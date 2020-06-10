@@ -1,0 +1,404 @@
+import React, { useState, useRef } from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
+import CustomModal from '.';
+import { COLORS } from '../../constants/constants';
+import CustomButton from '../CustomButton';
+
+const TITLE = 'Title';
+const CYCLES = 'Breath cycles';
+const REST = 'Rest';
+const ROUNDS = 'Rounds';
+const SELECTED_LEVEL = 'Selected level';
+
+const TITLE_LENGTH = 30;
+const LENGTH_2 = 2;
+const LENGTH_3 = 3;
+
+const ModalExcercise = ({
+  excercise,
+  cancelModel,
+  confirmModal,
+  headingColour,
+  selectedLevel,
+  cancelTitle,
+  confirmTitle,
+  isEditable = false,
+  confirmSelectCustomModal = () => {},
+  deleteCustomModal = () => {},
+}) => {
+  const [editExcercise, setEditExcercise] = useState(isEditable && !excercise);
+  const [deleteExcercise, setDeleteExcercise] = useState(false);
+  const [error, setError] = useState({});
+
+  // Added refs as useState would cause keyboard to disappear
+  const title = useRef((excercise && excercise.title) || '');
+  const cycles = useRef((excercise && excercise.cycles) || '');
+  const rest = useRef((excercise && excercise.rest) || '');
+  const rounds = useRef((excercise && excercise.rounds) || '');
+
+  const contents = [
+    [CYCLES, cycles.current],
+    [REST, rest.current],
+    [ROUNDS, rounds.current],
+    [SELECTED_LEVEL, selectedLevel],
+  ];
+
+  const editButtonHandler = () => {
+    setEditExcercise((curr) => !curr);
+  };
+
+  const deleteButtonHandler = () => {
+    setDeleteExcercise(true);
+  };
+
+  const validatedExcecise = () => {
+    let hasError = false;
+    let excerciseError = {};
+    const wholeNumberRegex = new RegExp(/^\d+$/);
+
+    if (title.current.length < 1 || title.current.length > TITLE_LENGTH) {
+      excerciseError[TITLE] = `${TITLE} is incorrect length`;
+      hasError = true;
+    }
+    if (
+      cycles.current.length < 1 ||
+      cycles.current.length > LENGTH_2 ||
+      cycles.current === '0'
+    ) {
+      excerciseError[CYCLES] = `${CYCLES} is incorrect length`;
+      hasError = true;
+    }
+    if (
+      rounds.current.length < 1 ||
+      rounds.current.length > LENGTH_2 ||
+      rounds.current === '0'
+    ) {
+      excerciseError[ROUNDS] = `${ROUNDS} is incorrect length`;
+      hasError = true;
+    }
+    if (
+      rest.current.length < 1 ||
+      rest.current.length > LENGTH_3 ||
+      rest.current === '0'
+    ) {
+      excerciseError[REST] = `${REST} is incorrect length`;
+      hasError = true;
+    }
+    if (!wholeNumberRegex.test(cycles.current)) {
+      excerciseError[CYCLES] = `${CYCLES} is the wrong format`;
+      hasError = true;
+    }
+    if (!wholeNumberRegex.test(rounds.current)) {
+      excerciseError[ROUNDS] = `${ROUNDS} is the wrong format`;
+      hasError = true;
+    }
+    if (!wholeNumberRegex.test(rest.current)) {
+      excerciseError[REST] = `${REST} is the wrong format`;
+      hasError = true;
+    }
+
+    if (hasError) {
+      setError(excerciseError);
+      return false;
+    }
+
+    return true;
+  };
+
+  const createNewExcerciseHandler = () => {
+    if (!editExcercise) return confirmSelectCustomModal();
+
+    if (validatedExcecise()) {
+      confirmModal(
+        {
+          title: title.current.trim(),
+          cycles: cycles.current.trim(),
+          rest: rest.current.trim(),
+          rounds: rounds.current.trim(),
+          id: isEditable && excercise ? excercise.id : Date.now(),
+        },
+        !!excercise
+      );
+    }
+  };
+
+  const TopLeft = () => {
+    if ((!excercise && isEditable) || !isEditable) return null;
+    return (
+      excercise && (
+        <View style={styles.deleteButton}>
+          <TouchableOpacity onPress={deleteButtonHandler}>
+            <MaterialCommunityIcons
+              name={'delete-outline'}
+              color={COLORS.TEXT}
+              size={24}
+            />
+          </TouchableOpacity>
+        </View>
+      )
+    );
+  };
+  const TopRight = () => {
+    if ((!excercise && isEditable) || !isEditable) return null;
+    return (
+      excercise && (
+        <View style={styles.deleteButton}>
+          <TouchableOpacity onPress={editButtonHandler}>
+            <MaterialCommunityIcons
+              name={'circle-edit-outline'}
+              color={COLORS.TEXT}
+              size={24}
+            />
+          </TouchableOpacity>
+        </View>
+      )
+    );
+  };
+
+  const confirmDeleteHandler = () => {
+    deleteCustomModal(excercise.id);
+    setDeleteExcercise(false);
+    cancelModel();
+  };
+
+  const excerciseTitleHandler = (text) => {
+    title.current = text;
+  };
+
+  const ExcerciseTitle = () => {
+    return (
+      <TextInput
+        editable={editExcercise}
+        defaultValue={title.current}
+        onChangeText={excerciseTitleHandler}
+        placeholder={'Title'}
+        style={{
+          ...styles.modalHeadingText,
+          ...(editExcercise ? styles.textInput : []),
+          color: !editExcercise ? headingColour : COLORS.TEXT,
+          ...(error[TITLE] ? styles.errorBorder : []),
+        }}
+        maxLength={TITLE_LENGTH}
+        selectionColor={COLORS.SECONDARY}
+        numberOfLines={2}
+        multiline
+      />
+    );
+  };
+
+  const textChangeHandler = (text, detail) => {
+    switch (detail) {
+      case CYCLES:
+        return (cycles.current = text);
+      case ROUNDS:
+        return (rounds.current = text);
+      case REST:
+        return (rest.current = text);
+      default:
+        return;
+    }
+  };
+
+  const ExcerciseValue = ({ detail, value }) => {
+    let textValue = value.toString();
+
+    if (detail === REST && !editExcercise) textValue += 's';
+
+    if (detail === SELECTED_LEVEL)
+      return (
+        <TextInput
+          editable={false}
+          value={textValue}
+          style={{
+            ...styles.contentText,
+            opacity: editExcercise ? 0.2 : 1,
+          }}
+        />
+      );
+
+    return (
+      <TextInput
+        editable={editExcercise}
+        defaultValue={textValue}
+        style={{
+          ...styles.contentText,
+          ...(editExcercise ? styles.textInput : []),
+          ...(error[detail] ? styles.errorBorder : []),
+        }}
+        onChangeText={(text) => textChangeHandler(text, detail)}
+        keyboardType="number-pad"
+        maxLength={detail === REST ? LENGTH_3 : LENGTH_2}
+        selectionColor={COLORS.SECONDARY}
+      />
+    );
+  };
+
+  return (
+    <View>
+      <CustomModal
+        cancelModel={deleteExcercise ? null : cancelModel}
+        confirmModal={
+          deleteExcercise
+            ? null
+            : isEditable
+            ? createNewExcerciseHandler
+            : confirmModal
+        }
+        headingColour={headingColour}
+        cancelTitle={cancelTitle}
+        confirmTitle={editExcercise ? 'Save' : confirmTitle}
+        TopLeft={deleteExcercise ? null : TopLeft}
+        TopRight={deleteExcercise ? null : TopRight}
+        header={deleteExcercise ? 'Warning' : !isEditable && title.current}
+      >
+        {!deleteExcercise && (
+          <View>
+            {isEditable && (
+              <View style={styles.headerContainer}>
+                <ExcerciseTitle />
+              </View>
+            )}
+            {contents.map(([detail, value], i) => {
+              return (
+                <View key={i} style={styles.contentContainer}>
+                  <View style={styles.detailContainer}>
+                    <Text
+                      style={{
+                        ...styles.contentText,
+                        opacity:
+                          editExcercise && detail === SELECTED_LEVEL ? 0.2 : 1,
+                      }}
+                    >
+                      {detail}
+                    </Text>
+                    {editExcercise && detail === REST && (
+                      <Text
+                        style={{
+                          ...styles.contentText,
+                          ...styles.textSecondary,
+                        }}
+                      >
+                        {'  '}
+                        (seconds)
+                      </Text>
+                    )}
+                  </View>
+                  <View style={styles.valueContainer}>
+                    <ExcerciseValue detail={detail} value={value} />
+                  </View>
+                </View>
+              );
+            })}
+            {Object.keys(error).length > 0 && (
+              <View style={styles.errorContainer}>
+                <Text style={styles.errorText}>Invalid input</Text>
+              </View>
+            )}
+          </View>
+        )}
+        {deleteExcercise && (
+          <View style={styles.warningContainer}>
+            <Text style={{ ...styles.contentText, textAlign: 'center' }}>
+              Are you sure you want to delete this custom excercise?
+            </Text>
+            <View style={styles.buttonContainer}>
+              <View style={{ width: '40%' }}>
+                <CustomButton
+                  title={'No'}
+                  onPress={() => setDeleteExcercise(false)}
+                />
+              </View>
+              <View style={{ width: '40%' }}>
+                <CustomButton title={'Yes'} onPress={confirmDeleteHandler} />
+              </View>
+            </View>
+          </View>
+        )}
+      </CustomModal>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  contentContainer: {
+    paddingTop: 10,
+    flexDirection: 'row',
+    width: '100%',
+  },
+  detailContainer: {
+    width: '80%',
+    textAlign: 'center',
+    paddingLeft: 20,
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+  },
+  headerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  modalHeadingText: {
+    fontSize: 20,
+    textAlign: 'center',
+    fontFamily: 'tit-regular',
+    color: COLORS.TEXT,
+    width: '90%',
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.BACKGROUND,
+  },
+  valueContainer: { width: '20%', paddingRight: 20 },
+  contentText: {
+    fontSize: 16,
+    fontFamily: 'tit-light',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.BACKGROUND,
+  },
+  deleteButton: {
+    opacity: 0.4,
+  },
+  editButton: {
+    opacity: 0.4,
+  },
+  textInput: {
+    borderBottomColor: COLORS.BORDER,
+    opacity: 0.7,
+  },
+  errorBorder: {
+    borderBottomColor: 'red',
+  },
+  errorContainer: {
+    paddingTop: 10,
+    marginHorizontal: 20,
+    width: '80%',
+  },
+  errorText: {
+    fontFamily: 'tit-regular',
+    fontSize: 16,
+    color: 'red',
+    opacity: 0.8,
+  },
+  textSecondary: {
+    opacity: 0.6,
+    fontSize: 16,
+    borderBottomWidth: 1,
+  },
+  warningContainer: {
+    paddingTop: 10,
+    width: '100%',
+  },
+  buttonContainer: {
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+});
+
+export default ModalExcercise;
