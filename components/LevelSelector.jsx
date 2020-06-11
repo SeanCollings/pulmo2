@@ -11,9 +11,7 @@ const SLIDE_WIDTH = 80;
 const LevelSelector = ({ header }) => {
   const { profileContext, updateProfileContext } = useContext(ProfileContext);
 
-  const selectedLevel =
-    (profileContext && profileContext[SELECTED_LEVEL]) ||
-    TOTAL_DIFFICULTY_LEVELS;
+  const selectedLevel = +profileContext[SELECTED_LEVEL];
   const data = getRangeArray(0, TOTAL_DIFFICULTY_LEVELS, 0.5);
   const selectedIndex = data.indexOf(selectedLevel);
 

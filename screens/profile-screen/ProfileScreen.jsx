@@ -54,14 +54,16 @@ const RenderItemHistory = ({ item, navigation }) => {
             {getDay(date)} {convertDate(date)}
           </Text>
           <View style={styles.bottomItemContainer}>
-            <Text style={{ ...styles.activityText }}>
+            <Text style={{ ...styles.activityText, opacity: 0.7 }}>
               {getRemainingTime(totalTime)}
             </Text>
-            <Text style={styles.activityText}>level: {level}</Text>
+            <Text style={{ ...styles.activityText, opacity: 0.7 }}>
+              level: {level}
+            </Text>
           </View>
         </View>
       </TouchableOpacity>
-      <View style={{ ...styles.verticalLine, width: '90%' }}></View>
+      <View style={{ ...styles.verticalLine }}></View>
     </View>
   );
 };
@@ -92,12 +94,10 @@ const ProfileScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <LevelSelector header="difficulty level" />
-      <View style={{ width: '90%' }}>
-        <View style={styles.historyContainer}>
-          <Text style={styles.historyHeaderText}>History</Text>
-        </View>
-        <View style={styles.verticalLine}></View>
+      <View style={styles.historyContainer}>
+        <Text style={styles.historyHeaderText}>History</Text>
       </View>
+      <View style={styles.verticalLine}></View>
       <View style={styles.listContainer}>
         {isLoading && (
           <View style={{ paddingTop: 20 }}>
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.BACKGROUND,
   },
   verticalLine: {
-    width: '100%',
+    width: '80%',
     borderTopColor: COLORS.BORDER,
     borderTopWidth: 1,
     opacity: 0.6,
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 1,
     paddingTop: 5,
+    paddingBottom: 20,
   },
   activityItemContainer: {
     alignItems: 'center',
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
   activityResultContainer: {
     flexDirection: 'row',
     paddingBottom: 5,
-    paddingHorizontal: '5%',
+    paddingHorizontal: '10%',
   },
   iconContainer: {
     alignItems: 'center',

@@ -73,6 +73,7 @@ const HomeScreen = ({ navigation }) => {
   const { customExcercises } = useContext(CustomExcerciseContext);
   const { profileContext } = useContext(ProfileContext);
   const { addActivity } = useContext(HistoryContext);
+
   const [showModal, setShowModal] = useState(false);
   const [userTimes, setUserTimes] = useState([]);
   const [currentBreathTime, setCurrentBreathTime] = useState('');
@@ -245,7 +246,7 @@ const HomeScreen = ({ navigation }) => {
             )}
         </View>
         <View style={styles.instructionContainer}>
-          <Text style={styles.mainText}>{activeExcercise.title}</Text>
+          <Text style={styles.ExcerciseTitle}>{activeExcercise.title}</Text>
           {instructions.state !== END_STATE &&
             instructions.state !== REST_STATE && (
               <View style={styles.gridContainer}>
@@ -327,10 +328,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: COLORS.TEXT,
   },
-  mainText: {
-    fontSize: 20,
+  ExcerciseTitle: {
+    fontSize: 22,
     color: COLORS.TERTIARY,
     fontFamily: 'tit-regular',
+    paddingBottom: 5,
   },
   gridContainer: {
     flexDirection: 'row',

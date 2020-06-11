@@ -4,13 +4,16 @@ import * as Font from 'expo-font';
 
 import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
-import ProfileContextProvider from './context/profile-context';
+import ProfileContextProvider, {
+  PROFILE_KEYS,
+} from './context/profile-context';
 import CustomExcerciseContextProvider, {
   CUSTOM_TAG,
 } from './context/custom-excercise-context';
 import HistoryContextProvider from './context/history-context';
 import { getAsyncData, getMultiAsyncData } from './helpers/storage';
 import { ACTIVITY_TAG } from './context/history-context';
+import { APP_ID } from './constants/constants';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -24,6 +27,7 @@ export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [customExcercises, setCustomExcercises] = useState([]);
   const [activityIdArray, setActivityIdArray] = useState([]);
+  const [profile, setProfile] = useState({});
 
   const loadCustomExcercises = async () => {
     try {
@@ -65,11 +69,32 @@ export default function App() {
     }
   };
 
+  const loadProfile = async () => {
+    try {
+      const profileValues = await getMultiAsyncData('', PROFILE_KEYS);
+      const formattedProfile = profileValues.reduce((acc, array) => {
+        const key = array[0];
+        const value = array[1];
+        if (key && key.includes(APP_ID) && value) {
+          const formattedKey = key.split(APP_ID)[1];
+          return { ...acc, [formattedKey]: array[1] };
+        } else return acc;
+      }, {});
+
+      setProfile(formattedProfile);
+      return Promise.resolve();
+    } catch (err) {
+      console.log(err);
+      return Promise.resolve();
+    }
+  };
+
   const loadAsyncDependencies = () => {
     return Promise.all([
       fetchFonts(),
       loadCustomExcercises(),
       loadActivityIdArray(),
+      loadProfile(),
     ]);
   };
 
@@ -86,7 +111,7 @@ export default function App() {
   return (
     <CustomExcerciseContextProvider excercises={customExcercises}>
       <ExcerciseContextProvider>
-        <ProfileContextProvider>
+        <ProfileContextProvider profile={profile}>
           <HistoryContextProvider idArray={activityIdArray}>
             <Navigator />
           </HistoryContextProvider>

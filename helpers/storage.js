@@ -1,6 +1,5 @@
 import { AsyncStorage } from 'react-native';
-
-const APP_ID = '@Plumo2:';
+import { APP_ID } from '../constants/constants';
 
 export const clearAllAsyncStorage = () => {
   AsyncStorage.clear();

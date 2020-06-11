@@ -1,19 +1,22 @@
 import React, { useState, createContext, useEffect } from 'react';
 
+import { storeAsyncData } from '../helpers/storage';
 import { TOTAL_DIFFICULTY_LEVELS } from '../constants/constants';
-import { getAsyncData, storeAsyncData } from '../helpers/storage';
 
 export const SELECTED_LEVEL = 'selected_level';
+export const PROFILE_KEYS = [SELECTED_LEVEL];
+
+const DEFAULT_PROFILE = {
+  [SELECTED_LEVEL]: TOTAL_DIFFICULTY_LEVELS,
+};
 
 export const ProfileContext = createContext({
   profileContext: {},
   updateProfileContext: () => {},
 });
 
-export default (props) => {
-  const [profileContext, setProfileContext] = useState({
-    [SELECTED_LEVEL]: TOTAL_DIFFICULTY_LEVELS,
-  });
+export default ({ profile, children }) => {
+  const [profileContext, setProfileContext] = useState(profile);
 
   const updateProfileContext = (key, value) => {
     try {
@@ -24,20 +27,14 @@ export default (props) => {
     }
   };
 
-  const getSelectedLevel = async () => {
-    const savedSelectedLevel = await getAsyncData(SELECTED_LEVEL);
-    if (savedSelectedLevel) {
-      updateProfileContext(SELECTED_LEVEL, savedSelectedLevel);
-    }
-  };
-
   useEffect(() => {
-    getSelectedLevel();
+    const getDefaultOrSavedProfile = { ...DEFAULT_PROFILE, ...profileContext };
+    setProfileContext(getDefaultOrSavedProfile);
   }, []);
 
   return (
     <ProfileContext.Provider value={{ profileContext, updateProfileContext }}>
-      {props.children}
+      {children}
     </ProfileContext.Provider>
   );
 };

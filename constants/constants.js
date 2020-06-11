@@ -1,10 +1,10 @@
 export const COLORS = {
   PRIMARY: '#005bbb',
   SECONDARY: '#002f56',
-  TERTIARY: '#00a69c',
-  QUARTERNARY: '#2f9fd0',
+  TERTIARY: '#00b8bb',
+  QUARTERNARY: '#5bacf3',
   QUINERY: '#990000',
-  TEXT: '#2e3740',
+  TEXT: '#3e4b57',
   BACKGROUND: 'white',
   SECONDARY_TEXT: 'white',
   BORDER: '#CCC',
@@ -30,6 +30,7 @@ export const COLORS_DARK = {
   SECONDARY_TEXT: '#6e6e6e',
 };
 
+export const APP_ID = '@Plumo2:';
 export const TOTAL_DIFFICULTY_LEVELS = 5;
 
 export const INTIAL_STATE = 'initial';

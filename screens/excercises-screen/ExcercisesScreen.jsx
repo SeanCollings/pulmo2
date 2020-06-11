@@ -254,8 +254,8 @@ const styles = StyleSheet.create({
   },
   slideContent: {
     flex: 1,
-    width: '95%',
-    padding: 20,
+    width: '90%',
+    paddingVertical: 20,
     alignItems: 'center',
   },
   topContainer: {
@@ -265,9 +265,11 @@ const styles = StyleSheet.create({
   },
   leftChevron: {
     width: '10%',
+    alignItems: 'center',
   },
   rightChevron: {
     width: '10%',
+    alignItems: 'center',
   },
   headingContainer: {
     padding: 20,
