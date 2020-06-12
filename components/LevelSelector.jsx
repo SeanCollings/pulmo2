@@ -2,16 +2,18 @@ import React, { useContext } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 import Scroller from './Scroller';
-import { COLORS, TOTAL_DIFFICULTY_LEVELS } from '../constants/constants';
+import { TOTAL_DIFFICULTY_LEVELS } from '../constants/constants';
 import { SELECTED_LEVEL, ProfileContext } from '../context/profile-context';
 import { getRangeArray } from '../utils';
+import { useTheme } from '../hooks/useTheme';
 
 const SLIDE_WIDTH = 80;
 
 const LevelSelector = ({ header }) => {
+  const theme = useTheme();
   const { profileContext, updateProfileContext } = useContext(ProfileContext);
 
-  const selectedLevel = +profileContext[SELECTED_LEVEL];
+  const selectedLevel = profileContext[SELECTED_LEVEL];
   const data = getRangeArray(0, TOTAL_DIFFICULTY_LEVELS, 0.5);
   const selectedIndex = data.indexOf(selectedLevel);
 
@@ -25,13 +27,17 @@ const LevelSelector = ({ header }) => {
         key={Math.random()}
         style={{ ...styles.scrollerItem, width: SLIDE_WIDTH }}
       >
-        <Text style={styles.levelText}>{value}</Text>
+        <Text style={{ ...styles.levelText, color: theme.SECONDARY }}>
+          {value}
+        </Text>
       </View>
     ));
 
   return (
     <View style={styles.levelContainer}>
-      <Text style={styles.levelTextHeading}>{header}</Text>
+      <Text style={{ ...styles.levelTextHeading, color: theme.SECONDARY }}>
+        {header}
+      </Text>
       <View>
         <Scroller
           totalChildren={data.length}
@@ -51,7 +57,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   levelText: {
-    color: COLORS.SECONDARY,
     fontSize: 30,
     fontFamily: 'tit-regular',
     textAlign: 'center',
@@ -64,7 +69,6 @@ const styles = StyleSheet.create({
   levelTextHeading: {
     fontFamily: 'tit-regular',
     fontSize: 20,
-    color: COLORS.SECONDARY,
     textAlign: 'center',
   },
 });

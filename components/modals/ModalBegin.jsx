@@ -4,10 +4,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import { SELECTED_LEVEL, ProfileContext } from '../../context/profile-context';
 import CustomModal from '.';
-import { COLORS } from '../../constants/constants';
+import { useTheme } from '../../hooks/useTheme';
 
 const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
-  const { profileContext, updateProfileContext } = useContext(ProfileContext);
+  const theme = useTheme();
+  const { profileContext } = useContext(ProfileContext);
 
   const selectedLevel =
     (profileContext && profileContext[SELECTED_LEVEL]) ||
@@ -25,7 +26,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
     <TouchableOpacity onPress={cancelModel} style={styles.backButton}>
       <MaterialCommunityIcons
         name="arrow-left"
-        color={COLORS.BORDER}
+        color={theme.BORDER}
         size={26}
       />
     </TouchableOpacity>
@@ -43,7 +44,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
       header={'Ready to begin?'}
       confirmTitle="Begin"
       cancelTitle="Update level"
-      headingColour={COLORS.SECONDARY}
+      headingColour={theme.SECONDARY}
       TopLeft={BackButton}
       buttonStyle={{ height: 60 }}
     >
@@ -53,6 +54,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
             <Text
               style={{
                 ...styles.contentText,
+                color: theme.TEXT,
                 fontFamily:
                   i === contents.length - 1 ? 'tit-regular' : 'tit-light',
               }}
@@ -76,7 +78,6 @@ const styles = StyleSheet.create({
   contentText: {
     textAlign: 'center',
     fontSize: 16,
-    color: COLORS.TEXT,
   },
   backButton: { position: 'absolute', left: 0, paddingTop: 3 },
 });

@@ -4,27 +4,38 @@ import { StyleSheet, View, Text, ScrollView } from 'react-native';
 
 import { HistoryContext } from '../../context/history-context';
 import options from './options';
-import { COLORS } from '../../constants/constants';
 import { getTotalResultTime, getRemainingTime, convertDate } from '../../utils';
 import Table from '../../components/Table';
 // import HeaderButton from '../../components/HeaderButton';
 import CustomButton from '../../components/CustomButton';
 import ConfirmModal from '../../components/modals/ConfirmModal';
+import { useTheme } from '../../hooks/useTheme';
 
 export const activityScreenOptions = options;
 
-const DetailContainer = ({ type, detail, style }) => {
+const DetailContainer = ({ type, detail, style, theme }) => {
   return (
-    <View style={{ ...styles.detailContainer, ...style }}>
-      <Text style={styles.detailText}>{detail}</Text>
+    <View
+      style={{
+        ...styles.detailContainer,
+        backgroundColor: theme.QUARTERNARY,
+        ...style,
+      }}
+    >
+      <Text style={{ ...styles.detailText, color: theme.BACKGROUND }}>
+        {detail}
+      </Text>
       <View style={{ justifyContent: 'center', height: 40 }}>
-        <Text style={styles.detailTypeText}>{type}</Text>
+        <Text style={{ ...styles.detailTypeText, color: theme.BACKGROUND }}>
+          {type}
+        </Text>
       </View>
     </View>
   );
 };
 
 const ActivityScreen = ({ route, navigation }) => {
+  const theme = useTheme();
   const { deleteActivity } = useContext(HistoryContext);
   const [showModal, setShowModal] = useState(false);
 
@@ -60,35 +71,61 @@ const ActivityScreen = ({ route, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <ScrollView>
         <View style={{ alignItems: 'center' }}>
           <View style={styles.topContainer}>
-            <Text style={styles.headingStyle}>{type}</Text>
-            <Text style={styles.textStyle}>{convertDate(date)}</Text>
+            <Text style={{ ...styles.headingStyle, color: theme.TEXT }}>
+              {type}
+            </Text>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
+              {convertDate(date)}
+            </Text>
           </View>
-          <View style={styles.verticalLine}></View>
+          <View
+            style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
+          ></View>
           <View style={styles.levelContainer}>
-            <Text style={styles.textStyle}>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
               total time: {getRemainingTime(totalTime)}
             </Text>
-            <Text style={styles.textStyle}>level: {level}</Text>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
+              level: {level}
+            </Text>
           </View>
           <View style={styles.allDetailContainer}>
             <DetailContainer
               type={`inhale & exhale`}
               detail={excercise.cycles}
+              theme={theme}
             />
             <DetailContainer
               type="rest"
               detail={getRemainingTime(excercise.rest)}
-              style={{ backgroundColor: COLORS.SECONDARY }}
+              style={{ backgroundColor: theme.SECONDARY }}
+              theme={theme}
             />
-            <DetailContainer type="rounds" detail={excercise.rounds} />
+            <DetailContainer
+              type="rounds"
+              detail={excercise.rounds}
+              theme={theme}
+            />
           </View>
           <View style={styles.resultsContainer}>
-            <Text style={styles.headingStyle}>results</Text>
-            <Table headerContent={['Workout', 'Rest']} rowContents={results} />
+            <Text
+              style={{
+                ...styles.headingStyle,
+                paddingBottom: 5,
+                color: theme.SECONDARY,
+              }}
+            >
+              results
+            </Text>
+            <Table
+              headerContent={['Workout', 'Rest']}
+              rowContents={results}
+              headerColour={theme.DARK ? theme.SECONDARY : theme.TERTIARY}
+            />
           </View>
         </View>
         {showModal && (
@@ -109,11 +146,9 @@ const ActivityScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.BACKGROUND,
   },
   verticalLine: {
     width: '80%',
-    borderTopColor: COLORS.BORDER,
     borderTopWidth: 1,
     opacity: 0.6,
   },
@@ -126,12 +161,10 @@ const styles = StyleSheet.create({
   textStyle: {
     fontFamily: 'tit-light',
     fontSize: 18,
-    color: COLORS.TEXT,
   },
   headingStyle: {
     fontFamily: 'tit-regular',
     fontSize: 18,
-    color: COLORS.SECONDARY,
   },
   levelContainer: {
     paddingVertical: 10,
@@ -144,7 +177,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   detailContainer: {
-    backgroundColor: COLORS.QUARTERNARY,
     paddingHorizontal: 10,
     paddingVertical: 10,
     width: '32%',
@@ -153,14 +185,12 @@ const styles = StyleSheet.create({
   },
   detailText: {
     fontFamily: 'tit-regular',
-    color: COLORS.BACKGROUND,
     fontSize: 24,
     paddingBottom: 5,
   },
   detailTypeText: {
     fontFamily: 'tit-regular',
     textAlign: 'center',
-    color: COLORS.BACKGROUND,
   },
   resultsContainer: {
     paddingVertical: 10,

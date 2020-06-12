@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
-const CustomButton = ({ title, style, onPress, colour }) => {
+const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
+  const theme = useTheme();
+
   return (
     <TouchableOpacity
       activeOpacity={0.7}
@@ -11,10 +13,14 @@ const CustomButton = ({ title, style, onPress, colour }) => {
       style={{
         ...styles.buttonContainer,
         ...style,
-        color: colour,
+        backgroundColor:
+          bgColour || (theme.DARK ? theme.DARKER_GRAY : theme.BACKGROUND),
+        borderColor: theme.BORDER,
       }}
     >
-      <Text style={styles.textStyle}>{title}</Text>
+      <Text style={{ ...styles.textStyle, color: colour || theme.TEXT }}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
@@ -27,8 +33,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: COLORS.BORDER,
-    backgroundColor: COLORS.BACKGROUND,
     paddingVertical: 6,
     paddingHorizontal: 14,
     elevation: 2,
@@ -37,8 +41,6 @@ const styles = StyleSheet.create({
   textStyle: {
     fontFamily: 'tit-regular',
     fontSize: 14,
-    color: COLORS.TEXT,
-    opacity: 0.7,
     textAlign: 'center',
     textTransform: 'uppercase',
   },

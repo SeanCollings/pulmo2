@@ -1,56 +1,61 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
-const TableRow = ({ content, index, rowStyles }) => (
+const TableRow = ({ theme, content, index, rowStyles }) => (
   <View
     style={{
       ...styles.content,
       width: index === 0 ? '20%' : '40%',
       borderLeftWidth: index === 0 ? 0 : 1,
+      borderLeftColor: theme.DARK ? theme.SECONDARY : theme.PRIMARY,
+      borderBottomColor: theme.DARK ? theme.DARK_GRAY : theme.BORDER,
     }}
   >
     <Text style={{ ...styles.tableText, ...rowStyles }}>{content}</Text>
   </View>
 );
 
-const TableHeader = ({ headerContent }) => (
-  <View style={styles.tableHeader}>
-    {['', ...headerContent].map((header, index) => (
-      <TableRow
-        key={`th-${index}`}
-        index={index}
-        content={header}
-        rowStyles={styles.tableHeaderText}
-      />
-    ))}
-  </View>
-);
+const Table = ({ headerContent, rowContents, headerColour }) => {
+  const theme = useTheme();
 
-const TableBody = ({ rowContents }) => (
-  <View style={styles.tableBody}>
-    {rowContents.map((row, i) => (
-      <View key={`tb-${i}`} style={styles.bodyContent}>
-        {[i + 1, ...row].map((content, contentIndex) => (
-          <TableRow
-            key={`tr-${contentIndex}`}
-            content={content}
-            index={contentIndex}
-          />
-        ))}
-      </View>
-    ))}
-  </View>
-);
-
-const Table = ({ headerContent, rowContents }) => {
   if (!headerContent.length || !rowContents.length) return null;
 
   return (
     <View style={styles.container}>
-      <TableHeader headerContent={headerContent} />
-      <TableBody rowContents={rowContents} />
+      <View style={styles.tableHeader}>
+        {['', ...headerContent].map((header, index) => (
+          <TableRow
+            key={`th-${index}`}
+            theme={theme}
+            index={index}
+            content={header}
+            rowStyles={{
+              ...styles.tableHeaderText,
+              color: headerColour || theme.TERTIARY,
+            }}
+          />
+        ))}
+      </View>
+      <View style={styles.tableBody}>
+        {rowContents.map((row, i) => (
+          <View key={`tb-${i}`} style={styles.bodyContent}>
+            {[i + 1, ...row].map((content, contentIndex) => (
+              <TableRow
+                key={`tr-${contentIndex}`}
+                theme={theme}
+                content={content}
+                index={contentIndex}
+                rowStyles={{
+                  color: theme.TEXT,
+                  opacity: theme.DARK ? 0.8 : 1,
+                }}
+              />
+            ))}
+          </View>
+        ))}
+      </View>
     </View>
   );
 };
@@ -79,19 +84,16 @@ const styles = StyleSheet.create({
     marginBottom: -1,
   },
   content: {
-    borderLeftColor: COLORS.PRIMARY,
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.BORDER,
   },
   tableHeaderText: {
+    fontSize: 16,
     fontFamily: 'tit-regular',
-    color: COLORS.TERTIARY,
   },
   tableText: {
     textAlign: 'center',
     fontFamily: 'tit-regular',
     fontSize: 16,
-    color: COLORS.TEXT,
     padding: 2,
   },
 });

@@ -1,13 +1,17 @@
 import React from 'react';
 import { StyleSheet, Switch, Platform } from 'react-native';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
-const CustomSwitch = ({ state, onChange, trackColor }) => {
+const CustomSwitch = ({ state, onChange, trackColor, falseColour }) => {
+  const theme = useTheme();
+
+  let falseValue = falseColour || (theme.DARK ? theme.DARK_GRAY : theme.BORDER);
+
   return (
     <Switch
-      trackColor={{ true: trackColor, false: COLORS.BORDER }}
-      thumbColor={Platform.OS === 'android' ? COLORS.SECONDARY_TEXT : ''}
+      trackColor={{ true: trackColor, false: falseValue }}
+      thumbColor={Platform.OS === 'android' ? theme.SECONDARY_TEXT : ''}
       value={state}
       onValueChange={onChange}
     />

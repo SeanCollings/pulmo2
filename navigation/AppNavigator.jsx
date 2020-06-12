@@ -2,7 +2,8 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
+import { defaultNavOptions } from '../constants/navigation-constants';
 import HomeScreen, {
   homeScreenOptions,
 } from '../screens/home-screen/HomeScreen';
@@ -25,23 +26,10 @@ import HelpProfileScreen, {
   helpProfileScreenOptions,
 } from '../screens/help-profile-screen/HelpProfileScreen';
 
-const defaultNavOptions = {
-  headerStyle: {
-    backgroundColor: COLORS.PRIMARY,
-  },
-  headerTitleStyle: {
-    fontFamily: 'tit-regular',
-    backgroundColor:
-      Platform.OS === 'android' ? COLORS.PRIMARY : COLORS.SECONDARY_TEXT,
-  },
-  headerTintColor:
-    Platform.OS === 'android' ? COLORS.SECONDARY_TEXT : COLORS.PRIMARY,
-};
-
 const StackHome = createStackNavigator();
 
 export const HomeStack = () => (
-  <StackHome.Navigator screenOptions={defaultNavOptions}>
+  <StackHome.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackHome.Screen
       name="Home"
       component={HomeScreen}
@@ -58,7 +46,7 @@ export const HomeStack = () => (
 const StackExcercises = createStackNavigator();
 
 export const ExcercisesStack = () => (
-  <StackExcercises.Navigator screenOptions={defaultNavOptions}>
+  <StackExcercises.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackExcercises.Screen
       name="Excercises"
       component={ExcercisesScreen}
@@ -75,7 +63,7 @@ export const ExcercisesStack = () => (
 const StackProfile = createStackNavigator();
 
 export const ProfileStack = () => (
-  <StackProfile.Navigator screenOptions={defaultNavOptions}>
+  <StackProfile.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackProfile.Screen
       name="Profile"
       component={ProfileScreen}
@@ -96,30 +84,18 @@ export const ProfileStack = () => (
 
 const Tab = createBottomTabNavigator();
 
-export const MainTabs = () => {
-  return (
-    <Tab.Navigator
-      tabBarOptions={{
-        activeTintColor: 'white',
-        inactiveTintColor: COLORS.SECONDARY,
-        tabStyle: { marginTop: 1, backgroundColor: COLORS.PRIMARY },
-      }}
-    >
-      <Tab.Screen
-        name="Home"
-        component={HomeStack}
-        options={homeScreenOptions}
-      />
-      <Tab.Screen
-        name="Excercises"
-        component={ExcercisesStack}
-        options={excercisesScreenOptions}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileStack}
-        options={profileScreenOptions}
-      />
-    </Tab.Navigator>
-  );
-};
+export const MainTabs = ({ defaultTabBarOptions }) => (
+  <Tab.Navigator tabBarOptions={defaultTabBarOptions}>
+    <Tab.Screen name="Home" component={HomeStack} options={homeScreenOptions} />
+    <Tab.Screen
+      name="Excercises"
+      component={ExcercisesStack}
+      options={excercisesScreenOptions}
+    />
+    <Tab.Screen
+      name="Profile"
+      component={ProfileStack}
+      options={profileScreenOptions}
+    />
+  </Tab.Navigator>
+);

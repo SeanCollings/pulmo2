@@ -16,18 +16,32 @@ import {
 import { ProfileContext, SELECTED_LEVEL } from '../../context/profile-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
 import options from './options';
-import { COLORS, TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
+import { TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
 import Slides from '../../components/Slides';
 import { EXCERCISE_DATA } from '../../data/excercises';
-import { CUSTOM_KEY } from '../../data';
+import { CUSTOM_KEY, STRENGTH_KEY, ENDURANCE_KEY } from '../../data';
 import CustomSwitch from '../../components/Switch';
 import ModalExcercise from '../../components/modals/ModalExcercise';
 import CustomButton from '../../components/CustomButton';
 import { storeAsyncData } from '../../helpers/storage';
+import { useTheme } from '../../hooks/useTheme';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const excercisesScreenOptions = options;
+
+const getColour = (title, theme) => {
+  switch (title) {
+    case STRENGTH_KEY:
+      return theme.TERTIARY;
+    case ENDURANCE_KEY:
+      return theme.SECONDARY;
+    case CUSTOM_KEY:
+      return theme.QUARTERNARY;
+    default:
+      return theme.TERTIARY;
+  }
+};
 
 const updateSelectedExercise = (toggleExcercise, content, type) => (
   selected
@@ -44,6 +58,7 @@ const SlideContent = ({
   setModalContent,
   excerciseContext,
   type,
+  theme,
 }) => {
   const { toggleExcercise, selectedExcercise } = excerciseContext;
 
@@ -52,6 +67,7 @@ const SlideContent = ({
       key={content.id}
       style={{
         ...styles.slideContentContainer,
+        borderBottomColor: theme.DARK ? theme.DARK_GRAY : theme.BORDER,
         borderBottomWidth: i === contents.length - 1 ? 0 : 1,
       }}
     >
@@ -59,7 +75,15 @@ const SlideContent = ({
         style={styles.slideContentTitle}
         onPress={() => setModalContent([content, colour, type])}
       >
-        <Text style={styles.slideContentText}>{content.title}</Text>
+        <Text
+          style={{
+            ...styles.slideContentText,
+            color: theme.TEXT,
+            opacity: theme.DARK ? 0.87 : 1,
+          }}
+        >
+          {content.title}
+        </Text>
       </TouchableOpacity>
       <View style={styles.slideContentToggle}>
         <CustomSwitch
@@ -79,19 +103,24 @@ const IndividualSlide = ({
   excerciseContext,
   createNewHandler,
   customExcerciseContext,
+  theme,
 }) =>
   data.map((slide, i) => {
     const custom = slide.title === CUSTOM_KEY;
+    const colour = getColour(slide.title, theme);
 
     return (
-      <View key={`slide-${i}`} style={{ ...styles.slideStyle }}>
+      <View
+        key={`slide-${i}`}
+        style={{ ...styles.slideStyle, backgroundColor: theme.BACKGROUND }}
+      >
         <View style={styles.slideContent}>
           <View style={styles.topContainer}>
             <View style={styles.leftChevron}>
               {i !== 0 && (
                 <MaterialCommunityIcons
                   name={'chevron-left'}
-                  color={COLORS.BORDER}
+                  color={theme.BORDER}
                   size={20}
                 />
               )}
@@ -99,21 +128,23 @@ const IndividualSlide = ({
             <View
               style={{
                 ...styles.headingContainer,
-                backgroundColor: slide.colour,
+                backgroundColor: colour,
               }}
             >
               <MaterialCommunityIcons
                 name={slide.icon}
-                color={COLORS.SECONDARY_TEXT}
+                color={theme.BACKGROUND}
                 size={30}
               />
-              <Text style={styles.slideHeading}>{slide.title}</Text>
+              <Text style={{ ...styles.slideHeading, color: theme.BACKGROUND }}>
+                {slide.title}
+              </Text>
             </View>
             <View style={styles.rightChevron}>
               {i !== data.length - 1 && (
                 <MaterialCommunityIcons
                   name={'chevron-right'}
-                  color={COLORS.BORDER}
+                  color={theme.BORDER}
                   size={20}
                   style={{ textAlign: 'right' }}
                 />
@@ -122,12 +153,15 @@ const IndividualSlide = ({
           </View>
           <View style={styles.promptContainer}>
             {!custom && (
-              <Text style={styles.promptText}>Select an excercise</Text>
+              <Text style={{ ...styles.promptText, color: theme.TEXT }}>
+                Select an excercise
+              </Text>
             )}
             {custom && (
               <CustomButton
                 title="Create new excercise"
-                onPress={() => createNewHandler(slide.colour)}
+                onPress={() => createNewHandler(colour)}
+                bgColour={theme.DARK ? theme.PRIMARY : theme.BACKGROUND}
               />
             )}
           </View>
@@ -138,7 +172,7 @@ const IndividualSlide = ({
               setModalContent={
                 custom ? setCreateNewModalContent : setModalContent
               }
-              colour={slide.colour}
+              colour={colour}
               contents={
                 custom
                   ? customExcerciseContext.customExcercises
@@ -146,6 +180,7 @@ const IndividualSlide = ({
               }
               excerciseContext={excerciseContext}
               type={slide.id}
+              theme={theme}
             />
           </ScrollView>
         </View>
@@ -154,6 +189,7 @@ const IndividualSlide = ({
   });
 
 const ExcercisesScreen = (props) => {
+  const theme = useTheme();
   const data = EXCERCISE_DATA;
   const excerciseContext = useContext(ExcerciseContext);
   const { profileContext } = useContext(ProfileContext);
@@ -212,6 +248,7 @@ const ExcercisesScreen = (props) => {
           excerciseContext={excerciseContext}
           createNewHandler={createNewHandler}
           customExcerciseContext={customExcerciseContext}
+          theme={theme}
         />
       </Slides>
       {modalContent && (
@@ -249,7 +286,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     width: SCREEN_WIDTH,
-    backgroundColor: COLORS.BACKGROUND,
     paddingBottom: 5,
   },
   slideContent: {
@@ -280,19 +316,16 @@ const styles = StyleSheet.create({
   },
   slideHeading: {
     fontSize: 24,
-    color: COLORS.SECONDARY_TEXT,
     fontFamily: 'tit-regular',
     paddingTop: 10,
   },
   promptContainer: {
     padding: 20,
   },
-  promptText: { fontSize: 20, fontFamily: 'tit-regular', color: COLORS.TEXT },
+  promptText: { fontSize: 20, fontFamily: 'tit-regular' },
   slideContentContainer: {
     flexDirection: 'row',
     width: '90%',
-    borderBottomColor: COLORS.BORDER,
-
     height: 50,
   },
   slideContentTitle: {
@@ -303,7 +336,6 @@ const styles = StyleSheet.create({
     fontFamily: 'tit-regular',
     fontSize: 16,
     padding: 10,
-    color: COLORS.TEXT,
   },
   slideContentToggle: {
     justifyContent: 'center',

@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Modal, Text } from 'react-native';
-import { COLORS } from '../../constants/constants';
+
 import CustomButton from '../CustomButton';
+import { useTheme } from '../../hooks/useTheme';
 
 const CustomModal = ({
   header,
@@ -15,11 +16,18 @@ const CustomModal = ({
   TopRight = () => null,
   buttonStyle,
 }) => {
+  const theme = useTheme();
+
   return (
     <View style={styles.centeredView}>
       <Modal animationType="none" transparent>
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
+          <View
+            style={{
+              ...styles.modalView,
+              backgroundColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+            }}
+          >
             <View
               style={{
                 ...styles.headerContainer,
@@ -38,26 +46,28 @@ const CustomModal = ({
             </View>
 
             <View>{children}</View>
-            <View style={styles.buttonContainer}>
-              {cancelModel && (
-                <View style={{ width: '40%' }}>
-                  <CustomButton
-                    title={cancelTitle}
-                    onPress={cancelModel}
-                    style={buttonStyle}
-                  />
-                </View>
-              )}
-              {confirmModal && (
-                <View style={{ width: '40%' }}>
-                  <CustomButton
-                    title={confirmTitle}
-                    onPress={confirmModal}
-                    style={buttonStyle}
-                  />
-                </View>
-              )}
-            </View>
+            {(cancelModel || confirmModal) && (
+              <View style={styles.buttonContainer}>
+                {cancelModel && (
+                  <View style={{ width: '40%' }}>
+                    <CustomButton
+                      title={cancelTitle}
+                      onPress={cancelModel}
+                      style={buttonStyle}
+                    />
+                  </View>
+                )}
+                {confirmModal && (
+                  <View style={{ width: '40%' }}>
+                    <CustomButton
+                      title={confirmTitle}
+                      onPress={confirmModal}
+                      style={buttonStyle}
+                    />
+                  </View>
+                )}
+              </View>
+            )}
           </View>
         </View>
       </Modal>
@@ -70,7 +80,6 @@ CustomModal.defaultProps = {
   contents: [],
   cancelTitle: 'Cancel',
   confirmTitle: 'Confirm',
-  headingColour: COLORS.TEXT,
 };
 
 const styles = StyleSheet.create({
@@ -82,7 +91,6 @@ const styles = StyleSheet.create({
   },
   modalView: {
     width: '80%',
-    backgroundColor: 'white',
     borderRadius: 12,
     padding: 20,
     alignItems: 'center',
@@ -109,14 +117,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     fontFamily: 'tit-regular',
-    color: COLORS.TEXT,
     width: '80%',
-  },
-  textStyle: {
-    fontSize: 16,
-    color: COLORS.TEXT,
-    textAlign: 'center',
-    fontFamily: 'tit-light',
   },
 });
 

@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  View,
-  Dimensions,
-  FlatList,
-  Text,
-} from 'react-native';
+import { StyleSheet, ScrollView, View, Dimensions } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
-const SlidePosition = ({ totalSlides, selectedSlide }) => (
+const SlidePosition = ({ totalSlides, selectedSlide, theme }) => (
   <View style={styles.slidePosition}>
     {[...Array(totalSlides).keys()].map((_, i) => (
       <MaterialCommunityIcons
         key={`sp-${i}`}
         name={i === selectedSlide ? 'circle' : 'circle-outline'}
-        color={COLORS.BORDER}
+        color={theme.BORDER}
         size={12}
       />
     ))}
@@ -27,6 +20,7 @@ const SlidePosition = ({ totalSlides, selectedSlide }) => (
 );
 
 const Slides = ({ totalSlides, children }) => {
+  const theme = useTheme();
   const [selectedSlide, setSelectedSlide] = useState(0);
 
   const onScrollHandler = (event) => {
@@ -47,7 +41,11 @@ const Slides = ({ totalSlides, children }) => {
       >
         {children}
       </ScrollView>
-      <SlidePosition totalSlides={totalSlides} selectedSlide={selectedSlide} />
+      <SlidePosition
+        totalSlides={totalSlides}
+        selectedSlide={selectedSlide}
+        theme={theme}
+      />
     </View>
   );
 };

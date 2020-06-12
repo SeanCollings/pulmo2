@@ -11,6 +11,9 @@ import CustomExcerciseContextProvider, {
   CUSTOM_TAG,
 } from './context/custom-excercise-context';
 import HistoryContextProvider from './context/history-context';
+import SettingsContextProvider, {
+  SETTINGS_KEYS,
+} from './context/settings-context';
 import { getAsyncData, getMultiAsyncData } from './helpers/storage';
 import { ACTIVITY_TAG } from './context/history-context';
 import { APP_ID } from './constants/constants';
@@ -28,6 +31,7 @@ export default function App() {
   const [customExcercises, setCustomExcercises] = useState([]);
   const [activityIdArray, setActivityIdArray] = useState([]);
   const [profile, setProfile] = useState({});
+  const [appSettings, setAppSettings] = useState({});
 
   const loadCustomExcercises = async () => {
     try {
@@ -75,13 +79,35 @@ export default function App() {
       const formattedProfile = profileValues.reduce((acc, array) => {
         const key = array[0];
         const value = array[1];
+
         if (key && key.includes(APP_ID) && value) {
           const formattedKey = key.split(APP_ID)[1];
-          return { ...acc, [formattedKey]: array[1] };
+          return { ...acc, [formattedKey]: JSON.parse(value) };
         } else return acc;
       }, {});
 
       setProfile(formattedProfile);
+      return Promise.resolve();
+    } catch (err) {
+      console.log(err);
+      return Promise.resolve();
+    }
+  };
+
+  const loadSettings = async () => {
+    try {
+      const settingsValues = await getMultiAsyncData('', SETTINGS_KEYS);
+      const formattedSettings = settingsValues.reduce((acc, array) => {
+        const key = array[0];
+        const value = array[1];
+
+        if (key && key.includes(APP_ID) && value) {
+          const formattedKey = key.split(APP_ID)[1];
+          return { ...acc, [formattedKey]: JSON.parse(value) };
+        } else return acc;
+      }, {});
+
+      setAppSettings(formattedSettings);
       return Promise.resolve();
     } catch (err) {
       console.log(err);
@@ -95,6 +121,7 @@ export default function App() {
       loadCustomExcercises(),
       loadActivityIdArray(),
       loadProfile(),
+      loadSettings(),
     ]);
   };
 
@@ -113,7 +140,9 @@ export default function App() {
       <ExcerciseContextProvider>
         <ProfileContextProvider profile={profile}>
           <HistoryContextProvider idArray={activityIdArray}>
-            <Navigator />
+            <SettingsContextProvider settings={appSettings}>
+              <Navigator />
+            </SettingsContextProvider>
           </HistoryContextProvider>
         </ProfileContextProvider>
       </ExcerciseContextProvider>

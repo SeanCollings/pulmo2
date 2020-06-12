@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
-import { COLORS } from '../constants/constants';
 import { getRemainingTime } from '../utils';
+import { useTheme } from '../hooks/useTheme';
 
 const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
+  const theme = useTheme();
   const [timeRemaining, setTimeRemaining] = useState(countDownTime);
   const minutesSeconds = getRemainingTime(timeRemaining);
   const intervalDiff = useRef(null);
@@ -50,9 +51,13 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
   return (
     <View style={styles.container}>
       {replacementText ? (
-        <Text style={styles.replacementText}>{replacementText}</Text>
+        <Text style={{ ...styles.replacementText, color: theme.TEXT }}>
+          {replacementText}
+        </Text>
       ) : (
-        <Text style={styles.timerText}>{minutesSeconds}</Text>
+        <Text style={{ ...styles.timerText, color: theme.TEXT }}>
+          {minutesSeconds}
+        </Text>
       )}
     </View>
   );
@@ -67,14 +72,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   timerText: {
-    color: COLORS.TEXT,
     fontSize: 60,
     textAlignVertical: 'center',
     textAlign: 'center',
     fontFamily: 'tit-light',
   },
   replacementText: {
-    color: COLORS.TEXT,
     fontSize: 40,
     textAlignVertical: 'center',
     fontFamily: 'tit-light',

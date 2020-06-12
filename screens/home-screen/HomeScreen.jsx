@@ -20,7 +20,6 @@ import {
 import {
   INTIAL_STATE,
   BREATHING_STATE,
-  COLORS,
   END_STATE,
   REST_STATE,
 } from '../../constants/constants';
@@ -43,6 +42,7 @@ import {
   CUSTOM_KEY,
   DEFAULT_EXCERCISE,
 } from '../../data';
+import { useTheme } from '../../hooks/useTheme';
 
 export const homeScreenOptions = options;
 
@@ -69,6 +69,7 @@ const getExcerciseById = (id, type, customExcercises) => {
 };
 
 const HomeScreen = ({ navigation }) => {
+  const theme = useTheme();
   const { selectedExcercise } = useContext(ExcerciseContext);
   const { customExcercises } = useContext(CustomExcerciseContext);
   const { profileContext } = useContext(ProfileContext);
@@ -182,7 +183,7 @@ const HomeScreen = ({ navigation }) => {
 
   if (!activeExcercise) return null;
 
-  let progressText = `level ${profileContext[SELECTED_LEVEL]}`;
+  let progressText = `selected level: ${profileContext[SELECTED_LEVEL]}`;
   if (currentRound > 0 && instructions.state !== END_STATE) {
     progressText = `round ${currentRound}/${activeExcercise.rounds}`;
   } else if (instructions.state === END_STATE) {
@@ -193,9 +194,11 @@ const HomeScreen = ({ navigation }) => {
   if (isActive) buttonIconName = 'pause';
   else if (instructions.state === END_STATE) buttonIconName = 'restart';
 
+  const styleSubText = { ...styles.subText, color: theme.TEXT };
+
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={styles.container}>
+      <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
         <View style={styles.timerContainer}>
           <Timer
             isActive={isActive}
@@ -212,8 +215,8 @@ const HomeScreen = ({ navigation }) => {
               borderWidth={4}
               size={60}
               buttonSize={120}
-              iconStyle={{ color: COLORS.SECONDARY }}
-              style={{ borderColor: COLORS.SECONDARY }}
+              iconStyle={{ color: theme.SECONDARY }}
+              style={{ borderColor: theme.SECONDARY }}
             />
           )}
           {instructions.state === BREATHING_STATE && (
@@ -223,11 +226,13 @@ const HomeScreen = ({ navigation }) => {
               buttonSize={120}
               fontSize={30}
               text={currentRound !== +activeExcercise.rounds ? 'REST' : 'DONE'}
-              textStyle={{ color: COLORS.SECONDARY }}
-              style={{ borderColor: COLORS.SECONDARY }}
+              textStyle={{ color: theme.SECONDARY }}
+              style={{ borderColor: theme.SECONDARY }}
             />
           )}
-          <Text style={styles.progressText}>{progressText}</Text>
+          <Text style={{ ...styles.progressText, color: theme.TEXT }}>
+            {progressText}
+          </Text>
           {instructions.state !== INTIAL_STATE &&
             instructions.state !== END_STATE && (
               <CircleIconButton
@@ -241,23 +246,26 @@ const HomeScreen = ({ navigation }) => {
                   right: '15%',
                   top: 0,
                 }}
-                iconStyle={{ color: COLORS.TERTIARY }}
+                iconStyle={{ color: theme.TERTIARY }}
               />
             )}
         </View>
         <View style={styles.instructionContainer}>
-          <Text style={styles.ExcerciseTitle}>{activeExcercise.title}</Text>
+          <Text style={{ ...styles.ExcerciseTitle, color: theme.TERTIARY }}>
+            {activeExcercise.title}
+          </Text>
           {instructions.state !== END_STATE &&
             instructions.state !== REST_STATE && (
               <View style={styles.gridContainer}>
                 <Text
                   style={{
-                    ...styles.subText,
+                    ...styleSubText,
                     ...styles.textAlignRight,
+                    borderRightColor: theme.BORDER,
                   }}
                 >{`inhale & exhale`}</Text>
                 <Text
-                  style={styles.subText}
+                  style={styleSubText}
                 >{`${activeExcercise.cycles} times`}</Text>
               </View>
             )}
@@ -265,20 +273,28 @@ const HomeScreen = ({ navigation }) => {
             instructions.state === REST_STATE) && (
             <View style={styles.gridContainer}>
               <Text
-                style={{ ...styles.subText, ...styles.textAlignRight }}
+                style={{
+                  ...styleSubText,
+                  ...styles.textAlignRight,
+                  borderRightColor: theme.BORDER,
+                }}
               >{`rest for`}</Text>
               <Text
-                style={styles.subText}
+                style={styleSubText}
               >{`${activeExcercise.rest} seconds`}</Text>
             </View>
           )}
           {instructions.state === INTIAL_STATE && (
             <View style={styles.gridContainer}>
               <Text
-                style={{ ...styles.subText, ...styles.textAlignRight }}
+                style={{
+                  ...styleSubText,
+                  ...styles.textAlignRight,
+                  borderRightColor: theme.BORDER,
+                }}
               >{`repeat`}</Text>
               <Text
-                style={styles.subText}
+                style={styleSubText}
               >{`${activeExcercise.rounds} times`}</Text>
             </View>
           )}
@@ -302,7 +318,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: COLORS.BACKGROUND,
   },
   timerContainer: {
     height: 100,
@@ -326,11 +341,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: 'tit-light',
     marginTop: 10,
-    color: COLORS.TEXT,
   },
   ExcerciseTitle: {
     fontSize: 22,
-    color: COLORS.TERTIARY,
     fontFamily: 'tit-regular',
     paddingBottom: 5,
   },
@@ -341,7 +354,6 @@ const styles = StyleSheet.create({
   },
   subText: {
     fontSize: 16,
-    color: COLORS.TEXT,
     paddingTop: 5,
     fontFamily: 'tit-light',
     width: '50%',
@@ -350,7 +362,6 @@ const styles = StyleSheet.create({
   textAlignRight: {
     textAlign: 'right',
     borderRightWidth: 1,
-    borderRightColor: COLORS.BORDER,
   },
 });
 

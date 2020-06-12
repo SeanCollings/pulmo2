@@ -9,7 +9,6 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import options from './options';
-import { COLORS } from '../../constants/constants';
 import { HistoryContext } from '../../context/history-context';
 import {
   convertDate,
@@ -20,6 +19,8 @@ import {
 import ListScroller from '../../components/ListScroller';
 import { STRENGTH_KEY, ENDURANCE_KEY } from '../../data';
 import LevelSelector from '../../components/LevelSelector';
+import { useTheme } from '../../hooks/useTheme';
+import ThemeSelector from '../../components/ThemeSelector';
 
 export const profileScreenOptions = options;
 
@@ -34,6 +35,7 @@ const getIcon = (type) => {
 };
 
 const RenderItemHistory = ({ item, navigation }) => {
+  const theme = useTheme();
   const { date, excercise, results, type, level } = item;
   const totalTime = getTotalResultTime(results);
   const icon = getIcon(type);
@@ -46,35 +48,52 @@ const RenderItemHistory = ({ item, navigation }) => {
         activeOpacity={0.6}
       >
         <View style={styles.iconContainer}>
-          <MaterialCommunityIcons name={icon} color={COLORS.BORDER} size={30} />
+          <MaterialCommunityIcons name={icon} color={theme.BORDER} size={30} />
         </View>
         <View style={styles.activityTextContainer}>
-          <Text style={styles.activityHeading}>{excercise.title}</Text>
-          <Text style={styles.activityText}>
+          <Text style={{ ...styles.activityHeading, color: theme.SECONDARY }}>
+            {excercise.title}
+          </Text>
+          <Text style={{ ...styles.activityText, color: theme.TEXT }}>
             {getDay(date)} {convertDate(date)}
           </Text>
           <View style={styles.bottomItemContainer}>
-            <Text style={{ ...styles.activityText, opacity: 0.7 }}>
+            <Text
+              style={{
+                ...styles.activityText,
+                color: theme.TEXT,
+                opacity: 0.7,
+              }}
+            >
               {getRemainingTime(totalTime)}
             </Text>
-            <Text style={{ ...styles.activityText, opacity: 0.7 }}>
+            <Text
+              style={{
+                ...styles.activityText,
+                color: theme.TEXT,
+                opacity: 0.7,
+              }}
+            >
               level: {level}
             </Text>
           </View>
         </View>
       </TouchableOpacity>
-      <View style={{ ...styles.verticalLine }}></View>
+      <View
+        style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
+      ></View>
     </View>
   );
 };
 
 const ProfileScreen = ({ navigation }) => {
+  const theme = useTheme();
   const { activities, getSavedActivites } = useContext(HistoryContext);
   const [allActivites, setAllActivites] = useState(activities);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!activities.length) {
+    if (!activities.length && getSavedActivites) {
       getSavedActivites().then(() => {
         setIsLoading(false);
       });
@@ -92,16 +111,23 @@ const ProfileScreen = ({ navigation }) => {
   }, [activities]);
 
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <LevelSelector header="difficulty level" />
-      <View style={styles.historyContainer}>
-        <Text style={styles.historyHeaderText}>History</Text>
+      <View style={styles.themeContainer}>
+        <ThemeSelector />
       </View>
-      <View style={styles.verticalLine}></View>
+      <View style={styles.historyContainer}>
+        <Text style={{ ...styles.historyHeaderText, color: theme.SECONDARY }}>
+          History
+        </Text>
+      </View>
+      <View
+        style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
+      ></View>
       <View style={styles.listContainer}>
         {isLoading && (
           <View style={{ paddingTop: 20 }}>
-            <ActivityIndicator size="large" color={COLORS.SECONDARY} />
+            <ActivityIndicator size="large" color={theme.SECONDARY} />
           </View>
         )}
         {!isLoading && (
@@ -121,19 +147,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: COLORS.BACKGROUND,
   },
   verticalLine: {
     width: '80%',
-    borderTopColor: COLORS.BORDER,
     borderTopWidth: 1,
     opacity: 0.6,
+  },
+  themeContainer: {
+    position: 'absolute',
+    right: 0,
+    width: '100%',
+    alignItems: 'flex-end',
+    paddingRight: '1%',
+    marginTop: 10,
+    paddingRight: 10,
   },
   historyContainer: { paddingVertical: 10, alignItems: 'center' },
   historyHeaderText: {
     fontSize: 20,
     fontFamily: 'tit-regular',
-    color: COLORS.SECONDARY,
     textTransform: 'lowercase',
   },
   listContainer: {
@@ -161,12 +193,10 @@ const styles = StyleSheet.create({
   activityHeading: {
     fontFamily: 'tit-regular',
     fontSize: 18,
-    color: COLORS.SECONDARY,
   },
   activityText: {
     fontFamily: 'tit-light',
     fontSize: 14,
-    color: COLORS.TEXT,
   },
   bottomItemContainer: {
     flexDirection: 'row',

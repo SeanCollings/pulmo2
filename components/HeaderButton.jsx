@@ -3,9 +3,11 @@ import { StyleSheet, View, Platform } from 'react-native';
 import { HeaderButton } from 'react-navigation-header-buttons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
 const CustomHeaderButton = (props) => {
+  const theme = useTheme();
+
   return (
     <View>
       <HeaderButton
@@ -13,7 +15,7 @@ const CustomHeaderButton = (props) => {
         IconComponent={MaterialCommunityIcons}
         iconSize={23}
         // color={Platform.OS === 'android' ? 'white' : '#ccc'}
-        color={COLORS.SECONDARY_TEXT}
+        color={theme.SECONDARY_TEXT}
       />
     </View>
   );

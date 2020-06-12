@@ -1,9 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-
-import { COLORS } from '../constants/constants';
 
 const getButtonSize = (size, borderWidth) => ({
   width: size,

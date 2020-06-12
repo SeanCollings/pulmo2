@@ -9,8 +9,8 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import CustomModal from '.';
-import { COLORS } from '../../constants/constants';
 import CustomButton from '../CustomButton';
+import { useTheme } from '../../hooks/useTheme';
 
 const TITLE = 'Title';
 const CYCLES = 'Breath cycles';
@@ -34,6 +34,7 @@ const ModalExcercise = ({
   confirmSelectCustomModal = () => {},
   deleteCustomModal = () => {},
 }) => {
+  const theme = useTheme();
   const [editExcercise, setEditExcercise] = useState(isEditable && !excercise);
   const [deleteExcercise, setDeleteExcercise] = useState(false);
   const [error, setError] = useState({});
@@ -138,7 +139,7 @@ const ModalExcercise = ({
           <TouchableOpacity onPress={deleteButtonHandler}>
             <MaterialCommunityIcons
               name={'delete-outline'}
-              color={COLORS.TEXT}
+              color={theme.TEXT}
               size={24}
             />
           </TouchableOpacity>
@@ -154,7 +155,7 @@ const ModalExcercise = ({
           <TouchableOpacity onPress={editButtonHandler}>
             <MaterialCommunityIcons
               name={'circle-edit-outline'}
-              color={COLORS.TEXT}
+              color={theme.TEXT}
               size={24}
             />
           </TouchableOpacity>
@@ -182,12 +183,16 @@ const ModalExcercise = ({
         placeholder={'Title'}
         style={{
           ...styles.modalHeadingText,
-          ...(editExcercise ? styles.textInput : []),
-          color: !editExcercise ? headingColour : COLORS.TEXT,
-          ...(error[TITLE] ? styles.errorBorder : []),
+          borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+          color: theme.TEXT,
+          ...(editExcercise
+            ? { ...styles.textInput, borderBottomColor: theme.BORDER }
+            : []),
+          color: !editExcercise ? headingColour : theme.TEXT,
+          ...(error[TITLE] ? { borderBottomColor: theme.ERROR } : []),
         }}
         maxLength={TITLE_LENGTH}
-        selectionColor={COLORS.SECONDARY}
+        selectionColor={theme.SECONDARY}
         numberOfLines={2}
         multiline
       />
@@ -219,6 +224,8 @@ const ModalExcercise = ({
           value={textValue}
           style={{
             ...styles.contentText,
+            color: theme.TEXT,
+            borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
             opacity: editExcercise ? 0.2 : 1,
           }}
         />
@@ -230,13 +237,17 @@ const ModalExcercise = ({
         defaultValue={textValue}
         style={{
           ...styles.contentText,
-          ...(editExcercise ? styles.textInput : []),
-          ...(error[detail] ? styles.errorBorder : []),
+          color: theme.TEXT,
+          borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+          ...(editExcercise
+            ? { ...styles.textInput, borderBottomColor: theme.BORDER }
+            : []),
+          ...(error[detail] ? { borderBottomColor: theme.ERROR } : []),
         }}
         onChangeText={(text) => textChangeHandler(text, detail)}
         keyboardType="number-pad"
         maxLength={detail === REST ? LENGTH_3 : LENGTH_2}
-        selectionColor={COLORS.SECONDARY}
+        selectionColor={theme.SECONDARY}
       />
     );
   };
@@ -273,6 +284,10 @@ const ModalExcercise = ({
                     <Text
                       style={{
                         ...styles.contentText,
+                        color: theme.TEXT,
+                        borderBottomColor: theme.DARK
+                          ? theme.PRIMARY
+                          : theme.BACKGROUND,
                         opacity:
                           editExcercise && detail === SELECTED_LEVEL ? 0.2 : 1,
                       }}
@@ -283,6 +298,10 @@ const ModalExcercise = ({
                       <Text
                         style={{
                           ...styles.contentText,
+                          color: theme.TEXT,
+                          borderBottomColor: theme.DARK
+                            ? theme.PRIMARY
+                            : theme.BACKGROUND,
                           ...styles.textSecondary,
                         }}
                       >
@@ -299,14 +318,25 @@ const ModalExcercise = ({
             })}
             {Object.keys(error).length > 0 && (
               <View style={styles.errorContainer}>
-                <Text style={styles.errorText}>Invalid input</Text>
+                <Text style={{ ...styles.errorText, color: theme.ERROR }}>
+                  Invalid input
+                </Text>
               </View>
             )}
           </View>
         )}
         {deleteExcercise && (
           <View style={styles.warningContainer}>
-            <Text style={{ ...styles.contentText, textAlign: 'center' }}>
+            <Text
+              style={{
+                ...styles.contentText,
+                color: theme.TEXT,
+                borderBottomColor: theme.DARK
+                  ? theme.PRIMARY
+                  : theme.BACKGROUND,
+                textAlign: 'center',
+              }}
+            >
               Are you sure you want to delete this custom excercise?
             </Text>
             <View style={styles.buttonContainer}>
@@ -348,10 +378,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     fontFamily: 'tit-regular',
-    color: COLORS.TEXT,
     width: '90%',
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.BACKGROUND,
   },
   valueContainer: { width: '20%', paddingRight: 20 },
   contentText: {
@@ -359,7 +387,6 @@ const styles = StyleSheet.create({
     fontFamily: 'tit-light',
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: COLORS.BACKGROUND,
   },
   deleteButton: {
     opacity: 0.4,
@@ -368,11 +395,7 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
   textInput: {
-    borderBottomColor: COLORS.BORDER,
     opacity: 0.7,
-  },
-  errorBorder: {
-    borderBottomColor: 'red',
   },
   errorContainer: {
     paddingTop: 10,
@@ -382,7 +405,6 @@ const styles = StyleSheet.create({
   errorText: {
     fontFamily: 'tit-regular',
     fontSize: 16,
-    color: 'red',
     opacity: 0.8,
   },
   textSecondary: {

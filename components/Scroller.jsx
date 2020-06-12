@@ -3,7 +3,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 
-import { COLORS } from '../constants/constants';
+import { useTheme } from '../hooks/useTheme';
 
 const Scroller = ({
   children,
@@ -12,6 +12,7 @@ const Scroller = ({
   initialIndex,
   width = 80,
 }) => {
+  const theme = useTheme();
   const infListRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
@@ -54,7 +55,7 @@ const Scroller = ({
       <TouchableOpacity style={styles.leftButton} onPress={onLeftPressHandler}>
         <MaterialCommunityIcons
           name={'chevron-left-circle'}
-          color={COLORS.BORDER}
+          color={theme.BORDER}
           size={30}
         />
       </TouchableOpacity>
@@ -76,7 +77,7 @@ const Scroller = ({
       >
         <MaterialCommunityIcons
           name={'chevron-right-circle'}
-          color={COLORS.BORDER}
+          color={theme.BORDER}
           size={30}
         />
       </TouchableOpacity>

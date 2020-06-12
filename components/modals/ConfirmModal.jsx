@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 import CustomModal from '.';
+import { useTheme } from '../../hooks/useTheme';
 
 const ConfirmModal = ({
   cancelModel,
@@ -9,6 +10,8 @@ const ConfirmModal = ({
   header = 'Warning',
   message = '',
 }) => {
+  const theme = useTheme();
+
   return (
     <CustomModal
       cancelModel={cancelModel}
@@ -16,9 +19,12 @@ const ConfirmModal = ({
       header={header}
       cancelTitle="No"
       confirmTitle="Yes"
+      headingColour={theme.TEXT}
     >
       <View style={styles.contentContainer}>
-        <Text style={styles.contentText}>{message}</Text>
+        <Text style={{ ...styles.contentText, color: theme.TEXT }}>
+          {message}
+        </Text>
       </View>
     </CustomModal>
   );
