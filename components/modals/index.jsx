@@ -25,7 +25,10 @@ const CustomModal = ({
           <View
             style={{
               ...styles.modalView,
-              backgroundColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+              backgroundColor: theme.BACKGROUND,
+              ...(theme.DARK
+                ? { borderColor: theme.PRIMARY, borderWidth: 1 }
+                : {}),
             }}
           >
             <View

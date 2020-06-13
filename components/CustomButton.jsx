@@ -14,11 +14,18 @@ const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
         ...styles.buttonContainer,
         ...style,
         backgroundColor:
-          bgColour || (theme.DARK ? theme.DARKER_GRAY : theme.BACKGROUND),
+          bgColour || (theme.DARK ? theme.PRIMARY : theme.BACKGROUND),
         borderColor: theme.BORDER,
+        ...(!theme.DARK ? { borderColor: theme.BORDER, borderWidth: 1 } : {}),
       }}
     >
-      <Text style={{ ...styles.textStyle, color: colour || theme.TEXT }}>
+      <Text
+        style={{
+          ...styles.textStyle,
+          color: colour || theme.TEXT,
+          opacity: theme.DARK ? 0.87 : 1,
+        }}
+      >
         {title}
       </Text>
     </TouchableOpacity>
@@ -32,7 +39,6 @@ CustomButton.defaultProps = {
 const styles = StyleSheet.create({
   buttonContainer: {
     borderRadius: 8,
-    borderWidth: 1,
     paddingVertical: 6,
     paddingHorizontal: 14,
     elevation: 2,

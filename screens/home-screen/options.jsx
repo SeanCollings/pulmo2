@@ -7,13 +7,14 @@ import HeaderButton from '../../components/HeaderButton';
 
 const homeScreenOptions = (navData) => {
   return {
-    headerTitle: ({ tintColor }) => {
+    headerTitle: ({ tintColor, style }) => {
       return (
         <View style={{ flexDirection: 'row' }}>
           <Text
             style={{
               fontSize: 20,
               color: tintColor,
+              ...style,
             }}
           >
             PulmO
@@ -23,6 +24,7 @@ const homeScreenOptions = (navData) => {
               style={{
                 fontSize: 20 * 0.9,
                 color: tintColor,
+                ...style,
               }}
             >
               2
@@ -31,15 +33,18 @@ const homeScreenOptions = (navData) => {
         </View>
       );
     },
-    headerRight: () => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="help"
-          iconName={'help-circle-outline'}
-          onPress={() => navData.navigation.navigate('HomeHelp')}
-        />
-      </HeaderButtons>
-    ),
+    headerRight: ({ tintColor }) => {
+      return (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
+          <Item
+            title="help"
+            iconName={'help-circle-outline'}
+            onPress={() => navData.navigation.navigate('HomeHelp')}
+            color={tintColor}
+          />
+        </HeaderButtons>
+      );
+    },
     tabBarIcon: ({ color, size }) => (
       <MaterialCommunityIcons name="home" color={color} size={26} />
     ),

@@ -9,7 +9,11 @@ export const helpProfileScreenOptions = options;
 
 const HelpProfileScreen = (props) => {
   const theme = useTheme();
-  const styleTextContent = { ...styles.textContent, color: theme.TEXT };
+  const styleTextContent = {
+    ...styles.textContent,
+    color: theme.TEXT,
+    opacity: theme.DARK ? 0.87 : 1,
+  };
 
   return (
     <ScrollView
@@ -34,7 +38,15 @@ const HelpProfileScreen = (props) => {
         />{' '}
         to select the difficulty level that you will use on the Luft&trade;.
       </Text>
-      <Text style={{ ...styleTextContent, ...styles.textBold }}>
+      <Text
+        style={{
+          ...styleTextContent,
+          ...styles.textBold,
+          ...(theme.DARK
+            ? { color: theme.TERTIARY, fontFamily: 'tit-light' }
+            : {}),
+        }}
+      >
         At the start of each excercise you will confirm the difficulty level.
       </Text>
       <Text style={styleTextContent}>

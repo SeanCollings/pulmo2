@@ -128,15 +128,22 @@ const IndividualSlide = ({
             <View
               style={{
                 ...styles.headingContainer,
-                backgroundColor: colour,
+                backgroundColor: theme.DARK ? theme.BACKGROUND : colour,
+                borderColor: colour,
+                borderWidth: theme.DARK ? 1 : 0,
               }}
             >
               <MaterialCommunityIcons
                 name={slide.icon}
-                color={theme.BACKGROUND}
+                color={theme.DARK ? colour : theme.BACKGROUND}
                 size={30}
               />
-              <Text style={{ ...styles.slideHeading, color: theme.BACKGROUND }}>
+              <Text
+                style={{
+                  ...styles.slideHeading,
+                  color: theme.DARK ? colour : theme.BACKGROUND,
+                }}
+              >
                 {slide.title}
               </Text>
             </View>
@@ -153,7 +160,13 @@ const IndividualSlide = ({
           </View>
           <View style={styles.promptContainer}>
             {!custom && (
-              <Text style={{ ...styles.promptText, color: theme.TEXT }}>
+              <Text
+                style={{
+                  ...styles.promptText,
+                  color: theme.TEXT,
+                  opacity: theme.DARK ? 0.87 : 1,
+                }}
+              >
                 Select an excercise
               </Text>
             )}

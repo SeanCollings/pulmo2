@@ -13,20 +13,31 @@ import { useTheme } from '../../hooks/useTheme';
 
 export const activityScreenOptions = options;
 
-const DetailContainer = ({ type, detail, style, theme }) => {
+const DetailContainer = ({ type, detail, colour, theme }) => {
   return (
     <View
       style={{
         ...styles.detailContainer,
-        backgroundColor: theme.QUARTERNARY,
-        ...style,
+        backgroundColor: theme.DARK ? theme.BACKGROUND : colour,
+        borderColor: colour,
+        borderWidth: theme.DARK ? 2 : 0,
       }}
     >
-      <Text style={{ ...styles.detailText, color: theme.BACKGROUND }}>
+      <Text
+        style={{
+          ...styles.detailText,
+          color: theme.DARK ? colour : theme.BACKGROUND,
+        }}
+      >
         {detail}
       </Text>
       <View style={{ justifyContent: 'center', height: 40 }}>
-        <Text style={{ ...styles.detailTypeText, color: theme.BACKGROUND }}>
+        <Text
+          style={{
+            ...styles.detailTypeText,
+            color: theme.DARK ? colour : theme.BACKGROUND,
+          }}
+        >
           {type}
         </Text>
       </View>
@@ -70,15 +81,19 @@ const ActivityScreen = ({ route, navigation }) => {
     deleteActivity(date);
   };
 
+  const opacity = theme.DARK ? 0.87 : 1;
+
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <ScrollView>
         <View style={{ alignItems: 'center' }}>
           <View style={styles.topContainer}>
-            <Text style={{ ...styles.headingStyle, color: theme.TEXT }}>
+            <Text
+              style={{ ...styles.headingStyle, color: theme.TEXT, opacity }}
+            >
               {type}
             </Text>
-            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
               {convertDate(date)}
             </Text>
           </View>
@@ -86,10 +101,10 @@ const ActivityScreen = ({ route, navigation }) => {
             style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
           ></View>
           <View style={styles.levelContainer}>
-            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
               total time: {getRemainingTime(totalTime)}
             </Text>
-            <Text style={{ ...styles.textStyle, color: theme.TEXT }}>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
               level: {level}
             </Text>
           </View>
@@ -98,17 +113,19 @@ const ActivityScreen = ({ route, navigation }) => {
               type={`inhale & exhale`}
               detail={excercise.cycles}
               theme={theme}
+              colour={theme.QUARTERNARY}
             />
             <DetailContainer
               type="rest"
               detail={getRemainingTime(excercise.rest)}
-              style={{ backgroundColor: theme.SECONDARY }}
+              colour={theme.SECONDARY}
               theme={theme}
             />
             <DetailContainer
               type="rounds"
               detail={excercise.rounds}
               theme={theme}
+              colour={theme.QUARTERNARY}
             />
           </View>
           <View style={styles.resultsContainer}>
@@ -124,7 +141,7 @@ const ActivityScreen = ({ route, navigation }) => {
             <Table
               headerContent={['Workout', 'Rest']}
               rowContents={results}
-              headerColour={theme.DARK ? theme.SECONDARY : theme.TERTIARY}
+              headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
             />
           </View>
         </View>

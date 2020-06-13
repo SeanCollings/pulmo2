@@ -57,6 +57,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
                 color: theme.TEXT,
                 fontFamily:
                   i === contents.length - 1 ? 'tit-regular' : 'tit-light',
+                opacity: theme.DARK ? 0.87 : 1,
               }}
             >
               {content}

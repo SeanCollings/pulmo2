@@ -300,7 +300,11 @@ const HomeScreen = ({ navigation }) => {
           )}
         </View>
         <View style={styles.tableContainer}>
-          <Table headerContent={['Workout', 'Rest']} rowContents={userTimes} />
+          <Table
+            headerContent={['Workout', 'Rest']}
+            rowContents={userTimes}
+            headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
+          />
         </View>
         {showModal && (
           <ModalBegin

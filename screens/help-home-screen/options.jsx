@@ -3,8 +3,10 @@ import { Text } from 'react-native';
 
 const options = (navData) => {
   return {
-    headerTitle: ({ tintColor }) => {
-      return <Text style={{ fontSize: 20, color: tintColor }}>Help</Text>;
+    headerTitle: ({ tintColor, style }) => {
+      return (
+        <Text style={{ fontSize: 20, color: tintColor, ...style }}>Help</Text>
+      );
     },
   };
 };

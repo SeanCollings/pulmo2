@@ -27,7 +27,13 @@ const LevelSelector = ({ header }) => {
         key={Math.random()}
         style={{ ...styles.scrollerItem, width: SLIDE_WIDTH }}
       >
-        <Text style={{ ...styles.levelText, color: theme.SECONDARY }}>
+        <Text
+          style={{
+            ...styles.levelText,
+            color: theme.DARK ? theme.TEXT : theme.SECONDARY,
+            opacity: theme.DARK ? 0.87 : 1,
+          }}
+        >
           {value}
         </Text>
       </View>

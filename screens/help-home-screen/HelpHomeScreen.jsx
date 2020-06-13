@@ -8,7 +8,11 @@ export const helpHomeScreenOptions = options;
 
 const HelpHomeScreen = (props) => {
   const theme = useTheme();
-  const styleTextContent = { ...styles.textContent, color: theme.TEXT };
+  const styleTextContent = {
+    ...styles.textContent,
+    color: theme.TEXT,
+    opacity: theme.DARK ? 0.87 : 1,
+  };
 
   return (
     <ScrollView
@@ -26,7 +30,15 @@ const HelpHomeScreen = (props) => {
         The selected level on the Luft&trade; is displayed below the play button
         for reference and can be updated in your Profile Page.
       </Text>
-      <Text style={{ ...styleTextContent, ...styles.textBold }}>
+      <Text
+        style={{
+          ...styleTextContent,
+          ...styles.textBold,
+          ...(theme.DARK
+            ? { color: theme.TERTIARY, fontFamily: 'tit-light' }
+            : {}),
+        }}
+      >
         Please confirm selected level before each excercise.
       </Text>
       <Text style={styleTextContent}>

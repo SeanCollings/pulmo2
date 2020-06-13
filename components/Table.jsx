@@ -34,6 +34,7 @@ const Table = ({ headerContent, rowContents, headerColour }) => {
             rowStyles={{
               ...styles.tableHeaderText,
               color: headerColour || theme.TERTIARY,
+              opacity: theme.DARK ? 0.87 : 1,
             }}
           />
         ))}
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   tableHeaderText: {
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: 'tit-regular',
   },
   tableText: {

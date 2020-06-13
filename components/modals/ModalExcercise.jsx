@@ -181,9 +181,10 @@ const ModalExcercise = ({
         defaultValue={title.current}
         onChangeText={excerciseTitleHandler}
         placeholder={'Title'}
+        placeholderTextColor={theme.DARK ? theme.DARK_GRAY : theme.BORDER}
         style={{
           ...styles.modalHeadingText,
-          borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+          borderBottomColor: theme.BACKGROUND,
           color: theme.TEXT,
           ...(editExcercise
             ? { ...styles.textInput, borderBottomColor: theme.BORDER }
@@ -225,8 +226,8 @@ const ModalExcercise = ({
           style={{
             ...styles.contentText,
             color: theme.TEXT,
-            borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
-            opacity: editExcercise ? 0.2 : 1,
+            borderBottomColor: theme.BACKGROUND,
+            opacity: editExcercise ? 0.2 : 0.87,
           }}
         />
       );
@@ -238,7 +239,7 @@ const ModalExcercise = ({
         style={{
           ...styles.contentText,
           color: theme.TEXT,
-          borderBottomColor: theme.DARK ? theme.PRIMARY : theme.BACKGROUND,
+          borderBottomColor: theme.BACKGROUND,
           ...(editExcercise
             ? { ...styles.textInput, borderBottomColor: theme.BORDER }
             : []),
@@ -285,11 +286,11 @@ const ModalExcercise = ({
                       style={{
                         ...styles.contentText,
                         color: theme.TEXT,
-                        borderBottomColor: theme.DARK
-                          ? theme.PRIMARY
-                          : theme.BACKGROUND,
+                        borderBottomColor: theme.BACKGROUND,
                         opacity:
-                          editExcercise && detail === SELECTED_LEVEL ? 0.2 : 1,
+                          editExcercise && detail === SELECTED_LEVEL
+                            ? 0.2
+                            : 0.87,
                       }}
                     >
                       {detail}
@@ -299,9 +300,7 @@ const ModalExcercise = ({
                         style={{
                           ...styles.contentText,
                           color: theme.TEXT,
-                          borderBottomColor: theme.DARK
-                            ? theme.PRIMARY
-                            : theme.BACKGROUND,
+                          borderBottomColor: theme.BACKGROUND,
                           ...styles.textSecondary,
                         }}
                       >
@@ -331,9 +330,7 @@ const ModalExcercise = ({
               style={{
                 ...styles.contentText,
                 color: theme.TEXT,
-                borderBottomColor: theme.DARK
-                  ? theme.PRIMARY
-                  : theme.BACKGROUND,
+                borderBottomColor: theme.BACKGROUND,
                 textAlign: 'center',
               }}
             >

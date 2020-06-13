@@ -48,14 +48,16 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
     return () => interval && clearInterval(interval);
   }, [isActive, timeRemaining, timerFinished, resetHandler, intervalDiff]);
 
+  const opacity = theme.DARK ? 0.87 : 1;
+
   return (
     <View style={styles.container}>
       {replacementText ? (
-        <Text style={{ ...styles.replacementText, color: theme.TEXT }}>
+        <Text style={{ ...styles.replacementText, color: theme.TEXT, opacity }}>
           {replacementText}
         </Text>
       ) : (
-        <Text style={{ ...styles.timerText, color: theme.TEXT }}>
+        <Text style={{ ...styles.timerText, color: theme.TEXT, opacity }}>
           {minutesSeconds}
         </Text>
       )}

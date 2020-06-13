@@ -7,15 +7,20 @@ import HeaderButton from '../../components/HeaderButton';
 
 const options = (navData) => {
   return {
-    headerTitle: ({ tintColor }) => {
-      return <Text style={{ fontSize: 20, color: tintColor }}>Excercises</Text>;
+    headerTitle: ({ tintColor, style }) => {
+      return (
+        <Text style={{ fontSize: 20, color: tintColor, ...style }}>
+          Excercises
+        </Text>
+      );
     },
-    headerRight: () => (
+    headerRight: ({ tintColor }) => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="help"
           iconName={'help-circle-outline'}
           onPress={() => navData.navigation.navigate('ExcerciseHelp')}
+          color={tintColor}
         />
       </HeaderButtons>
     ),

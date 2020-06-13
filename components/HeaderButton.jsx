@@ -16,6 +16,7 @@ const CustomHeaderButton = (props) => {
         iconSize={23}
         // color={Platform.OS === 'android' ? 'white' : '#ccc'}
         color={theme.SECONDARY_TEXT}
+        style={{ opacity: theme.DARK ? 0.87 : 1 }}
       />
     </View>
   );

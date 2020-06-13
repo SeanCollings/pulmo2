@@ -85,13 +85,13 @@ export const ProfileStack = () => (
 const Tab = createBottomTabNavigator();
 
 export const MainTabs = ({ defaultTabBarOptions }) => (
-  <Tab.Navigator tabBarOptions={defaultTabBarOptions}>
-    <Tab.Screen name="Home" component={HomeStack} options={homeScreenOptions} />
+  <Tab.Navigator tabBarOptions={defaultTabBarOptions} initialRouteName="Home">
     <Tab.Screen
       name="Excercises"
       component={ExcercisesStack}
       options={excercisesScreenOptions}
     />
+    <Tab.Screen name="Home" component={HomeStack} options={homeScreenOptions} />
     <Tab.Screen
       name="Profile"
       component={ProfileStack}
