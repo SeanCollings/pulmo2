@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/lungs_splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#002f56"
     },
     "packagerOpts": {
       "sourceExts": ["js", "json", "ts", "tsx", "jsx"]
@@ -29,7 +29,7 @@
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/lungs_splash.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#002f56"
       },
       "permissions": []
     }

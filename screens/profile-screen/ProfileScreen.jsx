@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import {
   StyleSheet,
   View,
@@ -21,6 +21,10 @@ import { STRENGTH_KEY, ENDURANCE_KEY } from '../../data';
 import LevelSelector from '../../components/LevelSelector';
 import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
+import Tabs from '../../components/Tabs';
+
+const HISTORY = 'History';
+const FAVOURITES = 'Favourites';
 
 export const profileScreenOptions = options;
 
@@ -88,9 +92,12 @@ const RenderItemHistory = ({ item, navigation }) => {
 
 const ProfileScreen = ({ navigation }) => {
   const theme = useTheme();
+  const firstLoad = useRef(false);
   const { activities, getSavedActivites } = useContext(HistoryContext);
   const [allActivites, setAllActivites] = useState(activities);
+  const [favouritedActivities, setFavouritedActivities] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedTab, setSelectedTab] = useState(HISTORY);
 
   useEffect(() => {
     if (!activities.length && getSavedActivites) {
@@ -106,9 +113,32 @@ const ProfileScreen = ({ navigation }) => {
     const sortedActivites = activities.sort(
       (a, b) => new Date(b.date) - new Date(a.date)
     );
+    const favExcercises = sortedActivites.filter(
+      (activity) => activity.favourite
+    );
 
+    setFavouritedActivities(favExcercises);
     setAllActivites(sortedActivites);
+    setSelectedTab(HISTORY);
   }, [activities]);
+
+  useEffect(() => {
+    if (!firstLoad.current) {
+      firstLoad.current = true;
+    } else {
+      if (selectedTab === FAVOURITES) {
+        setAllActivites(favouritedActivities);
+      } else {
+        setAllActivites(activities);
+      }
+      setIsLoading(false);
+    }
+  }, [firstLoad, selectedTab]);
+
+  const tabSelectHandler = (selected) => {
+    setIsLoading(true);
+    setSelectedTab(selected);
+  };
 
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
@@ -117,13 +147,12 @@ const ProfileScreen = ({ navigation }) => {
         <ThemeSelector />
       </View>
       <View style={styles.historyContainer}>
-        <Text style={{ ...styles.historyHeaderText, color: theme.SECONDARY }}>
-          History
-        </Text>
+        <Tabs
+          options={[HISTORY, FAVOURITES]}
+          onPress={tabSelectHandler}
+          selectedTab={selectedTab}
+        />
       </View>
-      <View
-        style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
-      ></View>
       <View style={styles.listContainer}>
         {isLoading && (
           <View style={{ paddingTop: 20 }}>
@@ -162,7 +191,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingRight: 10,
   },
-  historyContainer: { paddingVertical: 10, alignItems: 'center' },
+  historyContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    width: '80%',
+  },
   historyHeaderText: {
     fontSize: 20,
     fontFamily: 'tit-regular',

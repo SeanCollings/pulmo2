@@ -56,6 +56,13 @@ export const convertToSeconds = (time) => {
 
 const appendZero = (input) => (input.length === 1 ? `0${input}` : input);
 
+const getAmPmTime = (hours, mins) => {
+  const ampm = hours < 12 || hours === 24 ? 'am' : 'pm';
+  const hour = (hours % 12 || 12).toString();
+  const ampPmTime = `${appendZero(hour)}:${mins} ${ampm}`;
+  return ampPmTime;
+};
+
 /**
  * Converts to yyyy/mm/dd hh:mm format
  * @param {date} date eg 2020-12-06T14:15:00.015Z

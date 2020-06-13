@@ -26,7 +26,7 @@ const ThemeSelector = (props) => {
         <MaterialCommunityIcons
           name={'theme-light-dark'}
           color={theme.BORDER}
-          size={21}
+          size={22}
         />
       </View>
       <CustomSwitch

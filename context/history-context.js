@@ -5,6 +5,7 @@ import {
   storeAsyncData,
   getMultiAsyncData,
   removeAsyncData,
+  mergeAsyncData,
 } from '../helpers/storage';
 
 export const ACTIVITY_TAG = 'activity';
@@ -14,6 +15,7 @@ export const HistoryContext = createContext({
   addActivity: () => {},
   deleteActivity: () => {},
   getSavedActivites: () => {},
+  favouriteActivity: () => {},
 });
 
 export default ({ idArray, children }) => {
@@ -35,6 +37,28 @@ export default ({ idArray, children }) => {
       }
 
       if (success) storeAsyncData(date, newActivity);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const favouriteActivity = async (date) => {
+    try {
+      const updatedActivities = [...activities];
+      const foundIndex = updatedActivities.findIndex(
+        (activity) => activity.date === date
+      );
+
+      if (foundIndex >= 0) {
+        const foundActivity = updatedActivities[foundIndex];
+        updatedActivities[foundIndex] = {
+          ...updatedActivities[foundIndex],
+          favourite: !foundActivity.favourite,
+        };
+
+        setActivities(updatedActivities);
+        await mergeAsyncData(date, { favourite: !foundActivity.favourite });
+      }
     } catch (err) {
       console.log(err);
     }
@@ -93,6 +117,7 @@ export default ({ idArray, children }) => {
         addActivity,
         deleteActivity,
         setActivityIdArray,
+        favouriteActivity,
       }}
     >
       {children}

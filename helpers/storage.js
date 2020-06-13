@@ -42,6 +42,16 @@ export const storeAsyncData = async (id, value) => {
   }
 };
 
+export const mergeAsyncData = async (id, value) => {
+  try {
+    await AsyncStorage.mergeItem(`${APP_ID}${id}`, JSON.stringify(value));
+    return true;
+  } catch (err) {
+    console.log(err);
+    return false;
+  }
+};
+
 export const removeAsyncData = async (id) => {
   try {
     await AsyncStorage.removeItem(`${APP_ID}${id}`);

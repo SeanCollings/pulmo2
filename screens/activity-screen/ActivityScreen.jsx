@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
-// import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import { HistoryContext } from '../../context/history-context';
 import options from './options';
 import { getTotalResultTime, getRemainingTime, convertDate } from '../../utils';
 import Table from '../../components/Table';
-// import HeaderButton from '../../components/HeaderButton';
+import HeaderButton from '../../components/HeaderButton';
 import CustomButton from '../../components/CustomButton';
 import ConfirmModal from '../../components/modals/ConfirmModal';
 import { useTheme } from '../../hooks/useTheme';
@@ -46,30 +46,40 @@ const DetailContainer = ({ type, detail, colour, theme }) => {
 };
 
 const ActivityScreen = ({ route, navigation }) => {
-  const theme = useTheme();
-  const { deleteActivity } = useContext(HistoryContext);
-  const [showModal, setShowModal] = useState(false);
+  const {
+    date,
+    excercise,
+    level,
+    results,
+    type,
+    favourite,
+  } = route.params.item;
 
-  const { date, excercise, level, results, type } = route.params.item;
+  const theme = useTheme();
+  const { deleteActivity, favouriteActivity } = useContext(HistoryContext);
+  const [showModal, setShowModal] = useState(false);
+  const [isFavourite, setIsFavourite] = useState(favourite);
+
   const totalTime = getTotalResultTime(results);
 
-  // const openMenuHandler = () => {
-  //   console.log(excercise.title);
-  // };
+  const favouriteHandler = () => {
+    setIsFavourite((curr) => !curr);
+    favouriteActivity(date);
+  };
 
   useEffect(() => {
-    // navigation.setOptions({
-    //   headerRight: () => (
-    //     <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    //       <Item
-    //         title="help"
-    //         iconName={'dots-vertical'}
-    //         onPress={openMenuHandler}
-    //       />
-    //     </HeaderButtons>
-    //   ),
-    // });
-  }, []);
+    navigation.setOptions({
+      headerRight: () => (
+        <HeaderButtons HeaderButtonComponent={HeaderButton}>
+          <Item
+            title="help"
+            iconName={isFavourite ? 'heart' : 'heart-outline'}
+            onPress={favouriteHandler}
+          />
+        </HeaderButtons>
+      ),
+    });
+  }, [isFavourite]);
 
   const showModalHandler = () => {
     setShowModal(true);

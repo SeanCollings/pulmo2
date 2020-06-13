@@ -13,6 +13,7 @@ const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
       style={{
         ...styles.buttonContainer,
         ...style,
+        elevation: theme.DARK ? 0 : 2,
         backgroundColor:
           bgColour || (theme.DARK ? theme.PRIMARY : theme.BACKGROUND),
         borderColor: theme.BORDER,
@@ -41,7 +42,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 6,
     paddingHorizontal: 14,
-    elevation: 2,
     justifyContent: 'center',
   },
   textStyle: {
