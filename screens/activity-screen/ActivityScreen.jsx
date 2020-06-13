@@ -113,7 +113,7 @@ const ActivityScreen = ({ route, navigation }) => {
               type={`inhale & exhale`}
               detail={excercise.cycles}
               theme={theme}
-              colour={theme.QUARTERNARY}
+              colour={theme.QUATERNARY}
             />
             <DetailContainer
               type="rest"
@@ -125,7 +125,7 @@ const ActivityScreen = ({ route, navigation }) => {
               type="rounds"
               detail={excercise.rounds}
               theme={theme}
-              colour={theme.QUARTERNARY}
+              colour={theme.QUATERNARY}
             />
           </View>
           <View style={styles.resultsContainer}>

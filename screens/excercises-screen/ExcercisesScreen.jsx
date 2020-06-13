@@ -37,7 +37,7 @@ const getColour = (title, theme) => {
     case ENDURANCE_KEY:
       return theme.SECONDARY;
     case CUSTOM_KEY:
-      return theme.QUARTERNARY;
+      return theme.QUATERNARY;
     default:
       return theme.TERTIARY;
   }
