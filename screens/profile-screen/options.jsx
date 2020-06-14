@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -15,20 +15,38 @@ const options = (navData) => {
         </Text>
       );
     },
-    headerRight: ({ tintColor }) => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title="help"
-          iconName={'help-circle-outline'}
-          onPress={() => navData.navigation.navigate('ProfileHelp')}
-          color={tintColor}
-        />
-      </HeaderButtons>
-    ),
+    headerRight: ({ tintColor }) => {
+      return (
+        <View style={styles.headerRightContainer}>
+          <HeaderButtons HeaderButtonComponent={HeaderButton}>
+            <Item
+              title="help"
+              iconName={'settings'}
+              onPress={() => navData.navigation.navigate('Settings')}
+              color={tintColor}
+            />
+          </HeaderButtons>
+          <HeaderButtons HeaderButtonComponent={HeaderButton}>
+            <Item
+              title="help"
+              iconName={'help-circle-outline'}
+              onPress={() => navData.navigation.navigate('ProfileHelp')}
+              color={tintColor}
+            />
+          </HeaderButtons>
+        </View>
+      );
+    },
     tabBarIcon: ({ color, size }) => (
       <MaterialCommunityIcons name="account" color={color} size={26} />
     ),
   };
 };
+
+const styles = StyleSheet.create({
+  headerRightContainer: {
+    flexDirection: 'row',
+  },
+});
 
 export default options;

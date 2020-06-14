@@ -25,6 +25,9 @@ import HelpExcerciseScreen, {
 import HelpProfileScreen, {
   helpProfileScreenOptions,
 } from '../screens/help-profile-screen/HelpProfileScreen';
+import SettingsScreen, {
+  settingsScreenOptions,
+} from '../screens/settings-screen/SettingsScreen';
 
 const StackHome = createStackNavigator();
 
@@ -78,6 +81,11 @@ export const ProfileStack = () => (
       name="ProfileHelp"
       component={HelpProfileScreen}
       options={helpProfileScreenOptions}
+    />
+    <StackProfile.Screen
+      name="Settings"
+      component={SettingsScreen}
+      options={settingsScreenOptions}
     />
   </StackProfile.Navigator>
 );
