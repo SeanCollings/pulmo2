@@ -1,7 +1,7 @@
 import React, { useState, createContext, useEffect, useContext } from 'react';
 
 import { CustomExcerciseContext } from './custom-excercise-context';
-import { getAsyncData } from '../helpers/storage';
+import { getAsyncData, storeAsyncData } from '../helpers/storage';
 import { DEFAULT_EXCERCISE, STRENGTH_KEY, CUSTOM_KEY } from '../data';
 
 export const SELECTED_EXCERCISE = 'selected_Excercise';
@@ -16,10 +16,19 @@ export default (props) => {
   const [selectedExcercise, setSelectedExcercise] = useState([]);
 
   const toggleExcercise = (id, type) => {
-    if (!id) {
-      setSelectedExcercise([DEFAULT_EXCERCISE.id, STRENGTH_KEY]);
-    } else {
-      setSelectedExcercise([id, type]);
+    try {
+      if (!id) {
+        setSelectedExcercise([DEFAULT_EXCERCISE.id, STRENGTH_KEY]);
+        storeAsyncData(SELECTED_EXCERCISE, [
+          DEFAULT_EXCERCISE.id,
+          STRENGTH_KEY,
+        ]);
+      } else {
+        setSelectedExcercise([id, type]);
+        storeAsyncData(SELECTED_EXCERCISE, [id, type]);
+      }
+    } catch (err) {
+      console.log(err);
     }
   };
 

@@ -2,12 +2,13 @@
   "expo": {
     "name": "PulmO2",
     "slug": "pulmo2",
+    "description": "An app to help you with your Luft breathing excercises.",
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/lungs_splash.png",
+    "icon": "./assets/pulmo2_icon.png",
     "splash": {
-      "image": "./assets/lungs_splash.png",
+      "image": "./assets/pulmo2_splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#002f56"
     },
@@ -22,16 +23,16 @@
       "bundleIdentifier": "com.luft.pulmo-2",
       "buildNumber": "1.0.0",
       "supportsTablet": true,
-      "icon": "./assets/lungs_splash.png"
+      "icon": "./assets/pulmo2_icon.png"
     },
     "android": {
       "package": "com.luft.pulmo_2",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/lungs_splash.png",
+        "foregroundImage": "./assets/pulmo2_icon.png",
         "backgroundColor": "#002f56"
       },
-      "permissions": []
+      "permissions": ["VIBRATE"]
     }
   }
 }

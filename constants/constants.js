@@ -74,7 +74,7 @@ export const INSTRUCTIONS = {
     state: BREATHING_STATE,
     main: '',
     sub: '',
-    prompt: ' Inhale & Exhale',
+    prompt: 'Inhale & Exhale',
   },
   [REST_STATE]: {
     state: REST_STATE,

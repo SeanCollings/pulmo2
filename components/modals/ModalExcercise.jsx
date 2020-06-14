@@ -227,7 +227,7 @@ const ModalExcercise = ({
             ...styles.contentText,
             color: theme.TEXT,
             borderBottomColor: theme.BACKGROUND,
-            opacity: editExcercise ? 0.2 : 0.87,
+            opacity: editExcercise ? 0.2 : 0.63,
           }}
         />
       );
@@ -290,6 +290,8 @@ const ModalExcercise = ({
                         opacity:
                           editExcercise && detail === SELECTED_LEVEL
                             ? 0.2
+                            : detail === SELECTED_LEVEL
+                            ? 0.63
                             : 0.87,
                       }}
                     >

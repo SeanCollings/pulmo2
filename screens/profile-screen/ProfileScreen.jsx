@@ -92,7 +92,6 @@ const RenderItemHistory = ({ item, navigation }) => {
 
 const ProfileScreen = ({ navigation }) => {
   const theme = useTheme();
-  const firstLoad = useRef(false);
   const { activities, getSavedActivites } = useContext(HistoryContext);
   const [allActivites, setAllActivites] = useState(activities);
   const [favouritedActivities, setFavouritedActivities] = useState([]);
@@ -122,21 +121,7 @@ const ProfileScreen = ({ navigation }) => {
     setSelectedTab(HISTORY);
   }, [activities]);
 
-  useEffect(() => {
-    if (!firstLoad.current) {
-      firstLoad.current = true;
-    } else {
-      if (selectedTab === FAVOURITES) {
-        setAllActivites(favouritedActivities);
-      } else {
-        setAllActivites(activities);
-      }
-      setIsLoading(false);
-    }
-  }, [firstLoad, selectedTab]);
-
   const tabSelectHandler = (selected) => {
-    setIsLoading(true);
     setSelectedTab(selected);
   };
 
@@ -160,12 +145,26 @@ const ProfileScreen = ({ navigation }) => {
           </View>
         )}
         {!isLoading && (
-          <ListScroller
-            data={allActivites}
-            uid={'date'}
-            RenderItem={RenderItemHistory}
-            navigation={navigation}
-          />
+          <View>
+            <View style={{ ...(selectedTab !== HISTORY ? { height: 0 } : {}) }}>
+              <ListScroller
+                data={allActivites}
+                uid={'date'}
+                RenderItem={RenderItemHistory}
+                navigation={navigation}
+              />
+            </View>
+            <View
+              style={{ ...(selectedTab !== FAVOURITES ? { height: 0 } : {}) }}
+            >
+              <ListScroller
+                data={favouritedActivities}
+                uid={'date'}
+                RenderItem={RenderItemHistory}
+                navigation={navigation}
+              />
+            </View>
+          </View>
         )}
       </View>
     </View>

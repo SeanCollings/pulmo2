@@ -47,9 +47,7 @@ const updateSelectedExercise = (toggleExcercise, content, type) => (
   selected
 ) => {
   const excerciseId = selected && content && content.id;
-
   toggleExcercise(excerciseId, type);
-  storeAsyncData(SELECTED_EXCERCISE, [excerciseId, type]);
 };
 
 const SlideContent = ({
@@ -201,7 +199,7 @@ const IndividualSlide = ({
     );
   });
 
-const ExcercisesScreen = (props) => {
+const ExcercisesScreen = ({ navigation }) => {
   const theme = useTheme();
   const data = EXCERCISE_DATA;
   const excerciseContext = useContext(ExcerciseContext);
@@ -222,12 +220,14 @@ const ExcercisesScreen = (props) => {
     const [excercise, _, type] = modalContent;
     excerciseContext.toggleExcercise(excercise.id, type);
     setModalContent(null);
+    navigation.navigate('Home');
   };
 
   const confirmCustomModalHandler = () => {
-    const content = createNewModalContent[0];
-    excerciseContext.toggleExcercise(content);
+    const [excercise, _, type] = createNewModalContent;
+    excerciseContext.toggleExcercise(excercise.id, type);
     setCreateNewModalContent(null);
+    navigation.navigate('Home');
   };
 
   const createNewHandler = (color) => {

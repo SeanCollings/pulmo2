@@ -25,13 +25,6 @@ export const DATA = {
       rest: 50,
       rounds: 5,
     },
-    {
-      id: 14,
-      title: 'Strength Test',
-      cycles: 10,
-      rest: 2,
-      rounds: 3,
-    },
   ],
   [ENDURANCE_KEY]: [
     {

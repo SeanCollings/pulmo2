@@ -6,6 +6,7 @@ import React, {
   useEffect,
 } from 'react';
 import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import { useIsFocused } from '@react-navigation/native';
 
 import { ExcerciseContext } from '../../context/excercise-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
@@ -43,6 +44,7 @@ import {
   DEFAULT_EXCERCISE,
 } from '../../data';
 import { useTheme } from '../../hooks/useTheme';
+import AnimatedUnderline from '../../components/AnimatedUnderline';
 
 export const homeScreenOptions = options;
 
@@ -70,6 +72,7 @@ const getExcerciseById = (id, type, customExcercises) => {
 
 const HomeScreen = ({ navigation }) => {
   const theme = useTheme();
+  const isFocused = useIsFocused();
   const { selectedExcercise } = useContext(ExcerciseContext);
   const { customExcercises } = useContext(CustomExcerciseContext);
   const { profileContext } = useContext(ProfileContext);
@@ -91,6 +94,12 @@ const HomeScreen = ({ navigation }) => {
         customExcercises
       )
     : {};
+
+  useEffect(() => {
+    if (!isFocused && instructions.state !== INTIAL_STATE) {
+      dispatch({ type: INPUT_STOP });
+    }
+  }, [isFocused, instructions.state]);
 
   useEffect(() => {
     if (selectedExcercise) {
@@ -200,12 +209,17 @@ const HomeScreen = ({ navigation }) => {
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
         <View style={styles.timerContainer}>
-          <Timer
-            isActive={isActive}
-            timerFinished={(timeNow) => timerFinished(timeNow)}
-            replacementText={!isActive && instructions.prompt}
-            countDownTime={countDownTime}
-          />
+          {instructions.state !== BREATHING_STATE && (
+            <Timer
+              isActive={isActive}
+              timerFinished={(timeNow) => timerFinished(timeNow)}
+              replacementText={!isActive && instructions.prompt}
+              countDownTime={countDownTime}
+            />
+          )}
+          {instructions.state === BREATHING_STATE && (
+            <AnimatedUnderline text={instructions.prompt} />
+          )}
         </View>
         <View style={styles.buttonContainer}>
           {instructions.state !== BREATHING_STATE && (
