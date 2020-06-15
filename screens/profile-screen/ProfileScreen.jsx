@@ -202,8 +202,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 1,
-    paddingTop: 5,
-    paddingBottom: 20,
+    paddingTop: 10,
   },
   activityItemContainer: {
     alignItems: 'center',

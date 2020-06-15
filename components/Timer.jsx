@@ -9,17 +9,10 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
   const [timeRemaining, setTimeRemaining] = useState(countDownTime);
   const minutesSeconds = getRemainingTime(timeRemaining);
   const intervalDiff = useRef(null);
-  const isComplete = useRef(false);
 
   const resetHandler = useCallback(() => {
     setTimeRemaining(countDownTime);
   }, [countDownTime]);
-
-  useEffect(() => {
-    return () => {
-      isComplete.current = false;
-    };
-  }, []);
 
   useEffect(() => {
     setTimeRemaining(countDownTime);
@@ -31,7 +24,7 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
   useEffect(() => {
     let interval;
 
-    if (isActive && !isComplete.current) {
+    if (isActive) {
       const dateNow = Date.now();
 
       const diff =
@@ -41,7 +34,6 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
 
       interval = setInterval(() => {
         if (timeRemaining === 0) {
-          isComplete.current = true;
           timerFinished(dateNow);
           resetHandler();
         } else {
@@ -50,19 +42,11 @@ const Timer = ({ isActive, timerFinished, replacementText, countDownTime }) => {
       }, newTimeout);
     } else if (!isActive && timeRemaining !== 0) {
       intervalDiff.current = null;
-      clearInterval(interval);
     }
     return () => {
       interval && clearInterval(interval);
     };
-  }, [
-    isActive,
-    timeRemaining,
-    timerFinished,
-    resetHandler,
-    intervalDiff,
-    isComplete,
-  ]);
+  }, [isActive, timeRemaining, timerFinished, resetHandler, intervalDiff]);
 
   const opacity = theme.DARK ? 0.87 : 1;
 

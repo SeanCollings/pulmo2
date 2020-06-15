@@ -98,6 +98,8 @@ const HomeScreen = ({ navigation }) => {
   useEffect(() => {
     if (!isFocused && instructions.state !== INTIAL_STATE) {
       dispatch({ type: INPUT_STOP });
+      setUserTimes([]);
+      setCurrentBreathTime('');
     }
   }, [isFocused, instructions.state]);
 
@@ -209,14 +211,18 @@ const HomeScreen = ({ navigation }) => {
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
       <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
         <View style={styles.timerContainer}>
-          {instructions.state !== BREATHING_STATE && (
+          <View
+            style={{
+              ...(instructions.state !== BREATHING_STATE ? {} : { height: 0 }),
+            }}
+          >
             <Timer
               isActive={isActive}
               timerFinished={(timeNow) => timerFinished(timeNow)}
               replacementText={!isActive && instructions.prompt}
               countDownTime={countDownTime}
             />
-          )}
+          </View>
           {instructions.state === BREATHING_STATE && (
             <AnimatedUnderline text={instructions.prompt} />
           )}
