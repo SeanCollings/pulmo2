@@ -68,9 +68,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   levelContainer: {
-    paddingTop: 10,
-    paddingBottom: 20,
-    width: '80%',
+    width: '100%',
   },
   levelTextHeading: {
     fontFamily: 'tit-regular',

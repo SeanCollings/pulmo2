@@ -1,31 +1,56 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import options from './options';
 import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
+import { BUILD_VERSION, ANDROID_VERSION } from '../../version';
 
 export const settingsScreenOptions = options;
 
 const SettingsScreen = (props) => {
   const theme = useTheme();
 
+  const opacity = theme.DARK ? 0.36 : 0.7;
+
   return (
-    <ScrollView
-      style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}
-      contentContainerStyle={{ alignItems: 'center' }}
-    >
-      <View>
+    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
+      <View style={{ flex: 1 }}>
         <ThemeSelector />
       </View>
-    </ScrollView>
+      <View style={styles.versionContainer}>
+        <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
+          version:
+        </Text>
+        <Text
+          style={{
+            ...styles.textStyle,
+            fontSize: 14,
+            color: theme.TEXT,
+            opacity,
+          }}
+        >{` ${BUILD_VERSION}.${ANDROID_VERSION}`}</Text>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
     paddingTop: 20,
+  },
+  versionContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingBottom: 5,
+    justifyContent: 'center',
+  },
+  textStyle: {
+    fontFamily: 'tit-light',
+    fontSize: 16,
+    alignSelf: 'flex-end',
   },
 });
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { StyleSheet, View, BackHandler } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { StyleSheet, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { THEME, SettingsContext } from '../context/settings-context';
 import CustomSwitch from './Switch';
@@ -23,17 +23,26 @@ const ThemeSelector = (props) => {
   return (
     <View style={styles.container}>
       <View style={styles.iconContainer}>
-        <MaterialCommunityIcons
-          name={'theme-light-dark'}
-          color={theme.BORDER}
-          size={22}
+        <Ionicons
+          name={'ios-sunny'}
+          color={theme.DARK ? theme.BORDER : theme.SECONDARY}
+          size={24}
         />
       </View>
-      <CustomSwitch
-        onChange={onChangeHandler}
-        state={selectedTheme === DARK_MODE}
-        trackColor={theme.SECONDARY}
-      />
+      <View style={styles.switchContainer}>
+        <CustomSwitch
+          onChange={onChangeHandler}
+          state={selectedTheme === DARK_MODE}
+          trackColor={theme.SECONDARY}
+        />
+      </View>
+      <View style={styles.iconContainer}>
+        <Ionicons
+          name={'ios-moon'}
+          color={theme.DARK ? theme.BORDER : theme.SECONDARY}
+          size={24}
+        />
+      </View>
     </View>
   );
 };
@@ -42,8 +51,16 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
   },
+  switchContainer: {
+    paddingHorizontal: 10,
+    paddingTop: 1,
+  },
   iconContainer: {
-    justifyContent: 'center',
+    paddingTop: 2,
+  },
+  textStyle: {
+    fontSize: 18,
+    fontFamily: 'tit-regular',
   },
 });
 

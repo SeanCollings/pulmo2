@@ -51,11 +51,11 @@ const HelpProfileScreen = (props) => {
       </Text>
       <Text style={styleTextContent}>
         Each excercise will be saved to your Profile Page and can be viewed in
-        detail by selecting it from the history list.
+        detail by selecting it from 'All activities'.
       </Text>
       <Text style={styleTextContent}>
-        If you would like to delete an excercise, click throught to details and
-        select delete.
+        If you would like to delete an excercise, click through to an activity's
+        details and select delete.
       </Text>
       <Text style={styleTextContent}></Text>
     </ScrollView>

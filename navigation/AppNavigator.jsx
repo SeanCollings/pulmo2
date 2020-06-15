@@ -28,6 +28,12 @@ import HelpProfileScreen, {
 import SettingsScreen, {
   settingsScreenOptions,
 } from '../screens/settings-screen/SettingsScreen';
+import AllActivitiesScreen, {
+  allActivitiesScreenOptions,
+} from '../screens/all-activities-screen/AllActivitiesScreen';
+import FavouritesScreen, {
+  favouritesScreenOptions,
+} from '../screens/favourites-screen/FavouritesScreen';
 
 const StackHome = createStackNavigator();
 
@@ -73,11 +79,6 @@ export const ProfileStack = () => (
       options={profileScreenOptions}
     />
     <StackProfile.Screen
-      name="Activity"
-      component={ActivityScreen}
-      options={activityScreenOptions}
-    />
-    <StackProfile.Screen
       name="ProfileHelp"
       component={HelpProfileScreen}
       options={helpProfileScreenOptions}
@@ -86,6 +87,21 @@ export const ProfileStack = () => (
       name="Settings"
       component={SettingsScreen}
       options={settingsScreenOptions}
+    />
+    <StackProfile.Screen
+      name="AllActivities"
+      component={AllActivitiesScreen}
+      options={allActivitiesScreenOptions}
+    />
+    <StackProfile.Screen
+      name="Favourites"
+      component={FavouritesScreen}
+      options={favouritesScreenOptions}
+    />
+    <StackProfile.Screen
+      name="Activity"
+      component={ActivityScreen}
+      options={activityScreenOptions}
     />
   </StackProfile.Navigator>
 );

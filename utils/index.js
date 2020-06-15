@@ -1,3 +1,5 @@
+import { STRENGTH_KEY, ENDURANCE_KEY } from '../data';
+
 export const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
 
 /**
@@ -107,3 +109,13 @@ export const getTotalResultTime = (results) =>
     }, 0);
     return acc + roundTime;
   }, 0);
+
+export const getIcon = (type) => {
+  if (type === STRENGTH_KEY) {
+    return 'dumbbell';
+  } else if (type === ENDURANCE_KEY) {
+    return 'clock';
+  } else {
+    return 'wrench';
+  }
+};
