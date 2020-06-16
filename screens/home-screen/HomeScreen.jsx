@@ -5,7 +5,7 @@ import React, {
   useContext,
   useEffect,
 } from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, AppState } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
 
 import { ExcerciseContext } from '../../context/excercise-context';
@@ -35,7 +35,7 @@ import {
 } from '../../hooks/inputReducer';
 import Table from '../../components/Table';
 import ModalBegin from '../../components/modals/ModalBegin';
-import { formatMilliToSeconds } from '../../utils';
+import { formatMilliToSeconds, getRemainingTime } from '../../utils';
 import {
   DATA,
   STRENGTH_KEY,
@@ -81,6 +81,7 @@ const HomeScreen = ({ navigation }) => {
   const [showModal, setShowModal] = useState(false);
   const [userTimes, setUserTimes] = useState([]);
   const [currentBreathTime, setCurrentBreathTime] = useState('');
+  const [appState, setAppState] = useState(AppState.currentState);
 
   const [
     { isActive, currentRound, instructions, countDownTime },
@@ -94,6 +95,21 @@ const HomeScreen = ({ navigation }) => {
         customExcercises
       )
     : {};
+
+  const handleAppStateChange = (nextAppState) => {
+    if (nextAppState === 'background') {
+      dispatch({ type: INPUT_TOGGLE, isActive: false });
+    }
+    setAppState(nextAppState);
+  };
+
+  useEffect(() => {
+    const unsubscribe = AppState.addEventListener(
+      'change',
+      handleAppStateChange
+    );
+    return () => unsubscribe;
+  }, []);
 
   useEffect(() => {
     if (!isFocused && instructions.state !== INTIAL_STATE) {
@@ -124,16 +140,15 @@ const HomeScreen = ({ navigation }) => {
   const timerFinished = useCallback(
     (timeNow) => {
       if (currentRound < +activeExcercise.rounds) {
-        // Finess the time
-        const timeDifferenceRest = formatMilliToSeconds(
-          timeNow -
-            timeStampRest -
-            (countDownTime > 53 ? 1000 * Math.max(1, countDownTime / 60) : 0)
-        );
+        const timeDifferenceRest = timeNow - timeStampRest;
+        const restPausedExtra =
+          Math.floor(timeDifferenceRest / 1000) - countDownTime;
+        const totalCountDown =
+          restPausedExtra > 15 ? restPausedExtra : countDownTime;
 
         setUserTimes((curr) => [
           ...curr,
-          [currentBreathTime, timeDifferenceRest],
+          [currentBreathTime, getRemainingTime(totalCountDown)],
         ]);
 
         timeStampBreath = Date.now();

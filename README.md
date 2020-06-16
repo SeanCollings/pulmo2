@@ -9,3 +9,11 @@ A React-Native mobile application using Expo.
 > cd pulmo2
 > npm install
 > npm start
+
+### To upload to Google Play store
+
+```
+
+> expo publish
+> expo build:android -t app-bundle
+> expo fetch:android:keystore
