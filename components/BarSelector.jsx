@@ -4,22 +4,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { useTheme } from '../hooks/useTheme';
 
-const BarSelector = ({ textContent, onPress = () => null }) => {
+const BarSelector = ({ textContent, iconName, onPress = () => null }) => {
   const theme = useTheme();
 
   const opacity = theme.DARK ? 0.87 : 1;
-  const elevation = theme.DARK
-    ? {}
-    : {
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 2.84,
-        elevation: 5,
-      };
+  const elevation = theme.DARK ? {} : styles.buttonElevation;
 
   return (
     <TouchableOpacity
@@ -31,17 +20,39 @@ const BarSelector = ({ textContent, onPress = () => null }) => {
         ...elevation,
       }}
     >
-      <View style={styles.justifyContainer}>
-        <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
-          {textContent}
-        </Text>
-      </View>
-      <View style={styles.justifyContainer}>
-        <MaterialCommunityIcons
-          name={'chevron-right'}
-          color={theme.BORDER}
-          size={27}
-        />
+      <View style={styles.innerContainer}>
+        <View style={{ ...styles.justifyContainer }}>
+          {iconName && (
+            <View style={styles.contentIcon}>
+              <MaterialCommunityIcons
+                name={iconName}
+                color={theme.BORDER}
+                size={21}
+              />
+            </View>
+          )}
+          <Text
+            style={{
+              ...styles.textStyle,
+              color: theme.TEXT,
+              opacity,
+            }}
+          >
+            {textContent}
+          </Text>
+        </View>
+        <View
+          style={{
+            ...styles.justifyContainer,
+            paddingTop: 1,
+          }}
+        >
+          <MaterialCommunityIcons
+            name={'chevron-right'}
+            color={theme.BORDER}
+            size={23}
+          />
+        </View>
       </View>
     </TouchableOpacity>
   );
@@ -50,18 +61,38 @@ const BarSelector = ({ textContent, onPress = () => null }) => {
 const styles = StyleSheet.create({
   container: {
     height: 50,
-    width: '100%',
     paddingHorizontal: '10%',
+    justifyContent: 'center',
+    marginVertical: 2,
+  },
+  innerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: 2,
+    width: '100%',
+  },
+  contentIcon: {
+    paddingRight: 20,
+    paddingTop: 1,
+    justifyContent: 'center',
   },
   justifyContainer: {
     justifyContent: 'center',
+    flexDirection: 'row',
   },
   textStyle: {
     fontFamily: 'tit-regular',
     fontSize: 18,
+    justifyContent: 'center',
+  },
+  buttonElevation: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 2.84,
+    elevation: 5,
   },
 });
 

@@ -33,9 +33,14 @@ const ActivityDetail = ({ item, navigation, theme }) => {
           <Text style={{ ...styles.activityHeading, color: theme.SECONDARY }}>
             {excercise.title}
           </Text>
-          <Text style={{ ...styles.activityText, color: theme.TEXT }}>
-            {getDay(date)} {convertDate(date)}
-          </Text>
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={{ ...styles.activityText, color: theme.QUATERNARY }}>
+              {getDay(date)}
+            </Text>
+            <Text style={{ ...styles.activityText, color: theme.TEXT }}>
+              {` ${convertDate(date)}`}
+            </Text>
+          </View>
           <View style={styles.bottomItemContainer}>
             <Text
               style={{

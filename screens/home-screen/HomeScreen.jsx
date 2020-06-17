@@ -220,7 +220,16 @@ const HomeScreen = ({ navigation }) => {
   if (isActive) buttonIconName = 'pause';
   else if (instructions.state === END_STATE) buttonIconName = 'restart';
 
-  const styleSubText = { ...styles.subText, color: theme.TEXT };
+  const breathingState = instructions.state === BREATHING_STATE;
+  const showRestartButton =
+    instructions.state !== INTIAL_STATE && instructions.state !== END_STATE;
+
+  const opacity = theme.DARK ? 0.87 : 1;
+  const styleSubText = {
+    ...styles.subText,
+    color: theme.TEXT,
+    opacity,
+  };
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
@@ -228,7 +237,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.timerContainer}>
           <View
             style={{
-              ...(instructions.state !== BREATHING_STATE ? {} : { height: 0 }),
+              ...(!breathingState ? {} : { height: 0, opacity: 0 }),
             }}
           >
             <Timer
@@ -238,12 +247,10 @@ const HomeScreen = ({ navigation }) => {
               countDownTime={countDownTime}
             />
           </View>
-          {instructions.state === BREATHING_STATE && (
-            <AnimatedUnderline text={instructions.prompt} />
-          )}
+          {breathingState && <AnimatedUnderline text={instructions.prompt} />}
         </View>
         <View style={styles.buttonContainer}>
-          {instructions.state !== BREATHING_STATE && (
+          {!breathingState && (
             <CircleIconButton
               onPress={toggleHandler}
               name={buttonIconName}
@@ -254,7 +261,7 @@ const HomeScreen = ({ navigation }) => {
               style={{ borderColor: theme.SECONDARY }}
             />
           )}
-          {instructions.state === BREATHING_STATE && (
+          {breathingState && (
             <CircleTextButton
               onPress={toggleRestHandler}
               borderWidth={4}
@@ -265,25 +272,24 @@ const HomeScreen = ({ navigation }) => {
               style={{ borderColor: theme.SECONDARY }}
             />
           )}
-          <Text style={{ ...styles.progressText, color: theme.TEXT }}>
+          <Text style={{ ...styles.progressText, color: theme.TEXT, opacity }}>
             {progressText}
           </Text>
-          {instructions.state !== INTIAL_STATE &&
-            instructions.state !== END_STATE && (
-              <CircleIconButton
-                onPress={stopTimerHandler}
-                name={'restart'}
-                iconSize={40}
-                buttonSize={56}
-                borderWidth={0}
-                style={{
-                  position: 'absolute',
-                  right: '15%',
-                  top: 0,
-                }}
-                iconStyle={{ color: theme.TERTIARY }}
-              />
-            )}
+          {showRestartButton && (
+            <CircleIconButton
+              onPress={stopTimerHandler}
+              name={'restart'}
+              iconSize={40}
+              buttonSize={56}
+              borderWidth={0}
+              style={{
+                position: 'absolute',
+                right: '15%',
+                top: 0,
+              }}
+              iconStyle={{ color: theme.TERTIARY }}
+            />
+          )}
         </View>
         <View style={styles.instructionContainer}>
           <Text style={{ ...styles.ExcerciseTitle, color: theme.TERTIARY }}>

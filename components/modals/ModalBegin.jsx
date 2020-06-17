@@ -34,7 +34,9 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
 
   const updateLevelHandler = () => {
     navigation.navigate('Profile');
-    cancelModel();
+    setTimeout(() => {
+      cancelModel();
+    }, 0);
   };
 
   return (
@@ -47,6 +49,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
       headingColour={theme.SECONDARY}
       TopLeft={BackButton}
       buttonStyle={{ height: 60 }}
+      animationType="fade"
     >
       <View style={styles.container}>
         {contents.map((content, i) => (

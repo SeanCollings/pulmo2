@@ -3,7 +3,7 @@ import { StyleSheet, View, Text, Animated } from 'react-native';
 
 import { useTheme } from '../hooks/useTheme';
 
-const AnimatedUnderline = ({ text, duration = 2000 }) => {
+const AnimatedUnderline = ({ text, duration = 2000, fadeOut = 1000 }) => {
   const theme = useTheme();
   const animatedGrow = new Animated.Value(0);
   const animationOpacity = new Animated.Value(theme.DARK ? 0.5 : 0.7);
@@ -19,7 +19,7 @@ const AnimatedUnderline = ({ text, duration = 2000 }) => {
   });
   const opacityAnimation = Animated.timing(animationOpacity, {
     toValue: 0,
-    duration: 1000,
+    duration: fadeOut,
   });
 
   useEffect(() => {

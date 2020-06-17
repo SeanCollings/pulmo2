@@ -14,17 +14,18 @@ const ProfileScreen = ({ navigation }) => {
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <View style={styles.levelSelectorContainer}>
-        <LevelSelector header="Difficulty level" />
+        <LevelSelector header="Selected level" />
       </View>
-
       <View style={{ width: '100%' }}>
         <BarSelector
           textContent="All activities"
           onPress={() => navigation.navigate('AllActivities')}
+          iconName="view-headline"
         />
         <BarSelector
           textContent="Favourites"
           onPress={() => navigation.navigate('Favourites')}
+          iconName="heart-outline"
         />
       </View>
     </View>

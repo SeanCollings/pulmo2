@@ -1,34 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useTheme } from '../hooks/useTheme';
 
 const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
   const theme = useTheme();
 
+  const elevation = theme.DARK ? {} : styles.buttonElevation;
+
   return (
-    <TouchableOpacity
-      activeOpacity={0.7}
-      onPress={onPress}
-      style={{
-        ...styles.buttonContainer,
-        ...style,
-        elevation: theme.DARK ? 0 : 2,
-        backgroundColor:
-          bgColour || (theme.DARK ? theme.PRIMARY : theme.BACKGROUND),
-        borderColor: theme.BORDER,
-        ...(!theme.DARK ? { borderColor: theme.BORDER, borderWidth: 1 } : {}),
-      }}
-    >
-      <Text
+    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
+      <View
         style={{
-          ...styles.textStyle,
-          color: colour || theme.TEXT,
-          opacity: theme.DARK ? 0.87 : 1,
+          ...styles.buttonContainer,
+          ...style,
+          ...elevation,
+          backgroundColor:
+            bgColour || (theme.DARK ? theme.PRIMARY : theme.BACKGROUND),
+          borderColor: theme.BORDER,
+          ...(!theme.DARK ? { borderColor: theme.BORDER, borderWidth: 1 } : {}),
         }}
       >
-        {title}
-      </Text>
+        <Text
+          style={{
+            ...styles.textStyle,
+            color: colour || theme.TEXT,
+            opacity: theme.DARK ? 0.87 : 1,
+          }}
+        >
+          {title}
+        </Text>
+      </View>
     </TouchableOpacity>
   );
 };
@@ -49,6 +50,16 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     textTransform: 'uppercase',
+  },
+  buttonElevation: {
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 2.84,
+    elevation: 5,
   },
 });
 

@@ -17,6 +17,7 @@ const CircleButton = ({
   style,
 }) => (
   <TouchableOpacity
+    activeOpacity={0.6}
     onPress={onPress}
     style={{
       ...styles.button,

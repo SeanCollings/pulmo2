@@ -15,12 +15,13 @@ const CustomModal = ({
   TopLeft = () => null,
   TopRight = () => null,
   buttonStyle,
+  animationType = 'none',
 }) => {
   const theme = useTheme();
 
   return (
     <View style={styles.centeredView}>
-      <Modal animationType="none" transparent>
+      <Modal animationType={animationType} transparent>
         <View style={styles.centeredView}>
           <View
             style={{

@@ -66,7 +66,7 @@ const getAmPmTime = (hours, mins) => {
 };
 
 /**
- * Converts to yyyy/mm/dd hh:mm format
+ * Converts to dd/mm/yyyy hh:mm format
  * @param {date} date eg 2020-12-06T14:15:00.015Z
  */
 export const convertDate = (date) => {
@@ -77,7 +77,7 @@ export const convertDate = (date) => {
   const hours = appendZero(newDate.getHours().toString());
   const mins = appendZero(newDate.getMinutes().toString());
 
-  return `${year}/${month}/${day} ${hours}:${mins}`;
+  return `${day}/${month}/${year} ${hours}:${mins}`;
 };
 
 /**
