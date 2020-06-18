@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View, Text, Animated } from 'react-native';
 
-import { useTheme } from '../hooks/useTheme';
+import { useTheme } from '../../hooks/useTheme';
 
 const AnimatedUnderline = ({ text, duration = 2000, fadeOut = 1000 }) => {
   const theme = useTheme();

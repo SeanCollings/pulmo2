@@ -34,9 +34,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
 
   const updateLevelHandler = () => {
     navigation.navigate('Profile');
-    setTimeout(() => {
-      cancelModel();
-    }, 0);
+    cancelModel();
   };
 
   return (

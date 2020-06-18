@@ -44,7 +44,7 @@ import {
   DEFAULT_EXCERCISE,
 } from '../../data';
 import { useTheme } from '../../hooks/useTheme';
-import AnimatedUnderline from '../../components/AnimatedUnderline';
+import AnimatedUnderline from '../../components/animated/AnimatedUnderline';
 
 export const homeScreenOptions = options;
 
