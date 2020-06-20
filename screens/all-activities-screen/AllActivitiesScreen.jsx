@@ -36,7 +36,7 @@ const AllActivitiesScreen = ({ navigation }) => {
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       {isLoading && (
-        <View style={{ paddingTop: 20 }}>
+        <View style={styles.spinner}>
           <ActivityIndicator size="large" color={theme.SECONDARY} />
         </View>
       )}
@@ -55,6 +55,13 @@ const AllActivitiesScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
+  spinner: {
+    flex: 1,
+    position: 'absolute',
+    alignSelf: 'center',
+    top: '50%',
+    zIndex: 1,
+  },
 });
 
 export default AllActivitiesScreen;

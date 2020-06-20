@@ -27,7 +27,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
       <MaterialCommunityIcons
         name="arrow-left"
         color={theme.BORDER}
-        size={26}
+        size={30}
       />
     </TouchableOpacity>
   );
@@ -73,6 +73,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
+    paddingTop: 10,
   },
   contentContainer: {
     paddingTop: 10,

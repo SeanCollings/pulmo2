@@ -32,7 +32,7 @@
         "foregroundImage": "./assets/pulmo2_icon.png",
         "backgroundColor": "#002f56"
       },
-      "permissions": ["VIBRATE"]
+      "permissions": ["VIBRATE", "NOTIFICATIONS", "USER_FACING_NOTIFICATIONS"]
     }
   }
 }

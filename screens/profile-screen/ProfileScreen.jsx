@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 
 import options from './options';
 import LevelSelector from '../../components/LevelSelector';
@@ -16,7 +16,12 @@ const ProfileScreen = ({ navigation }) => {
       <View style={styles.levelSelectorContainer}>
         <LevelSelector header="Selected level" />
       </View>
-      <View style={{ width: '100%' }}>
+      <ScrollView style={{ width: '100%' }}>
+        <BarSelector
+          textContent="Calendar"
+          onPress={() => navigation.navigate('Calendar')}
+          iconName="calendar-outline"
+        />
         <BarSelector
           textContent="All activities"
           onPress={() => navigation.navigate('AllActivities')}
@@ -27,7 +32,7 @@ const ProfileScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Favourites')}
           iconName="heart-outline"
         />
-      </View>
+      </ScrollView>
     </View>
   );
 };

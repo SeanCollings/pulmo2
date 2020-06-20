@@ -17,10 +17,16 @@ const TableRow = ({ theme, content, index, rowStyles }) => (
   </View>
 );
 
-const Table = ({ headerContent, rowContents, headerColour }) => {
+const Table = ({
+  headerContent,
+  alwaysShowHeader = false,
+  rowContents = [],
+  headerColour,
+}) => {
   const theme = useTheme();
 
-  if (!headerContent.length || !rowContents.length) return null;
+  if (!headerContent.length || (!alwaysShowHeader && !rowContents.length))
+    return null;
 
   return (
     <View style={styles.container}>

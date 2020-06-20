@@ -9,39 +9,23 @@ import {
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import {
-  ExcerciseContext,
-  SELECTED_EXCERCISE,
-} from '../../context/excercise-context';
+import { ExcerciseContext } from '../../context/excercise-context';
 import { ProfileContext, SELECTED_LEVEL } from '../../context/profile-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
 import options from './options';
 import { TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
 import Slides from '../../components/Slides';
 import { EXCERCISE_DATA } from '../../data/excercises';
-import { CUSTOM_KEY, STRENGTH_KEY, ENDURANCE_KEY } from '../../data';
+import { CUSTOM_KEY } from '../../data';
 import CustomSwitch from '../../components/Switch';
 import ModalExcercise from '../../components/modals/ModalExcercise';
 import CustomButton from '../../components/CustomButton';
-import { storeAsyncData } from '../../helpers/storage';
 import { useTheme } from '../../hooks/useTheme';
+import { getColour } from '../../utils';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export const excercisesScreenOptions = options;
-
-const getColour = (title, theme) => {
-  switch (title) {
-    case STRENGTH_KEY:
-      return theme.TERTIARY;
-    case ENDURANCE_KEY:
-      return theme.SECONDARY;
-    case CUSTOM_KEY:
-      return theme.QUATERNARY;
-    default:
-      return theme.TERTIARY;
-  }
-};
 
 const updateSelectedExercise = (toggleExcercise, content, type) => (
   selected
@@ -156,7 +140,12 @@ const IndividualSlide = ({
               )}
             </View>
           </View>
-          <View style={styles.promptContainer}>
+          <View
+            style={{
+              ...styles.promptContainer,
+              ...(custom ? { paddingBottom: 10 } : {}),
+            }}
+          >
             {!custom && (
               <Text
                 style={{
@@ -176,9 +165,7 @@ const IndividualSlide = ({
               />
             )}
           </View>
-          <ScrollView
-            contentContainerStyle={{ width: '100%', alignItems: 'center' }}
-          >
+          <ScrollView contentContainerStyle={styles.excerciseContainer}>
             <SlideContent
               setModalContent={
                 custom ? setCreateNewModalContent : setModalContent
@@ -354,6 +341,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingRight: 10,
   },
+  excerciseContainer: { width: '100%', alignItems: 'center' },
 });
 
 export default ExcercisesScreen;

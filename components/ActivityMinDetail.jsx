@@ -10,14 +10,19 @@ import {
 } from '../utils';
 
 const ActivityDetail = ({ item, navigation, theme }) => {
-  const { date, excercise, results, type, level } = item;
+  const { date, excercise, results, type, level, favourite } = item;
   const totalTime = getTotalResultTime(results);
   const icon = getIcon(type);
 
   const onSelect = useCallback(
-    () => navigation.navigate('Activity', { item }),
-    [item]
+    () =>
+      navigation.navigate('Activity', {
+        item: { date, favourite, title: excercise.title },
+      }),
+    [date]
   );
+
+  const opacity = theme.DARK ? 0.87 : 1;
 
   return (
     <View style={{ ...styles.container }}>
@@ -37,7 +42,9 @@ const ActivityDetail = ({ item, navigation, theme }) => {
             <Text style={{ ...styles.activityText, color: theme.QUATERNARY }}>
               {getDay(date)}
             </Text>
-            <Text style={{ ...styles.activityText, color: theme.TEXT }}>
+            <Text
+              style={{ ...styles.activityText, color: theme.TEXT, opacity }}
+            >
               {` ${convertDate(date)}`}
             </Text>
           </View>
@@ -46,7 +53,7 @@ const ActivityDetail = ({ item, navigation, theme }) => {
               style={{
                 ...styles.activityText,
                 color: theme.TEXT,
-                opacity: 0.7,
+                opacity: 0.6,
               }}
             >
               {getRemainingTime(totalTime)}
@@ -55,7 +62,7 @@ const ActivityDetail = ({ item, navigation, theme }) => {
               style={{
                 ...styles.activityText,
                 color: theme.TEXT,
-                opacity: 0.7,
+                opacity: 0.6,
               }}
             >
               level: {level}

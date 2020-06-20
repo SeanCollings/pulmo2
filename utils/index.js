@@ -1,4 +1,11 @@
-import { STRENGTH_KEY, ENDURANCE_KEY } from '../data';
+import {
+  STRENGTH_KEY,
+  ENDURANCE_KEY,
+  CUSTOM_KEY,
+  DEFAULT_EXCERCISE,
+  DATA,
+} from '../data';
+import { EXCERCISE_DATA } from '../data/excercises';
 
 export const compose = (...fns) => (x) => fns.reduceRight((v, f) => f(v), x);
 
@@ -101,6 +108,15 @@ export const getDay = (date) => {
   return dayMonth;
 };
 
+export const isLeapYear = (month, year) => {
+  if (month === 1) {
+    if ((year % 4 === 0 && year % 100 != 0) || year % 400 === 0) {
+      return 1;
+    }
+  }
+  return 0;
+};
+
 export const getTotalResultTime = (results) =>
   results.reduce((acc, result) => {
     const roundTime = result.reduce((accRound, round) => {
@@ -117,5 +133,42 @@ export const getIcon = (type) => {
     return 'clock';
   } else {
     return 'wrench';
+  }
+};
+
+export const getColour = (type, theme) => {
+  switch (type) {
+    case STRENGTH_KEY:
+      return theme.TERTIARY;
+    case ENDURANCE_KEY:
+      return theme.SECONDARY;
+    case CUSTOM_KEY:
+      return theme.QUATERNARY;
+    default:
+      return theme.TERTIARY;
+  }
+};
+
+export const getColourCache = (theme) =>
+  EXCERCISE_DATA.reduce((acc, arr) => {
+    return { ...acc, [arr.title]: getColour(arr.title, theme) };
+  }, {});
+
+export const getExcerciseById = (id, type, customExcercises) => {
+  if (!id) {
+    return DEFAULT_EXCERCISE;
+  }
+
+  switch (type) {
+    case STRENGTH_KEY:
+      return DATA[STRENGTH_KEY].find((x) => x.id === id);
+    case ENDURANCE_KEY:
+      return DATA[ENDURANCE_KEY].find((x) => x.id === id);
+    case CUSTOM_KEY:
+      const custom = customExcercises.find((x) => x.id === id);
+      if (!custom) return DEFAULT_EXCERCISE;
+      return custom;
+    default:
+      DEFAULT_EXCERCISE;
   }
 };

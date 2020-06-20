@@ -244,6 +244,7 @@ const ModalExcercise = ({
             ? { ...styles.textInput, borderBottomColor: theme.BORDER }
             : []),
           ...(error[detail] ? { borderBottomColor: theme.ERROR } : []),
+          width: '110%',
         }}
         onChangeText={(text) => textChangeHandler(text, detail)}
         keyboardType="number-pad"

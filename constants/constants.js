@@ -25,26 +25,6 @@ export const COLORS_DARK = {
   DARK_GRAY: '#707070',
   DARKER_GRAY: '#2d2d2d',
 };
-// export const COLORS_DARK = {
-//   PRIMARY: '#222222',
-//   SECONDARY: '#2f9fd0',
-//   TERTIARY: '#28D6C0',
-//   QUARTERNARY: '#F12B7E',
-//   QUINERY: '#990000',
-//   TEXT: 'white',
-//   BACKGROUND: '#121212',
-//   SECONDARY_TEXT: 'white',
-//   BORDER: 'white',
-// };
-
-// export const COLORS_DARK = {
-//   PRIMARY: '#07121B',
-//   SECONDARY: '#28D6C0',
-//   TERTIARY: '#F12B7E',
-//   TEXT: '#CCC',
-//   BACKGROUND: '#07121B',
-//   SECONDARY_TEXT: '#6e6e6e',
-// };
 
 export const APP_ID = '@Plumo2:';
 export const TOTAL_DIFFICULTY_LEVELS = 5;
@@ -89,3 +69,20 @@ export const INSTRUCTIONS = {
     prompt: 'Complete',
   },
 };
+
+export const MONTHS = [
+  'January',
+  'Febuary',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+export const DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];

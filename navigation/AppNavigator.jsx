@@ -34,6 +34,9 @@ import AllActivitiesScreen, {
 import FavouritesScreen, {
   favouritesScreenOptions,
 } from '../screens/favourites-screen/FavouritesScreen';
+import CalendarScreen, {
+  calendarScreenOptions,
+} from '../screens/calendar-screen/CalendarScreen';
 
 const StackHome = createStackNavigator();
 
@@ -102,6 +105,11 @@ export const ProfileStack = () => (
       name="Activity"
       component={ActivityScreen}
       options={activityScreenOptions}
+    />
+    <StackProfile.Screen
+      name="Calendar"
+      component={CalendarScreen}
+      options={calendarScreenOptions}
     />
   </StackProfile.Navigator>
 );

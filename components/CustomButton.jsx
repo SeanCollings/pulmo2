@@ -1,5 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Platform,
+} from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import { useTheme } from '../hooks/useTheme';
 
 const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
@@ -8,7 +16,7 @@ const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
   const elevation = theme.DARK ? {} : styles.buttonElevation;
 
   return (
-    <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
       <View
         style={{
           ...styles.buttonContainer,
@@ -30,6 +38,12 @@ const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
           {title}
         </Text>
       </View>
+      {Platform.OS === 'android' && !theme.DARK && (
+        <LinearGradient
+          colors={['rgba(0,0,0,0.05)', 'transparent']}
+          style={styles.buttonElevationGradient}
+        />
+      )}
     </TouchableOpacity>
   );
 };
@@ -59,7 +73,11 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 2.84,
-    elevation: 5,
+  },
+  buttonElevationGradient: {
+    alignSelf: 'center',
+    width: '85%',
+    height: 4,
   },
 });
 

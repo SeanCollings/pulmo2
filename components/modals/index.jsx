@@ -19,6 +19,8 @@ const CustomModal = ({
 }) => {
   const theme = useTheme();
 
+  const elevation = theme.DARK ? {} : styles.elevationStyle;
+
   return (
     <View style={styles.centeredView}>
       <Modal animationType={animationType} transparent>
@@ -26,6 +28,7 @@ const CustomModal = ({
           <View
             style={{
               ...styles.modalView,
+              ...elevation,
               backgroundColor: theme.BACKGROUND,
               ...(theme.DARK
                 ? { borderColor: theme.PRIMARY, borderWidth: 1 }
@@ -49,7 +52,7 @@ const CustomModal = ({
               {TopRight && <TopRight />}
             </View>
 
-            <View>{children}</View>
+            <View style={styles.childrenContainer}>{children}</View>
             {(cancelModel || confirmModal) && (
               <View style={styles.buttonContainer}>
                 {cancelModel && (
@@ -98,6 +101,8 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     padding: 20,
     alignItems: 'center',
+  },
+  elevationStyle: {
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -122,6 +127,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'tit-regular',
     width: '80%',
+  },
+  childrenContainer: {
+    width: '100%',
   },
 });
 

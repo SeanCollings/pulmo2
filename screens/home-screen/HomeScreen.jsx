@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import { StyleSheet, View, Text, ScrollView, AppState } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
+import { useKeepAwake } from 'expo-keep-awake';
 
 import { ExcerciseContext } from '../../context/excercise-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
@@ -35,14 +36,11 @@ import {
 } from '../../hooks/inputReducer';
 import Table from '../../components/Table';
 import ModalBegin from '../../components/modals/ModalBegin';
-import { formatMilliToSeconds, getRemainingTime } from '../../utils';
 import {
-  DATA,
-  STRENGTH_KEY,
-  ENDURANCE_KEY,
-  CUSTOM_KEY,
-  DEFAULT_EXCERCISE,
-} from '../../data';
+  formatMilliToSeconds,
+  getRemainingTime,
+  getExcerciseById,
+} from '../../utils';
 import { useTheme } from '../../hooks/useTheme';
 import AnimatedUnderline from '../../components/animated/AnimatedUnderline';
 
@@ -51,26 +49,8 @@ export const homeScreenOptions = options;
 let timeStampBreath;
 let timeStampRest;
 
-const getExcerciseById = (id, type, customExcercises) => {
-  if (!id) {
-    return DEFAULT_EXCERCISE;
-  }
-
-  switch (type) {
-    case STRENGTH_KEY:
-      return DATA[STRENGTH_KEY].find((x) => x.id === id);
-    case ENDURANCE_KEY:
-      return DATA[ENDURANCE_KEY].find((x) => x.id === id);
-    case CUSTOM_KEY:
-      const custom = customExcercises.find((x) => x.id === id);
-      if (!custom) return DEFAULT_EXCERCISE;
-      return custom;
-    default:
-      DEFAULT_EXCERCISE;
-  }
-};
-
 const HomeScreen = ({ navigation }) => {
+  useKeepAwake();
   const theme = useTheme();
   const isFocused = useIsFocused();
   const { selectedExcercise } = useContext(ExcerciseContext);
@@ -81,7 +61,7 @@ const HomeScreen = ({ navigation }) => {
   const [showModal, setShowModal] = useState(false);
   const [userTimes, setUserTimes] = useState([]);
   const [currentBreathTime, setCurrentBreathTime] = useState('');
-  const [appState, setAppState] = useState(AppState.currentState);
+  const [_, setAppState] = useState(AppState.currentState);
 
   const [
     { isActive, currentRound, instructions, countDownTime },
@@ -104,11 +84,8 @@ const HomeScreen = ({ navigation }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = AppState.addEventListener(
-      'change',
-      handleAppStateChange
-    );
-    return () => unsubscribe;
+    AppState.addEventListener('change', handleAppStateChange);
+    return () => AppState.removeEventListener('change', handleAppStateChange);
   }, []);
 
   useEffect(() => {
@@ -117,6 +94,7 @@ const HomeScreen = ({ navigation }) => {
       setUserTimes([]);
       setCurrentBreathTime('');
     }
+    return () => {};
   }, [isFocused, instructions.state]);
 
   useEffect(() => {

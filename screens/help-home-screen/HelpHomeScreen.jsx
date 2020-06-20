@@ -23,7 +23,7 @@ const HelpHomeScreen = (props) => {
         Home Page
       </Text>
       <Text style={styleTextContent}>
-        Following the prompt 'click to begin', click on the play button to start
+        Following the prompt 'tap to begin', click on the play button to start
         selected excercise.
       </Text>
       <Text style={styleTextContent}>

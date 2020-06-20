@@ -1,5 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  ScrollView,
+  ActivityIndicator,
+} from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import { HistoryContext } from '../../context/history-context';
@@ -46,21 +52,26 @@ const DetailContainer = ({ type, detail, colour, theme }) => {
 };
 
 const ActivityScreen = ({ route, navigation }) => {
-  const {
-    date,
-    excercise,
-    level,
-    results,
-    type,
-    favourite,
-  } = route.params.item;
+  const { date, favourite } = route.params.item;
 
   const theme = useTheme();
-  const { deleteActivity, favouriteActivity } = useContext(HistoryContext);
+  const { deleteActivity, favouriteActivity, getActivityByDate } = useContext(
+    HistoryContext
+  );
   const [showModal, setShowModal] = useState(false);
   const [isFavourite, setIsFavourite] = useState(favourite);
+  const [selectedActivity, setSelectedActivity] = useState({});
+  const [isFetching, setIsFetching] = useState(true);
+  const { excercise, level, results, type } = selectedActivity;
 
-  const totalTime = getTotalResultTime(results);
+  useEffect(() => {
+    getActivityByDate(date).then((activity) => {
+      setIsFetching(false);
+      setSelectedActivity(activity);
+    });
+  }, []);
+
+  const totalTime = getTotalResultTime(results || []);
 
   const favouriteHandler = () => {
     setIsFavourite((curr) => !curr);
@@ -96,13 +107,22 @@ const ActivityScreen = ({ route, navigation }) => {
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <ScrollView>
-        <View style={{ alignItems: 'center' }}>
-          <View style={styles.topContainer}>
-            <Text
-              style={{ ...styles.headingStyle, color: theme.TEXT, opacity }}
-            >
-              {type}
-            </Text>
+        <View style={{ alignItems: 'center', opacity: isFetching ? 0.36 : 1 }}>
+          <View style={{ ...styles.topContainer, opacity }}>
+            {isFetching && (
+              <View style={styles.spinner}>
+                <ActivityIndicator size="small" color={theme.TEXT} />
+              </View>
+            )}
+
+            {!isFetching && (
+              <Text
+                style={{ ...styles.headingStyle, color: theme.TEXT, opacity }}
+              >
+                {type || ''}
+              </Text>
+            )}
+
             <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
               {convertDate(date)}
             </Text>
@@ -112,28 +132,30 @@ const ActivityScreen = ({ route, navigation }) => {
           ></View>
           <View style={styles.levelContainer}>
             <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
-              total time: {getRemainingTime(totalTime)}
+              total time: {(results && getRemainingTime(totalTime)) || '00:00'}
             </Text>
             <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
-              level: {level}
+              level: {level || '_'}
             </Text>
           </View>
           <View style={styles.allDetailContainer}>
             <DetailContainer
               type={`inhale & exhale`}
-              detail={excercise.cycles}
+              detail={(excercise && excercise.cycles) || '_'}
               theme={theme}
               colour={theme.QUATERNARY}
             />
             <DetailContainer
               type="rest"
-              detail={getRemainingTime(excercise.rest)}
+              detail={
+                (excercise && getRemainingTime(excercise.rest)) || '__:__'
+              }
               colour={theme.SECONDARY}
               theme={theme}
             />
             <DetailContainer
               type="rounds"
-              detail={excercise.rounds}
+              detail={(excercise && excercise.rounds) || '_'}
               theme={theme}
               colour={theme.QUATERNARY}
             />
@@ -150,8 +172,9 @@ const ActivityScreen = ({ route, navigation }) => {
             </Text>
             <Table
               headerContent={['Workout', 'Rest']}
-              rowContents={results}
+              rowContents={results || []}
               headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
+              alwaysShowHeader
             />
           </View>
         </View>
@@ -226,6 +249,10 @@ const styles = StyleSheet.create({
   buttonContainer: {
     paddingVertical: 10,
     alignItems: 'center',
+  },
+  spinner: {
+    alignSelf: 'center',
+    paddingHorizontal: 10,
   },
 });
 
