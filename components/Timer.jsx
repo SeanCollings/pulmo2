@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
   },
   replacementText: {
     fontSize: 40,
+    height: 60,
     textAlignVertical: 'center',
     fontFamily: 'tit-light',
     textTransform: 'lowercase',

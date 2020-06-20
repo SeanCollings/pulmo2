@@ -43,6 +43,7 @@ import {
 } from '../../utils';
 import { useTheme } from '../../hooks/useTheme';
 import AnimatedUnderline from '../../components/animated/AnimatedUnderline';
+import AnimatedCycleText from '../../components/animated/AnimatedCycleText';
 
 export const homeScreenOptions = options;
 
@@ -225,7 +226,11 @@ const HomeScreen = ({ navigation }) => {
               countDownTime={countDownTime}
             />
           </View>
-          {breathingState && <AnimatedUnderline text={instructions.prompt} />}
+          {breathingState && (
+            <AnimatedUnderline>
+              <AnimatedCycleText textArray={['Breathe', instructions.prompt]} />
+            </AnimatedUnderline>
+          )}
         </View>
         <View style={styles.buttonContainer}>
           {!breathingState && (

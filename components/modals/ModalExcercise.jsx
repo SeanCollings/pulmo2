@@ -140,7 +140,7 @@ const ModalExcercise = ({
             <MaterialCommunityIcons
               name={'delete-outline'}
               color={theme.TEXT}
-              size={24}
+              size={31}
             />
           </TouchableOpacity>
         </View>
@@ -149,14 +149,19 @@ const ModalExcercise = ({
   };
   const TopRight = () => {
     if ((!excercise && isEditable) || !isEditable) return null;
+
+    if (excercise && excercise.title !== title.current) {
+      title.current = excercise.title;
+    }
+
     return (
       excercise && (
-        <View style={styles.deleteButton}>
+        <View style={styles.editButton}>
           <TouchableOpacity onPress={editButtonHandler}>
             <MaterialCommunityIcons
               name={'circle-edit-outline'}
               color={theme.TEXT}
-              size={24}
+              size={31}
             />
           </TouchableOpacity>
         </View>
@@ -373,12 +378,13 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+    marginTop: -10,
   },
   modalHeadingText: {
     fontSize: 20,
     textAlign: 'center',
     fontFamily: 'tit-regular',
-    width: '90%',
+    width: '78%',
     borderBottomWidth: 1,
   },
   valueContainer: { width: '20%', paddingRight: 20 },
@@ -389,10 +395,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   deleteButton: {
-    opacity: 0.4,
+    opacity: 0.63,
   },
   editButton: {
-    opacity: 0.4,
+    opacity: 0.63,
   },
   textInput: {
     opacity: 0.7,

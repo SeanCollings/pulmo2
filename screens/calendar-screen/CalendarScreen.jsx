@@ -252,7 +252,7 @@ const CalendarScreen = ({ navigation }) => {
           onPress={previousMonthHandler}
           hitSlop={buttonHitslop}
         >
-          <View style={{ ...styles.iconContainer }}>
+          <View style={styles.iconContainer}>
             <MaterialCommunityIcons
               name="chevron-left"
               color={theme.SECONDARY}
@@ -262,7 +262,7 @@ const CalendarScreen = ({ navigation }) => {
         </TouchableOpacity>
         <Text style={monthTextStyle}>{formatMonth(selectedMonth)}</Text>
         <TouchableOpacity onPress={nextMonthHandler} hitSlop={buttonHitslop}>
-          <View style={{ ...styles.iconContainer }}>
+          <View style={styles.iconContainer}>
             <MaterialCommunityIcons
               name="chevron-right"
               color={theme.SECONDARY}

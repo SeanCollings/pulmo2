@@ -27,7 +27,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
       <MaterialCommunityIcons
         name="arrow-left"
         color={theme.BORDER}
-        size={30}
+        size={33}
       />
     </TouchableOpacity>
   );
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
   },
-  backButton: { position: 'absolute', left: 0, paddingTop: 3 },
+  backButton: { position: 'absolute', left: 0 },
 });
 
 export default ModalBegin;
