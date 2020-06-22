@@ -82,7 +82,7 @@ const CalendarScreen = ({ navigation }) => {
     if (!monthsActivities[formattedMonth]) return [];
     const presentActivities = monthsActivities[formattedMonth]
       .filter((activity) => activity.day === day)
-      .sort((a, b) => new Date(b.date) + new Date(a.date));
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
 
     return presentActivities;
   };
@@ -281,7 +281,7 @@ const CalendarScreen = ({ navigation }) => {
       </View>
       {modalContents && (
         <ModalDayActivities
-          cancelModel={() => setModalContents(null)}
+          cancelModal={() => setModalContents(null)}
           header={modalContents.day}
           activities={modalContents.activities}
           navigation={navigation}

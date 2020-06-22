@@ -46,22 +46,26 @@ const Table = ({
         ))}
       </View>
       <View style={styles.tableBody}>
-        {rowContents.map((row, i) => (
-          <View key={`tb-${i}`} style={styles.bodyContent}>
-            {[i + 1, ...row].map((content, contentIndex) => (
-              <TableRow
-                key={`tr-${contentIndex}`}
-                theme={theme}
-                content={content}
-                index={contentIndex}
-                rowStyles={{
-                  color: theme.TEXT,
-                  opacity: theme.DARK ? 0.8 : 1,
-                }}
-              />
-            ))}
-          </View>
-        ))}
+        {rowContents.map((row, i) => {
+          if (!row.length) return null;
+
+          return (
+            <View key={`tb-${i}`} style={styles.bodyContent}>
+              {[i + 1, ...row].map((content, contentIndex) => (
+                <TableRow
+                  key={`tr-${contentIndex}`}
+                  theme={theme}
+                  content={content}
+                  index={contentIndex}
+                  rowStyles={{
+                    color: theme.TEXT,
+                    opacity: theme.DARK ? 0.8 : 1,
+                  }}
+                />
+              ))}
+            </View>
+          );
+        })}
       </View>
     </View>
   );
@@ -94,13 +98,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   tableHeaderText: {
-    fontSize: 17,
+    fontSize: 18,
     fontFamily: 'tit-regular',
   },
   tableText: {
     textAlign: 'center',
     fontFamily: 'tit-regular',
-    fontSize: 16,
+    fontSize: 17,
     padding: 2,
   },
 });

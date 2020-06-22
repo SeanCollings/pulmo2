@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 
@@ -17,6 +17,7 @@ import SettingsContextProvider, {
 import { getAsyncData, getMultiAsyncData } from './helpers/storage';
 import { ACTIVITY_TAG } from './context/history-context';
 import { APP_ID } from './constants/constants';
+import { Text } from 'react-native';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -32,6 +33,11 @@ export default function App() {
   const [activityIdArray, setActivityIdArray] = useState([]);
   const [profile, setProfile] = useState({});
   const [appSettings, setAppSettings] = useState({});
+
+  useEffect(() => {
+    Text.defaultProps = Text.defaultProps || {};
+    Text.defaultProps.allowFontScaling = false;
+  }, []);
 
   const loadCustomExcercises = async () => {
     try {

@@ -13,7 +13,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { getColour, getIcon } from '../../utils';
 
 const ModalDayActivities = ({
-  cancelModel,
+  cancelModal,
   header,
   activities,
   navigation,
@@ -21,7 +21,7 @@ const ModalDayActivities = ({
   const theme = useTheme();
 
   const activitySelectedHandler = ({ date, favourite, title }) => {
-    cancelModel();
+    cancelModal();
     navigation.navigate('Activity', {
       item: { date, favourite, title },
     });
@@ -31,7 +31,7 @@ const ModalDayActivities = ({
 
   return (
     <CustomModal
-      cancelModel={cancelModel}
+      cancelModal={cancelModal}
       header={header}
       cancelTitle="Back"
       headingColour={theme.SECONDARY}
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
   contentText: {
     paddingLeft: 10,
     textAlign: 'left',
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: 'tit-light',
     width: '80%',
   },

@@ -55,7 +55,7 @@ CustomButton.defaultProps = {
 const styles = StyleSheet.create({
   buttonContainer: {
     borderRadius: 8,
-    paddingVertical: 6,
+    paddingVertical: 8,
     paddingHorizontal: 14,
     justifyContent: 'center',
   },

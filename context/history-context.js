@@ -26,9 +26,21 @@ export default ({ idArray, children }) => {
   const [activities, setActivities] = useState([]);
   const [activitiesUpdated, setActivitiesUpdated] = useState(Date.now());
 
-  const addActivity = async (date, excercise, level, results, type) => {
+  const addActivity = async ({
+    date,
+    excercise,
+    level,
+    results,
+    type,
+    incomplete,
+  }) => {
     try {
-      const newActivity = { date, excercise, level, results, type };
+      let newActivity = { date, excercise, level, results, type };
+
+      if (incomplete) {
+        newActivity = { ...newActivity, incomplete };
+      }
+
       setActivities((curr) => [...curr, newActivity]);
       let success = false;
       const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);

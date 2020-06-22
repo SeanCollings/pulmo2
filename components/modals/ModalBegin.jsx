@@ -6,7 +6,7 @@ import { SELECTED_LEVEL, ProfileContext } from '../../context/profile-context';
 import CustomModal from '.';
 import { useTheme } from '../../hooks/useTheme';
 
-const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
+const ModalBegin = ({ cancelModal, confirmModal, navigation }) => {
   const theme = useTheme();
   const { profileContext } = useContext(ProfileContext);
 
@@ -23,7 +23,7 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
   ];
 
   const BackButton = () => (
-    <TouchableOpacity onPress={cancelModel} style={styles.backButton}>
+    <TouchableOpacity onPress={cancelModal} style={styles.backButton}>
       <MaterialCommunityIcons
         name="arrow-left"
         color={theme.BORDER}
@@ -34,12 +34,12 @@ const ModalBegin = ({ cancelModel, confirmModal, navigation }) => {
 
   const updateLevelHandler = () => {
     navigation.navigate('Profile');
-    cancelModel();
+    cancelModal();
   };
 
   return (
     <CustomModal
-      cancelModel={updateLevelHandler}
+      cancelModal={updateLevelHandler}
       confirmModal={confirmModal}
       header={'Ready to begin?'}
       confirmTitle="Begin"
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   contentText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 17,
   },
   backButton: { position: 'absolute', left: 0 },
 });

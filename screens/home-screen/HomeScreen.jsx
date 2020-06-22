@@ -44,6 +44,7 @@ import {
 import { useTheme } from '../../hooks/useTheme';
 import AnimatedUnderline from '../../components/animated/AnimatedUnderline';
 import AnimatedCycleText from '../../components/animated/AnimatedCycleText';
+import ModalEndActivity from '../../components/modals/ModalEndActivity';
 
 export const homeScreenOptions = options;
 
@@ -60,6 +61,7 @@ const HomeScreen = ({ navigation }) => {
   const { addActivity } = useContext(HistoryContext);
 
   const [showModal, setShowModal] = useState(false);
+  const [showEndActivityModal, setShowEndActivityModal] = useState(false);
   const [userTimes, setUserTimes] = useState([]);
   const [currentBreathTime, setCurrentBreathTime] = useState('');
   const [_, setAppState] = useState(AppState.currentState);
@@ -143,10 +145,32 @@ const HomeScreen = ({ navigation }) => {
     [currentRound, currentBreathTime, timeStampRest]
   );
 
-  const stopTimerHandler = () => {
+  const endCurrentActivity = () => {
     dispatch({ type: INPUT_STOP });
     setUserTimes([]);
     setCurrentBreathTime(null);
+  };
+
+  const stopTimerHandler = () => {
+    if (!!userTimes.length) {
+      dispatch({ type: INPUT_TOGGLE, isActive: false });
+      setShowEndActivityModal(true);
+    } else {
+      endCurrentActivity();
+    }
+  };
+
+  const saveActivity = (timeDifferenceBreath, incomplete) => {
+    const timeBreath = timeDifferenceBreath ? [timeDifferenceBreath, ''] : [];
+
+    addActivity({
+      date: new Date().toISOString(),
+      excercise: activeExcercise,
+      level: profileContext[SELECTED_LEVEL],
+      results: [...userTimes, timeBreath],
+      type: selectedExcercise[1],
+      incomplete,
+    });
   };
 
   const toggleRestHandler = useCallback(() => {
@@ -156,13 +180,7 @@ const HomeScreen = ({ navigation }) => {
     );
 
     if (currentRound === +activeExcercise.rounds) {
-      addActivity(
-        new Date().toISOString(),
-        activeExcercise,
-        profileContext[SELECTED_LEVEL],
-        [...userTimes, [timeDifferenceBreath, '']],
-        selectedExcercise[1]
-      );
+      saveActivity(timeDifferenceBreath);
 
       setUserTimes((curr) => [...curr, [timeDifferenceBreath, '']]);
       dispatch({ type: INPUT_END });
@@ -184,6 +202,25 @@ const HomeScreen = ({ navigation }) => {
         countDownTime: activeExcercise.rest,
       });
     }
+  };
+
+  const resumeActivityHandler = () => {
+    setShowEndActivityModal(false);
+
+    if (instructions.state === REST_STATE)
+      dispatch({ type: INPUT_TOGGLE, isActive: true });
+  };
+  const cancelEndActivityModalHandler = () => {
+    setShowEndActivityModal(false);
+    endCurrentActivity();
+  };
+  const confirmEndActivityModalHandler = (reason) => {
+    saveActivity(
+      instructions.state === BREATHING_STATE ? null : currentBreathTime,
+      [reason]
+    );
+    setShowEndActivityModal(false);
+    endCurrentActivity();
   };
 
   if (!activeExcercise) return null;
@@ -265,11 +302,7 @@ const HomeScreen = ({ navigation }) => {
               iconSize={40}
               buttonSize={56}
               borderWidth={0}
-              style={{
-                position: 'absolute',
-                right: '15%',
-                top: 0,
-              }}
+              style={styles.restartButtonContainer}
               iconStyle={{ color: theme.TERTIARY }}
             />
           )}
@@ -316,10 +349,8 @@ const HomeScreen = ({ navigation }) => {
                   ...styles.textAlignRight,
                   borderRightColor: theme.BORDER,
                 }}
-              >{`repeat`}</Text>
-              <Text
-                style={styleSubText}
-              >{`${activeExcercise.rounds} times`}</Text>
+              >{`rounds`}</Text>
+              <Text style={styleSubText}>{`${activeExcercise.rounds}`}</Text>
             </View>
           )}
         </View>
@@ -332,9 +363,16 @@ const HomeScreen = ({ navigation }) => {
         </View>
         {showModal && (
           <ModalBegin
-            cancelModel={() => closeModalHandler(false)}
+            cancelModal={() => closeModalHandler(false)}
             confirmModal={() => closeModalHandler(true)}
             navigation={navigation}
+          />
+        )}
+        {showEndActivityModal && (
+          <ModalEndActivity
+            cancelModal={cancelEndActivityModalHandler}
+            confirmModal={confirmEndActivityModalHandler}
+            resumeActivity={resumeActivityHandler}
           />
         )}
       </View>
@@ -362,7 +400,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '80%',
+    width: '90%',
   },
   tableContainer: { marginTop: 20, width: '100%', alignItems: 'center' },
   progressText: {
@@ -381,7 +419,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   subText: {
-    fontSize: 16,
+    fontSize: 17,
     paddingTop: 5,
     fontFamily: 'tit-light',
     width: '50%',
@@ -390,6 +428,11 @@ const styles = StyleSheet.create({
   textAlignRight: {
     textAlign: 'right',
     borderRightWidth: 1,
+  },
+  restartButtonContainer: {
+    position: 'absolute',
+    right: '15%',
+    top: 0,
   },
 });
 

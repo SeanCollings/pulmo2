@@ -102,6 +102,15 @@ export const convertDateDetail = (date) => {
   return `${dayMonth} ${day} @${hours}:${mins}`;
 };
 
+export const getTimeFromDate = (date) => {
+  const newDate = new Date(date);
+
+  const hours = appendZero(newDate.getHours().toString());
+  const mins = appendZero(newDate.getMinutes().toString());
+
+  return `${hours}:${mins}`;
+};
+
 export const getDay = (date) => {
   const newDate = new Date(date);
   const dayMonth = newDate.toDateString().substr(0, 3);

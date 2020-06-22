@@ -16,8 +16,21 @@ import HeaderButton from '../../components/HeaderButton';
 import CustomButton from '../../components/CustomButton';
 import ConfirmModal from '../../components/modals/ConfirmModal';
 import { useTheme } from '../../hooks/useTheme';
+import {
+  OPTIONS_END_ACTIVITY_EARLY,
+  OPTION_SELECT_A_REASON,
+} from '../../constants/constants';
 
 export const activityScreenOptions = options;
+
+const getIncompleteReason = (value) => {
+  if (value === OPTION_SELECT_A_REASON.value) return '';
+
+  const option = OPTIONS_END_ACTIVITY_EARLY.find((opt) => opt.value === value);
+
+  if (!option) return '';
+  return `reason: ${option.label}`;
+};
 
 const DetailContainer = ({ type, detail, colour, theme }) => {
   return (
@@ -62,7 +75,7 @@ const ActivityScreen = ({ route, navigation }) => {
   const [isFavourite, setIsFavourite] = useState(favourite);
   const [selectedActivity, setSelectedActivity] = useState({});
   const [isFetching, setIsFetching] = useState(true);
-  const { excercise, level, results, type } = selectedActivity;
+  const { excercise, level, results, type, incomplete } = selectedActivity;
 
   useEffect(() => {
     getActivityByDate(date).then((activity) => {
@@ -176,11 +189,31 @@ const ActivityScreen = ({ route, navigation }) => {
               headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
               alwaysShowHeader
             />
+            {incomplete && (
+              <View style={{ alignItems: 'center' }}>
+                <Text
+                  style={{ ...styles.textStyle, color: theme.TEXT, opacity }}
+                >
+                  Incomplete
+                </Text>
+                {!!incomplete.length && (
+                  <Text
+                    style={{
+                      ...styles.reasonTextStyle,
+                      color: theme.TEXT,
+                      opacity: theme.DARK ? 0.63 : 0.8,
+                    }}
+                  >
+                    {getIncompleteReason(incomplete[0])}
+                  </Text>
+                )}
+              </View>
+            )}
           </View>
         </View>
         {showModal && (
           <ConfirmModal
-            cancelModel={() => setShowModal(false)}
+            cancelModal={() => setShowModal(false)}
             confirmModal={deleteActivityHandler}
             message="Are you sure you want to delete this activity permanently? "
           />
@@ -211,6 +244,11 @@ const styles = StyleSheet.create({
   textStyle: {
     fontFamily: 'tit-light',
     fontSize: 18,
+  },
+  reasonTextStyle: {
+    fontFamily: 'tit-light',
+    fontSize: 17,
+    textTransform: 'lowercase',
   },
   headingStyle: {
     fontFamily: 'tit-regular',

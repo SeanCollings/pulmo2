@@ -13,7 +13,7 @@ import CustomButton from '../CustomButton';
 import { useTheme } from '../../hooks/useTheme';
 
 const TITLE = 'Title';
-const CYCLES = 'Breath cycles';
+const CYCLES = 'Inhale & exhale';
 const REST = 'Rest';
 const ROUNDS = 'Rounds';
 const SELECTED_LEVEL = 'Selected level';
@@ -24,7 +24,7 @@ const LENGTH_3 = 3;
 
 const ModalExcercise = ({
   excercise,
-  cancelModel,
+  cancelModal,
   confirmModal,
   headingColour,
   selectedLevel,
@@ -172,7 +172,7 @@ const ModalExcercise = ({
   const confirmDeleteHandler = () => {
     deleteCustomModal(excercise.id);
     setDeleteExcercise(false);
-    cancelModel();
+    cancelModal();
   };
 
   const excerciseTitleHandler = (text) => {
@@ -262,7 +262,7 @@ const ModalExcercise = ({
   return (
     <View>
       <CustomModal
-        cancelModel={deleteExcercise ? null : cancelModel}
+        cancelModal={deleteExcercise ? null : cancelModal}
         confirmModal={
           deleteExcercise
             ? null
@@ -389,7 +389,7 @@ const styles = StyleSheet.create({
   },
   valueContainer: { width: '20%', paddingRight: 20 },
   contentText: {
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: 'tit-light',
     justifyContent: 'center',
     borderBottomWidth: 1,
@@ -410,12 +410,12 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontFamily: 'tit-regular',
-    fontSize: 16,
+    fontSize: 7,
     opacity: 0.8,
   },
   textSecondary: {
     opacity: 0.6,
-    fontSize: 16,
+    fontSize: 17,
     borderBottomWidth: 1,
   },
   warningContainer: {

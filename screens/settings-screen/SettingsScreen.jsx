@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     fontFamily: 'tit-light',
-    fontSize: 16,
+    fontSize: 17,
     alignSelf: 'flex-end',
   },
 });

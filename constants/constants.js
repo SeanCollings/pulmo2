@@ -86,3 +86,25 @@ export const MONTHS = [
 ];
 export const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 export const DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+export const OPTION_SELECT_A_REASON = {
+  label: 'Select a reason...',
+  value: 'placeholder',
+};
+export const OPTION_OUT_OF_BREATH = {
+  label: 'Out of breath',
+  value: 'out_of_breath',
+};
+export const OPTION_OUT_OF_TIME = {
+  label: 'Out of time',
+  value: 'out_of_time',
+};
+export const OPTION_LAZY = { label: 'Feeling lazy', value: 'feeling_lazy' };
+export const OPTION_OTHER = { label: 'Other', value: 'other' };
+export const OPTIONS_END_ACTIVITY_EARLY = [
+  OPTION_SELECT_A_REASON,
+  OPTION_OUT_OF_BREATH,
+  OPTION_OUT_OF_TIME,
+  OPTION_LAZY,
+  OPTION_OTHER,
+];

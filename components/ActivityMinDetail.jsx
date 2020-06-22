@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   },
   activityText: {
     fontFamily: 'tit-light',
-    fontSize: 14,
+    fontSize: 16,
   },
   bottomItemContainer: {
     flexDirection: 'row',

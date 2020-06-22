@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: 'tit-regular',
   },
   textContent: {
-    fontSize: 16,
+    fontSize: 17,
     width: '80%',
     textAlign: 'center',
     paddingBottom: 20,

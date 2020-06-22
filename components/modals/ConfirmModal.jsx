@@ -5,7 +5,7 @@ import CustomModal from '.';
 import { useTheme } from '../../hooks/useTheme';
 
 const ConfirmModal = ({
-  cancelModel,
+  cancelModal,
   confirmModal,
   header = 'Warning',
   message = '',
@@ -14,7 +14,7 @@ const ConfirmModal = ({
 
   return (
     <CustomModal
-      cancelModel={cancelModel}
+      cancelModal={cancelModal}
       confirmModal={confirmModal}
       header={header}
       cancelTitle="No"
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   contentText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 17,
     fontFamily: 'tit-light',
   },
 });

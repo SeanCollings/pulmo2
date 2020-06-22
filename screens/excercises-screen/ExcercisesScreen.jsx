@@ -151,18 +151,20 @@ const IndividualSlide = ({
                 style={{
                   ...styles.promptText,
                   color: theme.TEXT,
-                  opacity: theme.DARK ? 0.87 : 1,
+                  opacity: theme.DARK ? 0.63 : 0.8,
                 }}
               >
                 Select an excercise
               </Text>
             )}
             {custom && (
-              <CustomButton
-                title="Create new excercise"
-                onPress={() => createNewHandler(colour)}
-                bgColour={theme.DARK ? theme.PRIMARY : theme.BACKGROUND}
-              />
+              <View style={{ padding: 1 }}>
+                <CustomButton
+                  title="Create new excercise"
+                  onPress={() => createNewHandler(colour)}
+                  bgColour={theme.DARK ? theme.PRIMARY : theme.BACKGROUND}
+                />
+              </View>
             )}
           </View>
           <ScrollView contentContainerStyle={styles.excerciseContainer}>
@@ -255,7 +257,7 @@ const ExcercisesScreen = ({ navigation }) => {
         <ModalExcercise
           excercise={modalContent[0]}
           headingColour={modalContent[1]}
-          cancelModel={cancelModalHandler}
+          cancelModal={cancelModalHandler}
           confirmModal={confirmModalHandler}
           selectedLevel={selectedLevel}
           cancelTitle="Back"
@@ -266,7 +268,7 @@ const ExcercisesScreen = ({ navigation }) => {
         <ModalExcercise
           excercise={createNewModalContent[0]}
           headingColour={createNewModalContent[1]}
-          cancelModel={cancelCreateNewModalHandler}
+          cancelModal={cancelCreateNewModalHandler}
           confirmModal={saveNewExcerciseHandler}
           confirmSelectCustomModal={confirmCustomModalHandler}
           deleteCustomModal={customExcerciseContext.deleteCustomExcercise}
@@ -334,7 +336,7 @@ const styles = StyleSheet.create({
   },
   slideContentText: {
     fontFamily: 'tit-regular',
-    fontSize: 16,
+    fontSize: 17,
     padding: 10,
   },
   slideContentToggle: {

@@ -8,7 +8,7 @@ const CustomModal = ({
   header,
   cancelTitle,
   confirmTitle,
-  cancelModel,
+  cancelModal,
   confirmModal,
   headingColour,
   children,
@@ -53,13 +53,13 @@ const CustomModal = ({
             </View>
 
             <View style={styles.childrenContainer}>{children}</View>
-            {(cancelModel || confirmModal) && (
+            {(cancelModal || confirmModal) && (
               <View style={styles.buttonContainer}>
-                {cancelModel && (
+                {cancelModal && (
                   <View style={{ width: '40%' }}>
                     <CustomButton
                       title={cancelTitle}
-                      onPress={cancelModel}
+                      onPress={cancelModal}
                       style={buttonStyle}
                     />
                   </View>
@@ -83,7 +83,7 @@ const CustomModal = ({
 };
 
 CustomModal.defaultProps = {
-  cancelModel: () => {},
+  cancelModal: () => {},
   contents: [],
   cancelTitle: 'Cancel',
   confirmTitle: 'Confirm',
