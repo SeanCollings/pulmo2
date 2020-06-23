@@ -26,12 +26,9 @@ const FavouritesScreen = ({ navigation }) => {
   }, []);
 
   useEffect(() => {
-    const sortedActivites = activities.sort(
-      (a, b) => new Date(b.date) - new Date(a.date)
-    );
-    const favExcercises = sortedActivites.filter(
-      (activity) => activity.favourite
-    );
+    const favExcercises = activities
+      .filter((activity) => activity.favourite)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     setFavouritedActivities(favExcercises);
   }, [activities]);

@@ -41,18 +41,17 @@ export default ({ idArray, children }) => {
         newActivity = { ...newActivity, incomplete };
       }
 
-      setActivities((curr) => [...curr, newActivity]);
-      let success = false;
-      const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);
-
-      if (getActivityIdArray && !!getActivityIdArray.length) {
-        const newIdArray = [...getActivityIdArray, date];
-        success = await storeAsyncData(ACTIVITY_TAG, newIdArray);
+      if (activityIdArray && !!activityIdArray.length) {
+        const newIdArray = [...activityIdArray, date];
+        setActivityIdArray(newIdArray);
+        storeAsyncData(ACTIVITY_TAG, newIdArray);
       } else {
-        success = await storeAsyncData(ACTIVITY_TAG, [date]);
+        setActivityIdArray([date]);
+        storeAsyncData(ACTIVITY_TAG, [date]);
       }
 
-      if (success) storeAsyncData(date, newActivity);
+      storeAsyncData(date, newActivity);
+      setActivities((curr) => [...curr, newActivity]);
       setActivitiesUpdated(Date.now());
     } catch (err) {
       console.log(err);
@@ -108,13 +107,16 @@ export default ({ idArray, children }) => {
 
   const deleteActivity = (date) => {
     try {
+      const updatedIdArray = activityIdArray.filter((id) => id !== date);
       const updatedActivies = activities.filter(
         (activity) => activity.date !== date
       );
 
-      setActivitiesUpdated(Date.now());
-      setActivities(updatedActivies);
       removeAsyncData(date);
+      storeAsyncData(ACTIVITY_TAG, updatedIdArray);
+      setActivityIdArray(updatedIdArray);
+      setActivities(updatedActivies);
+      setActivitiesUpdated(Date.now());
     } catch (err) {
       console.log(err);
     }
