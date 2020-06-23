@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
+import { Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
@@ -17,7 +19,6 @@ import SettingsContextProvider, {
 import { getAsyncData, getMultiAsyncData } from './helpers/storage';
 import { ACTIVITY_TAG } from './context/history-context';
 import { APP_ID } from './constants/constants';
-import { Text } from 'react-native';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -39,7 +40,7 @@ export default function App() {
     Text.defaultProps.allowFontScaling = false;
   }, []);
 
-  const loadCustomExcercises = async () => {
+  const loadCustomExcercisesAsync = async () => {
     try {
       const getCustomIdArray = await getAsyncData(CUSTOM_TAG);
 
@@ -57,9 +58,7 @@ export default function App() {
           []
         );
 
-        setCustomExcercises(formattedCustomExcercise);
-
-        return Promise.resolve();
+        return Promise.resolve(formattedCustomExcercise);
       }
     } catch (err) {
       console.log(err);
@@ -67,19 +66,18 @@ export default function App() {
     }
   };
 
-  const loadActivityIdArray = async () => {
+  const loadActivityIdArrayAsync = async () => {
     try {
       const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);
-      setActivityIdArray(getActivityIdArray);
 
-      return Promise.resolve();
+      return Promise.resolve(getActivityIdArray);
     } catch (err) {
       console.log(err);
       return Promise.resolve();
     }
   };
 
-  const loadProfile = async () => {
+  const loadProfileAsync = async () => {
     try {
       const profileValues = await getMultiAsyncData('', PROFILE_KEYS);
       const formattedProfile = profileValues.reduce((acc, array) => {
@@ -92,15 +90,14 @@ export default function App() {
         } else return acc;
       }, {});
 
-      setProfile(formattedProfile);
-      return Promise.resolve();
+      return Promise.resolve(formattedProfile);
     } catch (err) {
       console.log(err);
       return Promise.resolve();
     }
   };
 
-  const loadSettings = async () => {
+  const loadSettingsAsync = async () => {
     try {
       const settingsValues = await getMultiAsyncData('', SETTINGS_KEYS);
       const formattedSettings = settingsValues.reduce((acc, array) => {
@@ -113,31 +110,61 @@ export default function App() {
         } else return acc;
       }, {});
 
-      setAppSettings(formattedSettings);
-      return Promise.resolve();
+      return Promise.resolve(formattedSettings);
     } catch (err) {
       console.log(err);
       return Promise.resolve();
     }
   };
 
-  const loadAsyncDependencies = () => {
-    return Promise.all([
+  const updateAsyncState = ({
+    customExcercisesAsync,
+    activityIdArrayAsync,
+    profileAsync,
+    settingsAsync,
+  }) => {
+    customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
+    activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
+    profileAsync && setProfile(profileAsync);
+    settingsAsync && setAppSettings(settingsAsync);
+
+    return Promise.resolve();
+  };
+
+  const loadAsyncDependencies = async () => {
+    const [
+      _,
+      customExcercisesAsync,
+      activityIdArrayAsync,
+      profileAsync,
+      settingsAsync,
+    ] = await Promise.all([
       fetchFonts(),
-      loadCustomExcercises(),
-      loadActivityIdArray(),
-      loadProfile(),
-      loadSettings(),
+      loadCustomExcercisesAsync(),
+      loadActivityIdArrayAsync(),
+      loadProfileAsync(),
+      loadSettingsAsync(),
     ]);
+
+    return updateAsyncState({
+      customExcercisesAsync,
+      activityIdArrayAsync,
+      profileAsync,
+      settingsAsync,
+    });
   };
 
   if (!dataLoaded) {
     return (
-      <AppLoading
-        startAsync={loadAsyncDependencies}
-        onFinish={() => setDataLoaded(true)}
-        onError={(err) => console.log(err)}
-      />
+      <View>
+        <AppLoading
+          startAsync={loadAsyncDependencies}
+          onFinish={() => setDataLoaded(true)}
+          onError={(err) => console.log(err)}
+          autoHideSplash
+        />
+        <StatusBar style="light" />
+      </View>
     );
   }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
+import { View, StyleSheet } from 'react-native';
 
 import { useTheme } from '../hooks/useTheme';
 import { MainTabs } from './AppNavigator';
@@ -15,10 +17,15 @@ const AppNavigator = (props) => {
   };
 
   return (
-    <NavigationContainer>
-      <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
-    </NavigationContainer>
+    <View style={styles.container}>
+      <NavigationContainer>
+        <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
+      </NavigationContainer>
+      <StatusBar style="light" />
+    </View>
   );
 };
 
 export default AppNavigator;
+
+const styles = StyleSheet.create({ container: { flex: 1 } });

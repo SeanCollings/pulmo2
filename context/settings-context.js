@@ -15,8 +15,15 @@ export const SettingsContext = createContext({
   updateSettingsContext: () => {},
 });
 
+const setSettings = (settings) => {
+  return {
+    ...DEFAULT_SETTINGS,
+    ...settings,
+  };
+};
+
 export default ({ settings, children }) => {
-  const [settingsContext, setSettingsContext] = useState(settings);
+  const [settingsContext, setSettingsContext] = useState(setSettings(settings));
 
   const updateSettingsContext = (key, value) => {
     try {
@@ -26,15 +33,6 @@ export default ({ settings, children }) => {
       console.log(err);
     }
   };
-
-  useEffect(() => {
-    const getDefaultOrSavedSettings = {
-      ...DEFAULT_SETTINGS,
-      ...settingsContext,
-    };
-
-    setSettingsContext(getDefaultOrSavedSettings);
-  }, []);
 
   return (
     <SettingsContext.Provider

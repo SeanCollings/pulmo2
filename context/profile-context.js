@@ -15,8 +15,12 @@ export const ProfileContext = createContext({
   updateProfileContext: () => {},
 });
 
+const setProfile = (profile) => {
+  return { ...DEFAULT_PROFILE, ...profile };
+};
+
 export default ({ profile, children }) => {
-  const [profileContext, setProfileContext] = useState(profile);
+  const [profileContext, setProfileContext] = useState(setProfile(profile));
 
   const updateProfileContext = (key, value) => {
     try {
@@ -26,11 +30,6 @@ export default ({ profile, children }) => {
       console.log(err);
     }
   };
-
-  useEffect(() => {
-    const getDefaultOrSavedProfile = { ...DEFAULT_PROFILE, ...profileContext };
-    setProfileContext(getDefaultOrSavedProfile);
-  }, []);
 
   return (
     <ProfileContext.Provider value={{ profileContext, updateProfileContext }}>
