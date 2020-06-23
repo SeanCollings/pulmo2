@@ -13,12 +13,14 @@ const CircleButton = ({
   buttonSize,
   borderWidth,
   onPress,
+  onLongPress,
   children,
   style,
 }) => (
   <TouchableOpacity
     activeOpacity={0.6}
     onPress={onPress}
+    onLongPress={onLongPress}
     style={{
       ...styles.button,
       ...style,

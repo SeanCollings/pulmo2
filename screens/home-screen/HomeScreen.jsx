@@ -45,6 +45,7 @@ import { useTheme } from '../../hooks/useTheme';
 import AnimatedUnderline from '../../components/animated/AnimatedUnderline';
 import AnimatedCycleText from '../../components/animated/AnimatedCycleText';
 import ModalEndActivity from '../../components/modals/ModalEndActivity';
+import Counter from '../../components/Counter';
 
 export const homeScreenOptions = options;
 
@@ -248,71 +249,96 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
-        <View style={styles.timerContainer}>
-          <View
-            style={{
-              ...(!breathingState ? {} : { height: 0, opacity: 0 }),
-            }}
-          >
-            <Timer
-              isActive={isActive}
-              timerFinished={(timeNow) => timerFinished(timeNow)}
-              replacementText={!isActive && instructions.prompt}
-              countDownTime={countDownTime}
-            />
+    <View style={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+        <View
+          style={{
+            ...styles.container,
+            backgroundColor: theme.BACKGROUND,
+          }}
+        >
+          <View style={styles.timerContainer}>
+            <View
+              style={{
+                ...(!breathingState ? {} : { height: 0, opacity: 0 }),
+              }}
+            >
+              <Timer
+                isActive={isActive}
+                timerFinished={(timeNow) => timerFinished(timeNow)}
+                replacementText={!isActive && instructions.prompt}
+                countDownTime={countDownTime}
+              />
+            </View>
+            {breathingState && (
+              <AnimatedUnderline>
+                <AnimatedCycleText
+                  textArray={['Breathe', instructions.prompt]}
+                />
+              </AnimatedUnderline>
+            )}
           </View>
-          {breathingState && (
-            <AnimatedUnderline>
-              <AnimatedCycleText textArray={['Breathe', instructions.prompt]} />
-            </AnimatedUnderline>
-          )}
-        </View>
-        <View style={styles.buttonContainer}>
-          {!breathingState && (
-            <CircleIconButton
-              onPress={toggleHandler}
-              name={buttonIconName}
-              borderWidth={4}
-              size={60}
-              buttonSize={120}
-              iconStyle={{ color: theme.SECONDARY }}
-              style={{ borderColor: theme.SECONDARY }}
-            />
-          )}
-          {breathingState && (
-            <CircleTextButton
-              onPress={toggleRestHandler}
-              borderWidth={4}
-              buttonSize={120}
-              fontSize={30}
-              text={currentRound !== +activeExcercise.rounds ? 'REST' : 'DONE'}
-              textStyle={{ color: theme.SECONDARY }}
-              style={{ borderColor: theme.SECONDARY }}
-            />
-          )}
+          <View style={styles.buttonContainer}>
+            {!breathingState && (
+              <CircleIconButton
+                onPress={toggleHandler}
+                name={buttonIconName}
+                borderWidth={4}
+                size={60}
+                buttonSize={120}
+                iconStyle={{ color: theme.SECONDARY }}
+                style={{ borderColor: theme.SECONDARY }}
+              />
+            )}
+            {breathingState && (
+              <CircleTextButton
+                onPress={toggleRestHandler}
+                borderWidth={4}
+                buttonSize={120}
+                fontSize={30}
+                text={
+                  currentRound !== +activeExcercise.rounds ? 'REST' : 'DONE'
+                }
+                textStyle={{ color: theme.SECONDARY }}
+                style={{ borderColor: theme.SECONDARY }}
+              />
+            )}
+            {showRestartButton && (
+              <CircleIconButton
+                onPress={stopTimerHandler}
+                name={'restart'}
+                iconSize={40}
+                buttonSize={56}
+                borderWidth={0}
+                style={styles.restartButtonContainer}
+                iconStyle={{ color: theme.TERTIARY }}
+              />
+            )}
+          </View>
           <Text style={{ ...styles.progressText, color: theme.TEXT, opacity }}>
             {progressText}
           </Text>
-          {showRestartButton && (
-            <CircleIconButton
-              onPress={stopTimerHandler}
-              name={'restart'}
-              iconSize={40}
-              buttonSize={56}
-              borderWidth={0}
-              style={styles.restartButtonContainer}
-              iconStyle={{ color: theme.TERTIARY }}
-            />
-          )}
-        </View>
-        <View style={styles.instructionContainer}>
-          <Text style={{ ...styles.ExcerciseTitle, color: theme.TERTIARY }}>
-            {activeExcercise.title}
-          </Text>
-          {instructions.state !== END_STATE &&
-            instructions.state !== REST_STATE && (
+          <View style={styles.instructionContainer}>
+            <Text style={{ ...styles.ExcerciseTitle, color: theme.TERTIARY }}>
+              {activeExcercise.title}
+            </Text>
+            {instructions.state !== END_STATE &&
+              instructions.state !== REST_STATE && (
+                <View style={styles.gridContainer}>
+                  <Text
+                    style={{
+                      ...styleSubText,
+                      ...styles.textAlignRight,
+                      borderRightColor: theme.BORDER,
+                    }}
+                  >{`inhale & exhale`}</Text>
+                  <Text
+                    style={styleSubText}
+                  >{`${activeExcercise.cycles} times`}</Text>
+                </View>
+              )}
+            {(instructions.state === INTIAL_STATE ||
+              instructions.state === REST_STATE) && (
               <View style={styles.gridContainer}>
                 <Text
                   style={{
@@ -320,63 +346,55 @@ const HomeScreen = ({ navigation }) => {
                     ...styles.textAlignRight,
                     borderRightColor: theme.BORDER,
                   }}
-                >{`inhale & exhale`}</Text>
+                >{`rest for`}</Text>
                 <Text
                   style={styleSubText}
-                >{`${activeExcercise.cycles} times`}</Text>
+                >{`${activeExcercise.rest} seconds`}</Text>
               </View>
             )}
-          {(instructions.state === INTIAL_STATE ||
-            instructions.state === REST_STATE) && (
-            <View style={styles.gridContainer}>
-              <Text
-                style={{
-                  ...styleSubText,
-                  ...styles.textAlignRight,
-                  borderRightColor: theme.BORDER,
-                }}
-              >{`rest for`}</Text>
-              <Text
-                style={styleSubText}
-              >{`${activeExcercise.rest} seconds`}</Text>
-            </View>
+            {instructions.state === INTIAL_STATE && (
+              <View style={styles.gridContainer}>
+                <Text
+                  style={{
+                    ...styleSubText,
+                    ...styles.textAlignRight,
+                    borderRightColor: theme.BORDER,
+                  }}
+                >{`rounds`}</Text>
+                <Text style={styleSubText}>{`${activeExcercise.rounds}`}</Text>
+              </View>
+            )}
+          </View>
+          <View style={styles.tableContainer}>
+            <Table
+              headerContent={['Workout', 'Rest']}
+              rowContents={userTimes}
+              headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
+            />
+          </View>
+          {showModal && (
+            <ModalBegin
+              cancelModal={() => closeModalHandler(false)}
+              confirmModal={() => closeModalHandler(true)}
+              navigation={navigation}
+            />
           )}
-          {instructions.state === INTIAL_STATE && (
-            <View style={styles.gridContainer}>
-              <Text
-                style={{
-                  ...styleSubText,
-                  ...styles.textAlignRight,
-                  borderRightColor: theme.BORDER,
-                }}
-              >{`rounds`}</Text>
-              <Text style={styleSubText}>{`${activeExcercise.rounds}`}</Text>
-            </View>
+          {showEndActivityModal && (
+            <ModalEndActivity
+              cancelModal={cancelEndActivityModalHandler}
+              confirmModal={confirmEndActivityModalHandler}
+              resumeActivity={resumeActivityHandler}
+            />
           )}
         </View>
-        <View style={styles.tableContainer}>
-          <Table
-            headerContent={['Workout', 'Rest']}
-            rowContents={userTimes}
-            headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
-          />
-        </View>
-        {showModal && (
-          <ModalBegin
-            cancelModal={() => closeModalHandler(false)}
-            confirmModal={() => closeModalHandler(true)}
-            navigation={navigation}
-          />
-        )}
-        {showEndActivityModal && (
-          <ModalEndActivity
-            cancelModal={cancelEndActivityModalHandler}
-            confirmModal={confirmEndActivityModalHandler}
-            resumeActivity={resumeActivityHandler}
-          />
-        )}
-      </View>
-    </ScrollView>
+      </ScrollView>
+      {showRestartButton && (
+        <Counter
+          disabled={instructions.state === REST_STATE}
+          reset={instructions.state === BREATHING_STATE}
+        />
+      )}
+    </View>
   );
 };
 
@@ -384,6 +402,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    paddingBottom: 70,
   },
   timerContainer: {
     height: 100,
@@ -393,7 +412,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    paddingBottom: 10,
   },
   instructionContainer: {
     paddingTop: 20,

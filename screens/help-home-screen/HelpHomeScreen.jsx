@@ -24,7 +24,7 @@ const HelpHomeScreen = (props) => {
       </Text>
       <Text style={styleTextContent}>
         Following the prompt 'tap to begin', click on the play button to start
-        selected excercise.
+        the selected excercise.
       </Text>
       <Text style={styleTextContent}>
         The selected level on the Luft&trade; is displayed below the play button
@@ -47,8 +47,13 @@ const HelpHomeScreen = (props) => {
         the bottom of the screen.
       </Text>
       <Text style={styleTextContent}>
+        After starting an excercise, a quick tap of the bottom right button will
+        increment a counter to help you keep track of your inhalation and
+        expiration cycles. A long press will decrement this counter.
+      </Text>
+      <Text style={styleTextContent}>
         After completing an excercise, a summary of your workout will be
-        displayed. A saved copy of this can be found in your Profile Page.
+        displayed. You may review your activity again in your Profile Page.
       </Text>
       <Text style={styleTextContent}></Text>
     </ScrollView>
