@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useRef } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 import options from './options';
@@ -11,7 +11,6 @@ export const favouritesScreenOptions = options;
 
 const FavouritesScreen = ({ navigation }) => {
   const theme = useTheme();
-  const firstMount = useRef(true);
   const { activities, activitiesUpdated, getSavedActivites } = useContext(
     HistoryContext
   );

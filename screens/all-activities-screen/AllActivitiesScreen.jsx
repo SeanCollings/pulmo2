@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, useRef } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 import options from './options';
@@ -11,7 +11,6 @@ export const allActivitiesScreenOptions = options;
 
 const AllActivitiesScreen = ({ navigation }) => {
   const theme = useTheme();
-  const firstMount = useRef(true);
   const { activities, activitiesUpdated, getSavedActivites } = useContext(
     HistoryContext
   );
@@ -29,18 +28,14 @@ const AllActivitiesScreen = ({ navigation }) => {
   }, []);
 
   useEffect(() => {
-    if (firstMount.current) {
-      firstMount.current = false;
-    } else {
-      getSavedActivites().then(() => {
-        setIsLoading(false);
-      });
-      const sortedActivites = activities.sort(
-        (a, b) => new Date(b.date) - new Date(a.date)
-      );
+    getSavedActivites().then(() => {
+      setIsLoading(false);
+    });
+    const sortedActivites = activities.sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
 
-      setAllActivites(sortedActivites);
-    }
+    setAllActivites(sortedActivites);
   }, [activitiesUpdated]);
 
   return (
