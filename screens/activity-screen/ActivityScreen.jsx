@@ -1,10 +1,17 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, {
+  useEffect,
+  useState,
+  useContext,
+  useRef,
+  useCallback,
+} from 'react';
 import {
   StyleSheet,
   View,
   Text,
   ScrollView,
   ActivityIndicator,
+  Dimensions,
 } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
@@ -20,8 +27,12 @@ import {
   OPTIONS_END_ACTIVITY_EARLY,
   OPTION_SELECT_A_REASON,
 } from '../../constants/constants';
+import RatingDetail from '../../components/RatingDetail';
+import CategoryContainer from '../../components/CategoryContainer';
 
 export const activityScreenOptions = options;
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const getIncompleteReason = (value) => {
   if (value === OPTION_SELECT_A_REASON.value) return '';
@@ -29,7 +40,7 @@ const getIncompleteReason = (value) => {
   const option = OPTIONS_END_ACTIVITY_EARLY.find((opt) => opt.value === value);
 
   if (!option) return '';
-  return `reason: ${option.label}`;
+  return `Reason: ${option.label}`;
 };
 
 const DetailContainer = ({ type, detail, colour, theme }) => {
@@ -37,7 +48,7 @@ const DetailContainer = ({ type, detail, colour, theme }) => {
     <View
       style={{
         ...styles.detailContainer,
-        backgroundColor: theme.DARK ? theme.BACKGROUND : colour,
+        backgroundColor: theme.DARK ? theme.PRIMARY : colour,
         borderColor: colour,
         borderWidth: theme.DARK ? 2 : 0,
       }}
@@ -68,21 +79,76 @@ const ActivityScreen = ({ route, navigation }) => {
   const { date, favourite } = route.params.item;
 
   const theme = useTheme();
-  const { deleteActivity, favouriteActivity, getActivityByDate } = useContext(
-    HistoryContext
-  );
+  const {
+    activitiesUpdated,
+    deleteActivity,
+    favouriteActivity,
+    getActivityByDate,
+  } = useContext(HistoryContext);
+  const firstMount = useRef(true);
   const [showModal, setShowModal] = useState(false);
   const [isFavourite, setIsFavourite] = useState(favourite);
   const [selectedActivity, setSelectedActivity] = useState({});
-  const [isFetching, setIsFetching] = useState(true);
-  const { excercise, level, results, type, incomplete } = selectedActivity;
+  const [isLoading, setIsLoading] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const {
+    excercise,
+    level,
+    results,
+    type,
+    incomplete,
+    rating,
+  } = selectedActivity;
+
+  const getSelectedActivity = useCallback(
+    (activity) => {
+      setIsLoading(false);
+      setSelectedActivity(activity);
+      navigation.setOptions({
+        headerTitle: ({ tintColor, style }) => {
+          let title = (activity && activity.excercise.title) || '';
+
+          if (SCREEN_WIDTH < 350 && title.length > 18) {
+            title = title.substr(0, 18) + '...';
+          }
+
+          return (
+            <Text style={{ fontSize: 20, color: tintColor, ...style }}>
+              {title}
+            </Text>
+          );
+        },
+      });
+    },
+    [navigation]
+  );
 
   useEffect(() => {
     getActivityByDate(date).then((activity) => {
-      setIsFetching(false);
-      setSelectedActivity(activity);
+      getSelectedActivity(activity);
     });
   }, []);
+
+  useEffect(() => {
+    if (isDeleting) {
+      setIsDeleting(false);
+      deleteActivity(date).then(() => {
+        navigation.goBack();
+      });
+    }
+  }, [isDeleting, date, navigation, deleteActivity]);
+
+  useEffect(() => {
+    if (firstMount.current) {
+      firstMount.current = false;
+    } else {
+      setIsLoading(true);
+      getActivityByDate(date).then((activity) => {
+        getSelectedActivity(activity);
+      });
+    }
+  }, [activitiesUpdated]);
 
   const totalTime = getTotalResultTime(results || []);
 
@@ -110,9 +176,21 @@ const ActivityScreen = ({ route, navigation }) => {
   };
 
   const deleteActivityHandler = () => {
-    navigation.goBack();
     setShowModal(false);
-    deleteActivity(date);
+    setIsDeleting(true);
+    setIsLoading(true);
+  };
+
+  const editActivityHandler = () => {
+    navigation.navigate('EditActivity', {
+      editActivity: {
+        date,
+        title: excercise.title,
+        reason: incomplete,
+        rating,
+        level,
+      },
+    });
   };
 
   const opacity = theme.DARK ? 0.87 : 1;
@@ -120,22 +198,20 @@ const ActivityScreen = ({ route, navigation }) => {
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <ScrollView>
-        <View style={{ alignItems: 'center', opacity: isFetching ? 0.36 : 1 }}>
+        <View style={{ alignItems: 'center', opacity: isLoading ? 0.36 : 1 }}>
           <View style={{ ...styles.topContainer, opacity }}>
-            {isFetching && (
+            {isLoading && (
               <View style={styles.spinner}>
                 <ActivityIndicator size="small" color={theme.TEXT} />
               </View>
             )}
-
-            {!isFetching && (
+            {!isLoading && (
               <Text
                 style={{ ...styles.headingStyle, color: theme.TEXT, opacity }}
               >
                 {type || ''}
               </Text>
             )}
-
             <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
               {convertDate(date)}
             </Text>
@@ -173,43 +249,47 @@ const ActivityScreen = ({ route, navigation }) => {
               colour={theme.QUATERNARY}
             />
           </View>
+          <CategoryContainer
+            header="Results"
+            alignItems="flex-start"
+            paddingVertical={0}
+          ></CategoryContainer>
           <View style={styles.resultsContainer}>
-            <Text
-              style={{
-                ...styles.headingStyle,
-                paddingBottom: 5,
-                color: theme.SECONDARY,
-              }}
-            >
-              results
-            </Text>
             <Table
               headerContent={['Workout', 'Rest']}
               rowContents={results || []}
               headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
               alwaysShowHeader
             />
-            {incomplete && (
-              <View style={{ alignItems: 'center' }}>
-                <Text
-                  style={{ ...styles.textStyle, color: theme.TEXT, opacity }}
-                >
-                  Incomplete
-                </Text>
-                {!!incomplete.length && (
-                  <Text
-                    style={{
-                      ...styles.reasonTextStyle,
-                      color: theme.TEXT,
-                      opacity: theme.DARK ? 0.63 : 0.8,
-                    }}
-                  >
-                    {getIncompleteReason(incomplete[0])}
-                  </Text>
-                )}
-              </View>
-            )}
           </View>
+          {incomplete && (
+            <CategoryContainer
+              header="Status: Incomplete"
+              alignItems="flex-start"
+              paddingVertical={18}
+            >
+              {!!incomplete.length && (
+                <Text
+                  style={{
+                    ...styles.reasonTextStyle,
+                    color: theme.TEXT,
+                    opacity,
+                  }}
+                >
+                  {getIncompleteReason(incomplete[0])}
+                </Text>
+              )}
+            </CategoryContainer>
+          )}
+          {(rating || rating === 0) && (
+            <CategoryContainer
+              header="How did you feel?"
+              alignItems="flex-start"
+              paddingVertical={10}
+            >
+              <RatingDetail rating={rating} />
+            </CategoryContainer>
+          )}
         </View>
         {showModal && (
           <ConfirmModal
@@ -219,8 +299,21 @@ const ActivityScreen = ({ route, navigation }) => {
           />
         )}
       </ScrollView>
-      <View style={styles.buttonContainer}>
-        <CustomButton title="delete" onPress={showModalHandler} />
+      <View
+        style={{ ...styles.buttonContainer, opacity: isLoading ? 0.36 : 1 }}
+      >
+        <CustomButton
+          title="delete"
+          onPress={showModalHandler}
+          disabled={isLoading}
+          style={{ width: 100 }}
+        />
+        <CustomButton
+          title="Edit"
+          onPress={editActivityHandler}
+          disabled={isLoading}
+          style={{ width: 100 }}
+        />
       </View>
     </View>
   );
@@ -248,19 +341,20 @@ const styles = StyleSheet.create({
   reasonTextStyle: {
     fontFamily: 'tit-light',
     fontSize: 17,
-    textTransform: 'lowercase',
+    paddingBottom: 2,
+    paddingLeft: 10,
   },
   headingStyle: {
     fontFamily: 'tit-regular',
     fontSize: 18,
   },
   levelContainer: {
-    paddingVertical: 10,
+    paddingVertical: 20,
     alignItems: 'center',
   },
   allDetailContainer: {
     width: '90%',
-    paddingVertical: 15,
+    paddingBottom: 20,
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
@@ -281,16 +375,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   resultsContainer: {
-    paddingVertical: 10,
+    paddingVertical: 20,
     alignItems: 'center',
   },
   buttonContainer: {
     paddingVertical: 10,
     alignItems: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    justifyContent: 'space-evenly',
   },
   spinner: {
     alignSelf: 'center',
     paddingHorizontal: 10,
+  },
+  incompleteContainer: {
+    alignItems: 'center',
+    paddingBottom: 10,
   },
 });
 

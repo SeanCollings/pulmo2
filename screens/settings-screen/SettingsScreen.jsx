@@ -5,6 +5,7 @@ import options from './options';
 import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
 import { BUILD_VERSION, ANDROID_VERSION } from '../../version';
+import CategoryContainer from '../../components/CategoryContainer';
 
 export const settingsScreenOptions = options;
 
@@ -15,8 +16,10 @@ const SettingsScreen = (props) => {
 
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
-      <View style={{ flex: 1 }}>
-        <ThemeSelector />
+      <View style={styles.upperContainer}>
+        <CategoryContainer header="Day/night mode">
+          <ThemeSelector />
+        </CategoryContainer>
       </View>
       <View style={styles.versionContainer}>
         <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
@@ -39,7 +42,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    paddingTop: 20,
+    paddingTop: 10,
+  },
+  upperContainer: {
+    flex: 1,
+    width: '100%',
+    alignItems: 'center',
   },
   versionContainer: {
     flexDirection: 'row',

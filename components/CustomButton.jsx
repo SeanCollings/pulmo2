@@ -10,13 +10,20 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { useTheme } from '../hooks/useTheme';
 
-const CustomButton = ({ title, style, onPress, bgColour, colour }) => {
+const CustomButton = ({
+  title,
+  style,
+  onPress,
+  bgColour,
+  colour,
+  disabled = false,
+}) => {
   const theme = useTheme();
 
   const elevation = theme.DARK ? {} : styles.buttonElevation;
 
   return (
-    <TouchableOpacity activeOpacity={0.5} onPress={onPress}>
+    <TouchableOpacity activeOpacity={0.5} onPress={onPress} disabled={disabled}>
       <View
         style={{
           ...styles.buttonContainer,

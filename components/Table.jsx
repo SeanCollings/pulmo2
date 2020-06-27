@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
-    padding: 10,
+    paddingHorizontal: 10,
   },
   tableHeader: {
     flexDirection: 'row',

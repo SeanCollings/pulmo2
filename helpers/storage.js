@@ -55,7 +55,9 @@ export const mergeAsyncData = async (id, value) => {
 export const removeAsyncData = async (id) => {
   try {
     await AsyncStorage.removeItem(`${APP_ID}${id}`);
+    return true;
   } catch (err) {
     console.log('Failure removing: ' + error);
+    return false;
   }
 };

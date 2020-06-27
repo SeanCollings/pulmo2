@@ -39,7 +39,13 @@ const ActivityDetail = ({ item, navigation, theme }) => {
             {excercise.title}
           </Text>
           <View style={{ flexDirection: 'row' }}>
-            <Text style={{ ...styles.activityText, color: theme.QUATERNARY }}>
+            <Text
+              style={{
+                ...styles.activityText,
+                color: theme.QUATERNARY,
+                fontFamily: 'tit-regular',
+              }}
+            >
               {getDay(date)}
             </Text>
             <Text

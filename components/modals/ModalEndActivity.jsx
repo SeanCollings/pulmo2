@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Picker,
-  Platform,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import CustomModal from '.';
@@ -15,6 +8,7 @@ import {
   OPTIONS_END_ACTIVITY_EARLY,
   OPTION_SELECT_A_REASON,
 } from '../../constants/constants';
+import OptionsPicker from '../OptionsPicker';
 
 const ModalEndActivity = ({ cancelModal, confirmModal, resumeActivity }) => {
   const theme = useTheme();
@@ -57,45 +51,14 @@ const ModalEndActivity = ({ cancelModal, confirmModal, resumeActivity }) => {
         >
           Would you like to save it as is?
         </Text>
-        <View
+        <OptionsPicker
+          selectedOption={reason}
+          options={OPTIONS_END_ACTIVITY_EARLY}
+          onChange={setReason}
           style={{
-            alignSelf: 'center',
-            borderWidth: theme.DARK ? 2 : 1,
-            borderColor: theme.DARK ? theme.PRIMARY : theme.BORDER,
-            backgroundColor: theme.BACKGROUND,
-            borderRadius: 10,
-            width: '80%',
+            opacity: reason === OPTION_SELECT_A_REASON.value ? 0.36 : opacity,
           }}
-        >
-          <Picker
-            selectedValue={reason}
-            style={{
-              height: Platform.OS === 'android' ? 40 : 45,
-              width: '100%',
-              fontFamily: 'tit-light',
-              color: theme.TEXT,
-              opacity: reason === OPTION_SELECT_A_REASON.value ? 0.36 : opacity,
-            }}
-            onValueChange={(itemValue) => setReason(itemValue)}
-          >
-            {OPTIONS_END_ACTIVITY_EARLY.map((option, i) => {
-              const colour =
-                i === 0
-                  ? theme.BORDER
-                  : theme.DARK
-                  ? theme.BACKGROUND
-                  : theme.TEXT;
-              return (
-                <Picker.Item
-                  key={`${option.value}`}
-                  color={colour}
-                  label={option.label}
-                  value={option.value}
-                />
-              );
-            })}
-          </Picker>
-        </View>
+        />
       </View>
     </CustomModal>
   );

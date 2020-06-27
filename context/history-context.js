@@ -19,6 +19,7 @@ export const HistoryContext = createContext({
   getActivitiesByMonth: () => {},
   activitiesUpdated: null,
   getActivityByDate: () => {},
+  updateActivity: () => {},
 });
 
 export default ({ idArray, children }) => {
@@ -35,6 +36,7 @@ export default ({ idArray, children }) => {
     incomplete,
   }) => {
     try {
+      let success = false;
       let newActivity = { date, excercise, level, results, type };
 
       if (incomplete) {
@@ -43,18 +45,58 @@ export default ({ idArray, children }) => {
 
       if (activityIdArray && !!activityIdArray.length) {
         const newIdArray = [...activityIdArray, date];
+        success = await storeAsyncData(ACTIVITY_TAG, newIdArray);
         setActivityIdArray(newIdArray);
-        storeAsyncData(ACTIVITY_TAG, newIdArray);
       } else {
+        success = await storeAsyncData(ACTIVITY_TAG, [date]);
         setActivityIdArray([date]);
-        storeAsyncData(ACTIVITY_TAG, [date]);
       }
 
-      storeAsyncData(date, newActivity);
-      setActivities((curr) => [...curr, newActivity]);
-      setActivitiesUpdated(Date.now());
+      if (success) {
+        setActivities((curr) => [...curr, newActivity]);
+        setActivitiesUpdated(Date.now());
+        storeAsyncData(date, newActivity);
+      }
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  const updateActivity = async ({
+    date,
+    newRating,
+    newLevel,
+    newTitle,
+    newReason,
+  }) => {
+    try {
+      const updatedActivities = [...activities];
+      const foundIndex = updatedActivities.findIndex(
+        (activity) => activity.date === date
+      );
+
+      if (foundIndex >= 0) {
+        const foundActivity = updatedActivities[foundIndex];
+        const updatedActivity = {
+          level: newLevel,
+          incomplete: newReason,
+          rating: newRating,
+          excercise: { ...foundActivity.excercise, title: newTitle },
+        };
+
+        updatedActivities[foundIndex] = {
+          ...updatedActivities[foundIndex],
+          ...updatedActivity,
+        };
+
+        setActivitiesUpdated(Date.now());
+        setActivities(updatedActivities);
+        await mergeAsyncData(date, updatedActivity);
+      }
+
+      return true;
+    } catch (err) {
+      return false;
     }
   };
 
@@ -72,7 +114,6 @@ export default ({ idArray, children }) => {
           favourite: !foundActivity.favourite,
         };
 
-        setActivitiesUpdated(Date.now());
         setActivities(updatedActivities);
         await mergeAsyncData(date, { favourite: !foundActivity.favourite });
       }
@@ -105,20 +146,23 @@ export default ({ idArray, children }) => {
     }
   };
 
-  const deleteActivity = (date) => {
+  const deleteActivity = async (date) => {
     try {
       const updatedIdArray = activityIdArray.filter((id) => id !== date);
       const updatedActivies = activities.filter(
         (activity) => activity.date !== date
       );
 
-      removeAsyncData(date);
-      storeAsyncData(ACTIVITY_TAG, updatedIdArray);
       setActivityIdArray(updatedIdArray);
       setActivities(updatedActivies);
       setActivitiesUpdated(Date.now());
+      removeAsyncData(date);
+      storeAsyncData(ACTIVITY_TAG, updatedIdArray);
+
+      return true;
     } catch (err) {
       console.log(err);
+      return false;
     }
   };
 
@@ -170,6 +214,7 @@ export default ({ idArray, children }) => {
         getActivitiesByMonth,
         activitiesUpdated,
         getActivityByDate,
+        updateActivity,
       }}
     >
       {children}

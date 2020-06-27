@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 
 import options from './options';
@@ -11,7 +11,10 @@ export const favouritesScreenOptions = options;
 
 const FavouritesScreen = ({ navigation }) => {
   const theme = useTheme();
-  const { activities, getSavedActivites } = useContext(HistoryContext);
+  const firstMount = useRef(true);
+  const { activities, activitiesUpdated, getSavedActivites } = useContext(
+    HistoryContext
+  );
   const [favouritedActivities, setFavouritedActivities] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -31,7 +34,7 @@ const FavouritesScreen = ({ navigation }) => {
       .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     setFavouritedActivities(favExcercises);
-  }, [activities]);
+  }, [activitiesUpdated]);
 
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>

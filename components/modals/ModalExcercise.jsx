@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontFamily: 'tit-regular',
-    fontSize: 7,
+    fontSize: 17,
     opacity: 0.8,
   },
   textSecondary: {
