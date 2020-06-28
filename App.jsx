@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import { Text, View } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import Navigator from './navigation';
@@ -47,6 +47,88 @@ const getCurrentStreak = (profile) => {
   }
 };
 
+const loadCustomExcercisesAsync = async () => {
+  try {
+    const getCustomIdArray = await getAsyncData(CUSTOM_TAG);
+
+    if (getCustomIdArray) {
+      const savedCustomExcercises = await getMultiAsyncData(
+        CUSTOM_TAG,
+        getCustomIdArray
+      );
+
+      const formattedCustomExcercise = savedCustomExcercises.reduce(
+        (acc, array) => {
+          if (array[1]) return [...acc, JSON.parse(array[1])];
+          else return acc;
+        },
+        []
+      );
+
+      return Promise.resolve(formattedCustomExcercise);
+    }
+  } catch (err) {
+    console.log(err);
+    return Promise.resolve();
+  }
+};
+
+const loadActivityIdArrayAsync = async () => {
+  try {
+    const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);
+
+    return Promise.resolve(getActivityIdArray);
+  } catch (err) {
+    console.log(err);
+    return Promise.resolve();
+  }
+};
+
+const loadProfileAsync = async () => {
+  try {
+    const profileValues = await getMultiAsyncData('', PROFILE_KEYS);
+    const formattedProfile = profileValues.reduce((acc, array) => {
+      const key = array[0];
+      const value = array[1];
+
+      if (key && key.includes(APP_ID) && value) {
+        const formattedKey = key.split(APP_ID)[1];
+        return { ...acc, [formattedKey]: JSON.parse(value) };
+      } else return acc;
+    }, {});
+
+    const currentSteak = getCurrentStreak(formattedProfile);
+
+    return Promise.resolve({
+      ...formattedProfile,
+      ...(currentSteak && { [STREAK]: currentSteak }),
+    });
+  } catch (err) {
+    console.log(err);
+    return Promise.resolve();
+  }
+};
+
+const loadSettingsAsync = async () => {
+  try {
+    const settingsValues = await getMultiAsyncData('', SETTINGS_KEYS);
+    const formattedSettings = settingsValues.reduce((acc, array) => {
+      const key = array[0];
+      const value = array[1];
+
+      if (key && key.includes(APP_ID) && value) {
+        const formattedKey = key.split(APP_ID)[1];
+        return { ...acc, [formattedKey]: JSON.parse(value) };
+      } else return acc;
+    }, {});
+
+    return Promise.resolve(formattedSettings);
+  } catch (err) {
+    console.log(err);
+    return Promise.resolve();
+  }
+};
+
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [customExcercises, setCustomExcercises] = useState([]);
@@ -58,88 +140,6 @@ export default function App() {
     Text.defaultProps = Text.defaultProps || {};
     Text.defaultProps.allowFontScaling = false;
   }, []);
-
-  const loadCustomExcercisesAsync = async () => {
-    try {
-      const getCustomIdArray = await getAsyncData(CUSTOM_TAG);
-
-      if (getCustomIdArray) {
-        const savedCustomExcercises = await getMultiAsyncData(
-          CUSTOM_TAG,
-          getCustomIdArray
-        );
-
-        const formattedCustomExcercise = savedCustomExcercises.reduce(
-          (acc, array) => {
-            if (array[1]) return [...acc, JSON.parse(array[1])];
-            else return acc;
-          },
-          []
-        );
-
-        return Promise.resolve(formattedCustomExcercise);
-      }
-    } catch (err) {
-      console.log(err);
-      return Promise.resolve();
-    }
-  };
-
-  const loadActivityIdArrayAsync = async () => {
-    try {
-      const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);
-
-      return Promise.resolve(getActivityIdArray);
-    } catch (err) {
-      console.log(err);
-      return Promise.resolve();
-    }
-  };
-
-  const loadProfileAsync = async () => {
-    try {
-      const profileValues = await getMultiAsyncData('', PROFILE_KEYS);
-      const formattedProfile = profileValues.reduce((acc, array) => {
-        const key = array[0];
-        const value = array[1];
-
-        if (key && key.includes(APP_ID) && value) {
-          const formattedKey = key.split(APP_ID)[1];
-          return { ...acc, [formattedKey]: JSON.parse(value) };
-        } else return acc;
-      }, {});
-
-      const currentSteak = getCurrentStreak(formattedProfile);
-
-      return Promise.resolve({
-        ...formattedProfile,
-        ...(currentSteak && { [STREAK]: currentSteak }),
-      });
-    } catch (err) {
-      console.log(err);
-      return Promise.resolve();
-    }
-  };
-
-  const loadSettingsAsync = async () => {
-    try {
-      const settingsValues = await getMultiAsyncData('', SETTINGS_KEYS);
-      const formattedSettings = settingsValues.reduce((acc, array) => {
-        const key = array[0];
-        const value = array[1];
-
-        if (key && key.includes(APP_ID) && value) {
-          const formattedKey = key.split(APP_ID)[1];
-          return { ...acc, [formattedKey]: JSON.parse(value) };
-        } else return acc;
-      }, {});
-
-      return Promise.resolve(formattedSettings);
-    } catch (err) {
-      console.log(err);
-      return Promise.resolve();
-    }
-  };
 
   const updateAsyncState = ({
     customExcercisesAsync,
@@ -179,8 +179,9 @@ export default function App() {
   };
 
   if (!dataLoaded) {
+    // Remove style={styles.container} if white flash still persists
     return (
-      <View>
+      <View style={styles.container}>
         <AppLoading
           startAsync={loadAsyncDependencies}
           onFinish={() => setDataLoaded(true)}
@@ -192,17 +193,24 @@ export default function App() {
     );
   }
 
+  // Remove <View style={styles.container}> if white flash still persists
   return (
-    <CustomExcerciseContextProvider excercises={customExcercises}>
-      <ExcerciseContextProvider>
-        <ProfileContextProvider profile={profile}>
-          <HistoryContextProvider idArray={activityIdArray}>
-            <SettingsContextProvider settings={appSettings}>
-              <Navigator />
-            </SettingsContextProvider>
-          </HistoryContextProvider>
-        </ProfileContextProvider>
-      </ExcerciseContextProvider>
-    </CustomExcerciseContextProvider>
+    <View style={styles.container}>
+      <CustomExcerciseContextProvider excercises={customExcercises}>
+        <ExcerciseContextProvider>
+          <ProfileContextProvider profile={profile}>
+            <HistoryContextProvider idArray={activityIdArray}>
+              <SettingsContextProvider settings={appSettings}>
+                <Navigator />
+              </SettingsContextProvider>
+            </HistoryContextProvider>
+          </ProfileContextProvider>
+        </ExcerciseContextProvider>
+      </CustomExcerciseContextProvider>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#002f56' },
+});

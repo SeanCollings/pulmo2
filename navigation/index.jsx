@@ -16,8 +16,9 @@ const AppNavigator = (props) => {
     labelStyle: { fontFamily: 'tit-regular', fontSize: 12 },
   };
 
+  // Remove view>styles if white flash still persists
   return (
-    <View style={styles.container}>
+    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <NavigationContainer>
         <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
       </NavigationContainer>
