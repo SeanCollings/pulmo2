@@ -8,6 +8,9 @@ import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
 import ProfileContextProvider, {
   PROFILE_KEYS,
+  STREAK,
+  STREAK_LAST_ACTIVITY,
+  STREAK_CURRENT,
 } from './context/profile-context';
 import CustomExcerciseContextProvider, {
   CUSTOM_TAG,
@@ -19,6 +22,7 @@ import SettingsContextProvider, {
 import { getAsyncData, getMultiAsyncData } from './helpers/storage';
 import { ACTIVITY_TAG } from './context/history-context';
 import { APP_ID } from './constants/constants';
+import { isDateYesterday, isDateToday } from './utils';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -26,6 +30,21 @@ const fetchFonts = () => {
     'tit-regular': require('./assets/fonts/TitilliumWeb-Regular.ttf'),
     'tit-bold': require('./assets/fonts/TitilliumWeb-Bold.ttf'),
   });
+};
+
+const getCurrentStreak = (profile) => {
+  if (profile[STREAK]) {
+    const currentStreak = { ...profile[STREAK] };
+    const lastActivity = currentStreak[STREAK_LAST_ACTIVITY];
+
+    if (!isDateToday(lastActivity) && !isDateYesterday(lastActivity)) {
+      currentStreak[STREAK_CURRENT] = 0;
+    }
+
+    return currentStreak;
+  } else {
+    return null;
+  }
 };
 
 export default function App() {
@@ -90,7 +109,12 @@ export default function App() {
         } else return acc;
       }, {});
 
-      return Promise.resolve(formattedProfile);
+      const currentSteak = getCurrentStreak(formattedProfile);
+
+      return Promise.resolve({
+        ...formattedProfile,
+        ...(currentSteak && { [STREAK]: currentSteak }),
+      });
     } catch (err) {
       console.log(err);
       return Promise.resolve();

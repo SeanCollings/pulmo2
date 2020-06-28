@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 
 import {
   getAsyncData,
@@ -7,6 +7,7 @@ import {
   removeAsyncData,
   mergeAsyncData,
 } from '../helpers/storage';
+import { ProfileContext } from './profile-context';
 
 export const ACTIVITY_TAG = 'activity';
 
@@ -23,6 +24,7 @@ export const HistoryContext = createContext({
 });
 
 export default ({ idArray, children }) => {
+  const { updateCurrentStreak } = useContext(ProfileContext);
   const [activityIdArray, setActivityIdArray] = useState(idArray);
   const [activities, setActivities] = useState([]);
   const [activitiesUpdated, setActivitiesUpdated] = useState(Date.now());
@@ -56,6 +58,7 @@ export default ({ idArray, children }) => {
         setActivities((curr) => [...curr, newActivity]);
         setActivitiesUpdated(Date.now());
         storeAsyncData(date, newActivity);
+        updateCurrentStreak(date);
       }
     } catch (err) {
       console.log(err);

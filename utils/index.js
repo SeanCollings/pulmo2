@@ -181,3 +181,34 @@ export const getExcerciseById = (id, type, customExcercises) => {
       DEFAULT_EXCERCISE;
   }
 };
+
+/**
+ * Checks if two dates are from the same day
+ * @param {string} date1 eg. 2020-06-27T16:41:49.156Z
+ * @param {string} date2 eg. 2020-06-27T18:41:49.156Z
+ */
+export const datesSameDay = (date1, date2) =>
+  new Date(date1).toDateString() === new Date(date2).toDateString();
+
+/**
+ * Checks if date is yesterday
+ * @param {string} date eg. 2020-06-27T18:41:49.156Z
+ */
+export const isDateYesterday = (date) => {
+  let yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  yesterday = yesterday.toDateString();
+
+  const newDate = new Date(date).toDateString();
+
+  return newDate === yesterday;
+};
+
+/**
+ * Checks if date is today
+ * @param {date} date eg. 2020-06-27T18:41:49.156Z
+ */
+export const isDateToday = (date) => {
+  const today = new Date();
+  return new Date(today).toDateString() === new Date(date).toDateString();
+};

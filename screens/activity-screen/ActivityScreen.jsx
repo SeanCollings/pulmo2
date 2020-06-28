@@ -35,7 +35,7 @@ export const activityScreenOptions = options;
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 const getIncompleteReason = (value) => {
-  if (value === OPTION_SELECT_A_REASON.value) return '';
+  if (value === OPTION_SELECT_A_REASON.value) return 'Reason: unspecified';
 
   const option = OPTIONS_END_ACTIVITY_EARLY.find((opt) => opt.value === value);
 
