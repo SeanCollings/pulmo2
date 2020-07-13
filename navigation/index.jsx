@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 
 import { useTheme } from '../hooks/useTheme';
-import { MainTabs } from './AppNavigator';
+import { MainTabs, DisclaimerStack } from './AppNavigator';
+import {
+  ProfileContext,
+  DISCLAIMER_DONT_SHOW_AGAIN,
+  DISCLAIMER,
+  DISCLAIMER_SHOW,
+} from '../context/profile-context';
 
 const AppNavigator = (props) => {
   const theme = useTheme();
+  const firstMount = useRef(true);
+  const { profileContext } = useContext(ProfileContext);
+  const disclaimerContext = profileContext[DISCLAIMER];
+  const [showDisclaimer, setShowDisclaimer] = useState(
+    disclaimerContext[DISCLAIMER_SHOW] ||
+      !disclaimerContext[DISCLAIMER_DONT_SHOW_AGAIN]
+  );
+
+  useEffect(() => {
+    if (firstMount.current) {
+      firstMount.current = false;
+    } else {
+      if (!disclaimerContext[DISCLAIMER_SHOW]) {
+        setShowDisclaimer(false);
+      }
+    }
+  }, [disclaimerContext]);
 
   const defaultTabBarOptions = {
     activeTintColor: theme.DARK ? theme.SECONDARY : theme.BACKGROUND,
@@ -20,7 +43,10 @@ const AppNavigator = (props) => {
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
       <NavigationContainer>
-        <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
+        {showDisclaimer && <DisclaimerStack />}
+        {!showDisclaimer && (
+          <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
+        )}
       </NavigationContainer>
       <StatusBar style="light" />
     </View>

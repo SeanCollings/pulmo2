@@ -6,18 +6,29 @@ import { isDateYesterday, datesSameDay } from '../utils';
 
 export const SELECTED_LEVEL = 'selected_level';
 export const STREAK = 'streak';
-export const PROFILE_KEYS = [SELECTED_LEVEL, STREAK];
+export const DISCLAIMER = 'disclaimer';
+export const PROFILE_KEYS = [SELECTED_LEVEL, STREAK, DISCLAIMER];
 
 export const STREAK_CURRENT = 'current';
 export const STREAK_LAST_ACTIVITY = 'lastActivity';
+export const STREAK_SHOW = 'streak_show';
 export const STREAK_DEFAULT = {
   [STREAK_CURRENT]: 0,
   [STREAK_LAST_ACTIVITY]: '',
+  [STREAK_SHOW]: true,
+};
+
+export const DISCLAIMER_SHOW = 'disclaimer_show';
+export const DISCLAIMER_DONT_SHOW_AGAIN = 'dont_show_again';
+export const DISCLAIMER_DEFAULT = {
+  [DISCLAIMER_SHOW]: false,
+  [DISCLAIMER_DONT_SHOW_AGAIN]: true,
 };
 
 const DEFAULT_PROFILE = {
   [SELECTED_LEVEL]: TOTAL_DIFFICULTY_LEVELS,
   [STREAK]: STREAK_DEFAULT,
+  [DISCLAIMER]: DISCLAIMER_DEFAULT,
 };
 
 export const ProfileContext = createContext({

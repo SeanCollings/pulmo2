@@ -6,10 +6,11 @@ import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
 import { BUILD_VERSION, ANDROID_VERSION } from '../../version';
 import CategoryContainer from '../../components/CategoryContainer';
+import BarSelector from '../../components/BarSelector';
 
 export const settingsScreenOptions = options;
 
-const SettingsScreen = (props) => {
+const SettingsScreen = ({ navigation }) => {
   const theme = useTheme();
 
   const opacity = theme.DARK ? 0.36 : 0.7;
@@ -20,6 +21,13 @@ const SettingsScreen = (props) => {
         <CategoryContainer header="Day/night mode">
           <ThemeSelector />
         </CategoryContainer>
+        <View style={styles.barSelectorContainer}>
+          <BarSelector
+            textContent="Disclaimer"
+            onPress={() => navigation.navigate('Disclaimer')}
+            iconName="note-text"
+          />
+        </View>
       </View>
       <View style={styles.versionContainer}>
         <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
@@ -48,6 +56,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     alignItems: 'center',
+  },
+  barSelectorContainer: {
+    width: '100%',
   },
   versionContainer: {
     flexDirection: 'row',

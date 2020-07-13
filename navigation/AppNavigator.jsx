@@ -40,10 +40,13 @@ import CalendarScreen, {
 import EditActivityScreen, {
   editActivityScreenOptions,
 } from '../screens/edit-activity-screen/EditActivityScreen';
+import DisclaimerScreen, {
+  disclaimerScreenOptions,
+  disclaimerScreenOptionsEntry,
+} from '../screens/disclaimer-screen/DisclaimerScreen';
 
 const StackHome = createStackNavigator();
-
-export const HomeStack = () => (
+const HomeStack = () => (
   <StackHome.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackHome.Screen
       name="Home"
@@ -59,8 +62,7 @@ export const HomeStack = () => (
 );
 
 const StackExcercises = createStackNavigator();
-
-export const ExcercisesStack = () => (
+const ExcercisesStack = () => (
   <StackExcercises.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackExcercises.Screen
       name="Excercises"
@@ -76,8 +78,7 @@ export const ExcercisesStack = () => (
 );
 
 const StackProfile = createStackNavigator();
-
-export const ProfileStack = () => (
+const ProfileStack = () => (
   <StackProfile.Navigator screenOptions={defaultNavOptions(useTheme())}>
     <StackProfile.Screen
       name="Profile"
@@ -88,11 +89,6 @@ export const ProfileStack = () => (
       name="ProfileHelp"
       component={HelpProfileScreen}
       options={helpProfileScreenOptions}
-    />
-    <StackProfile.Screen
-      name="Settings"
-      component={SettingsScreen}
-      options={settingsScreenOptions}
     />
     <StackProfile.Screen
       name="AllActivities"
@@ -119,11 +115,33 @@ export const ProfileStack = () => (
       component={CalendarScreen}
       options={calendarScreenOptions}
     />
+    <StackProfile.Screen
+      name="Settings"
+      component={SettingsScreen}
+      options={settingsScreenOptions}
+    />
+    <StackProfile.Screen
+      name="Disclaimer"
+      component={DisclaimerScreen}
+      options={disclaimerScreenOptions}
+      initialParams={{ readOnly: true }}
+    />
   </StackProfile.Navigator>
 );
 
-const Tab = createBottomTabNavigator();
+const StackDisclaimer = createStackNavigator();
+export const DisclaimerStack = () => (
+  <StackDisclaimer.Navigator screenOptions={defaultNavOptions(useTheme())}>
+    <StackDisclaimer.Screen
+      name="Disclaimer"
+      component={DisclaimerScreen}
+      options={disclaimerScreenOptionsEntry}
+      initialParams={{ readOnly: false }}
+    />
+  </StackDisclaimer.Navigator>
+);
 
+const Tab = createBottomTabNavigator();
 export const MainTabs = ({ defaultTabBarOptions }) => (
   <Tab.Navigator tabBarOptions={defaultTabBarOptions} initialRouteName="Home">
     <Tab.Screen
