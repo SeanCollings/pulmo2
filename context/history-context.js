@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
 import {
   getAsyncData,
@@ -9,25 +9,32 @@ import {
 } from '../helpers/storage';
 import { ProfileContext } from './profile-context';
 
+export const LOAD_ACTIVITIES = 20;
+
 export const ACTIVITY_TAG = 'activity';
+export const FAV_ACTIVITY_TAG = 'fav_activity';
+export const ACTIVITY_UPDATE = 'activity_update';
+export const ACTIVITY_DELETE = 'activity_delete';
+export const ACTIVITY_NEW = 'activity_new';
+export const ACTIVITY_UNFAVOURITE = 'activity_unfavourite';
 
 export const HistoryContext = createContext({
-  activities: [],
   addActivity: () => {},
   deleteActivity: () => {},
-  getSavedActivites: () => {},
   favouriteActivity: () => {},
   getActivitiesByMonth: () => {},
-  activitiesUpdated: null,
   getActivityByDate: () => {},
   updateActivity: () => {},
+  getFavActiviesBySlice: () => {},
+  getSavedActivitiesBySlice: () => {},
+  updatedActivity: null,
 });
 
-export default ({ idArray, children }) => {
+export default ({ idArray, favIdArray, children }) => {
   const { updateCurrentStreak } = useContext(ProfileContext);
   const [activityIdArray, setActivityIdArray] = useState(idArray);
-  const [activities, setActivities] = useState([]);
-  const [activitiesUpdated, setActivitiesUpdated] = useState(Date.now());
+  const [favActivityIdArray, setFavActivityIdArray] = useState(favIdArray);
+  const [updatedActivity, setUpdatedActivity] = useState(null);
 
   const addActivity = async ({
     date,
@@ -46,7 +53,7 @@ export default ({ idArray, children }) => {
       }
 
       if (activityIdArray && !!activityIdArray.length) {
-        const newIdArray = [...activityIdArray, date];
+        const newIdArray = [date, ...activityIdArray];
         success = await storeAsyncData(ACTIVITY_TAG, newIdArray);
         setActivityIdArray(newIdArray);
       } else {
@@ -55,10 +62,13 @@ export default ({ idArray, children }) => {
       }
 
       if (success) {
-        setActivities((curr) => [...curr, newActivity]);
-        setActivitiesUpdated(Date.now());
         storeAsyncData(date, newActivity);
         updateCurrentStreak(date);
+        setUpdatedActivity({
+          type: ACTIVITY_NEW,
+          activity: newActivity,
+          date,
+        });
       }
     } catch (err) {
       console.log(err);
@@ -73,29 +83,24 @@ export default ({ idArray, children }) => {
     newReason,
   }) => {
     try {
-      const updatedActivities = [...activities];
-      const foundIndex = updatedActivities.findIndex(
-        (activity) => activity.date === date
-      );
+      const savedActivity = await getAsyncData(date);
+      const updatedActivity = {
+        level: newLevel,
+        incomplete: newReason,
+        rating: newRating,
+        excercise: { ...savedActivity.excercise, title: newTitle },
+      };
+      const newUpdatedActivity = {
+        ...savedActivity,
+        ...updatedActivity,
+      };
 
-      if (foundIndex >= 0) {
-        const foundActivity = updatedActivities[foundIndex];
-        const updatedActivity = {
-          level: newLevel,
-          incomplete: newReason,
-          rating: newRating,
-          excercise: { ...foundActivity.excercise, title: newTitle },
-        };
-
-        updatedActivities[foundIndex] = {
-          ...updatedActivities[foundIndex],
-          ...updatedActivity,
-        };
-
-        setActivitiesUpdated(Date.now());
-        setActivities(updatedActivities);
-        await mergeAsyncData(date, updatedActivity);
-      }
+      await mergeAsyncData(date, updatedActivity);
+      setUpdatedActivity({
+        type: ACTIVITY_UPDATE,
+        activity: newUpdatedActivity,
+        date,
+      });
 
       return true;
     } catch (err) {
@@ -103,40 +108,70 @@ export default ({ idArray, children }) => {
     }
   };
 
-  const favouriteActivity = async (date) => {
+  const favouriteActivity = async (date, activity) => {
     try {
-      const updatedActivities = [...activities];
-      const foundIndex = updatedActivities.findIndex(
-        (activity) => activity.date === date
-      );
+      let newFavActivityIdArray = [...favActivityIdArray];
 
-      if (foundIndex >= 0) {
-        const foundActivity = updatedActivities[foundIndex];
-        updatedActivities[foundIndex] = {
-          ...updatedActivities[foundIndex],
-          favourite: !foundActivity.favourite,
-        };
-
-        setActivities(updatedActivities);
-        await mergeAsyncData(date, { favourite: !foundActivity.favourite });
+      const index = newFavActivityIdArray.indexOf(date);
+      if (index > -1) {
+        newFavActivityIdArray.splice(index, 1);
+      } else {
+        newFavActivityIdArray.push(date);
       }
+
+      const updatedActivity = {
+        ...activity,
+        favourite: !activity.favourite,
+      };
+
+      await Promise.all([
+        storeAsyncData(FAV_ACTIVITY_TAG, newFavActivityIdArray),
+        mergeAsyncData(date, updatedActivity),
+      ]);
+
+      setFavActivityIdArray(newFavActivityIdArray);
+      setUpdatedActivity({
+        type: ACTIVITY_UNFAVOURITE,
+        date,
+        activity: updatedActivity,
+      });
+
+      return true;
     } catch (err) {
       console.log(err);
     }
   };
 
-  const getActivitiesByMonth = (month) => {
-    const activitiesByMonth = activities
-      .filter((activity) => activity.date.includes(month))
-      .map((activity) => ({
-        date: activity.date,
-        type: activity.type,
-        day: new Date(activity.date).getDate(),
-        title: activity.excercise.title,
-        favourite: activity.favourite,
-      }));
+  const getActivitiesByMonth = async (month) => {
+    try {
+      const activitiesToLoadByMonth = activityIdArray.filter((activity) =>
+        activity.includes(month)
+      );
 
-    return activitiesByMonth;
+      const savedActivities = await getMultiAsyncData(
+        '',
+        activitiesToLoadByMonth
+      );
+
+      if (!savedActivities) return [];
+
+      const formattedActivities = savedActivities
+        .reduce((acc, array) => {
+          if (array[1]) return [...acc, JSON.parse(array[1])];
+          else return acc;
+        }, [])
+        .map((activity) => ({
+          date: activity.date,
+          type: activity.type,
+          day: new Date(activity.date).getDate(),
+          title: activity.excercise.title,
+          favourite: activity.favourite,
+        }));
+
+      return formattedActivities;
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const getActivityByDate = async (date) => {
@@ -152,15 +187,14 @@ export default ({ idArray, children }) => {
   const deleteActivity = async (date) => {
     try {
       const updatedIdArray = activityIdArray.filter((id) => id !== date);
-      const updatedActivies = activities.filter(
-        (activity) => activity.date !== date
-      );
 
       setActivityIdArray(updatedIdArray);
-      setActivities(updatedActivies);
-      setActivitiesUpdated(Date.now());
       removeAsyncData(date);
       storeAsyncData(ACTIVITY_TAG, updatedIdArray);
+      setUpdatedActivity({
+        type: ACTIVITY_DELETE,
+        date,
+      });
 
       return true;
     } catch (err) {
@@ -169,10 +203,50 @@ export default ({ idArray, children }) => {
     }
   };
 
-  const getSavedActivites = async () => {
+  const getFavActiviesBySlice = async (slice) => {
     try {
-      let getActivityIdArray = activityIdArray;
+      let getFavActivityIdArray = [...favActivityIdArray];
+      if (
+        !getFavActivityIdArray ||
+        (getFavActivityIdArray && !getFavActivityIdArray.length)
+      ) {
+        getFavActivityIdArray = await getAsyncData(FAV_ACTIVITY_TAG);
+      }
 
+      if (getFavActivityIdArray && !!getFavActivityIdArray.length) {
+        const sortedFavouritedActivites = getFavActivityIdArray.sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
+
+        const toLoadActivities = sortedFavouritedActivites.slice(
+          slice * LOAD_ACTIVITIES,
+          (slice + 1) * LOAD_ACTIVITIES
+        );
+
+        const favActivities = await getMultiAsyncData('', toLoadActivities);
+        if (!favActivities) return [];
+
+        const formattedActivities = favActivities.reduce((acc, array) => {
+          if (array[1]) return [...acc, JSON.parse(array[1])];
+          else return acc;
+        }, []);
+
+        const sortedActivites = formattedActivities.sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
+
+        return sortedActivites;
+      }
+
+      return [];
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const getSavedActivitiesBySlice = async (slice) => {
+    try {
+      let getActivityIdArray = [...activityIdArray];
       if (
         !getActivityIdArray ||
         (getActivityIdArray && !getActivityIdArray.length)
@@ -181,7 +255,13 @@ export default ({ idArray, children }) => {
       }
 
       if (getActivityIdArray) {
-        const savedActivities = await getMultiAsyncData('', getActivityIdArray);
+        const toLoadActivities = getActivityIdArray.slice(
+          slice * LOAD_ACTIVITIES,
+          (slice + 1) * LOAD_ACTIVITIES
+        );
+
+        const savedActivities = await getMultiAsyncData('', toLoadActivities);
+        if (!savedActivities) return [];
 
         const formattedActivities = savedActivities.reduce((acc, array) => {
           if (array[1]) return [...acc, JSON.parse(array[1])];
@@ -192,32 +272,27 @@ export default ({ idArray, children }) => {
           (a, b) => new Date(b.date) - new Date(a.date)
         );
 
-        setActivities(sortedActivites);
-        return Promise.resolve();
+        return sortedActivites;
       }
+
+      return [];
     } catch (err) {
       console.log(err);
-      return Promise.reject();
     }
   };
-
-  useEffect(() => {
-    getSavedActivites();
-  }, []);
 
   return (
     <HistoryContext.Provider
       value={{
-        activities,
-        getSavedActivites,
         addActivity,
         deleteActivity,
-        setActivityIdArray,
         favouriteActivity,
         getActivitiesByMonth,
-        activitiesUpdated,
         getActivityByDate,
         updateActivity,
+        getSavedActivitiesBySlice,
+        getFavActiviesBySlice,
+        updatedActivity,
       }}
     >
       {children}

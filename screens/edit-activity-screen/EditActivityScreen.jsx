@@ -33,7 +33,6 @@ const EditActivityScreen = ({ route, navigation }) => {
 
   useEffect(() => {
     if (isSaving) {
-      setIsSaving(false);
       updateActivity({
         date,
         newRating,

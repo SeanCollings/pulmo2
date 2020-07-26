@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import {
   StyleSheet,
   View,
@@ -31,9 +31,8 @@ const formatMonth = (date) => {
 
 const CalendarScreen = ({ navigation }) => {
   const theme = useTheme();
-  const { activitiesUpdated, getActivitiesByMonth } = useContext(
-    HistoryContext
-  );
+  const firstMount = useRef(true);
+  const { getActivitiesByMonth, updatedActivity } = useContext(HistoryContext);
   const [selectedMonth, setSelectedMonth] = useState(new Date());
   const [monthsActivities, setMonthsActivities] = useState({});
   const [isFetching, setIsFetching] = useState(true);
@@ -42,24 +41,35 @@ const CalendarScreen = ({ navigation }) => {
   const colourCache = getColourCache(theme);
 
   useEffect(() => {
-    const formattedMonth = monthSubstring(new Date());
-    setMonthsActivities({
-      ...monthsActivities,
-      [formattedMonth]: getActivitiesByMonth(formattedMonth),
-    });
-  }, [activitiesUpdated]);
+    if (firstMount.current) {
+      firstMount.current = false;
+    } else if (updatedActivity) {
+      const formattedMonth = monthSubstring(new Date(updatedActivity.date));
+      getActivitiesByMonth(formattedMonth)
+        .then((activities) => {
+          setMonthsActivities({
+            ...monthsActivities,
+            [formattedMonth]: activities,
+          });
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [updatedActivity, firstMount]);
 
   useEffect(() => {
     const formattedMonth = monthSubstring(selectedMonth);
     if (!monthsActivities[formattedMonth]) {
-      setIsFetching(true);
-      setMonthsActivities({
-        ...monthsActivities,
-        [formattedMonth]: getActivitiesByMonth(formattedMonth),
+      getActivitiesByMonth(formattedMonth).then((activities) => {
+        setMonthsActivities({
+          ...monthsActivities,
+          [formattedMonth]: activities,
+        });
+        setIsFetching(false);
       });
+    } else {
+      setIsFetching(false);
     }
 
-    setIsFetching(false);
     return () => {};
   }, [selectedMonth]);
 
@@ -69,17 +79,24 @@ const CalendarScreen = ({ navigation }) => {
     return newMonth;
   };
 
+  const updateMonth = (month) => {
+    if (!monthsActivities[monthSubstring(month)]) {
+      setIsFetching(true);
+    }
+    setSelectedMonth(month);
+  };
+
   const previousMonthHandler = () => {
-    setSelectedMonth(getNewMonth(false));
+    updateMonth(getNewMonth(false));
   };
   const nextMonthHandler = () => {
-    setSelectedMonth(getNewMonth(true));
+    updateMonth(getNewMonth(true));
   };
 
   const isActivityPresent = (day) => {
     const formattedMonth = monthSubstring(selectedMonth);
-
     if (!monthsActivities[formattedMonth]) return [];
+
     const presentActivities = monthsActivities[formattedMonth]
       .filter((activity) => activity.day === day)
       .sort((a, b) => new Date(a.date) - new Date(b.date));

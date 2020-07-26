@@ -9,7 +9,7 @@ import {
   getIcon,
 } from '../utils';
 
-const ActivityDetail = ({ item, navigation, theme }) => {
+const ActivityDetail = ({ item, navigation, theme, totalItems, index }) => {
   const { date, excercise, results, type, level, favourite } = item;
   const totalTime = getTotalResultTime(results);
   const icon = getIcon(type);
@@ -76,9 +76,11 @@ const ActivityDetail = ({ item, navigation, theme }) => {
           </View>
         </View>
       </TouchableOpacity>
-      <View
-        style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
-      ></View>
+      {index + 1 < totalItems && (
+        <View
+          style={{ ...styles.verticalLine, borderTopColor: theme.BORDER }}
+        ></View>
+      )}
     </View>
   );
 };

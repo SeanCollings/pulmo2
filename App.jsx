@@ -15,7 +15,9 @@ import ProfileContextProvider, {
 import CustomExcerciseContextProvider, {
   CUSTOM_TAG,
 } from './context/custom-excercise-context';
-import HistoryContextProvider from './context/history-context';
+import HistoryContextProvider, {
+  FAV_ACTIVITY_TAG,
+} from './context/history-context';
 import SettingsContextProvider, {
   SETTINGS_KEYS,
 } from './context/settings-context';
@@ -75,9 +77,28 @@ const loadCustomExcercisesAsync = async () => {
 
 const loadActivityIdArrayAsync = async () => {
   try {
-    const getActivityIdArray = await getAsyncData(ACTIVITY_TAG);
+    const activityIdArray = await getAsyncData(ACTIVITY_TAG);
+    if (!activityIdArray) return Promise.resolve([]);
 
-    return Promise.resolve(getActivityIdArray);
+    const orderedActivityArray = activityIdArray.sort(
+      (a, b) => new Date(b) - new Date(a)
+    );
+    return Promise.resolve(orderedActivityArray);
+  } catch (err) {
+    console.log(err);
+    return Promise.resolve();
+  }
+};
+
+const loadFavActivityIdArrayAsync = async () => {
+  try {
+    const favActivityIdArray = await getAsyncData(FAV_ACTIVITY_TAG);
+    if (!favActivityIdArray) return Promise.resolve([]);
+
+    const orderedActivityArray = favActivityIdArray.sort(
+      (a, b) => new Date(b) - new Date(a)
+    );
+    return Promise.resolve(orderedActivityArray);
   } catch (err) {
     console.log(err);
     return Promise.resolve();
@@ -133,6 +154,7 @@ export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [customExcercises, setCustomExcercises] = useState([]);
   const [activityIdArray, setActivityIdArray] = useState([]);
+  const [favActivityIdArray, setFavActivityIdArray] = useState([]);
   const [profile, setProfile] = useState({});
   const [appSettings, setAppSettings] = useState({});
 
@@ -144,11 +166,13 @@ export default function App() {
   const updateAsyncState = ({
     customExcercisesAsync,
     activityIdArrayAsync,
+    favActivityIdArrayAsync,
     profileAsync,
     settingsAsync,
   }) => {
     customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
     activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
+    favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
     profileAsync && setProfile(profileAsync);
     settingsAsync && setAppSettings(settingsAsync);
 
@@ -160,12 +184,14 @@ export default function App() {
       _,
       customExcercisesAsync,
       activityIdArrayAsync,
+      favActivityIdArrayAsync,
       profileAsync,
       settingsAsync,
     ] = await Promise.all([
       fetchFonts(),
       loadCustomExcercisesAsync(),
       loadActivityIdArrayAsync(),
+      loadFavActivityIdArrayAsync(),
       loadProfileAsync(),
       loadSettingsAsync(),
     ]);
@@ -173,40 +199,40 @@ export default function App() {
     return updateAsyncState({
       customExcercisesAsync,
       activityIdArrayAsync,
+      favActivityIdArrayAsync,
       profileAsync,
       settingsAsync,
     });
   };
 
-  if (!dataLoaded) {
-    // Remove style={styles.container} if white flash still persists
-    return (
-      <View style={styles.container}>
+  // Remove <View style={styles.container}> if white flash still persists
+  return (
+    <View style={styles.container}>
+      {!dataLoaded && (
         <AppLoading
           startAsync={loadAsyncDependencies}
           onFinish={() => setDataLoaded(true)}
           onError={(err) => console.log(err)}
           autoHideSplash
         />
-        <StatusBar style="light" />
-      </View>
-    );
-  }
-
-  // Remove <View style={styles.container}> if white flash still persists
-  return (
-    <View style={styles.container}>
-      <CustomExcerciseContextProvider excercises={customExcercises}>
-        <ExcerciseContextProvider>
-          <ProfileContextProvider profile={profile}>
-            <HistoryContextProvider idArray={activityIdArray}>
-              <SettingsContextProvider settings={appSettings}>
-                <Navigator />
-              </SettingsContextProvider>
-            </HistoryContextProvider>
-          </ProfileContextProvider>
-        </ExcerciseContextProvider>
-      </CustomExcerciseContextProvider>
+      )}
+      {dataLoaded && (
+        <CustomExcerciseContextProvider excercises={customExcercises}>
+          <ExcerciseContextProvider>
+            <ProfileContextProvider profile={profile}>
+              <HistoryContextProvider
+                idArray={activityIdArray}
+                favIdArray={favActivityIdArray}
+              >
+                <SettingsContextProvider settings={appSettings}>
+                  <Navigator />
+                </SettingsContextProvider>
+              </HistoryContextProvider>
+            </ProfileContextProvider>
+          </ExcerciseContextProvider>
+        </CustomExcerciseContextProvider>
+      )}
+      <StatusBar style="light" />
     </View>
   );
 }

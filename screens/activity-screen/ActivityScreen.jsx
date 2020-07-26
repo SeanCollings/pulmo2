@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
-import { HistoryContext } from '../../context/history-context';
+import { HistoryContext, ACTIVITY_UPDATE } from '../../context/history-context';
 import options from './options';
 import { getTotalResultTime, getRemainingTime, convertDate } from '../../utils';
 import Table from '../../components/Table';
@@ -80,7 +80,7 @@ const ActivityScreen = ({ route, navigation }) => {
 
   const theme = useTheme();
   const {
-    activitiesUpdated,
+    updatedActivity,
     deleteActivity,
     favouriteActivity,
     getActivityByDate,
@@ -91,6 +91,7 @@ const ActivityScreen = ({ route, navigation }) => {
   const [selectedActivity, setSelectedActivity] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isFavouriting, setIsFavouriting] = useState(false);
 
   const {
     excercise,
@@ -142,19 +143,33 @@ const ActivityScreen = ({ route, navigation }) => {
   useEffect(() => {
     if (firstMount.current) {
       firstMount.current = false;
-    } else {
-      setIsLoading(true);
-      getActivityByDate(date).then((activity) => {
-        getSelectedActivity(activity);
-      });
+    } else if (updatedActivity && updatedActivity.date === date) {
+      switch (updatedActivity.type) {
+        case ACTIVITY_UPDATE:
+          setIsLoading(true);
+          getActivityByDate(date).then((activity) => {
+            getSelectedActivity(activity);
+          });
+          break;
+        default:
+          break;
+      }
     }
-  }, [activitiesUpdated]);
+  }, [updatedActivity, firstMount]);
 
   const totalTime = getTotalResultTime(results || []);
 
+  useEffect(() => {
+    if (isFavouriting) {
+      favouriteActivity(date, selectedActivity).then(() => {
+        setIsFavourite((curr) => !curr);
+        setIsFavouriting(false);
+      });
+    }
+  }, [isFavouriting]);
+
   const favouriteHandler = () => {
-    setIsFavourite((curr) => !curr);
-    favouriteActivity(date);
+    setIsFavouriting(true);
   };
 
   useEffect(() => {
@@ -162,7 +177,7 @@ const ActivityScreen = ({ route, navigation }) => {
       headerRight: () => (
         <HeaderButtons HeaderButtonComponent={HeaderButton}>
           <Item
-            title="help"
+            title="favourite"
             iconName={isFavourite ? 'heart' : 'heart-outline'}
             onPress={favouriteHandler}
           />
