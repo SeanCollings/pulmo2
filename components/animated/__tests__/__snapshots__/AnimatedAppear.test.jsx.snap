@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedAppear - unit test should render default 1`] = `
+<View
+  style={Object {}}
+>
+  <View
+    style={
+      Object {
+        "opacity": 1,
+        "transform": Array [
+          Object {
+            "scale": 0,
+          },
+        ],
+      }
+    }
+  >
+    <Text>
+      AnimatedAppear
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`AnimatedAppear - unit test should return null if isVisible is false 1`] = `null`;

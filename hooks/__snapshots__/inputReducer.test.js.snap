@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`inputReducer - unit tests case INPUT_BREATH: 1`] = `
+Object {
+  "countDownTime": 10,
+  "currentRound": 2,
+  "instructions": Object {
+    "main": "",
+    "prompt": "Inhale & Exhale",
+    "state": "breathing",
+    "sub": "",
+  },
+  "isActive": false,
+}
+`;
+
+exports[`inputReducer - unit tests case INPUT_END: 1`] = `
+Object {
+  "countDownTime": 0,
+  "currentRound": 0,
+  "instructions": Object {
+    "main": "Your training is complete",
+    "prompt": "Complete",
+    "state": "end",
+    "sub": "",
+  },
+  "isActive": false,
+}
+`;
+
+exports[`inputReducer - unit tests case INPUT_REST: 1`] = `
+Object {
+  "countDownTime": 0,
+  "currentRound": 0,
+  "instructions": Object {
+    "main": "Rest period",
+    "prompt": "",
+    "state": "rest",
+    "sub": "",
+  },
+  "isActive": true,
+}
+`;
+
+exports[`inputReducer - unit tests case INPUT_STOP: 1`] = `
+Object {
+  "countDownTime": 0,
+  "currentRound": 0,
+  "instructions": Object {
+    "main": "",
+    "prompt": "tap to begin",
+    "state": "initial",
+    "sub": "rounds total",
+  },
+  "isActive": false,
+}
+`;
+
+exports[`inputReducer - unit tests case INPUT_TOGGLE: 1`] = `
+Object {
+  "countDownTime": 0,
+  "currentRound": 0,
+  "instructions": Object {
+    "main": "",
+    "prompt": "tap to begin",
+    "state": "initial",
+    "sub": "rounds total",
+  },
+  "isActive": true,
+}
+`;
+
+exports[`inputReducer - unit tests default: 1`] = `
+Object {
+  "countDownTime": 0,
+  "currentRound": 0,
+  "instructions": Object {
+    "main": "",
+    "prompt": "tap to begin",
+    "state": "initial",
+    "sub": "rounds total",
+  },
+  "isActive": false,
+}
+`;

@@ -7,7 +7,6 @@ import HeaderButton from '../../components/HeaderButton';
 
 const options = (navData) => {
   return {
-    headerTitle: 'Excercises',
     headerTitle: ({ tintColor, style }) => {
       return (
         <Text style={{ fontSize: 20, color: tintColor, ...style }}>
@@ -20,7 +19,7 @@ const options = (navData) => {
         <View style={styles.headerRightContainer}>
           <HeaderButtons HeaderButtonComponent={HeaderButton}>
             <Item
-              title="help"
+              title="settings"
               iconName={'settings'}
               onPress={() => navData.navigation.navigate('Settings')}
               color={tintColor}

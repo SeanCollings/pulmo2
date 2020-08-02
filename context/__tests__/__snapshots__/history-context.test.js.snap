@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`history-context unit test 1`] = `
+Object {
+  "addActivity": [Function],
+  "deleteActivity": [Function],
+  "favouriteActivity": [Function],
+  "getActivitiesByMonth": [Function],
+  "getActivityByDate": [Function],
+  "getFavActiviesBySlice": [Function],
+  "getSavedActivitiesBySlice": [Function],
+  "updateActivity": [Function],
+  "updatedActivity": null,
+}
+`;
+
+exports[`history-context unit test 2`] = `null`;

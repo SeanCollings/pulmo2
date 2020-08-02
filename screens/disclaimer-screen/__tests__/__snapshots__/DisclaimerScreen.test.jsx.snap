@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisclaimerScreen - unit test disclaimerScreenOptions headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Disclaimer
+</Text>
+`;
+
+exports[`DisclaimerScreen - unit test disclaimerScreenOptions options 1`] = `
+Object {
+  "cardStyleInterpolator": [Function],
+  "headerTitle": [Function],
+}
+`;
+
+exports[`DisclaimerScreen - unit test disclaimerScreenOptionsEntry headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "alignSelf": "center",
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Disclaimer
+</Text>
+`;
+
+exports[`DisclaimerScreen - unit test disclaimerScreenOptionsEntry optionsEntry 1`] = `
+Object {
+  "headerTitle": [Function],
+}
+`;
+
+exports[`DisclaimerScreen - unit test should render readOnly false 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignSelf": "center",
+      }
+    }
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "paddingTop": 20,
+            "width": "80%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          The use of this application is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions or queries you may have.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          Rinse your Luft™ thoroughly with warm water and a mild detergent after each use. Be sure to flush both ends of the device and any attachments that you may have used with clear water. Shake out any excess water and allow to air dry. DO NOT BOIL or HEAT. After allowing the device to dry completely, store the Luft™ for your next session.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          Note:
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          For asthmatics, do not exhale using the Luft™ in the first week, rather breathe out normally. During the second week, exhale using the Luft™.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "paddingTop": 10,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              testID="checkboxButton"
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Text
+                    allowFontScaling={false}
+                    style={
+                      Array [
+                        Object {
+                          "color": "#CCC",
+                          "fontSize": 28,
+                        },
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "fontFamily": "material-community",
+                          "fontStyle": "normal",
+                          "fontWeight": "normal",
+                        },
+                        Object {},
+                      ]
+                    }
+                  >
+                    
+                  </Text>
+                  <View
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "transform": Array [
+                          Object {
+                            "scale": 0.01,
+                          },
+                        ],
+                      }
+                    }
+                  >
+                    <Text
+                      allowFontScaling={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#3e4b57",
+                            "fontSize": 16,
+                          },
+                          Object {
+                            "opacity": 1,
+                          },
+                          Object {
+                            "fontFamily": "material-community",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      ﹮
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "paddingLeft": 10,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 16,
+                        "opacity": 1,
+                        "paddingBottom": 2,
+                      }
+                    }
+                  >
+                    Don't show me again
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingBottom": 30,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#CCC",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 14,
+                    "paddingVertical": 8,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 2.84,
+                    "width": 100,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 14,
+                      "opacity": 1,
+                      "textAlign": "center",
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Agree
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`DisclaimerScreen - unit test should render readOnly true 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignSelf": "center",
+      }
+    }
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "paddingTop": 20,
+            "width": "80%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          The use of this application is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions or queries you may have.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          Rinse your Luft™ thoroughly with warm water and a mild detergent after each use. Be sure to flush both ends of the device and any attachments that you may have used with clear water. Shake out any excess water and allow to air dry. DO NOT BOIL or HEAT. After allowing the device to dry completely, store the Luft™ for your next session.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          Note:
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        >
+          For asthmatics, do not exhale using the Luft™ in the first week, rather breathe out normally. During the second week, exhale using the Luft™.
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#3e4b57",
+              "fontFamily": "tit-regular",
+              "fontSize": 16,
+              "opacity": 1,
+              "textAlign": "center",
+            }
+          }
+        />
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

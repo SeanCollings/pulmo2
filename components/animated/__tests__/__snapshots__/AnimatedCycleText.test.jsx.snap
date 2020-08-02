@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedAppear - unit test should render default with a non-empty text array of length 1 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 60,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 40,
+        "opacity": 1,
+        "position": "absolute",
+        "textAlignVertical": "center",
+        "textTransform": "lowercase",
+      }
+    }
+  >
+    AnimatedCycleText
+  </Text>
+</View>
+`;
+
+exports[`AnimatedAppear - unit test should render with multiple text array values 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "height": 60,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 40,
+        "opacity": 0,
+        "position": "absolute",
+        "textAlignVertical": "center",
+        "textTransform": "lowercase",
+      }
+    }
+  >
+    one
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 40,
+        "opacity": 0,
+        "position": "absolute",
+        "textAlignVertical": "center",
+        "textTransform": "lowercase",
+      }
+    }
+  >
+    two
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 40,
+        "opacity": 1,
+        "position": "absolute",
+        "textAlignVertical": "center",
+        "textTransform": "lowercase",
+      }
+    }
+  >
+    three
+  </Text>
+</View>
+`;
+
+exports[`AnimatedAppear - unit test should return null if empty text array 1`] = `null`;

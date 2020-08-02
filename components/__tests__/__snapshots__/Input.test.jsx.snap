@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingHorizontal": 5,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "78%",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      maxLength={40}
+      multiline={true}
+      numberOfLines={2}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      rejectResponderTermination={true}
+      selectionColor="#002f56"
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+        }
+      }
+      testID="textInput"
+      underlineColorAndroid="transparent"
+      value="Input"
+    />
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#CCC",
+          "borderBottomWidth": 1,
+          "opacity": 0,
+          "width": "0%",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingLeft": 10,
+        "width": "22%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 14,
+          "opacity": 0.8,
+        }
+      }
+    >
+      5 / 40
+    </Text>
+  </View>
+</View>
+`;

@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpExcerciseScreen - unit test helpExcerciseScreenOptions headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Help
+</Text>
+`;
+
+exports[`HelpExcerciseScreen - unit test helpExcerciseScreenOptions options 1`] = `
+Object {
+  "headerTitle": [Function],
+}
+`;
+
+exports[`HelpExcerciseScreen - unit test should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "alignItems": "center",
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 30,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#002f56",
+          "fontFamily": "tit-regular",
+          "fontSize": 20,
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Excercises Page
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 0,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      There are three types of excercises:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-bold",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Strength, Endurance, Custom
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      To preview an excercise, tap on its title.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      An excercise can be selected by either tapping on its toggle, or selecting it on the preview menu.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Create a
+       
+      <Text
+        style={
+          Object {
+            "fontFamily": "tit-bold",
+          }
+        }
+      >
+        Custom
+      </Text>
+       
+      excercise by inputting the title, breath cycles, rest period and number of rounds.
+      <Text
+        style={
+          Object {
+            "fontFamily": "tit-bold",
+          }
+        }
+      >
+         
+        Custom
+      </Text>
+       
+      excercises are saved and can be editted or deleted later.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

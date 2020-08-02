@@ -11,6 +11,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import CustomModal from '.';
 import CustomButton from '../CustomButton';
 import { useTheme } from '../../hooks/useTheme';
+import { TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
 
 const TITLE = 'Title';
 const CYCLES = 'Inhale & exhale';
@@ -27,7 +28,7 @@ const ModalExcercise = ({
   cancelModal,
   confirmModal,
   headingColour,
-  selectedLevel,
+  selectedLevel = TOTAL_DIFFICULTY_LEVELS,
   cancelTitle,
   confirmTitle,
   isEditable = false,
@@ -136,7 +137,7 @@ const ModalExcercise = ({
     return (
       excercise && (
         <View style={styles.deleteButton}>
-          <TouchableOpacity onPress={deleteButtonHandler}>
+          <TouchableOpacity testID="deleteButton" onPress={deleteButtonHandler}>
             <MaterialCommunityIcons
               name={'delete-outline'}
               color={theme.TEXT}
@@ -157,7 +158,7 @@ const ModalExcercise = ({
     return (
       excercise && (
         <View style={styles.editButton}>
-          <TouchableOpacity onPress={editButtonHandler}>
+          <TouchableOpacity testID="editButton" onPress={editButtonHandler}>
             <MaterialCommunityIcons
               name={'circle-edit-outline'}
               color={theme.TEXT}
@@ -182,6 +183,7 @@ const ModalExcercise = ({
   const ExcerciseTitle = () => {
     return (
       <TextInput
+        testID={`textInput_${TITLE}`}
         editable={editExcercise}
         defaultValue={title.current}
         onChangeText={excerciseTitleHandler}
@@ -239,6 +241,7 @@ const ModalExcercise = ({
 
     return (
       <TextInput
+        testID={`textInput_${detail}`}
         editable={editExcercise}
         defaultValue={textValue}
         style={{
@@ -347,12 +350,17 @@ const ModalExcercise = ({
             <View style={styles.buttonContainer}>
               <View style={{ width: '40%' }}>
                 <CustomButton
+                  testID="cancelDelete"
                   title={'No'}
                   onPress={() => setDeleteExcercise(false)}
                 />
               </View>
               <View style={{ width: '40%' }}>
-                <CustomButton title={'Yes'} onPress={confirmDeleteHandler} />
+                <CustomButton
+                  testID="confirmDelete"
+                  title={'Yes'}
+                  onPress={confirmDeleteHandler}
+                />
               </View>
             </View>
           </View>

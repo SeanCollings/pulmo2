@@ -20,6 +20,7 @@ const Tabs = ({ options, onPress, selectedTab }) => {
             }}
           >
             <TouchableOpacity
+              testID={`tab_${options[i]}`}
               onPress={() => onPress(options[i])}
               activeOpacity={0.8}
               style={{

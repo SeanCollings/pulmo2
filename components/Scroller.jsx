@@ -52,7 +52,11 @@ const Scroller = ({
 
   return (
     <View style={{ ...styles.container }}>
-      <TouchableOpacity style={styles.leftButton} onPress={onLeftPressHandler}>
+      <TouchableOpacity
+        testID="left"
+        style={styles.leftButton}
+        onPress={onLeftPressHandler}
+      >
         <MaterialCommunityIcons
           name={'chevron-left-circle'}
           color={theme.BORDER}
@@ -72,6 +76,7 @@ const Scroller = ({
         </ScrollView>
       </View>
       <TouchableOpacity
+        testID="right"
         style={styles.rightButton}
         onPress={onRightPressHandler}
       >

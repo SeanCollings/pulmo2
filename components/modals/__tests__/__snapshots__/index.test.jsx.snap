@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal - unit test should render default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, 0.5)",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Modal
+    animationType="none"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": 12,
+            "elevation": 5,
+            "padding": 20,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 2.84,
+            "width": "80%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "105%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginTop": 20,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#CCC",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 14,
+                    "paddingVertical": 8,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 2.84,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 14,
+                      "opacity": 1,
+                      "textAlign": "center",
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Cancel
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;
+
+exports[`Modal - unit test should render with custom props 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 0, 0, 0.5)",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Modal
+    animationType="none"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderRadius": 12,
+            "elevation": 5,
+            "padding": 20,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 2.84,
+            "width": "80%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "width": "105%",
+            }
+          }
+        >
+          <Text>
+            TopLeft
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "tit-regular",
+                "fontSize": 20,
+                "textAlign": "center",
+                "width": "80%",
+              }
+            }
+          >
+            Modal header
+          </Text>
+          <Text>
+            TopRight
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+              "marginTop": 20,
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#CCC",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 14,
+                    "paddingVertical": 8,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 2.84,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 14,
+                      "opacity": 1,
+                      "textAlign": "center",
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Modal cancelTitle
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "40%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "#CCC",
+                    "borderRadius": 8,
+                    "borderWidth": 1,
+                    "justifyContent": "center",
+                    "paddingHorizontal": 14,
+                    "paddingVertical": 8,
+                    "shadowColor": "#000",
+                    "shadowOffset": Object {
+                      "height": 2,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.25,
+                    "shadowRadius": 2.84,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 14,
+                      "opacity": 1,
+                      "textAlign": "center",
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Modal confirmTitle
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</View>
+`;

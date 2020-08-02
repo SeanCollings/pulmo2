@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpProfileScreen - unit test helpProfileScreenOptions headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Help
+</Text>
+`;
+
+exports[`HelpProfileScreen - unit test helpProfileScreenOptions options 1`] = `
+Object {
+  "headerTitle": [Function],
+}
+`;
+
+exports[`HelpProfileScreen - unit test should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "alignItems": "center",
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 30,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#002f56",
+          "fontFamily": "tit-regular",
+          "fontSize": 20,
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Profile Page
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Use
+       
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#CCC",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        ﬍
+      </Text>
+       
+      and
+       
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#CCC",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        ﬏
+      </Text>
+       
+      to select the difficulty level that you will be using on the Luft™.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-bold",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      At the start of each excercise you will confirm the difficulty level.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Each excercise will be saved to your Profile and can be viewed in detail by selecting it from 'All activities'.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      If you would like to delete or edit an excercise, click through to an activity's details and select your desired option.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

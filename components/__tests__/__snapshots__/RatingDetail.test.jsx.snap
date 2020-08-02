@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RatingDetail - unit test should render 1`] = `
+<View
+  style={Object {}}
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "paddingLeft": 10,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#002f56",
+          "borderRadius": 36,
+          "height": 36,
+          "justifyContent": "center",
+          "width": 36,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 28.8,
+            },
+            Object {
+              "opacity": 1,
+            },
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        ﱊ
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "justifyContent": "center",
+          "paddingBottom": 4,
+          "paddingLeft": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#3e4b57",
+            "fontFamily": "tit-light",
+            "fontSize": 18,
+            "opacity": 1,
+          }
+        }
+      >
+        terrible
+      </Text>
+    </View>
+  </View>
+</View>
+`;

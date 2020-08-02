@@ -7,6 +7,7 @@ const AnimatedBottomSpinner = ({
   animateOutFinished,
   animateIn,
   animateOut,
+  duration = 200,
 }) => {
   const theme = useTheme();
   const [animatedHeight] = useState(new Animated.Value(-100));
@@ -15,7 +16,7 @@ const AnimatedBottomSpinner = ({
     if (animateIn) {
       Animated.timing(animatedHeight, {
         toValue: 0,
-        duration: 200,
+        duration,
       }).start(({ finished }) => {
         if (finished) {
           animateInFinished();
@@ -28,7 +29,7 @@ const AnimatedBottomSpinner = ({
     if (animateOut) {
       Animated.timing(animatedHeight, {
         toValue: -100,
-        duration: 200,
+        duration,
       }).start(({ finished }) => {
         if (finished) {
           animateOutFinished();

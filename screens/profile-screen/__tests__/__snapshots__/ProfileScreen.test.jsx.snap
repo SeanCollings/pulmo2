@@ -1,0 +1,859 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileScreen - unit test profileScreenOptions headerRight 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <HeaderButtons
+    HeaderButtonComponent={[Function]}
+    left={false}
+  >
+    <Item
+      color="white"
+      iconName="settings"
+      onPress={[Function]}
+      title="settings"
+    />
+  </HeaderButtons>
+  <HeaderButtons
+    HeaderButtonComponent={[Function]}
+    left={false}
+  >
+    <Item
+      color="white"
+      iconName="help-circle-outline"
+      onPress={[Function]}
+      title="help"
+    />
+  </HeaderButtons>
+</View>
+`;
+
+exports[`ProfileScreen - unit test profileScreenOptions headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Profile
+</Text>
+`;
+
+exports[`ProfileScreen - unit test profileScreenOptions options 1`] = `
+Object {
+  "headerRight": [Function],
+  "headerTitle": [Function],
+  "tabBarIcon": [Function],
+}
+`;
+
+exports[`ProfileScreen - unit test profileScreenOptions tabBarIcon 1`] = `
+<Icon
+  allowFontScaling={false}
+  color="white"
+  name="account"
+  size={26}
+/>
+`;
+
+exports[`ProfileScreen - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingBottom": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#002f56",
+            "fontFamily": "tit-regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Selected level
+      </Text>
+      <View>
+        <View
+          style={
+            Object {
+              "alignSelf": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "paddingTop": 4,
+              }
+            }
+            testID="left"
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#CCC",
+                    "fontSize": 30,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              ﬍
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "width": 80,
+              }
+            }
+          >
+            <RCTScrollView
+              horizontal={true}
+              keyboardShouldPersistTaps="always"
+              pagingEnabled={true}
+              scrollEnabled={false}
+              showsHorizontalScrollIndicator={false}
+            >
+              <View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    0
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    0.5
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    1
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    1.5
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    2
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    2.5
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    3
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    3.5
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    4
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    4.5
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                      "width": 80,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 30,
+                        "opacity": 1,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    5
+                  </Text>
+                </View>
+              </View>
+            </RCTScrollView>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "justifyContent": "center",
+                "opacity": 1,
+                "paddingTop": 4,
+              }
+            }
+            testID="right"
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#CCC",
+                    "fontSize": 30,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              ﬏
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-regular",
+          "fontSize": 18,
+          "opacity": 0.8,
+        }
+      }
+    >
+      0 day streak
+    </Text>
+  </View>
+  <RCTScrollView
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "elevation": 5,
+            "height": 50,
+            "justifyContent": "center",
+            "marginVertical": 2,
+            "opacity": 1,
+            "paddingHorizontal": "10%",
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 2.84,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "justifyContent": "center",
+                  "paddingRight": 20,
+                  "paddingTop": 1,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#CCC",
+                      "fontSize": 21,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#3e4b57",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 18,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                }
+              }
+            >
+              All activities
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingTop": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#CCC",
+                    "fontSize": 23,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "elevation": 5,
+            "height": 50,
+            "justifyContent": "center",
+            "marginVertical": 2,
+            "opacity": 1,
+            "paddingHorizontal": "10%",
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 2.84,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "justifyContent": "center",
+                  "paddingRight": 20,
+                  "paddingTop": 1,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#CCC",
+                      "fontSize": 21,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#3e4b57",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 18,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                }
+              }
+            >
+              Favourites
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingTop": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#CCC",
+                    "fontSize": 23,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "elevation": 5,
+            "height": 50,
+            "justifyContent": "center",
+            "marginVertical": 2,
+            "opacity": 1,
+            "paddingHorizontal": "10%",
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.25,
+            "shadowRadius": 2.84,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "justifyContent": "center",
+                  "paddingRight": 20,
+                  "paddingTop": 1,
+                }
+              }
+            >
+              <Text
+                allowFontScaling={false}
+                style={
+                  Array [
+                    Object {
+                      "color": "#CCC",
+                      "fontSize": 21,
+                    },
+                    undefined,
+                    Object {
+                      "fontFamily": "material-community",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                ףּ
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#3e4b57",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 18,
+                  "justifyContent": "center",
+                  "opacity": 1,
+                }
+              }
+            >
+              Calendar
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingTop": 1,
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#CCC",
+                    "fontSize": 23,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "material-community",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

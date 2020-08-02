@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slides - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    horizontal={true}
+    keyboardShouldPersistTaps="always"
+    onScroll={[Function]}
+    pagingEnabled={true}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <Text>
+        one
+      </Text>
+      <Text>
+        two
+      </Text>
+      <Text>
+        three
+      </Text>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "bottom": 10,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": 750,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 12,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 12,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 12,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

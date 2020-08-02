@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`settings-context unit test 1`] = `
+Object {
+  "settingsContext": Object {
+    "theme": "light_mode",
+  },
+  "updateSettingsContext": [Function],
+}
+`;
+
+exports[`settings-context unit test 2`] = `null`;

@@ -8,7 +8,7 @@ const AnimateAppear = ({
   startingScale = 0,
   durationScale = 300,
   startingOpacity = 0,
-  durationOpacity = 300,
+  duration = 300,
 }) => {
   let animatedScale = new Animated.Value(isVisible ? startingScale : 1);
   let animatedOpacity = new Animated.Value(startingOpacity);
@@ -21,7 +21,7 @@ const AnimateAppear = ({
       }),
       Animated.timing(animatedOpacity, {
         toValue: isVisible ? 1 : 0,
-        duration: durationOpacity,
+        duration: duration,
       }),
     ]).start();
   }, [isVisible]);

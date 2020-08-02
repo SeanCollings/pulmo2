@@ -50,10 +50,10 @@ const Input = ({
 
   const onChangeTextHandler = (text) => {
     let newText = text;
-    if (newText > maxLength) {
-      newText.substr(0, maxLength);
+    if (newText.length > maxLength) {
+      newText = newText.substr(0, maxLength);
     }
-    onChangeText(text);
+    onChangeText(newText);
   };
 
   const animatedGrowStyle = {
@@ -65,6 +65,7 @@ const Input = ({
     <View style={styles.container}>
       <View style={styles.textInputContainer}>
         <TextInput
+          testID="textInput"
           {...rest}
           style={{
             ...styles.input,

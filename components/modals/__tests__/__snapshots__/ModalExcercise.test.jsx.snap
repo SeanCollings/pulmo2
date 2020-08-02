@@ -1,0 +1,4020 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalExcercise - unit test Create new excercise Validation should show errors if validation fails 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": -10,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  defaultValue=""
+                  editable={true}
+                  maxLength={30}
+                  multiline={true}
+                  numberOfLines={2}
+                  onChangeText={[Function]}
+                  placeholder="Title"
+                  placeholderTextColor="#CCC"
+                  rejectResponderTermination={true}
+                  selectionColor="#002f56"
+                  style={
+                    Object {
+                      "borderBottomColor": "#ff1507",
+                      "borderBottomWidth": 1,
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 20,
+                      "opacity": 0.7,
+                      "textAlign": "center",
+                      "width": "78%",
+                    }
+                  }
+                  testID="textInput_Title"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#ff1507",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#ff1507",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#ff1507",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "marginHorizontal": 20,
+                    "paddingTop": 10,
+                    "width": "80%",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ff1507",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 17,
+                      "opacity": 0.8,
+                    }
+                  }
+                >
+                  Invalid input
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Save
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test delete excercise prompt should handle cancel delete activity 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="deleteButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  罹
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="editButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": -10,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  defaultValue="Modal Excercise"
+                  editable={false}
+                  maxLength={30}
+                  multiline={true}
+                  numberOfLines={2}
+                  onChangeText={[Function]}
+                  placeholder="Title"
+                  placeholderTextColor="#CCC"
+                  rejectResponderTermination={true}
+                  selectionColor="#002f56"
+                  style={
+                    Object {
+                      "borderBottomColor": "white",
+                      "borderBottomWidth": 1,
+                      "color": undefined,
+                      "fontFamily": "tit-regular",
+                      "fontSize": 20,
+                      "textAlign": "center",
+                      "width": "78%",
+                    }
+                  }
+                  testID="textInput_Title"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="12"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="10s"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="5"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Confirm
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test delete excercise prompt should render the delete excercise prompt 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "width": "105%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": "tit-regular",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                  "width": "80%",
+                }
+              }
+            >
+              Warning
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "paddingTop": 10,
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "borderBottomColor": "white",
+                    "borderBottomWidth": 1,
+                    "color": "#3e4b57",
+                    "fontFamily": "tit-light",
+                    "fontSize": 17,
+                    "justifyContent": "center",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Are you sure you want to delete this custom excercise?
+              </Text>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": 20,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "white",
+                          "borderColor": "#CCC",
+                          "borderRadius": 8,
+                          "borderWidth": 1,
+                          "justifyContent": "center",
+                          "paddingHorizontal": 14,
+                          "paddingVertical": 8,
+                          "shadowColor": "#000",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.25,
+                          "shadowRadius": 2.84,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#3e4b57",
+                            "fontFamily": "tit-regular",
+                            "fontSize": 14,
+                            "opacity": 1,
+                            "textAlign": "center",
+                            "textTransform": "uppercase",
+                          }
+                        }
+                      >
+                        No
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    focusable={true}
+                    isTVSelectable={true}
+                    onClick={[Function]}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "white",
+                          "borderColor": "#CCC",
+                          "borderRadius": 8,
+                          "borderWidth": 1,
+                          "justifyContent": "center",
+                          "paddingHorizontal": 14,
+                          "paddingVertical": 8,
+                          "shadowColor": "#000",
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.25,
+                          "shadowRadius": 2.84,
+                        }
+                      }
+                    >
+                      <Text
+                        style={
+                          Object {
+                            "color": "#3e4b57",
+                            "fontFamily": "tit-regular",
+                            "fontSize": 14,
+                            "opacity": 1,
+                            "textAlign": "center",
+                            "textTransform": "uppercase",
+                          }
+                        }
+                      >
+                        Yes
+                      </Text>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test should render default 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="s"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test should render in the editable state when edit button pressed and there is an excerise and it is editable 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="deleteButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  罹
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="editButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": -10,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  defaultValue="Modal Excercise"
+                  editable={true}
+                  maxLength={30}
+                  multiline={true}
+                  numberOfLines={2}
+                  onChangeText={[Function]}
+                  placeholder="Title"
+                  placeholderTextColor="#CCC"
+                  rejectResponderTermination={true}
+                  selectionColor="#002f56"
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 20,
+                      "opacity": 0.7,
+                      "textAlign": "center",
+                      "width": "78%",
+                    }
+                  }
+                  testID="textInput_Title"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="12"
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="10"
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="5"
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Save
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test should render with a non editable excercise selected 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "width": "105%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": "tit-regular",
+                  "fontSize": 20,
+                  "textAlign": "center",
+                  "width": "80%",
+                }
+              }
+            >
+              Modal Excercise
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="12"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="10s"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="5"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test should render with an editable empty excercise 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": -10,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  defaultValue=""
+                  editable={true}
+                  maxLength={30}
+                  multiline={true}
+                  numberOfLines={2}
+                  onChangeText={[Function]}
+                  placeholder="Title"
+                  placeholderTextColor="#CCC"
+                  rejectResponderTermination={true}
+                  selectionColor="#002f56"
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "color": "#3e4b57",
+                      "fontFamily": "tit-regular",
+                      "fontSize": 20,
+                      "opacity": 0.7,
+                      "textAlign": "center",
+                      "width": "78%",
+                    }
+                  }
+                  testID="textInput_Title"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue=""
+                    editable={true}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.7,
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.2,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Save
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;
+
+exports[`ModalExcercise - unit test should render with an editable excercise selected 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      transparent={true}
+      visible={true}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "borderRadius": 12,
+              "elevation": 5,
+              "padding": 20,
+              "shadowColor": "#000",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.25,
+              "shadowRadius": 2.84,
+              "width": "80%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "width": "105%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="deleteButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  罹
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "opacity": 0.63,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+                testID="editButton"
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e4b57",
+                        "fontSize": 31,
+                      },
+                      undefined,
+                      Object {
+                        "fontFamily": "material-community",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "marginTop": -10,
+                  }
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  defaultValue="Modal Excercise"
+                  editable={false}
+                  maxLength={30}
+                  multiline={true}
+                  numberOfLines={2}
+                  onChangeText={[Function]}
+                  placeholder="Title"
+                  placeholderTextColor="#CCC"
+                  rejectResponderTermination={true}
+                  selectionColor="#002f56"
+                  style={
+                    Object {
+                      "borderBottomColor": "white",
+                      "borderBottomWidth": 1,
+                      "color": undefined,
+                      "fontFamily": "tit-regular",
+                      "fontSize": 20,
+                      "textAlign": "center",
+                      "width": "78%",
+                    }
+                  }
+                  testID="textInput_Title"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Inhale & exhale
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="12"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Inhale & exhale"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="10s"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={3}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rest"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.87,
+                      }
+                    }
+                  >
+                    Rounds
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    defaultValue="5"
+                    editable={false}
+                    keyboardType="number-pad"
+                    maxLength={2}
+                    onChangeText={[Function]}
+                    rejectResponderTermination={true}
+                    selectionColor="#002f56"
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "width": "110%",
+                      }
+                    }
+                    testID="textInput_Rounds"
+                    underlineColorAndroid="transparent"
+                  />
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "paddingTop": 10,
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "paddingLeft": 20,
+                      "textAlign": "center",
+                      "width": "80%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                  >
+                    Selected level
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "paddingRight": 20,
+                      "width": "20%",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    editable={false}
+                    rejectResponderTermination={true}
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.63,
+                      }
+                    }
+                    underlineColorAndroid="transparent"
+                    value="5"
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+                "marginTop": 20,
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Cancel
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "width": "40%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "white",
+                      "borderColor": "#CCC",
+                      "borderRadius": 8,
+                      "borderWidth": 1,
+                      "justifyContent": "center",
+                      "paddingHorizontal": 14,
+                      "paddingVertical": 8,
+                      "shadowColor": "#000",
+                      "shadowOffset": Object {
+                        "height": 2,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.25,
+                      "shadowRadius": 2.84,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 14,
+                        "opacity": 1,
+                        "textAlign": "center",
+                        "textTransform": "uppercase",
+                      }
+                    }
+                  >
+                    Confirm
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </Modal>
+  </View>
+</View>
+`;

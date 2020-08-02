@@ -54,6 +54,7 @@ const SlideContent = ({
       }}
     >
       <TouchableOpacity
+        testID={`openExcerciseModal_${content.id}`}
         style={styles.slideContentTitle}
         onPress={() => setModalContent([content, colour, type])}
       >
@@ -160,6 +161,7 @@ const IndividualSlide = ({
             {custom && (
               <View style={{ padding: 1 }}>
                 <CustomButton
+                  testID="createNewExcercise"
                   title="Create new excercise"
                   onPress={() => createNewHandler(colour)}
                   bgColour={theme.DARK ? theme.PRIMARY : theme.BACKGROUND}

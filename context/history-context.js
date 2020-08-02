@@ -148,6 +148,8 @@ export default ({ idArray, favIdArray, children }) => {
         activity.includes(month)
       );
 
+      if (!activitiesToLoadByMonth.length) return [];
+
       const savedActivities = await getMultiAsyncData(
         '',
         activitiesToLoadByMonth
@@ -241,6 +243,7 @@ export default ({ idArray, favIdArray, children }) => {
       return [];
     } catch (err) {
       console.log(err);
+      return [];
     }
   };
 
@@ -278,6 +281,7 @@ export default ({ idArray, favIdArray, children }) => {
       return [];
     } catch (err) {
       console.log(err);
+      return [];
     }
   };
 

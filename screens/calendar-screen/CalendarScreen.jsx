@@ -33,7 +33,7 @@ const CalendarScreen = ({ navigation }) => {
   const theme = useTheme();
   const firstMount = useRef(true);
   const { getActivitiesByMonth, updatedActivity } = useContext(HistoryContext);
-  const [selectedMonth, setSelectedMonth] = useState(new Date());
+  const [selectedMonth, setSelectedMonth] = useState(new Date(Date.now()));
   const [monthsActivities, setMonthsActivities] = useState({});
   const [isFetching, setIsFetching] = useState(true);
   const [modalContents, setModalContents] = useState(null);

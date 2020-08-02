@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <RNGestureHandlerButton
+      collapsable={false}
+      onGestureEvent={[Function]}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onHandlerStateChange={[Function]}
+      rippleColor={0}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID="tab_one"
+      >
+        <View
+          style={
+            Object {
+              "height": "100%",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#3e4b57",
+                "fontFamily": "tit-regular",
+                "fontSize": 16,
+                "opacity": 0.9,
+              }
+            }
+          >
+            one
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderBottomColor": "#CCC",
+              "borderBottomWidth": 1,
+              "width": "50%",
+            }
+          }
+        />
+      </View>
+    </RNGestureHandlerButton>
+  </View>
+  <View
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
+  >
+    <RNGestureHandlerButton
+      collapsable={false}
+      onGestureEvent={[Function]}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onHandlerStateChange={[Function]}
+      rippleColor={0}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "height": 40,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID="tab_two"
+      >
+        <View
+          style={
+            Object {
+              "height": "100%",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#3e4b57",
+                "fontFamily": "tit-regular",
+                "fontSize": 16,
+                "opacity": 0.9,
+              }
+            }
+          >
+            two
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "borderBottomColor": "white",
+              "borderBottomWidth": 1,
+              "width": "50%",
+            }
+          }
+        />
+      </View>
+    </RNGestureHandlerButton>
+  </View>
+</View>
+`;

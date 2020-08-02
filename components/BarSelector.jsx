@@ -4,7 +4,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { useTheme } from '../hooks/useTheme';
 
-const BarSelector = ({ textContent, iconName, onPress = () => null }) => {
+const BarSelector = ({ textContent, iconName, onPress }) => {
   const theme = useTheme();
 
   const opacity = theme.DARK ? 0.87 : 1;
@@ -56,6 +56,10 @@ const BarSelector = ({ textContent, iconName, onPress = () => null }) => {
       </View>
     </TouchableOpacity>
   );
+};
+
+BarSelector.defaultProps = {
+  onPress: () => {},
 };
 
 const styles = StyleSheet.create({

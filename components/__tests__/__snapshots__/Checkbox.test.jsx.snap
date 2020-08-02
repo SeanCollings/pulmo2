@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox - unit test should render in checked state 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="checkboxButton"
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#CCC",
+              "fontSize": 28,
+            },
+            Object {
+              "opacity": 1,
+            },
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "scale": 1,
+              },
+            ],
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#3e4b57",
+                "fontSize": 16,
+              },
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "fontFamily": "material-community",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          ﹮
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "justifyContent": "center",
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#3e4b57",
+            "fontFamily": "tit-light",
+            "fontSize": 16,
+            "opacity": 1,
+            "paddingBottom": 2,
+          }
+        }
+      >
+        Checkbox
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Checkbox - unit test should render in unchecked state 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID="checkboxButton"
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#CCC",
+              "fontSize": 28,
+            },
+            Object {
+              "opacity": 1,
+            },
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "transform": Array [
+              Object {
+                "scale": 0.01,
+              },
+            ],
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#3e4b57",
+                "fontSize": 16,
+              },
+              Object {
+                "opacity": 1,
+              },
+              Object {
+                "fontFamily": "material-community",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          ﹮
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "justifyContent": "center",
+          "paddingLeft": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#3e4b57",
+            "fontFamily": "tit-light",
+            "fontSize": 16,
+            "opacity": 1,
+            "paddingBottom": 2,
+          }
+        }
+      >
+        Checkbox
+      </Text>
+    </View>
+  </View>
+</View>
+`;

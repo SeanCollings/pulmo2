@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slides - unit test should enable theme change 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#ededed",
+        "fontFamily": "tit-regular",
+        "fontSize": 17,
+        "opacity": 0.87,
+      }
+    }
+  >
+    Use dark mode
+  </Text>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingTop": 1,
+        }
+      }
+    >
+      <RCTSwitch
+        accessibilityRole="button"
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onTintColor="#2f9fd0"
+        style={
+          Object {
+            "height": 31,
+            "width": 51,
+          }
+        }
+        testID="customSwitch_valueChange"
+        thumbTintColor=""
+        tintColor="#707070"
+        value={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Slides - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "paddingHorizontal": 10,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-regular",
+        "fontSize": 17,
+        "opacity": 1,
+      }
+    }
+  >
+    Use dark mode
+  </Text>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingTop": 1,
+        }
+      }
+    >
+      <RCTSwitch
+        accessibilityRole="button"
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onTintColor="#002f56"
+        style={
+          Object {
+            "height": 31,
+            "width": 51,
+          }
+        }
+        testID="customSwitch_valueChange"
+        thumbTintColor=""
+        tintColor="#CCC"
+        value={false}
+      />
+    </View>
+  </View>
+</View>
+`;

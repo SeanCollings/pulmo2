@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Scroller - unit test should render 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingTop": 4,
+      }
+    }
+    testID="left"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 30,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      ﬍
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "width": 80,
+      }
+    }
+  >
+    <RCTScrollView
+      horizontal={true}
+      keyboardShouldPersistTaps="always"
+      pagingEnabled={true}
+      scrollEnabled={false}
+      showsHorizontalScrollIndicator={false}
+    >
+      <View>
+        <Text>
+          one
+        </Text>
+        <Text>
+          two
+        </Text>
+        <Text>
+          three
+        </Text>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "justifyContent": "center",
+        "opacity": 1,
+        "paddingTop": 4,
+      }
+    }
+    testID="right"
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 30,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      ﬏
+    </Text>
+  </View>
+</View>
+`;

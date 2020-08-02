@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedUnderline - unit test should render default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }
+>
+  <View />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderBottomColor": "white",
+          "borderBottomWidth": 1,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#3e4b57",
+          "borderBottomWidth": 1,
+          "opacity": 0.7,
+          "position": "absolute",
+          "width": "0%",
+        }
+      }
+    />
+  </View>
+</View>
+`;

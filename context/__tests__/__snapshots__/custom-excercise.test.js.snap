@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom-excercise-context unit test 1`] = `
+Object {
+  "addCustomExcercise": [Function],
+  "customExcercises": undefined,
+  "deleteCustomExcercise": [Function],
+  "updateCustomExcercise": [Function],
+}
+`;
+
+exports[`custom-excercise-context unit test 2`] = `null`;

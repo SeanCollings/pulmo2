@@ -58,6 +58,7 @@ const CustomModal = ({
                 {cancelModal && (
                   <View style={{ width: '40%' }}>
                     <CustomButton
+                      testID="cancelModal"
                       title={cancelTitle}
                       onPress={cancelModal}
                       style={buttonStyle}
@@ -67,6 +68,7 @@ const CustomModal = ({
                 {confirmModal && (
                   <View style={{ width: '40%' }}>
                     <CustomButton
+                      testID="confirmModal"
                       title={confirmTitle}
                       onPress={confirmModal}
                       style={buttonStyle}

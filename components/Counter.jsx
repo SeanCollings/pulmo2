@@ -17,10 +17,16 @@ const firstNumberIs1 = (number) => {
   return regEx.test(number.toString()) || number === 1;
 };
 
-const Counter = ({ reset, disabled }) => {
+const Counter = ({
+  reset,
+  disabled,
+  duration = 200,
+  countStart = 0,
+  jest = false,
+}) => {
   const theme = useTheme();
   const firstMount = useRef(true);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(countStart);
   const [animatedRotate, setAnimatedRotate] = useState(new Animated.Value(0));
   const [animatedGrow] = useState(new Animated.Value(0));
   const animatedOpacity = new Animated.Value(0);
@@ -30,7 +36,7 @@ const Counter = ({ reset, disabled }) => {
     outputRange: ['-90deg', '0deg'],
   });
 
-  const rotateAnimation = (duration = 200) =>
+  const rotateAnimation = (duration) =>
     Animated.timing(animatedRotate, {
       toValue: 1,
       duration,
@@ -38,20 +44,20 @@ const Counter = ({ reset, disabled }) => {
     });
   const opacityAnimation = Animated.timing(animatedOpacity, {
     toValue: 1,
-    duration: 200,
+    duration,
   });
   const growAnimation = Animated.timing(animatedGrow, {
     toValue: 1,
-    duration: 200,
+    duration,
   });
 
   useEffect(() => {
     Animated.parallel([
       growAnimation,
-      rotateAnimation(),
+      rotateAnimation(duration),
       opacityAnimation,
     ]).start(({ finished }) => {
-      if (finished) setAnimatedRotate(new Animated.Value(0));
+      if (finished && !jest) setAnimatedRotate(new Animated.Value(0));
     });
   }, []);
 
@@ -59,8 +65,8 @@ const Counter = ({ reset, disabled }) => {
     if (firstMount.current) {
       firstMount.current = false;
     } else if (reset) {
-      rotateAnimation().start(({ finished }) => {
-        if (finished) setAnimatedRotate(new Animated.Value(0));
+      rotateAnimation(duration).start(({ finished }) => {
+        if (finished && !jest) setAnimatedRotate(new Animated.Value(0));
       });
       setCount(0);
     }
@@ -92,6 +98,7 @@ const Counter = ({ reset, disabled }) => {
       <View style={{ opacity: disabled ? 0.5 : 1 }}>
         <Animated.View style={{ ...animatedGrowStyle }}>
           <TouchableOpacity
+            testID="counterButton"
             activeOpacity={0.8}
             style={{
               ...styles.fabContainer,

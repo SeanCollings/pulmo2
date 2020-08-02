@@ -15,7 +15,11 @@ const ModalEndActivity = ({ cancelModal, confirmModal, resumeActivity }) => {
   const [reason, setReason] = useState(OPTIONS_END_ACTIVITY_EARLY[0].value);
 
   const BackButton = () => (
-    <TouchableOpacity onPress={resumeActivity} style={styles.backButton}>
+    <TouchableOpacity
+      testID="resumeActivity"
+      onPress={resumeActivity}
+      style={styles.backButton}
+    >
       <MaterialCommunityIcons
         name="arrow-left"
         color={theme.BORDER}

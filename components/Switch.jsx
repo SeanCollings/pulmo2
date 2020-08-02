@@ -10,6 +10,7 @@ const CustomSwitch = ({ state, onChange, trackColor, falseColour }) => {
 
   return (
     <Switch
+      testID="customSwitch_valueChange"
       trackColor={{ true: trackColor, false: falseValue }}
       thumbColor={Platform.OS === 'android' ? theme.SECONDARY_TEXT : ''}
       value={state}

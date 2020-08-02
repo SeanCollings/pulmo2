@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils - unit tests getExcerciseById Custom 1`] = `
+Object {
+  "cycles": 10,
+  "id": 1234,
+  "rest": 60,
+  "rounds": 4,
+  "title": "Custom Excercise",
+}
+`;
+
+exports[`utils - unit tests getExcerciseById Endurance 1`] = `
+Object {
+  "cycles": 10,
+  "id": 21,
+  "rest": 30,
+  "rounds": 4,
+  "title": "Endurance Level I",
+}
+`;
+
+exports[`utils - unit tests getExcerciseById Strength 1`] = `
+Object {
+  "cycles": 10,
+  "id": 11,
+  "rest": 60,
+  "rounds": 4,
+  "title": "Strength Level I",
+}
+`;
+
+exports[`utils - unit tests getExcerciseById should return the default excercise if the Custom excercise doesnt exisit 1`] = `
+Object {
+  "cycles": 10,
+  "id": 11,
+  "rest": 60,
+  "rounds": 4,
+  "title": "Strength Level I",
+}
+`;
+
+exports[`utils - unit tests getExcerciseById should return the default excercise if there is no id 1`] = `
+Object {
+  "cycles": 10,
+  "id": 11,
+  "rest": 60,
+  "rounds": 4,
+  "title": "Strength Level I",
+}
+`;
+
+exports[`utils - unit tests getExcerciseById should return the default excercise if there is no type 1`] = `undefined`;

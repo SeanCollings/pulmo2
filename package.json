@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest",
+    "test:debug": "jest -o --watch --coverage=false"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.6",
@@ -16,7 +18,6 @@
     "expo-font": "~8.1.0",
     "expo-keep-awake": "~8.1.0",
     "expo-linear-gradient": "~8.1.0",
-    "expo-sqlite": "~8.1.0",
     "expo-status-bar": "^1.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
@@ -30,8 +31,14 @@
     "react-navigation-header-buttons": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.10.4",
+    "babel-jest": "^26.1.0",
     "babel-preset-expo": "~8.1.0",
-    "@babel/core": "^7.8.6"
+    "jest": "^26.1.0",
+    "jest-expo": "^38.0.2",
+    "react-native-testing-library": "^2.1.1",
+    "react-test-renderer": "^16.13.1"
   },
   "private": true
 }

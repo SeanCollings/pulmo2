@@ -3,7 +3,12 @@ import { StyleSheet, View, Text, Animated } from 'react-native';
 
 import { useTheme } from '../../hooks/useTheme';
 
-const AnimatedUnderline = ({ children, duration = 2000, fadeOut = 1000 }) => {
+const AnimatedUnderline = ({
+  children,
+  duration = 2000,
+  fadeOut = 1000,
+  jest = false,
+}) => {
   const theme = useTheme();
   const [animatedGrow] = useState(new Animated.Value(0));
   const [animationOpacity] = useState(
@@ -25,6 +30,8 @@ const AnimatedUnderline = ({ children, duration = 2000, fadeOut = 1000 }) => {
   });
 
   useEffect(() => {
+    if (jest) return;
+
     Animated.loop(
       Animated.sequence([lineGrowAnimation, opacityAnimation])
     ).start();

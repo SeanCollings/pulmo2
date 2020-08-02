@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`excercise-context unit test 1`] = `
+Object {
+  "selectedExcercise": Array [],
+  "toggleExcercise": [Function],
+}
+`;
+
+exports[`excercise-context unit test 2`] = `null`;

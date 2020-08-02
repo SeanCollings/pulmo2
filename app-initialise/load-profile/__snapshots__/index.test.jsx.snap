@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadProfileAsync - unit test should not set streak to 0 if last activity date is same day 1`] = `
+Object {
+  "selected_level": 2,
+  "streak": Object {
+    "current": 2,
+    "lastActivity": "2020-07-26T15:15:43.411Z",
+  },
+}
+`;
+
+exports[`loadProfileAsync - unit test should return null for profile streak if it is not defined 1`] = `
+Object {
+  "selected_level": 2,
+}
+`;

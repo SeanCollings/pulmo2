@@ -42,6 +42,7 @@ const ModalDayActivities = ({
           {activities.map((activity) => {
             return (
               <TouchableOpacity
+                testID={`activity_select_${activity.date}`}
                 key={activity.date}
                 style={styles.contentContainer}
                 onPress={() => activitySelectedHandler(activity)}

@@ -52,7 +52,6 @@ const Slides = ({ totalSlides, children }) => {
 
 Slides.defaultProps = {
   data: [],
-  IndividualSlide: () => null,
 };
 
 const styles = StyleSheet.create({

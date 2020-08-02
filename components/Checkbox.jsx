@@ -32,7 +32,11 @@ const Checkbox = ({ state, onChange, label }) => {
   };
 
   return (
-    <TouchableOpacity activeOpacity={1} onPress={checkboxHandler}>
+    <TouchableOpacity
+      testID="checkboxButton"
+      activeOpacity={1}
+      onPress={checkboxHandler}
+    >
       <View style={styles.container}>
         <View style={styles.checkContainer}>
           <MaterialCommunityIcons

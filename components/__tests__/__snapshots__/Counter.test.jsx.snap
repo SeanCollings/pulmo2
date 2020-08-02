@@ -1,0 +1,473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter - unit test should decrease counter on longPress 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#002f56",
+      "borderRadius": 55,
+      "bottom": 0,
+      "marginBottom": 20,
+      "marginRight": 15,
+      "opacity": 0,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#002f56",
+            "borderRadius": 55,
+            "borderWidth": 2,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 55,
+          }
+        }
+        testID="counterButton"
+      >
+        <View
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "-90deg",
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#002f56",
+                "fontFamily": "tit-regular",
+                "fontSize": 30,
+                "marginRight": 0,
+                "marginTop": -5,
+                "textAlign": "center",
+              }
+            }
+          >
+            9
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Counter - unit test should increase counter 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#002f56",
+      "borderRadius": 55,
+      "bottom": 0,
+      "marginBottom": 20,
+      "marginRight": 15,
+      "opacity": 0,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#002f56",
+            "borderRadius": 55,
+            "borderWidth": 2,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 55,
+          }
+        }
+        testID="counterButton"
+      >
+        <View
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "-90deg",
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#002f56",
+                "fontFamily": "tit-regular",
+                "fontSize": 30,
+                "marginRight": 3,
+                "marginTop": -5,
+                "textAlign": "center",
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Counter - unit test should increase counter 2`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#002f56",
+      "borderRadius": 55,
+      "bottom": 0,
+      "marginBottom": 20,
+      "marginRight": 15,
+      "opacity": 0,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#002f56",
+            "borderRadius": 55,
+            "borderWidth": 2,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 55,
+          }
+        }
+        testID="counterButton"
+      >
+        <View
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "-90deg",
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#002f56",
+                "fontFamily": "tit-regular",
+                "fontSize": 30,
+                "marginRight": 3,
+                "marginTop": -5,
+                "textAlign": "center",
+              }
+            }
+          >
+            1
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Counter - unit test should render in active state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 55,
+      "bottom": 0,
+      "marginBottom": 20,
+      "marginRight": 15,
+      "opacity": 1,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#002f56",
+            "borderRadius": 55,
+            "borderWidth": 2,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 55,
+          }
+        }
+        testID="counterButton"
+      >
+        <View
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "-90deg",
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#002f56",
+                  "fontSize": 30,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "material-community",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Counter - unit test should render in disabled state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderRadius": 55,
+      "bottom": 0,
+      "marginBottom": 20,
+      "marginRight": 15,
+      "opacity": 1,
+      "position": "absolute",
+      "right": 0,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "opacity": 0.5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "white",
+            "borderColor": "#002f56",
+            "borderRadius": 55,
+            "borderWidth": 2,
+            "height": 55,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 55,
+          }
+        }
+        testID="counterButton"
+      >
+        <View
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "-90deg",
+                },
+              ],
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#002f56",
+                  "fontSize": 30,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "material-community",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

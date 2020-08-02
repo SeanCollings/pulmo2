@@ -65,7 +65,7 @@ export const convertToSeconds = (time) => {
 
 const appendZero = (input) => (input.length === 1 ? `0${input}` : input);
 
-const getAmPmTime = (hours, mins) => {
+export const getAmPmTime = (hours, mins) => {
   const ampm = hours < 12 || hours === 24 ? 'am' : 'pm';
   const hour = (hours % 12 || 12).toString();
   const ampPmTime = `${appendZero(hour)}:${mins} ${ampm}`;
@@ -126,6 +126,10 @@ export const isLeapYear = (month, year) => {
   return 0;
 };
 
+/**
+ * Converts array of result arrays into a seconds eg 5
+ * @param {array} results eg [['00:01', '00:02'], ['00:03]]
+ */
 export const getTotalResultTime = (results) =>
   results.reduce((acc, result) => {
     const roundTime = result.reduce((accRound, round) => {
@@ -195,7 +199,7 @@ export const datesSameDay = (date1, date2) =>
  * @param {string} date eg. 2020-06-27T18:41:49.156Z
  */
 export const isDateYesterday = (date) => {
-  let yesterday = new Date();
+  let yesterday = new Date(Date.now());
   yesterday.setDate(yesterday.getDate() - 1);
   yesterday = yesterday.toDateString();
 
@@ -209,6 +213,6 @@ export const isDateYesterday = (date) => {
  * @param {date} date eg. 2020-06-27T18:41:49.156Z
  */
 export const isDateToday = (date) => {
-  const today = new Date();
+  const today = new Date(Date.now());
   return new Date(today).toDateString() === new Date(date).toDateString();
 };

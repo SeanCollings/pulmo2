@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile-context unit test 1`] = `
+Object {
+  "profileContext": Object {
+    "disclaimer": Object {
+      "disclaimer_show": false,
+      "dont_show_again": true,
+    },
+    "selected_level": 5,
+    "streak": Object {
+      "current": 0,
+      "lastActivity": "",
+      "streak_show": true,
+    },
+  },
+  "updateCurrentStreak": [Function],
+  "updateProfileContext": [Function],
+}
+`;
+
+exports[`profile-context unit test 2`] = `null`;

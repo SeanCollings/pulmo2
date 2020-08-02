@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedAppear - unit test should render default 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderBottomWidth": 0,
+      "borderColor": "#CCC",
+      "borderTopLeftRadius": 50,
+      "borderTopRightRadius": 50,
+      "borderWidth": 1,
+      "bottom": -100,
+      "padding": 10,
+      "position": "absolute",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#002f56"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;
+
+exports[`AnimatedAppear - unit test should render with animateIn 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderBottomWidth": 0,
+      "borderColor": "#CCC",
+      "borderTopLeftRadius": 50,
+      "borderTopRightRadius": 50,
+      "borderWidth": 1,
+      "bottom": 0,
+      "padding": 10,
+      "position": "absolute",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#002f56"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;
+
+exports[`AnimatedAppear - unit test should render with animateOut 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "center",
+      "backgroundColor": "white",
+      "borderBottomWidth": 0,
+      "borderColor": "#CCC",
+      "borderTopLeftRadius": 50,
+      "borderTopRightRadius": 50,
+      "borderWidth": 1,
+      "bottom": -100,
+      "padding": 10,
+      "position": "absolute",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#002f56"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;

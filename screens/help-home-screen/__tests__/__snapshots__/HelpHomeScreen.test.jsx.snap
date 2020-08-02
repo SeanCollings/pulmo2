@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HelpHomeScreen - unit test helpHomeScreenOptions headerTitle 1`] = `
+<Text
+  style={
+    Object {
+      "color": "white",
+      "fontSize": 20,
+    }
+  }
+>
+  Help
+</Text>
+`;
+
+exports[`HelpHomeScreen - unit test helpHomeScreenOptions options 1`] = `
+Object {
+  "headerTitle": [Function],
+}
+`;
+
+exports[`HelpHomeScreen - unit test should render 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "alignItems": "center",
+    }
+  }
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 30,
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "#002f56",
+          "fontFamily": "tit-regular",
+          "fontSize": 20,
+          "paddingBottom": 20,
+        }
+      }
+    >
+      Home Page
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Following the prompt 'tap to begin', click on the play button to start the selected excercise.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      The selected level on the Luft™ is displayed below the play button for reference and can be updated in your Profile Page.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-bold",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Please confirm selected level before each excercise.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      The name and summary of the selected excercise is displayed on the page. The excercise can be changed by navigating to the 'Excercises' tab at the bottom of the screen.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      After starting an excercise, a quick tap of the bottom right button will increment a counter to help you keep track of your inhalation and expiration cycles. A long press will decrement this counter.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      After completing an excercise, a summary of your workout will be displayed. You may review your activity again in your Profile Page.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;

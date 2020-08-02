@@ -1,10 +1,6 @@
 import { AsyncStorage } from 'react-native';
 import { APP_ID } from '../constants/constants';
 
-export const clearAllAsyncStorage = () => {
-  AsyncStorage.clear();
-};
-
 export const getAsyncData = async (id) => {
   try {
     const value = await AsyncStorage.getItem(`${APP_ID}${id}`);
@@ -14,7 +10,7 @@ export const getAsyncData = async (id) => {
       return null;
     }
   } catch (error) {
-    console.log('Failure retrieving ' + id + ' error: ' + error);
+    throw new Error(`Failure retrieving ${id} with error: ${error}`);
   }
 };
 
@@ -27,8 +23,8 @@ export const getMultiAsyncData = async (id, keys) => {
     else {
       return null;
     }
-  } catch (err) {
-    console.log('Failure retrieving from all keys with error ' + error);
+  } catch (error) {
+    throw new Error(`Failure retrieving from all keys with error: ${error}`);
   }
 };
 
@@ -37,8 +33,7 @@ export const storeAsyncData = async (id, value) => {
     await AsyncStorage.setItem(`${APP_ID}${id}`, JSON.stringify(value));
     return true;
   } catch (error) {
-    console.log('Failure saving: ' + error);
-    return false;
+    throw new Error('Failure saving: ' + error);
   }
 };
 
@@ -46,9 +41,8 @@ export const mergeAsyncData = async (id, value) => {
   try {
     await AsyncStorage.mergeItem(`${APP_ID}${id}`, JSON.stringify(value));
     return true;
-  } catch (err) {
-    console.log(err);
-    return false;
+  } catch (error) {
+    throw new Error('Failure merging: ' + error);
   }
 };
 
@@ -56,8 +50,7 @@ export const removeAsyncData = async (id) => {
   try {
     await AsyncStorage.removeItem(`${APP_ID}${id}`);
     return true;
-  } catch (err) {
-    console.log('Failure removing: ' + error);
-    return false;
+  } catch (error) {
+    throw new Error('Failure removing: ' + error);
   }
 };
