@@ -17,8 +17,8 @@ steps:
 
 # Install node modules.
 - script: |
-    npm install
-  displayName: 'NPM Install'
+    yarn install
+  displayName: 'YARN Install'
   
  # Runs the `test` script that I included in my package.json
 - task: Npm@1
