@@ -15,8 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+# Install node modules.
 - script: |
-    cd $(build.sourcesdirectory)/package
     npm install
-    npm run test
-  displayName: 'npm install and npm test'
+  displayName: 'NPM Install'
+  
+ # Runs the `test` script that I included in my package.json
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'test'
+  displayName: Run Tests
