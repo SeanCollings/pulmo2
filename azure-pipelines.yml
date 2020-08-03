@@ -16,6 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    cd $(build.sourcesdirectory)/package
     npm install
     npm test
-  displayName: 'npm install and test'
+  displayName: 'npm install and npm test'
