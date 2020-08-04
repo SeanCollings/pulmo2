@@ -12,6 +12,7 @@ import loadSettingsAsync from './app-initialise/load-settings';
 import { LIGHT_MODE, DARK_MODE } from './constants/constants';
 
 jest.useFakeTimers();
+jest.mock('Dimensions');
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 jest.mock('./app-initialise/load-activity-id-array');
 jest.mock('./app-initialise/load-custom-excercise');

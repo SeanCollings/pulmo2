@@ -10,6 +10,7 @@ import CustomExcerciseContext from '../../context/custom-excercise-context';
 import { getAsyncData } from '../../helpers/storage';
 
 jest.useFakeTimers();
+jest.mock('Dimensions');
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 jest.mock('../../helpers/storage');
 

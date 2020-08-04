@@ -143,7 +143,10 @@ export const DisclaimerStack = () => (
 
 const Tab = createBottomTabNavigator();
 export const MainTabs = ({ defaultTabBarOptions }) => (
-  <Tab.Navigator tabBarOptions={defaultTabBarOptions} initialRouteName="Home">
+  <Tab.Navigator
+    tabBarOptions={{ ...defaultTabBarOptions }}
+    initialRouteName="Home"
+  >
     <Tab.Screen
       name="Excercises"
       component={ExcercisesStack}
