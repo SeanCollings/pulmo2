@@ -37,6 +37,7 @@ const AppNavigator = (props) => {
     inactiveTintColor: theme.DARK ? theme.DARK_GRAY : theme.SECONDARY,
     tabStyle: { backgroundColor: theme.PRIMARY },
     labelStyle: { fontFamily: 'tit-regular', fontSize: 12 },
+    allowFontScaling: false,
   };
 
   // Remove view>styles if white flash still persists

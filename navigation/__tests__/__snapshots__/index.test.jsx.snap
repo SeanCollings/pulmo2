@@ -903,6 +903,7 @@ exports[`navigation renders app if show disclaimer is false 1`] = `
               </View>
             </View>
             <Text
+              allowFontScaling={false}
               numberOfLines={1}
               style={
                 Array [
@@ -1050,6 +1051,7 @@ exports[`navigation renders app if show disclaimer is false 1`] = `
               </View>
             </View>
             <Text
+              allowFontScaling={false}
               numberOfLines={1}
               style={
                 Array [
@@ -1193,6 +1195,7 @@ exports[`navigation renders app if show disclaimer is false 1`] = `
               </View>
             </View>
             <Text
+              allowFontScaling={false}
               numberOfLines={1}
               style={
                 Array [

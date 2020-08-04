@@ -9,7 +9,6 @@ import ExcerciseContext from '../../../context/excercise-context';
 import { useIsFocused } from '@react-navigation/native';
 import { getAsyncData } from '../../../helpers/storage';
 import { ENDURANCE_KEY } from '../../../data';
-import { INPUT_END } from '../../../hooks/inputReducer';
 
 jest.useFakeTimers();
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
