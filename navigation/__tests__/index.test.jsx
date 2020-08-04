@@ -8,6 +8,7 @@ import ExcerciseContext from '../../context/excercise-context';
 import HistoryContextProvider from '../../context/history-context';
 import CustomExcerciseContext from '../../context/custom-excercise-context';
 import { getAsyncData } from '../../helpers/storage';
+import { Text } from 'react-native';
 
 jest.useFakeTimers();
 jest.mock('Dimensions');
@@ -24,6 +25,12 @@ describe('navigation', () => {
     },
     disclaimer: { disclaimer_show: false, dont_show_again: true },
   };
+
+  beforeEach(() => {
+    Text.defaultProps = Text.defaultProps || {};
+    Text.defaultProps.allowFontScaling = false;
+    Text.defaultProps.adjustsFontSizeToFit = false;
+  });
 
   afterEach(() => {
     cleanup();
