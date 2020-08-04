@@ -14,6 +14,8 @@ jest.mock('Dimensions');
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 jest.mock('../../helpers/storage');
 
+// Set to test.skip as Azure produces a different snapshot for some reason.
+// Remove skip to test navigation workflow locally.
 describe.skip('navigation', () => {
   let component;
   const profile = {
