@@ -77,16 +77,7 @@ export const getAmPmTime = (hours, mins) => {
  * @param {date} date eg 2020-12-06T14:15:00.015Z
  */
 export const convertDate = (date) => {
-  console.log('----------------------------------------------------');
-  console.log('process', process.env.TZ);
-  console.log('new Date() ::', new Date());
-  console.log('Date.now() ::', Date.now());
-  console.log('new Date(Date.now()) ::', new Date(Date.now()));
   const newDate = new Date(date);
-  console.log('===============');
-  console.log('convertDate - date in ::', date);
-  console.log('newDate : new Date(date) ::', newDate);
-  console.log('newDate.getHours() ::', newDate.getHours());
   const year = newDate.getFullYear().toString();
   const month = appendZero((newDate.getMonth() + 1).toString());
   const day = appendZero(newDate.getDate().toString());
