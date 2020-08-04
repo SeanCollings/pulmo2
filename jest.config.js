@@ -19,4 +19,5 @@ module.exports = {
   ],
   coveragePathIgnorePatterns: ['jest.config.js', 'metro.config.js'],
   testEnvironment: 'node',
+  globalSetup: './global-setup.js',
 };
