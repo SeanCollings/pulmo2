@@ -18,14 +18,15 @@ steps:
 # Install node modules.
 - script: |
     yarn install
-  displayName: 'YARN Install'
+    npm run test:ci
+  displayName: 'YARN install and run tests'
   
 # Runs the `test` script
-- task: Npm@1
-  inputs:
-    command: custom
-    customCommand: 'test:ci'
-  displayName: Run Tests
+# - task: Npm@1
+#   inputs:
+#     command: custom
+#     customCommand: 'test:ci'
+#   displayName: Run Tests
 
 - task: PublishCodeCoverageResults@1
   inputs:
