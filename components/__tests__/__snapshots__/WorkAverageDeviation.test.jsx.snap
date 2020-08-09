@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkAverageDeviation - unit test should render with improvement down 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 17,
+        "opacity": 0.8,
+      }
+    }
+  >
+    Work Average deviation: 17.64%
+  </Text>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "paddingLeft": 5,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 24,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`WorkAverageDeviation - unit test should render with improvement same 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 17,
+        "opacity": 0.8,
+      }
+    }
+  >
+    Work Average deviation: 17.64%
+  </Text>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "paddingLeft": 5,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 17,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`WorkAverageDeviation - unit test should render with improvement up 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "paddingVertical": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#3e4b57",
+        "fontFamily": "tit-light",
+        "fontSize": 17,
+        "opacity": 0.8,
+      }
+    }
+  >
+    Work Average deviation: 17.64%
+  </Text>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "paddingLeft": 5,
+      }
+    }
+  >
+    <Text
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "#CCC",
+            "fontSize": 24,
+          },
+          undefined,
+          Object {
+            "fontFamily": "material-community",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

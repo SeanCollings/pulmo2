@@ -15,6 +15,10 @@ const HelpProfileScreen = (props) => {
     opacity: theme.DARK ? 0.87 : 1,
   };
 
+  const importantText = theme.DARK
+    ? { color: theme.TERTIARY, fontFamily: 'tit-light' }
+    : {};
+
   return (
     <ScrollView
       style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}
@@ -43,9 +47,7 @@ const HelpProfileScreen = (props) => {
         style={{
           ...styleTextContent,
           ...styles.textBold,
-          ...(theme.DARK
-            ? { color: theme.TERTIARY, fontFamily: 'tit-light' }
-            : {}),
+          ...importantText,
         }}
       >
         At the start of each excercise you will confirm the difficulty level.
@@ -57,6 +59,21 @@ const HelpProfileScreen = (props) => {
       <Text style={styleTextContent}>
         If you would like to delete or edit an excercise, click through to an
         activity's details and select your desired option.
+      </Text>
+      <Text style={{ ...styleTextContent, paddingBottom: 0, ...importantText }}>
+        Work Average deviation:
+      </Text>
+      <Text style={{ ...styleTextContent, paddingBottom: 0 }}>
+        The average deviation in the breathing work (non-rest) periods of an
+        activity.
+      </Text>
+      <Text style={{ ...styleTextContent, paddingBottom: 0 }}>
+        A deviation of more than 20% means that the work done is becoming
+        unstable.
+      </Text>
+      <Text style={styleTextContent}>
+        Good progress is made when the Work deviation % gets smaller over time.
+        The arrows on the Profile page will help visualise this trend.
       </Text>
       <Text style={styleTextContent}></Text>
     </ScrollView>

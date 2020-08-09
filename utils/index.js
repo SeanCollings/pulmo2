@@ -216,3 +216,47 @@ export const isDateToday = (date) => {
   const today = new Date(Date.now());
   return new Date(today).toDateString() === new Date(date).toDateString();
 };
+
+/**
+ * Converts work portion of an array of result into a work average deviation
+ * @param {array} results eg [['00:01', '00:02'], ['00:03]]
+ */
+export const getWorkAverageDeviation = (results) => {
+  let totalTime = 0;
+
+  if (!results.length) return 0;
+
+  const allWorkTimes = results.reduce((acc, result) => {
+    if (!!result.length) {
+      const time = convertToSeconds(result[0]);
+      acc.push(time);
+      totalTime += time;
+    }
+    return acc;
+  }, []);
+
+  if (!allWorkTimes.length) return 0;
+
+  const mean = totalTime / allWorkTimes.length;
+
+  if (!mean) return 0;
+
+  const totalDistance = allWorkTimes.reduce((acc, time) => {
+    return (acc += Math.abs(mean - time));
+  }, 0);
+
+  const meanDeviation = totalDistance / allWorkTimes.length;
+  const workAverageDeviation = ((meanDeviation / mean) * 100).toFixed(2);
+
+  return workAverageDeviation;
+};
+
+/**
+ * Returns the total, non-empty rounds in a result array
+ * @param {array} results eg [['00:01', '00:02'], ['00:03'], []]
+ */
+export const getTotalWorkRounds = (results) =>
+  results.reduce((acc, round) => {
+    if (!!round.length) acc++;
+    return acc;
+  }, 0);

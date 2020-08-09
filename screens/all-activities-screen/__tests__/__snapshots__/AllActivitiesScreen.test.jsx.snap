@@ -137,6 +137,7 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }
@@ -298,6 +299,7 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }
@@ -459,6 +461,7 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }

@@ -20,6 +20,8 @@ import {
   datesSameDay,
   isDateYesterday,
   isDateToday,
+  getWorkAverageDeviation,
+  getTotalWorkRounds,
 } from '..';
 
 describe('utils - unit tests', () => {
@@ -320,6 +322,45 @@ describe('utils - unit tests', () => {
     test('should be falsy if the date is not today', () => {
       const result = isDateToday('2020-06-20T16:41:49.156Z');
       expect(result).toBeFalsy();
+    });
+  });
+
+  describe('getWorkAverageDeviation', () => {
+    test('should return work average deviation', () => {
+      const result = getWorkAverageDeviation([
+        ['00:98', '00:05'],
+        ['00:32', '00:05'],
+        [],
+      ]);
+
+      expect(result).toEqual('50.77');
+    });
+
+    test('should return 0 if results length is 0', () => {
+      const result = getWorkAverageDeviation([]);
+      expect(result).toEqual(0);
+    });
+
+    test('should return 0 if the only result in results is empty', () => {
+      const result = getWorkAverageDeviation([[]]);
+      expect(result).toEqual(0);
+    });
+
+    test('should return 0 if the mean is 0', () => {
+      const result = getWorkAverageDeviation([['00:00', '00:05']]);
+      expect(result).toEqual(0);
+    });
+  });
+
+  describe('getTotalWorkRounds ', () => {
+    test('should get the total non-empty work rounds', () => {
+      const result = getTotalWorkRounds([['00:01', '00:02'], ['00:03'], []]);
+      expect(result).toEqual(2);
+    });
+
+    test('should return 0 for empty array', () => {
+      const result = getTotalWorkRounds([]);
+      expect(result).toEqual(0);
     });
   });
 });

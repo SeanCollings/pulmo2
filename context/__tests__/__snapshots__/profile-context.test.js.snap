@@ -13,9 +13,15 @@ Object {
       "lastActivity": "",
       "streak_show": true,
     },
+    "work_average_deviation": Object {
+      "current": 0,
+      "improvement": "same",
+      "total_activities": 0,
+    },
   },
   "updateCurrentStreak": [Function],
   "updateProfileContext": [Function],
+  "updateWorkAverageDeviation": [Function],
 }
 `;
 

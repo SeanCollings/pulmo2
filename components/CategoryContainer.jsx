@@ -8,6 +8,7 @@ const CategoryContainer = ({
   children,
   alignItems = 'center',
   paddingVertical = 20,
+  ...rest
 }) => {
   const theme = useTheme();
 
@@ -37,7 +38,14 @@ const CategoryContainer = ({
   return (
     <View style={styles.categoryContainer}>
       <HeaderContainer header={header} />
-      <View style={{ ...styles.categoryContent, alignItems, paddingVertical }}>
+      <View
+        style={{
+          ...styles.categoryContent,
+          alignItems,
+          paddingVertical,
+          ...rest,
+        }}
+      >
         {children}
       </View>
     </View>

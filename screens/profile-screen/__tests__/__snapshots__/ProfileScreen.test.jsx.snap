@@ -77,6 +77,56 @@ exports[`ProfileScreen - unit test should render 1`] = `
   <View
     style={
       Object {
+        "flexDirection": "row",
+        "paddingVertical": 5,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 0.8,
+        }
+      }
+    >
+      Work Average deviation: 17.64%
+    </Text>
+    <View
+      style={
+        Object {
+          "justifyContent": "center",
+          "paddingLeft": 5,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#CCC",
+              "fontSize": 24,
+            },
+            undefined,
+            Object {
+              "fontFamily": "material-community",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
         "paddingBottom": 10,
       }
     }
@@ -513,6 +563,7 @@ exports[`ProfileScreen - unit test should render 1`] = `
             "shadowRadius": 2.84,
           }
         }
+        testID="allActivities"
       >
         <View
           style={
@@ -636,6 +687,7 @@ exports[`ProfileScreen - unit test should render 1`] = `
             "shadowRadius": 2.84,
           }
         }
+        testID="favourites"
       >
         <View
           style={
@@ -759,6 +811,7 @@ exports[`ProfileScreen - unit test should render 1`] = `
             "shadowRadius": 2.84,
           }
         }
+        testID="calendar"
       >
         <View
           style={

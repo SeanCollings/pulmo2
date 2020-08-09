@@ -58,7 +58,9 @@ const HomeScreen = ({ navigation }) => {
   const isFocused = useIsFocused();
   const { selectedExcercise } = useContext(ExcerciseContext);
   const { customExcercises } = useContext(CustomExcerciseContext);
-  const { profileContext } = useContext(ProfileContext);
+  const { profileContext, updateWorkAverageDeviation } = useContext(
+    ProfileContext
+  );
   const { addActivity } = useContext(HistoryContext);
 
   const [showModal, setShowModal] = useState(false);
@@ -163,12 +165,14 @@ const HomeScreen = ({ navigation }) => {
 
   const saveActivity = (timeDifferenceBreath, incomplete) => {
     const timeBreath = timeDifferenceBreath ? [timeDifferenceBreath, ''] : [];
+    const results = [...userTimes, timeBreath];
 
+    updateWorkAverageDeviation(results);
     addActivity({
       date: new Date().toISOString(),
       excercise: activeExcercise,
       level: profileContext[SELECTED_LEVEL],
-      results: [...userTimes, timeBreath],
+      results,
       type: selectedExcercise[1],
       incomplete,
     });

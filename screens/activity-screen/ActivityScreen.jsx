@@ -16,8 +16,14 @@ import {
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import { HistoryContext, ACTIVITY_UPDATE } from '../../context/history-context';
+import { ProfileContext } from '../../context/profile-context';
 import options from './options';
-import { getTotalResultTime, getRemainingTime, convertDate } from '../../utils';
+import {
+  getTotalResultTime,
+  getRemainingTime,
+  convertDate,
+  getWorkAverageDeviation,
+} from '../../utils';
 import Table from '../../components/Table';
 import HeaderButton from '../../components/HeaderButton';
 import CustomButton from '../../components/CustomButton';
@@ -85,6 +91,7 @@ const ActivityScreen = ({ route, navigation }) => {
     favouriteActivity,
     getActivityByDate,
   } = useContext(HistoryContext);
+  const { updateWorkAverageDeviation } = useContext(ProfileContext);
   const firstMount = useRef(true);
   const [showModal, setShowModal] = useState(false);
   const [isFavourite, setIsFavourite] = useState(favourite);
@@ -126,14 +133,17 @@ const ActivityScreen = ({ route, navigation }) => {
   );
 
   useEffect(() => {
-    getActivityByDate(date).then((activity) => {
-      getSelectedActivity(activity);
-    });
+    getActivityByDate(date)
+      .then((activity) => {
+        getSelectedActivity(activity);
+      })
+      .catch(console.log);
   }, []);
 
   useEffect(() => {
     if (isDeleting) {
       setIsDeleting(false);
+      updateWorkAverageDeviation(results, true);
       deleteActivity(date).then(() => {
         navigation.goBack();
       });
@@ -147,9 +157,11 @@ const ActivityScreen = ({ route, navigation }) => {
       switch (updatedActivity.type) {
         case ACTIVITY_UPDATE:
           setIsLoading(true);
-          getActivityByDate(date).then((activity) => {
-            getSelectedActivity(activity);
-          });
+          getActivityByDate(date)
+            .then((activity) => {
+              getSelectedActivity(activity);
+            })
+            .catch(console.log);
           break;
         default:
           break;
@@ -266,27 +278,34 @@ const ActivityScreen = ({ route, navigation }) => {
           </View>
           <CategoryContainer
             header="Results"
-            alignItems="flex-start"
-            paddingVertical={0}
-          ></CategoryContainer>
-          <View style={styles.resultsContainer}>
+            alignItems="center"
+            paddingVertical={20}
+          >
             <Table
               headerContent={['Workout', 'Rest']}
               rowContents={results || []}
               headerColour={theme.DARK ? theme.TEXT : theme.TERTIARY}
               alwaysShowHeader
             />
-          </View>
+          </CategoryContainer>
+          <CategoryContainer
+            header={`Work Average deviation: ${getWorkAverageDeviation(
+              results || []
+            )}%`}
+            alignItems="flex-start"
+            paddingVertical={10}
+          ></CategoryContainer>
           {incomplete && (
             <CategoryContainer
               header="Status: Incomplete"
               alignItems="flex-start"
               paddingVertical={18}
+              paddingLeft={10}
             >
               {!!incomplete.length && (
                 <Text
                   style={{
-                    ...styles.reasonTextStyle,
+                    ...styles.categoryTextStyle,
                     color: theme.TEXT,
                     opacity,
                   }}
@@ -353,11 +372,10 @@ const styles = StyleSheet.create({
     fontFamily: 'tit-light',
     fontSize: 18,
   },
-  reasonTextStyle: {
+  categoryTextStyle: {
     fontFamily: 'tit-light',
     fontSize: 17,
     paddingBottom: 2,
-    paddingLeft: 10,
   },
   headingStyle: {
     fontFamily: 'tit-regular',
@@ -388,10 +406,6 @@ const styles = StyleSheet.create({
   detailTypeText: {
     fontFamily: 'tit-regular',
     textAlign: 'center',
-  },
-  resultsContainer: {
-    paddingVertical: 20,
-    alignItems: 'center',
   },
   buttonContainer: {
     paddingVertical: 10,

@@ -10,6 +10,7 @@ import {
   ProfileContext,
   STREAK,
 } from '../../context/profile-context';
+import WorkAverageDeviation from '../../components/WorkAverageDeviation';
 
 export const profileScreenOptions = options;
 
@@ -32,6 +33,7 @@ const ProfileScreen = ({ navigation }) => {
 
   return (
     <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
+      <WorkAverageDeviation />
       <View style={styles.levelSelectorContainer}>
         <LevelSelector
           header="Selected level"
@@ -52,16 +54,19 @@ const ProfileScreen = ({ navigation }) => {
       </View>
       <ScrollView style={{ width: '100%' }}>
         <BarSelector
+          testID="allActivities"
           textContent="All activities"
           onPress={() => navigation.navigate('AllActivities')}
           iconName="view-headline"
         />
         <BarSelector
+          testID="favourites"
           textContent="Favourites"
           onPress={() => navigation.navigate('Favourites')}
           iconName="heart-outline"
         />
         <BarSelector
+          testID="calendar"
           textContent="Calendar"
           onPress={() => navigation.navigate('Calendar')}
           iconName="calendar-outline"

@@ -160,6 +160,66 @@ exports[`HelpProfileScreen - unit test should render 1`] = `
           "fontFamily": "tit-light",
           "fontSize": 17,
           "opacity": 1,
+          "paddingBottom": 0,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Work Average deviation:
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 0,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      The average deviation in the breathing work (non-rest) periods of an activity.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 0,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      A deviation of more than 20% means that the work done is becoming unstable.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
+          "paddingBottom": 20,
+          "textAlign": "center",
+          "width": "80%",
+        }
+      }
+    >
+      Good progress is made when the Work deviation % gets smaller over time. The arrows on the Profile page will help visualise this trend.
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3e4b57",
+          "fontFamily": "tit-light",
+          "fontSize": 17,
+          "opacity": 1,
           "paddingBottom": 20,
           "textAlign": "center",
           "width": "80%",

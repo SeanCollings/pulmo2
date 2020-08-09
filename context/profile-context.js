@@ -2,12 +2,23 @@ import React, { useState, createContext } from 'react';
 
 import { storeAsyncData } from '../helpers/storage';
 import { TOTAL_DIFFICULTY_LEVELS } from '../constants/constants';
-import { isDateYesterday, datesSameDay } from '../utils';
+import {
+  isDateYesterday,
+  datesSameDay,
+  getWorkAverageDeviation,
+  getTotalWorkRounds,
+} from '../utils';
 
 export const SELECTED_LEVEL = 'selected_level';
 export const STREAK = 'streak';
 export const DISCLAIMER = 'disclaimer';
-export const PROFILE_KEYS = [SELECTED_LEVEL, STREAK, DISCLAIMER];
+export const WORK_AVERAGE_DEVIATION = 'work_average_deviation';
+export const PROFILE_KEYS = [
+  SELECTED_LEVEL,
+  STREAK,
+  DISCLAIMER,
+  WORK_AVERAGE_DEVIATION,
+];
 
 export const STREAK_CURRENT = 'current';
 export const STREAK_LAST_ACTIVITY = 'lastActivity';
@@ -25,16 +36,30 @@ export const DISCLAIMER_DEFAULT = {
   [DISCLAIMER_DONT_SHOW_AGAIN]: true,
 };
 
+export const WORK_AVE_DEV_CURRENT = 'current';
+export const WORK_AVE_DEV_TOTAL_ACTIVITIES = 'total_activities';
+export const WORK_AVE_DEV_IMPROVEMENT = 'improvement';
+export const WORK_AVE_DEV_SAME = 'same';
+export const WORK_AVE_DEV_UP = 'up';
+export const WORK_AVE_DEV_DOWN = 'down';
+export const WORK_AVE_DEV_DEFAULT = {
+  [WORK_AVE_DEV_CURRENT]: 0,
+  [WORK_AVE_DEV_TOTAL_ACTIVITIES]: 0,
+  [WORK_AVE_DEV_IMPROVEMENT]: WORK_AVE_DEV_SAME,
+};
+
 const DEFAULT_PROFILE = {
   [SELECTED_LEVEL]: TOTAL_DIFFICULTY_LEVELS,
   [STREAK]: STREAK_DEFAULT,
   [DISCLAIMER]: DISCLAIMER_DEFAULT,
+  [WORK_AVERAGE_DEVIATION]: WORK_AVE_DEV_DEFAULT,
 };
 
 export const ProfileContext = createContext({
   profileContext: {},
   updateProfileContext: () => {},
   updateCurrentStreak: () => {},
+  updateWorkAverageDeviation: () => {},
 });
 
 const setProfile = (profile) => {
@@ -43,6 +68,15 @@ const setProfile = (profile) => {
 
 export default ({ profile, children }) => {
   const [profileContext, setProfileContext] = useState(setProfile(profile));
+
+  const updateProfileContext = async (key, value) => {
+    try {
+      setProfileContext((curr) => ({ ...curr, [key]: value }));
+      await storeAsyncData(key, value);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const updateCurrentStreak = (date) => {
     try {
@@ -62,17 +96,70 @@ export default ({ profile, children }) => {
         }
       }
 
-      setProfileContext({ ...profileContext, [STREAK]: updatedStreakObj });
-      storeAsyncData(STREAK, updatedStreakObj);
+      updateProfileContext(STREAK, updatedStreakObj);
     } catch (err) {
       console.log(err);
     }
   };
 
-  const updateProfileContext = (key, value) => {
+  const updateWorkAverageDeviation = (results, remove) => {
     try {
-      setProfileContext({ ...profileContext, [key]: value });
-      storeAsyncData(key, value);
+      if (getTotalWorkRounds(results) > 1) {
+        const {
+          [WORK_AVE_DEV_CURRENT]: currentWorkAverageDeviation,
+          [WORK_AVE_DEV_TOTAL_ACTIVITIES]: currentTotalActivities,
+        } = profileContext[WORK_AVERAGE_DEVIATION];
+
+        const workAverageDeviationResults = +getWorkAverageDeviation(results);
+
+        if (remove) {
+          if (currentTotalActivities > 1) {
+            const newTotalActivities = currentTotalActivities - 1;
+
+            const newWorkAverageDeviation =
+              (currentWorkAverageDeviation * currentTotalActivities -
+                workAverageDeviationResults) /
+              newTotalActivities;
+
+            const updatedWorkAverageDeviation = {
+              [WORK_AVE_DEV_CURRENT]: newWorkAverageDeviation,
+              [WORK_AVE_DEV_TOTAL_ACTIVITIES]: newTotalActivities,
+              [WORK_AVE_DEV_IMPROVEMENT]: WORK_AVE_DEV_SAME,
+            };
+
+            updateProfileContext(
+              WORK_AVERAGE_DEVIATION,
+              updatedWorkAverageDeviation
+            );
+          } else {
+            updateProfileContext(WORK_AVERAGE_DEVIATION, WORK_AVE_DEV_DEFAULT);
+          }
+        } else {
+          let improvement = WORK_AVE_DEV_SAME;
+          const newTotalActivities = currentTotalActivities + 1;
+
+          if (currentWorkAverageDeviation > workAverageDeviationResults)
+            improvement = WORK_AVE_DEV_DOWN;
+          else if (currentWorkAverageDeviation < workAverageDeviationResults)
+            improvement = WORK_AVE_DEV_UP;
+
+          const newWorkAverageDeviation =
+            (currentWorkAverageDeviation * currentTotalActivities +
+              workAverageDeviationResults) /
+            newTotalActivities;
+
+          const updatedWorkAverageDeviation = {
+            [WORK_AVE_DEV_CURRENT]: newWorkAverageDeviation,
+            [WORK_AVE_DEV_TOTAL_ACTIVITIES]: newTotalActivities,
+            [WORK_AVE_DEV_IMPROVEMENT]: improvement,
+          };
+
+          updateProfileContext(
+            WORK_AVERAGE_DEVIATION,
+            updatedWorkAverageDeviation
+          );
+        }
+      }
     } catch (err) {
       console.log(err);
     }
@@ -80,7 +167,12 @@ export default ({ profile, children }) => {
 
   return (
     <ProfileContext.Provider
-      value={{ profileContext, updateProfileContext, updateCurrentStreak }}
+      value={{
+        profileContext,
+        updateProfileContext,
+        updateCurrentStreak,
+        updateWorkAverageDeviation,
+      }}
     >
       {children}
     </ProfileContext.Provider>

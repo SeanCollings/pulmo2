@@ -23,6 +23,7 @@ const FavouritesScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [animateIn, setAnimateIn] = useState(false);
   const [animateOut, setAnimateOut] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
 
   useEffect(() => {
     getFavActiviesBySlice(currentLoad).then((activitiesSlice) => {
@@ -67,6 +68,7 @@ const FavouritesScreen = ({ navigation }) => {
 
   const endReachedHandler = async () => {
     setAnimateIn(true);
+    setLoadingMore(true);
   };
 
   const animateInFinishedHandler = () => {
@@ -89,6 +91,7 @@ const FavouritesScreen = ({ navigation }) => {
   };
   const animateOutFinishedHandler = () => {
     setAnimateOut(false);
+    setLoadingMore(false);
   };
 
   const opacity = theme.DARK ? 0.83 : 1;
@@ -108,6 +111,7 @@ const FavouritesScreen = ({ navigation }) => {
           navigation={navigation}
           theme={theme}
           onEndReached={endReachedHandler}
+          opacity={loadingMore ? 0.5 : 1}
         />
       )}
       {favouritedActivities && !favouritedActivities.length && !isLoading && (

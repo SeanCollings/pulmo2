@@ -298,123 +298,19 @@ exports[`ActivityScreen - unit test should cancel the confirm delete modal 1`] =
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -441,149 +337,9 @@ exports[`ActivityScreen - unit test should cancel the confirm delete modal 1`] =
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -593,9 +349,289 @@ exports[`ActivityScreen - unit test should cancel the confirm delete modal 1`] =
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
       </View>
     </View>
@@ -1013,123 +1049,19 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -1156,149 +1088,9 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -1308,9 +1100,289 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
         <View
           style={
@@ -1351,6 +1423,7 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
               Object {
                 "alignItems": "flex-start",
                 "justifyContent": "center",
+                "paddingLeft": 10,
                 "paddingVertical": 18,
               }
             }
@@ -1363,7 +1436,6 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
                   "fontSize": 17,
                   "opacity": 1,
                   "paddingBottom": 2,
-                  "paddingLeft": 10,
                 }
               }
             >
@@ -1787,123 +1859,19 @@ exports[`ActivityScreen - unit test should render 1`] = `
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -1930,149 +1898,9 @@ exports[`ActivityScreen - unit test should render 1`] = `
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -2082,9 +1910,289 @@ exports[`ActivityScreen - unit test should render 1`] = `
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
       </View>
     </View>
@@ -2502,123 +2610,19 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -2645,149 +2649,9 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -2797,9 +2661,289 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
         <View
           style={
@@ -2840,6 +2984,7 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
               Object {
                 "alignItems": "flex-start",
                 "justifyContent": "center",
+                "paddingLeft": 10,
                 "paddingVertical": 18,
               }
             }
@@ -2852,7 +2997,6 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
                   "fontSize": 17,
                   "opacity": 1,
                   "paddingBottom": 2,
-                  "paddingLeft": 10,
                 }
               }
             >
@@ -3276,123 +3420,19 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -3419,149 +3459,9 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -3571,9 +3471,289 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
         <View
           style={
@@ -3614,6 +3794,7 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
               Object {
                 "alignItems": "flex-start",
                 "justifyContent": "center",
+                "paddingLeft": 10,
                 "paddingVertical": 18,
               }
             }
@@ -3626,7 +3807,6 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
                   "fontSize": 17,
                   "opacity": 1,
                   "paddingBottom": 2,
-                  "paddingLeft": 10,
                 }
               }
             >
@@ -4050,123 +4230,19 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
           <View
             style={
               Object {
-                "alignItems": "flex-start",
-                "justifyContent": "center",
-                "paddingVertical": 0,
-              }
-            }
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "paddingVertical": 20,
-            }
-          }
-        >
-          <View
-            style={
-              Object {
                 "alignItems": "center",
                 "justifyContent": "center",
-                "paddingHorizontal": 10,
-                "width": "80%",
+                "paddingVertical": 20,
               }
             }
           >
             <View
               style={
                 Object {
-                  "flexDirection": "row",
-                  "marginBottom": -1,
-                  "width": "100%",
-                }
-              }
-            >
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 0,
-                    "width": "20%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Workout
-                </Text>
-              </View>
-              <View
-                style={
-                  Object {
-                    "borderBottomColor": "#CCC",
-                    "borderBottomWidth": 1,
-                    "borderLeftColor": "#005bbb",
-                    "borderLeftWidth": 1,
-                    "width": "40%",
-                  }
-                }
-              >
-                <Text
-                  style={
-                    Object {
-                      "color": "#00b8bb",
-                      "fontFamily": "tit-regular",
-                      "fontSize": 18,
-                      "opacity": 1,
-                      "padding": 2,
-                      "textAlign": "center",
-                    }
-                  }
-                >
-                  Rest
-                </Text>
-              </View>
-            </View>
-            <View
-              style={
-                Object {
-                  "width": "100%",
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "paddingHorizontal": 10,
+                  "width": "80%",
                 }
               }
             >
@@ -4193,149 +4269,9 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
                   <Text
                     style={
                       Object {
-                        "color": "#3e4b57",
+                        "color": "#00b8bb",
                         "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    1
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    01:38
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:05
-                  </Text>
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "marginBottom": -1,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 0,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    2
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
-                        "opacity": 1,
-                        "padding": 2,
-                        "textAlign": "center",
-                      }
-                    }
-                  >
-                    00:32
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "borderBottomColor": "#CCC",
-                      "borderBottomWidth": 1,
-                      "borderLeftColor": "#005bbb",
-                      "borderLeftWidth": 1,
-                      "width": "40%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-regular",
-                        "fontSize": 17,
+                        "fontSize": 18,
                         "opacity": 1,
                         "padding": 2,
                         "textAlign": "center",
@@ -4345,9 +4281,289 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
                     
                   </Text>
                 </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Workout
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "borderBottomColor": "#CCC",
+                      "borderBottomWidth": 1,
+                      "borderLeftColor": "#005bbb",
+                      "borderLeftWidth": 1,
+                      "width": "40%",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#00b8bb",
+                        "fontFamily": "tit-regular",
+                        "fontSize": 18,
+                        "opacity": 1,
+                        "padding": 2,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Rest
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      1
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      01:38
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:05
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "marginBottom": -1,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 0,
+                        "width": "20%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      2
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      00:32
+                    </Text>
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "borderBottomColor": "#CCC",
+                        "borderBottomWidth": 1,
+                        "borderLeftColor": "#005bbb",
+                        "borderLeftWidth": 1,
+                        "width": "40%",
+                      }
+                    }
+                  >
+                    <Text
+                      style={
+                        Object {
+                          "color": "#3e4b57",
+                          "fontFamily": "tit-regular",
+                          "fontSize": 17,
+                          "opacity": 1,
+                          "padding": 2,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "width": "85%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#5bacf3",
+                "borderRadius": 4,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingBottom": 2,
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "tit-regular",
+                  "fontSize": 16,
+                  "opacity": 1,
+                  "paddingLeft": 10,
+                  "textAlignVertical": "center",
+                }
+              }
+            >
+              Work Average deviation: 50.77%
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "justifyContent": "center",
+                "paddingVertical": 10,
+              }
+            }
+          />
         </View>
       </View>
       <View

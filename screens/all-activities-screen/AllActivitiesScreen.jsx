@@ -122,7 +122,12 @@ const AllActivitiesScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
+    <View
+      style={{
+        ...styles.container,
+        backgroundColor: theme.BACKGROUND,
+      }}
+    >
       {isLoading && (
         <View style={styles.spinner}>
           <ActivityIndicator size="large" color={theme.SECONDARY} />
@@ -136,10 +141,11 @@ const AllActivitiesScreen = ({ navigation }) => {
           navigation={navigation}
           theme={theme}
           onEndReached={endReachedHandler}
+          opacity={loadingMore ? 0.5 : 1}
         />
       )}
       {loadedActivities && !loadedActivities.length && !isLoading && (
-        <View style={styles.favouriteContainer}>
+        <View style={styles.activitiesContainer}>
           <Text style={{ ...styles.favouriteText, color: theme.TEXT, opacity }}>
             Saved activities are shown here.
           </Text>
@@ -177,7 +183,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderBottomWidth: 0,
   },
-  favouriteContainer: {
+  activitiesContainer: {
     flex: 1,
     position: 'absolute',
     alignSelf: 'center',

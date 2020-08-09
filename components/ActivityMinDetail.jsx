@@ -9,7 +9,14 @@ import {
   getIcon,
 } from '../utils';
 
-const ActivityDetail = ({ item, navigation, theme, totalItems, index }) => {
+const ActivityDetail = ({
+  item,
+  navigation,
+  theme,
+  totalItems,
+  index,
+  opacity = 1,
+}) => {
   const { date, excercise, results, type, level, favourite } = item;
   const totalTime = getTotalResultTime(results);
   const icon = getIcon(type);
@@ -22,10 +29,10 @@ const ActivityDetail = ({ item, navigation, theme, totalItems, index }) => {
     [date]
   );
 
-  const opacity = theme.DARK ? 0.87 : 1;
+  const textOpacity = theme.DARK ? 0.87 : 1;
 
   return (
-    <View style={{ ...styles.container }}>
+    <View style={{ ...styles.container, opacity }}>
       <TouchableOpacity
         style={styles.activityResultContainer}
         onPress={onSelect}
@@ -49,7 +56,11 @@ const ActivityDetail = ({ item, navigation, theme, totalItems, index }) => {
               {getDay(date)}
             </Text>
             <Text
-              style={{ ...styles.activityText, color: theme.TEXT, opacity }}
+              style={{
+                ...styles.activityText,
+                color: theme.TEXT,
+                opacity: textOpacity,
+              }}
             >
               {` ${convertDate(date)}`}
             </Text>

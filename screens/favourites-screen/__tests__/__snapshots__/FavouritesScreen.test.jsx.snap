@@ -311,6 +311,7 @@ exports[`FavouritesScreen - unit test should render favourited activities when p
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }
@@ -472,6 +473,7 @@ exports[`FavouritesScreen - unit test should render favourited activities when p
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }
@@ -633,6 +635,7 @@ exports[`FavouritesScreen - unit test should render favourited activities when p
           style={
             Object {
               "alignItems": "center",
+              "opacity": 1,
               "paddingTop": 5,
             }
           }
