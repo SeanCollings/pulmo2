@@ -10,6 +10,8 @@ import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-a
 import loadProfileAsync from './app-initialise/load-profile';
 import loadSettingsAsync from './app-initialise/load-settings';
 import { LIGHT_MODE, DARK_MODE } from './constants/constants';
+import { getAsyncData } from './helpers/storage';
+import { STRENGTH_KEY } from './data';
 
 jest.useFakeTimers();
 jest.mock('Dimensions');
@@ -19,6 +21,7 @@ jest.mock('./app-initialise/load-custom-excercise');
 jest.mock('./app-initialise/load-fav-activity-id-array');
 jest.mock('./app-initialise/load-profile');
 jest.mock('./app-initialise/load-settings');
+jest.mock('./helpers/storage');
 
 describe('App', () => {
   afterEach(() => {
@@ -29,6 +32,7 @@ describe('App', () => {
   describe('success', () => {
     test('has 1 child', async () => {
       let tree;
+      getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
 
       await act(async () => {
         tree = create(<App />);

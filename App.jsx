@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { AppLoading } from 'expo';
+// import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, ActivityIndicator } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import Navigator from './navigation';
@@ -31,11 +31,6 @@ export default function App() {
   const [favActivityIdArray, setFavActivityIdArray] = useState([]);
   const [profile, setProfile] = useState({});
   const [appSettings, setAppSettings] = useState({});
-
-  useEffect(() => {
-    Text.defaultProps = Text.defaultProps || {};
-    Text.defaultProps.allowFontScaling = false;
-  }, []);
 
   const updateAsyncState = ({
     customExcercisesAsync,
@@ -83,16 +78,30 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    loadAsyncDependencies()
+      .then(() => {
+        setDataLoaded(true);
+      })
+      .catch((err) => console.log(`Load dependencies error: ${err}`));
+
+    Text.defaultProps = Text.defaultProps || {};
+    Text.defaultProps.allowFontScaling = false;
+  }, []);
+
   // Remove <View style={styles.container}> if white flash still persists
   return (
     <View style={styles.container} data-testid="app-component">
       {!dataLoaded && (
-        <AppLoading
-          startAsync={loadAsyncDependencies}
-          onFinish={() => setDataLoaded(true)}
-          onError={(err) => console.log(`AppLoading  error: ${err}`)}
-          autoHideSplash
-        />
+        // <AppLoading
+        //   startAsync={loadAsyncDependencies}
+        //   onFinish={() => setDataLoaded(true)}
+        //   onError={(err) => console.log(`AppLoading  error: ${err}`)}
+        //   autoHideSplash
+        // />
+        <View style={styles.spinnerContainer}>
+          <ActivityIndicator size="large" color={'white'} />
+        </View>
       )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
@@ -117,4 +126,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
+  spinnerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });

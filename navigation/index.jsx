@@ -16,7 +16,7 @@ const AppNavigator = (props) => {
   const theme = useTheme();
   const firstMount = useRef(true);
   const { profileContext } = useContext(ProfileContext);
-  const disclaimerContext = profileContext[DISCLAIMER];
+  const disclaimerContext = profileContext[DISCLAIMER] || {};
   const [showDisclaimer, setShowDisclaimer] = useState(
     disclaimerContext[DISCLAIMER_SHOW] ||
       !disclaimerContext[DISCLAIMER_DONT_SHOW_AGAIN]
