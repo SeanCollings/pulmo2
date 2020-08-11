@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import { AppLoading } from 'expo';
+import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import { View, StyleSheet, Text, ActivityIndicator } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import Navigator from './navigation';
@@ -24,13 +24,19 @@ const fetchFonts = () => {
   });
 };
 
+let customExcercises = [];
+let activityIdArray = [];
+let favActivityIdArray = [];
+let profile = {};
+let appSettings = {};
+
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [customExcercises, setCustomExcercises] = useState([]);
-  const [activityIdArray, setActivityIdArray] = useState([]);
-  const [favActivityIdArray, setFavActivityIdArray] = useState([]);
-  const [profile, setProfile] = useState({});
-  const [appSettings, setAppSettings] = useState({});
+  // const [customExcercises, setCustomExcercises] = useState([]);
+  // const [activityIdArray, setActivityIdArray] = useState([]);
+  // const [favActivityIdArray, setFavActivityIdArray] = useState([]);
+  // const [profile, setProfile] = useState({});
+  // const [appSettings, setAppSettings] = useState({});
 
   const updateAsyncState = ({
     customExcercisesAsync,
@@ -39,11 +45,16 @@ export default function App() {
     profileAsync,
     settingsAsync,
   }) => {
-    customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
-    activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
-    favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
-    profileAsync && setProfile(profileAsync);
-    settingsAsync && setAppSettings(settingsAsync);
+    // customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
+    // activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
+    // favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
+    // profileAsync && setProfile(profileAsync);
+    // settingsAsync && setAppSettings(settingsAsync);
+    customExcercises = customExcercisesAsync || [];
+    activityIdArray = activityIdArrayAsync || [];
+    favActivityIdArray = favActivityIdArrayAsync || [];
+    profile = profileAsync || {};
+    appSettings = settingsAsync || {};
 
     return Promise.resolve();
   };
@@ -79,12 +90,6 @@ export default function App() {
   };
 
   useEffect(() => {
-    loadAsyncDependencies()
-      .then(() => {
-        setDataLoaded(true);
-      })
-      .catch((err) => console.log(`Load dependencies error: ${err}`));
-
     Text.defaultProps = Text.defaultProps || {};
     Text.defaultProps.allowFontScaling = false;
   }, []);
@@ -93,15 +98,11 @@ export default function App() {
   return (
     <View style={styles.container} data-testid="app-component">
       {!dataLoaded && (
-        // <AppLoading
-        //   startAsync={loadAsyncDependencies}
-        //   onFinish={() => setDataLoaded(true)}
-        //   onError={(err) => console.log(`AppLoading  error: ${err}`)}
-        //   autoHideSplash
-        // />
-        <View style={styles.spinnerContainer}>
-          <ActivityIndicator size="large" color={'white'} />
-        </View>
+        <AppLoading
+          startAsync={loadAsyncDependencies}
+          onFinish={() => setDataLoaded(true)}
+          onError={(err) => console.log(`AppLoading  error: ${err}`)}
+        />
       )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
@@ -126,9 +127,4 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
-  spinnerContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
 });
