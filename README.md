@@ -9,11 +9,18 @@ A React-Native mobile application using Expo.
 > cd pulmo2
 > npm install
 > npm start
+```
+
+To get the tests to run locally:
+
+```
+> yarn add jest
+```
 
 ### To upload to Google Play store
 
 ```
-
-> expo publish
-> expo build:android -t app-bundle
-> expo fetch:android:keystore
+> npx expo publish
+> npx expo build:android -t app-bundle
+> npx expo fetch:android:keystore
+```

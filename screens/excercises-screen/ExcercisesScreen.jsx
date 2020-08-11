@@ -10,10 +10,8 @@ import {
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { ExcerciseContext } from '../../context/excercise-context';
-import { ProfileContext, SELECTED_LEVEL } from '../../context/profile-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
 import options from './options';
-import { TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
 import Slides from '../../components/Slides';
 import { EXCERCISE_DATA } from '../../data/excercises';
 import { CUSTOM_KEY } from '../../data';
@@ -194,14 +192,9 @@ const ExcercisesScreen = ({ navigation }) => {
   const theme = useTheme();
   const data = EXCERCISE_DATA;
   const excerciseContext = useContext(ExcerciseContext);
-  const { profileContext } = useContext(ProfileContext);
   const customExcerciseContext = useContext(CustomExcerciseContext);
   const [modalContent, setModalContent] = useState(null);
   const [createNewModalContent, setCreateNewModalContent] = useState(null);
-
-  const selectedLevel =
-    (profileContext && profileContext[SELECTED_LEVEL]) ||
-    TOTAL_DIFFICULTY_LEVELS;
 
   const cancelModalHandler = () => {
     setModalContent(null);
@@ -261,7 +254,6 @@ const ExcercisesScreen = ({ navigation }) => {
           headingColour={modalContent[1]}
           cancelModal={cancelModalHandler}
           confirmModal={confirmModalHandler}
-          selectedLevel={selectedLevel}
           cancelTitle="Back"
           confirmTitle="Select"
         />
@@ -274,7 +266,6 @@ const ExcercisesScreen = ({ navigation }) => {
           confirmModal={saveNewExcerciseHandler}
           confirmSelectCustomModal={confirmCustomModalHandler}
           deleteCustomModal={customExcerciseContext.deleteCustomExcercise}
-          selectedLevel={selectedLevel}
           cancelTitle="Back"
           confirmTitle="Select"
           isEditable

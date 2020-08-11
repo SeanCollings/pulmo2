@@ -130,7 +130,7 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -162,7 +162,7 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -200,7 +200,7 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -248,7 +248,7 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -286,7 +286,7 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -318,76 +318,12 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -779,7 +715,7 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -811,6 +747,7 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -848,11 +785,27 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
                     Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
                   </Text>
                 </View>
                 <View
@@ -865,7 +818,7 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                 >
                   <TextInput
                     allowFontScaling={true}
-                    defaultValue="10s"
+                    defaultValue="10"
                     editable={false}
                     keyboardType="number-pad"
                     maxLength={3}
@@ -880,6 +833,7 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -917,7 +871,7 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -949,75 +903,12 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -1497,7 +1388,7 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -1529,6 +1420,7 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -1566,11 +1458,27 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
                     Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
                   </Text>
                 </View>
                 <View
@@ -1583,7 +1491,7 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                 >
                   <TextInput
                     allowFontScaling={true}
-                    defaultValue="s"
+                    defaultValue=""
                     editable={false}
                     keyboardType="number-pad"
                     maxLength={3}
@@ -1598,6 +1506,7 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -1635,7 +1544,7 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -1667,75 +1576,12 @@ exports[`ModalExcercise - unit test should render default 1`] = `
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -2045,7 +1891,7 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -2077,7 +1923,7 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -2115,7 +1961,7 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -2163,7 +2009,7 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -2201,7 +2047,7 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -2233,76 +2079,12 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -2555,7 +2337,7 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -2587,6 +2369,7 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -2624,11 +2407,27 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
                     Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
                   </Text>
                 </View>
                 <View
@@ -2641,7 +2440,7 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                 >
                   <TextInput
                     allowFontScaling={true}
-                    defaultValue="10s"
+                    defaultValue="10"
                     editable={false}
                     keyboardType="number-pad"
                     maxLength={3}
@@ -2656,6 +2455,7 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -2693,7 +2493,7 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -2725,75 +2525,12 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -3008,7 +2745,7 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -3040,7 +2777,7 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -3078,7 +2815,7 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -3126,7 +2863,7 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -3164,7 +2901,7 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -3196,76 +2933,12 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.7,
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.2,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>
@@ -3635,7 +3308,7 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -3667,6 +3340,7 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -3704,11 +3378,27 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
                     Rest
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "borderBottomColor": "white",
+                        "borderBottomWidth": 1,
+                        "color": "#3e4b57",
+                        "fontFamily": "tit-light",
+                        "fontSize": 17,
+                        "justifyContent": "center",
+                        "opacity": 0.6,
+                      }
+                    }
+                  >
+                      
+                    (seconds)
                   </Text>
                 </View>
                 <View
@@ -3721,7 +3411,7 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                 >
                   <TextInput
                     allowFontScaling={true}
-                    defaultValue="10s"
+                    defaultValue="10"
                     editable={false}
                     keyboardType="number-pad"
                     maxLength={3}
@@ -3736,6 +3426,7 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
@@ -3773,7 +3464,7 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
-                        "opacity": 0.87,
+                        "opacity": 1,
                       }
                     }
                   >
@@ -3805,75 +3496,12 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
                         "fontFamily": "tit-light",
                         "fontSize": 17,
                         "justifyContent": "center",
+                        "opacity": 1,
                         "width": "110%",
                       }
                     }
                     testID="textInput_Rounds"
                     underlineColorAndroid="transparent"
-                  />
-                </View>
-              </View>
-              <View
-                style={
-                  Object {
-                    "flexDirection": "row",
-                    "paddingTop": 10,
-                    "width": "100%",
-                  }
-                }
-              >
-                <View
-                  style={
-                    Object {
-                      "flexDirection": "row",
-                      "justifyContent": "flex-start",
-                      "paddingLeft": 20,
-                      "textAlign": "center",
-                      "width": "80%",
-                    }
-                  }
-                >
-                  <Text
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                  >
-                    Selected level
-                  </Text>
-                </View>
-                <View
-                  style={
-                    Object {
-                      "paddingRight": 20,
-                      "width": "20%",
-                    }
-                  }
-                >
-                  <TextInput
-                    allowFontScaling={true}
-                    editable={false}
-                    rejectResponderTermination={true}
-                    style={
-                      Object {
-                        "borderBottomColor": "white",
-                        "borderBottomWidth": 1,
-                        "color": "#3e4b57",
-                        "fontFamily": "tit-light",
-                        "fontSize": 17,
-                        "justifyContent": "center",
-                        "opacity": 0.63,
-                      }
-                    }
-                    underlineColorAndroid="transparent"
-                    value="5"
                   />
                 </View>
               </View>

@@ -3,7 +3,6 @@ import { act, create } from 'react-test-renderer';
 import { cleanup, fireEvent } from 'react-native-testing-library';
 import ExcercisesScreen, { excercisesScreenOptions } from '../ExcercisesScreen';
 import CustomExcerciseContext from '../../../context/custom-excercise-context';
-import ProfileContext from '../../../context/profile-context';
 import ExcerciseContext from '../../../context/excercise-context';
 import { getAsyncData, storeAsyncData } from '../../../helpers/storage';
 
@@ -42,11 +41,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={[]}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -60,11 +57,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -78,11 +73,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -101,11 +94,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -128,11 +119,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigationHome} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigationHome} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -156,11 +145,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigationHome} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigationHome} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -180,11 +167,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={customExcercises}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigationHome} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigationHome} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -205,11 +190,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={[]}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -228,11 +211,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={[]}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigation} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigation} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });
@@ -256,11 +237,9 @@ describe('ExcercisesScreen - unit test', () => {
     await act(async () => {
       component = create(
         <CustomExcerciseContext excercises={[]}>
-          <ProfileContext>
-            <ExcerciseContext>
-              <ExcercisesScreen navigation={navigationHome} />
-            </ExcerciseContext>
-          </ProfileContext>
+          <ExcerciseContext>
+            <ExcercisesScreen navigation={navigationHome} />
+          </ExcerciseContext>
         </CustomExcerciseContext>
       );
     });

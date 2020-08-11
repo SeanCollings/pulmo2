@@ -11,13 +11,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import CustomModal from '.';
 import CustomButton from '../CustomButton';
 import { useTheme } from '../../hooks/useTheme';
-import { TOTAL_DIFFICULTY_LEVELS } from '../../constants/constants';
 
 const TITLE = 'Title';
 const CYCLES = 'Inhale & exhale';
 const REST = 'Rest';
 const ROUNDS = 'Rounds';
-const SELECTED_LEVEL = 'Selected level';
 
 const TITLE_LENGTH = 30;
 const LENGTH_2 = 2;
@@ -28,7 +26,6 @@ const ModalExcercise = ({
   cancelModal,
   confirmModal,
   headingColour,
-  selectedLevel = TOTAL_DIFFICULTY_LEVELS,
   cancelTitle,
   confirmTitle,
   isEditable = false,
@@ -46,11 +43,12 @@ const ModalExcercise = ({
   const rest = useRef((excercise && excercise.rest) || '');
   const rounds = useRef((excercise && excercise.rounds) || '');
 
+  const opacity = theme.DARK ? 0.87 : 1;
+
   const contents = [
     [CYCLES, cycles.current],
     [REST, rest.current],
     [ROUNDS, rounds.current],
-    [SELECTED_LEVEL, selectedLevel],
   ];
 
   const editButtonHandler = () => {
@@ -223,22 +221,6 @@ const ModalExcercise = ({
   const ExcerciseValue = ({ detail, value }) => {
     let textValue = value.toString();
 
-    if (detail === REST && !editExcercise) textValue += 's';
-
-    if (detail === SELECTED_LEVEL)
-      return (
-        <TextInput
-          editable={false}
-          value={textValue}
-          style={{
-            ...styles.contentText,
-            color: theme.TEXT,
-            borderBottomColor: theme.BACKGROUND,
-            opacity: editExcercise ? 0.2 : 0.63,
-          }}
-        />
-      );
-
     return (
       <TextInput
         testID={`textInput_${detail}`}
@@ -253,6 +235,7 @@ const ModalExcercise = ({
             : []),
           ...(error[detail] ? { borderBottomColor: theme.ERROR } : []),
           width: '110%',
+          opacity,
         }}
         onChangeText={(text) => textChangeHandler(text, detail)}
         keyboardType="number-pad"
@@ -296,17 +279,12 @@ const ModalExcercise = ({
                         ...styles.contentText,
                         color: theme.TEXT,
                         borderBottomColor: theme.BACKGROUND,
-                        opacity:
-                          editExcercise && detail === SELECTED_LEVEL
-                            ? 0.2
-                            : detail === SELECTED_LEVEL
-                            ? 0.63
-                            : 0.87,
+                        opacity,
                       }}
                     >
                       {detail}
                     </Text>
-                    {editExcercise && detail === REST && (
+                    {detail === REST && (
                       <Text
                         style={{
                           ...styles.contentText,
