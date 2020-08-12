@@ -17,7 +17,11 @@ module.exports = {
     '!**/babel.config.js',
     '!**/jest.setup.js',
   ],
-  coveragePathIgnorePatterns: ['jest.config.js', 'metro.config.js'],
+  coveragePathIgnorePatterns: [
+    'jest.config.js',
+    'metro.config.js',
+    'app.config.js',
+  ],
   testEnvironment: 'node',
   globalSetup: './global-setup.js',
 };
