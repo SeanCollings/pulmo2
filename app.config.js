@@ -1,16 +1,6 @@
 import { BUILD_VERSION, ANDROID_VERSION, IOS_VERSION } from './version';
 
 export default ({ config }) => {
-  console.log('---------- VARIABLES - BuildId::', process?.env?.Build?.BuildId);
-  console.log(
-    '---------- VARIABLES - BuildNumber::',
-    process?.env?.Build?.BuildNumber
-  );
-  console.log(
-    '---------- VARIABLES - Release.ReleaseId::',
-    process?.env?.Release?.ReleaseId
-  );
-
   return {
     ...config,
     version: BUILD_VERSION,

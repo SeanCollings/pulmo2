@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import options from './options';
 import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
-import { BUILD_VERSION, ANDROID_VERSION } from '../../version';
+import { BUILD_VERSION, ANDROID_VERSION, RELEASE_ID } from '../../version';
 import CategoryContainer from '../../components/CategoryContainer';
 import BarSelector from '../../components/BarSelector';
 
@@ -12,6 +12,8 @@ export const settingsScreenOptions = options;
 
 const SettingsScreen = ({ navigation }) => {
   const theme = useTheme();
+
+  const releaseId = RELEASE_ID.includes('#') ? '1' : RELEASE_ID;
 
   const opacity = theme.DARK ? 0.36 : 0.7;
 
@@ -40,7 +42,7 @@ const SettingsScreen = ({ navigation }) => {
             color: theme.TEXT,
             opacity,
           }}
-        >{` ${BUILD_VERSION}.${ANDROID_VERSION}`}</Text>
+        >{` ${BUILD_VERSION}.${releaseId}.${ANDROID_VERSION}`}</Text>
       </View>
     </View>
   );
