@@ -11,6 +11,11 @@ jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 jest.mock('../../../helpers/storage');
 
 describe('ExcercisesScreen - unit test', () => {
+  // Hide console.error that I can't find a reason for yet:
+  // Warning: dispatchCommand was called with a ref that isn't a native component.
+  // Use React.forwardRef to get access to the underlying native component
+  jest.spyOn(console, 'error').mockImplementation(jest.fn());
+
   let component;
   const navigation = { goBack: () => {} };
   const customExcercises = [

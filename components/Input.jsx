@@ -12,13 +12,8 @@ const Input = ({
   ...rest
 }) => {
   const theme = useTheme();
-  const [animatedGrow] = useState(new Animated.Value(0));
+  const [animatedGrow] = useState(new Animated.Value(-300));
   const [animationOpacity] = useState(new Animated.Value(0));
-
-  const interpolateGrow = animatedGrow.interpolate({
-    inputRange: [0, 1],
-    outputRange: ['0%', '100%'],
-  });
 
   const opacity = theme.DARK ? 0.87 : 1;
   const opacityDarker = theme.DARK ? 0.63 : 0.8;
@@ -28,22 +23,26 @@ const Input = ({
       Animated.timing(animatedGrow, {
         toValue: 1,
         duration: 100,
+        useNativeDriver: true,
       }),
       Animated.timing(animationOpacity, {
         toValue: opacity,
         duration: 100,
+        useNativeDriver: true,
       }),
     ]).start();
   };
   const onBlurHandler = () => {
     Animated.parallel([
       Animated.timing(animatedGrow, {
-        toValue: 0,
+        toValue: -300,
         duration: 10,
+        useNativeDriver: true,
       }),
       Animated.timing(animationOpacity, {
         toValue: 0,
         duration: 10,
+        useNativeDriver: true,
       }),
     ]).start();
   };
@@ -57,7 +56,7 @@ const Input = ({
   };
 
   const animatedGrowStyle = {
-    width: interpolateGrow,
+    transform: [{ translateX: animatedGrow }],
     opacity: animationOpacity,
   };
 
@@ -82,13 +81,15 @@ const Input = ({
           multiline
           selectionColor={theme.SECONDARY}
         />
-        <Animated.View
-          style={{
-            borderBottomWidth: 1,
-            borderBottomColor: theme.BORDER,
-            ...animatedGrowStyle,
-          }}
-        ></Animated.View>
+        <View style={styles.animatedContainer}>
+          <Animated.View
+            style={{
+              borderBottomWidth: 1,
+              borderBottomColor: theme.BORDER,
+              ...animatedGrowStyle,
+            }}
+          ></Animated.View>
+        </View>
       </View>
       <View style={styles.remainingContainer}>
         <Text
@@ -114,6 +115,9 @@ const styles = StyleSheet.create({
   },
   textInputContainer: {
     width: '78%',
+  },
+  animatedContainer: {
+    overflow: 'hidden',
   },
   input: {
     fontFamily: 'tit-light',

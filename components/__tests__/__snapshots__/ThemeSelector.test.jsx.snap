@@ -32,7 +32,7 @@ exports[`Slides - unit test should enable theme change 1`] = `
       }
     >
       <RCTSwitch
-        accessibilityRole="button"
+        accessibilityRole="switch"
         onChange={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
@@ -85,7 +85,7 @@ exports[`Slides - unit test should render 1`] = `
       }
     >
       <RCTSwitch
-        accessibilityRole="button"
+        accessibilityRole="switch"
         onChange={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}

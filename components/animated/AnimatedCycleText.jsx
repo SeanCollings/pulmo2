@@ -27,6 +27,7 @@ const AnimatedCycleText = ({
           Animated.timing(animatedOpacities[i], {
             toValue: maxOpacity,
             duration: fadeIn,
+            useNativeDriver: true,
           }),
         ];
       } else {
@@ -35,11 +36,13 @@ const AnimatedCycleText = ({
           Animated.timing(animatedOpacities[i], {
             toValue: maxOpacity,
             duration: fadeIn,
+            useNativeDriver: true,
           }),
           Animated.delay(delay),
           Animated.timing(animatedOpacities[i], {
             toValue: 0,
             duration: fadeOut,
+            useNativeDriver: true,
           }),
         ];
       }

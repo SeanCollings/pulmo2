@@ -13,6 +13,7 @@ describe('AnimatedAppear - unit test', () => {
 
   afterEach(() => {
     cleanup();
+    jest.clearAllMocks();
   });
 
   test('should render default', async () => {

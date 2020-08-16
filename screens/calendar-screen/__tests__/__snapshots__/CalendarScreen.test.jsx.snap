@@ -52,7 +52,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -121,7 +120,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -198,7 +196,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -244,7 +241,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -290,7 +286,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -336,7 +331,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -382,7 +376,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -428,7 +421,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -474,7 +466,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -529,7 +520,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -577,7 +567,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -625,7 +614,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -673,7 +661,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -721,7 +708,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -769,7 +755,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -817,7 +802,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -874,7 +858,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -922,7 +905,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -970,7 +952,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1018,7 +999,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1066,7 +1046,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1114,7 +1093,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1180,7 +1158,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1237,7 +1214,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1285,7 +1261,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1333,7 +1308,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1381,7 +1355,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1429,7 +1402,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1477,7 +1449,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1525,7 +1496,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1582,7 +1552,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1630,7 +1599,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1696,7 +1664,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1744,7 +1711,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1792,7 +1758,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1840,7 +1805,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1906,7 +1870,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -1963,7 +1926,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2011,7 +1973,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2059,7 +2020,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2107,7 +2067,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2155,7 +2114,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2203,7 +2161,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2251,7 +2208,6 @@ exports[`CalendarScreen - unit test should render all activities found in a mont
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2331,7 +2287,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -2400,7 +2355,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -2477,7 +2431,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2523,7 +2476,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2569,7 +2521,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2615,7 +2566,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2661,7 +2611,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2707,7 +2656,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2753,7 +2701,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2808,7 +2755,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2856,7 +2802,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2904,7 +2849,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -2952,7 +2896,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3000,7 +2943,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3048,7 +2990,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3096,7 +3037,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3153,7 +3093,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3201,7 +3140,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3249,7 +3187,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3297,7 +3234,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3345,7 +3281,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3393,7 +3328,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3441,7 +3375,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3498,7 +3431,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3546,7 +3478,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3594,7 +3525,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3642,7 +3572,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3690,7 +3619,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3738,7 +3666,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3786,7 +3713,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3843,7 +3769,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3891,7 +3816,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3939,7 +3863,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -3987,7 +3910,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4035,7 +3957,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4083,7 +4004,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4131,7 +4051,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4188,7 +4107,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4236,7 +4154,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4284,7 +4201,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4332,7 +4248,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4380,7 +4295,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4428,7 +4342,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4476,7 +4389,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4556,7 +4468,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -4625,7 +4536,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -4702,7 +4612,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4748,7 +4657,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4794,7 +4702,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4840,7 +4747,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4886,7 +4792,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4932,7 +4837,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -4978,7 +4882,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5033,7 +4936,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5081,7 +4983,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5129,7 +5030,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5177,7 +5077,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5225,7 +5124,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5273,7 +5171,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5321,7 +5218,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5378,7 +5274,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5426,7 +5321,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5474,7 +5368,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5522,7 +5415,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5570,7 +5462,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5618,7 +5509,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5666,7 +5556,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5723,7 +5612,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5771,7 +5659,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5819,7 +5706,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5867,7 +5753,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5915,7 +5800,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -5963,7 +5847,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6011,7 +5894,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6068,7 +5950,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6116,7 +5997,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6164,7 +6044,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6212,7 +6091,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6260,7 +6138,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6308,7 +6185,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6356,7 +6232,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6413,7 +6288,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6461,7 +6335,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6509,7 +6382,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6557,7 +6429,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6605,7 +6476,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6653,7 +6523,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6701,7 +6570,6 @@ exports[`CalendarScreen - unit test should render an empty month if there are no
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6781,7 +6649,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -6850,7 +6717,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
           "top": 0,
         }
       }
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -6927,7 +6793,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -6973,7 +6838,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7019,7 +6883,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7065,7 +6928,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7111,7 +6973,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7157,7 +7018,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7203,7 +7063,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7258,7 +7117,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7306,7 +7164,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7354,7 +7211,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7402,7 +7258,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7450,7 +7305,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7498,7 +7352,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7546,7 +7399,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7603,7 +7455,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7651,7 +7502,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7699,7 +7549,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7747,7 +7596,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7795,7 +7643,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7843,7 +7690,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7891,7 +7737,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7948,7 +7793,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -7996,7 +7840,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8044,7 +7887,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8092,7 +7934,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8140,7 +7981,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8188,7 +8028,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8236,7 +8075,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8293,7 +8131,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8341,7 +8178,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8389,7 +8225,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8437,7 +8272,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8485,7 +8319,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8533,7 +8366,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8667,7 +8499,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8724,7 +8555,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8772,7 +8602,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8820,7 +8649,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8868,7 +8696,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8916,7 +8743,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -8964,7 +8790,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -9012,7 +8837,6 @@ exports[`CalendarScreen - unit test should show a maximum amount of activities p
         <View
           accessible={true}
           focusable={true}
-          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

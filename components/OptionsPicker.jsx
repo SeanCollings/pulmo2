@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, Picker, Platform } from 'react-native';
+import { StyleSheet, View, Platform } from 'react-native';
+import { Picker } from '@react-native-community/picker';
 
 import { useTheme } from '../hooks/useTheme';
 

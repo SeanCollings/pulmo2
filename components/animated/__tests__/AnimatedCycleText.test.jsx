@@ -4,11 +4,13 @@ import { cleanup } from 'react-native-testing-library';
 import AnimatedCycleText from '../AnimatedCycleText';
 
 jest.useFakeTimers();
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('AnimatedAppear - unit test', () => {
   let component;
   afterEach(() => {
     cleanup();
+    jest.clearAllMocks();
   });
 
   test('should return null if empty text array', async () => {

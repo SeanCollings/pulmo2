@@ -227,7 +227,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -267,7 +266,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -299,7 +298,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -339,7 +337,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -371,7 +369,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -411,7 +408,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -614,7 +611,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -654,7 +650,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -686,7 +682,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -726,7 +721,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -758,7 +753,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -798,7 +792,7 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -953,7 +947,6 @@ exports[`ExcercisesScreen - unit test should cancel excercise modal 1`] = `
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1278,7 +1271,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1318,7 +1310,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -1350,7 +1342,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1390,7 +1381,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -1422,7 +1413,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1462,7 +1452,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -1665,7 +1655,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1705,7 +1694,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -1737,7 +1726,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1777,7 +1765,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -1809,7 +1797,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1849,7 +1836,7 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2004,7 +1991,6 @@ exports[`ExcercisesScreen - unit test should confirm selected excercise modal an
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2329,7 +2315,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2369,7 +2354,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2401,7 +2386,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2441,7 +2425,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2473,7 +2457,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2513,7 +2496,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2716,7 +2699,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2756,7 +2738,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2788,7 +2770,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2828,7 +2809,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -2860,7 +2841,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -2900,7 +2880,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -3055,7 +3035,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -3130,7 +3109,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -3170,7 +3148,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -3202,7 +3180,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -3242,7 +3219,7 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -3687,7 +3664,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -3748,7 +3724,6 @@ exports[`ExcercisesScreen - unit test should open create new custom excercises m
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -3991,7 +3966,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4031,7 +4005,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4063,7 +4037,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4103,7 +4076,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4135,7 +4108,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4175,7 +4147,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4378,7 +4350,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4418,7 +4389,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4450,7 +4421,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4490,7 +4460,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4522,7 +4492,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4562,7 +4531,7 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -4717,7 +4686,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -5181,7 +5149,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -5242,7 +5209,6 @@ exports[`ExcercisesScreen - unit test should open excercise modal 1`] = `
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -5485,7 +5451,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -5525,7 +5490,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -5557,7 +5522,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -5597,7 +5561,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -5629,7 +5593,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -5669,7 +5632,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -5872,7 +5835,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -5912,7 +5874,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -5944,7 +5906,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -5984,7 +5945,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6016,7 +5977,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -6056,7 +6016,7 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6211,7 +6171,6 @@ exports[`ExcercisesScreen - unit test should render 1`] = `
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -6536,7 +6495,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -6576,7 +6534,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6608,7 +6566,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -6648,7 +6605,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6680,7 +6637,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -6720,7 +6676,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6923,7 +6879,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -6963,7 +6918,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -6995,7 +6950,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7035,7 +6989,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7067,7 +7021,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7107,7 +7060,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7262,7 +7215,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -7337,7 +7289,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7377,7 +7328,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7409,7 +7360,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7449,7 +7399,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises 1`] =
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7732,7 +7682,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7772,7 +7721,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7804,7 +7753,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7844,7 +7792,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -7876,7 +7824,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -7916,7 +7863,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8119,7 +8066,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -8159,7 +8105,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8191,7 +8137,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -8231,7 +8176,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8263,7 +8208,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -8303,7 +8247,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8458,7 +8402,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -8533,7 +8476,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -8573,7 +8515,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8605,7 +8547,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -8645,7 +8586,7 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                     }
                   >
                     <RCTSwitch
-                      accessibilityRole="button"
+                      accessibilityRole="switch"
                       onChange={[Function]}
                       onResponderTerminationRequest={[Function]}
                       onStartShouldSetResponder={[Function]}
@@ -8807,7 +8748,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -8854,7 +8794,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -9184,7 +9123,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -9245,7 +9183,6 @@ exports[`ExcercisesScreen - unit test should render with custom excercises modal
                 <View
                   accessible={true}
                   focusable={true}
-                  isTVSelectable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}

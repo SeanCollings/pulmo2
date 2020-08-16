@@ -41,14 +41,17 @@ const Counter = ({
       toValue: 1,
       duration,
       delay: firstMount.current ? 100 : 0,
+      useNativeDriver: false,
     });
   const opacityAnimation = Animated.timing(animatedOpacity, {
     toValue: 1,
     duration,
+    useNativeDriver: false,
   });
   const growAnimation = Animated.timing(animatedGrow, {
     toValue: 1,
     duration,
+    useNativeDriver: false,
   });
 
   useEffect(() => {

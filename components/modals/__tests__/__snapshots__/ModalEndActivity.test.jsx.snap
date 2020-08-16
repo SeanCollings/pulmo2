@@ -58,7 +58,6 @@ exports[`ModalEndActivity - unit test should render default 1`] = `
           <View
             accessible={true}
             focusable={false}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -174,7 +173,7 @@ exports[`ModalEndActivity - unit test should render default 1`] = `
                   }
                 }
               >
-                <RCTPicker
+                <RNCPicker
                   items={
                     Array [
                       Object {
@@ -205,8 +204,6 @@ exports[`ModalEndActivity - unit test should render default 1`] = `
                     ]
                   }
                   onChange={[Function]}
-                  onResponderTerminationRequest={[Function]}
-                  onStartShouldSetResponder={[Function]}
                   selectedIndex={0}
                   style={
                     Array [
@@ -241,7 +238,6 @@ exports[`ModalEndActivity - unit test should render default 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -302,7 +298,6 @@ exports[`ModalEndActivity - unit test should render default 1`] = `
             <View
               accessible={true}
               focusable={true}
-              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}

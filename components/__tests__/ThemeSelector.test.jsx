@@ -8,6 +8,11 @@ import { storeAsyncData } from '../../helpers/storage';
 jest.mock('../../helpers/storage');
 
 describe('Slides - unit test', () => {
+  // Hide console.error that I can't find a reason for yet:
+  // Warning: dispatchCommand was called with a ref that isn't a native component.
+  // Use React.forwardRef to get access to the underlying native component
+  jest.spyOn(console, 'error').mockImplementation(jest.fn());
+
   let component;
 
   afterEach(() => {

@@ -110,7 +110,6 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
     initialNumToRender={20}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.001}
@@ -145,7 +144,6 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -307,7 +305,6 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -469,7 +466,6 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -618,24 +614,32 @@ exports[`AllActivitiesScreen - unit test should render all activities when prese
     style={
       Object {
         "alignSelf": "center",
-        "backgroundColor": "white",
-        "borderBottomWidth": 0,
-        "borderColor": "#CCC",
-        "borderTopLeftRadius": 50,
-        "borderTopRightRadius": 50,
-        "borderWidth": 1,
-        "bottom": -100,
-        "padding": 10,
+        "bottom": 0,
         "position": "absolute",
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#002f56"
-      hidesWhenStopped={true}
-      size="large"
-    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderBottomWidth": 0,
+          "borderColor": "#CCC",
+          "borderTopLeftRadius": 50,
+          "borderTopRightRadius": 50,
+          "borderWidth": 1,
+          "padding": 10,
+          "translateY": 100,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#002f56"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
   </View>
 </View>
 `;
@@ -658,7 +662,6 @@ exports[`AllActivitiesScreen - unit test should render an empty screen if there 
     initialNumToRender={20}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.001}
@@ -705,24 +708,32 @@ exports[`AllActivitiesScreen - unit test should render an empty screen if there 
     style={
       Object {
         "alignSelf": "center",
-        "backgroundColor": "white",
-        "borderBottomWidth": 0,
-        "borderColor": "#CCC",
-        "borderTopLeftRadius": 50,
-        "borderTopRightRadius": 50,
-        "borderWidth": 1,
-        "bottom": -100,
-        "padding": 10,
+        "bottom": 0,
         "position": "absolute",
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#002f56"
-      hidesWhenStopped={true}
-      size="large"
-    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderBottomWidth": 0,
+          "borderColor": "#CCC",
+          "borderTopLeftRadius": 50,
+          "borderTopRightRadius": 50,
+          "borderWidth": 1,
+          "padding": 10,
+          "translateY": 100,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#002f56"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
   </View>
 </View>
 `;
@@ -745,7 +756,6 @@ exports[`AllActivitiesScreen - unit test should render an empty screen when ther
     initialNumToRender={20}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.001}
@@ -792,24 +802,32 @@ exports[`AllActivitiesScreen - unit test should render an empty screen when ther
     style={
       Object {
         "alignSelf": "center",
-        "backgroundColor": "white",
-        "borderBottomWidth": 0,
-        "borderColor": "#CCC",
-        "borderTopLeftRadius": 50,
-        "borderTopRightRadius": 50,
-        "borderWidth": 1,
-        "bottom": -100,
-        "padding": 10,
+        "bottom": 0,
         "position": "absolute",
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#002f56"
-      hidesWhenStopped={true}
-      size="large"
-    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderBottomWidth": 0,
+          "borderColor": "#CCC",
+          "borderTopLeftRadius": 50,
+          "borderTopRightRadius": 50,
+          "borderWidth": 1,
+          "padding": 10,
+          "translateY": 100,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#002f56"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
   </View>
 </View>
 `;
@@ -832,7 +850,6 @@ exports[`AllActivitiesScreen - unit test should render an empty screen when ther
     initialNumToRender={20}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.001}
@@ -879,24 +896,32 @@ exports[`AllActivitiesScreen - unit test should render an empty screen when ther
     style={
       Object {
         "alignSelf": "center",
-        "backgroundColor": "white",
-        "borderBottomWidth": 0,
-        "borderColor": "#CCC",
-        "borderTopLeftRadius": 50,
-        "borderTopRightRadius": 50,
-        "borderWidth": 1,
-        "bottom": -100,
-        "padding": 10,
+        "bottom": 0,
         "position": "absolute",
       }
     }
   >
-    <ActivityIndicator
-      animating={true}
-      color="#002f56"
-      hidesWhenStopped={true}
-      size="large"
-    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderBottomWidth": 0,
+          "borderColor": "#CCC",
+          "borderTopLeftRadius": 50,
+          "borderTopRightRadius": 50,
+          "borderWidth": 1,
+          "padding": 10,
+          "translateY": 100,
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#002f56"
+        hidesWhenStopped={true}
+        size="large"
+      />
+    </View>
   </View>
 </View>
 `;

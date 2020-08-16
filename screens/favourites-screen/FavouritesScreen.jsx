@@ -84,14 +84,15 @@ const FavouritesScreen = ({ navigation }) => {
           setCurrentLoad((curr) => curr + 1);
         }
         setAnimateOut(true);
+        setLoadingMore(false);
       })
       .catch(() => {
         setAnimateOut(true);
+        setLoadingMore(false);
       });
   };
   const animateOutFinishedHandler = () => {
     setAnimateOut(false);
-    setLoadingMore(false);
   };
 
   const opacity = theme.DARK ? 0.83 : 1;

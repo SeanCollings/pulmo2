@@ -4,6 +4,7 @@ import { cleanup, fireEvent } from 'react-native-testing-library';
 import Checkbox from '../Checkbox';
 
 jest.useFakeTimers();
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('Checkbox - unit test', () => {
   let component;
@@ -11,6 +12,7 @@ describe('Checkbox - unit test', () => {
 
   afterEach(() => {
     cleanup();
+    jest.clearAllMocks();
   });
 
   test('should render in unchecked state', async () => {

@@ -21,6 +21,7 @@ const Checkbox = ({ state, onChange, label }) => {
       toValue: state ? 0.01 : 1,
       bounciness: 10,
       speed: 80,
+      useNativeDriver: false,
     }).start(({ finished }) => {
       if (finished) onChange();
     });

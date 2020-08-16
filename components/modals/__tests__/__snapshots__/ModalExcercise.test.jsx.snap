@@ -371,7 +371,6 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -432,7 +431,6 @@ exports[`ModalExcercise - unit test Create new excercise Validation should show 
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -557,7 +555,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -604,7 +601,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -934,7 +930,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -995,7 +990,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should handle cancel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -1173,7 +1167,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should render the de
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1234,7 +1227,6 @@ exports[`ModalExcercise - unit test delete excercise prompt should render the de
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -1607,7 +1599,6 @@ exports[`ModalExcercise - unit test should render default 1`] = `
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -1732,7 +1723,6 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -1779,7 +1769,6 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2110,7 +2099,6 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2171,7 +2159,6 @@ exports[`ModalExcercise - unit test should render in the editable state when edi
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2556,7 +2543,6 @@ exports[`ModalExcercise - unit test should render with a non editable excercise 
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -2964,7 +2950,6 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3025,7 +3010,6 @@ exports[`ModalExcercise - unit test should render with an editable empty excerci
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3150,7 +3134,6 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3197,7 +3180,6 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3527,7 +3509,6 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -3588,7 +3569,6 @@ exports[`ModalExcercise - unit test should render with an editable excercise sel
               <View
                 accessible={true}
                 focusable={true}
-                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}

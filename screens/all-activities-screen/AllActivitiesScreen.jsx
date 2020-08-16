@@ -31,7 +31,7 @@ const AllActivitiesScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
   const [loadedActivities, setLoadedActivities] = useState([]);
-  const [animatedHeight] = useState(new Animated.Value(-100));
+  const [animatedHeight] = useState(new Animated.Value(100));
 
   useEffect(() => {
     getSavedActivitiesBySlice(currentLoad).then((activitiesSlice) => {
@@ -97,8 +97,9 @@ const AllActivitiesScreen = ({ navigation }) => {
         });
     } else {
       Animated.timing(animatedHeight, {
-        toValue: -100,
+        toValue: 100,
         duration: 200,
+        useNativeDriver: true,
       }).start();
     }
   }, [loadingMore]);
@@ -106,19 +107,17 @@ const AllActivitiesScreen = ({ navigation }) => {
   const endReachedHandler = async () => {
     if (loadingMore) return;
 
+    setLoadingMore(true);
     Animated.timing(animatedHeight, {
       toValue: 0,
       duration: 200,
-    }).start(({ finished }) => {
-      if (finished) {
-        setLoadingMore(true);
-      }
-    });
+      useNativeDriver: true,
+    }).start();
   };
 
   const opacity = theme.DARK ? 0.83 : 1;
   const animatedStyleHeight = {
-    bottom: animatedHeight,
+    translateY: animatedHeight,
   };
 
   return (
@@ -151,16 +150,18 @@ const AllActivitiesScreen = ({ navigation }) => {
           </Text>
         </View>
       )}
-      <Animated.View
-        style={{
-          ...styles.spinnerMore,
-          ...animatedStyleHeight,
-          backgroundColor: theme.BACKGROUND,
-          borderColor: theme.DARK ? theme.PRIMARY : theme.BORDER,
-        }}
-      >
-        <ActivityIndicator size="large" color={theme.SECONDARY} />
-      </Animated.View>
+      <View style={styles.spinnerContainer}>
+        <Animated.View
+          style={{
+            ...styles.spinnerMore,
+            ...animatedStyleHeight,
+            backgroundColor: theme.BACKGROUND,
+            borderColor: theme.DARK ? theme.PRIMARY : theme.BORDER,
+          }}
+        >
+          <ActivityIndicator size="large" color={theme.SECONDARY} />
+        </Animated.View>
+      </View>
     </View>
   );
 };
@@ -174,9 +175,12 @@ const styles = StyleSheet.create({
     top: '50%',
     zIndex: 1,
   },
-  spinnerMore: {
+  spinnerContainer: {
     position: 'absolute',
     alignSelf: 'center',
+    bottom: 0,
+  },
+  spinnerMore: {
     padding: 10,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,

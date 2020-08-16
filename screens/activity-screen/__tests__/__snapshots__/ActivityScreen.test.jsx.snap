@@ -651,7 +651,6 @@ exports[`ActivityScreen - unit test should cancel the confirm delete modal 1`] =
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -705,7 +704,6 @@ exports[`ActivityScreen - unit test should cancel the confirm delete modal 1`] =
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1461,7 +1459,6 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -1515,7 +1512,6 @@ exports[`ActivityScreen - unit test should not render an incomplete reason if op
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -2212,7 +2208,6 @@ exports[`ActivityScreen - unit test should render 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -2266,7 +2261,6 @@ exports[`ActivityScreen - unit test should render 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -3022,7 +3016,6 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -3076,7 +3069,6 @@ exports[`ActivityScreen - unit test should render default incomplete activity of
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -3832,7 +3824,6 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -3886,7 +3877,6 @@ exports[`ActivityScreen - unit test should render incomplete activity of reason 
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -4682,7 +4672,6 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4743,7 +4732,6 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
                   <View
                     accessible={true}
                     focusable={true}
-                    isTVSelectable={true}
                     onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
@@ -4816,7 +4804,6 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -4870,7 +4857,6 @@ exports[`ActivityScreen - unit test should show the confirm delete modal 1`] = `
     <View
       accessible={true}
       focusable={true}
-      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

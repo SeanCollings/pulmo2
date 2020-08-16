@@ -18,10 +18,12 @@ const AnimateAppear = ({
       Animated.timing(animatedScale, {
         toValue: isVisible ? 1 : 0,
         duration: durationScale,
+        useNativeDriver: true,
       }),
       Animated.timing(animatedOpacity, {
         toValue: isVisible ? 1 : 0,
         duration: duration,
+        useNativeDriver: true,
       }),
     ]).start();
   }, [isVisible]);

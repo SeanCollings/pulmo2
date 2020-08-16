@@ -144,7 +144,6 @@ exports[`HomeScreen - unit test should render the active excercise if there is o
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
@@ -444,7 +443,6 @@ exports[`HomeScreen - unit test should render the default excercise if there is 
           <View
             accessible={true}
             focusable={true}
-            isTVSelectable={true}
             onClick={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}

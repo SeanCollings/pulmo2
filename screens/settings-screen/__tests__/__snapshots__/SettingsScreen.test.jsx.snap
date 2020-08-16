@@ -113,7 +113,7 @@ exports[`SettingsScreen - unit test should render 1`] = `
               }
             >
               <RCTSwitch
-                accessibilityRole="button"
+                accessibilityRole="switch"
                 onChange={[Function]}
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
@@ -144,7 +144,6 @@ exports[`SettingsScreen - unit test should render 1`] = `
       <View
         accessible={true}
         focusable={true}
-        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}

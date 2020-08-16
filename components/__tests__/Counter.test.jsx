@@ -3,11 +3,14 @@ import { act, create } from 'react-test-renderer';
 import { cleanup, fireEvent } from 'react-native-testing-library';
 import Counter from '../Counter';
 
+jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
+
 describe('Counter - unit test', () => {
   let component;
 
   afterEach(() => {
     cleanup();
+    jest.clearAllMocks();
   });
 
   test('should render in disabled state', async () => {

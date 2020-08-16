@@ -23,10 +23,12 @@ const AnimatedUnderline = ({
   const lineGrowAnimation = Animated.timing(animatedGrow, {
     toValue: 1,
     duration,
+    useNativeDriver: false,
   });
   const opacityAnimation = Animated.timing(animationOpacity, {
     toValue: 0,
     duration: fadeOut,
+    useNativeDriver: false,
   });
 
   useEffect(() => {
