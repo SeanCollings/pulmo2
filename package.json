@@ -29,6 +29,7 @@
     "react-native-reanimated": "~1.9.0",
     "react-native-safe-area-context": "~3.0.7",
     "react-native-screens": "~2.9.0",
+    "react-native-version-check-expo": "^3.4.1",
     "react-native-web": "~0.11.7",
     "react-navigation-header-buttons": "^4.0.2"
   },

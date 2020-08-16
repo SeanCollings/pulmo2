@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import VersionCheck from 'react-native-version-check-expo';
 
 import options from './options';
 import { useTheme } from '../../hooks/useTheme';
@@ -12,6 +13,11 @@ export const settingsScreenOptions = options;
 
 const SettingsScreen = ({ navigation }) => {
   const theme = useTheme();
+  const [latestVersion, setLatestVersion] = useState(null);
+
+  VersionCheck.getLatestVersion().then((version) => {
+    setLatestVersion(version);
+  });
 
   const releaseId = RELEASE_ID.includes('#') ? '1' : RELEASE_ID;
 
@@ -31,6 +37,11 @@ const SettingsScreen = ({ navigation }) => {
           />
         </View>
       </View>
+      {/* <View>
+        <Text
+          style={{ ...styles.textStyle, color: theme.TEXT, opacity }}
+        >{`latest version: ${latestVersion}`}</Text>
+      </View> */}
       <View style={styles.versionContainer}>
         <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
           version:
