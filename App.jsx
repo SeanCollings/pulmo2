@@ -3,6 +3,7 @@ import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { View, StyleSheet, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import Constants from 'expo-constants';
 
 import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
@@ -15,6 +16,7 @@ import loadSettingsAsync from './app-initialise/load-settings';
 import loadProfileAsync from './app-initialise/load-profile';
 import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-array';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
+import AppSetup from './setup';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -24,19 +26,20 @@ const fetchFonts = () => {
   });
 };
 
-let customExcercises = [];
-let activityIdArray = [];
-let favActivityIdArray = [];
-let profile = {};
-let appSettings = {};
+// let customExcercises = [];
+// let activityIdArray = [];
+// let favActivityIdArray = [];
+// let profile = {};
+// let appSettings = {};
 
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
-  // const [customExcercises, setCustomExcercises] = useState([]);
-  // const [activityIdArray, setActivityIdArray] = useState([]);
-  // const [favActivityIdArray, setFavActivityIdArray] = useState([]);
-  // const [profile, setProfile] = useState({});
-  // const [appSettings, setAppSettings] = useState({});
+  const [setupApp, setSetupApp] = useState(false);
+  const [customExcercises, setCustomExcercises] = useState([]);
+  const [activityIdArray, setActivityIdArray] = useState([]);
+  const [favActivityIdArray, setFavActivityIdArray] = useState([]);
+  const [profile, setProfile] = useState({});
+  const [appSettings, setAppSettings] = useState({});
 
   const updateAsyncState = ({
     customExcercisesAsync,
@@ -45,16 +48,16 @@ export default function App() {
     profileAsync,
     settingsAsync,
   }) => {
-    // customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
-    // activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
-    // favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
-    // profileAsync && setProfile(profileAsync);
-    // settingsAsync && setAppSettings(settingsAsync);
-    customExcercises = customExcercisesAsync || [];
-    activityIdArray = activityIdArrayAsync || [];
-    favActivityIdArray = favActivityIdArrayAsync || [];
-    profile = profileAsync || {};
-    appSettings = settingsAsync || {};
+    customExcercisesAsync && setCustomExcercises(customExcercisesAsync);
+    activityIdArrayAsync && setActivityIdArray(activityIdArrayAsync);
+    favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
+    profileAsync && setProfile(profileAsync);
+    settingsAsync && setAppSettings(settingsAsync);
+    // customExcercises = customExcercisesAsync || [];
+    // activityIdArray = activityIdArrayAsync || [];
+    // favActivityIdArray = favActivityIdArrayAsync || [];
+    // profile = profileAsync || {};
+    // appSettings = settingsAsync || {};
 
     return Promise.resolve();
   };
@@ -90,9 +93,15 @@ export default function App() {
   };
 
   useEffect(() => {
+    if (Constants.manifest?.extra?.setupData === 'true') {
+      setSetupApp(true);
+    }
+
     Text.defaultProps = Text.defaultProps || {};
     Text.defaultProps.allowFontScaling = false;
   }, []);
+
+  if (setupApp) return <AppSetup />;
 
   // Remove <View style={styles.container}> if white flash still persists
   return (

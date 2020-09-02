@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext } from 'react';
 
 import { storeAsyncData } from '../helpers/storage';
 import { LIGHT_MODE } from '../constants/constants';

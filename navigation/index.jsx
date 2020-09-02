@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 
 import { useTheme } from '../hooks/useTheme';
@@ -49,7 +48,6 @@ const AppNavigator = (props) => {
           <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
         )}
       </NavigationContainer>
-      <StatusBar style="light" />
     </View>
   );
 };

@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setup should render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#002f56",
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+        }
+      }
+    >
+      Saving Data to Device
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "width": "80%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Activity IDs: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        All Activities: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Custom Excercise IDs: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Custom Excercises: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Favourite Activity IDs: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Profile: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Selected Excercise: done
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Settings: done
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`setup should render error correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#002f56",
+      "flex": 1,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingVertical": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "green",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+        }
+      }
+    >
+      Saving Data to Device
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "width": "80%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Activity IDs: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        All Activities: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Custom Excercise IDs: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Custom Excercises: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Favourite Activity IDs: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Profile: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Selected Excercise: saving...
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "monospace",
+            "fontSize": 16,
+          }
+        }
+      >
+        Settings: saving...
+      </Text>
+    </View>
+  </View>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "red",
+          "fontFamily": "monospace",
+          "fontSize": 16,
+          "paddingVertical": 2,
+        }
+      }
+    >
+      New error caught
+    </Text>
+  </View>
+</View>
+`;

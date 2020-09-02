@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import VersionCheck from 'react-native-version-check-expo';
 
 import options from './options';
@@ -14,6 +14,7 @@ export const settingsScreenOptions = options;
 const SettingsScreen = ({ navigation }) => {
   const theme = useTheme();
   const [latestVersion, setLatestVersion] = useState(null);
+  const [showLatestVersion, setShowLatestVersion] = useState(false);
 
   VersionCheck.getLatestVersion().then((version) => {
     setLatestVersion(version);
@@ -37,24 +38,33 @@ const SettingsScreen = ({ navigation }) => {
           />
         </View>
       </View>
-      {/* <View>
-        <Text
-          style={{ ...styles.textStyle, color: theme.TEXT, opacity }}
-        >{`latest version: ${latestVersion}`}</Text>
-      </View> */}
-      <View style={styles.versionContainer}>
-        <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
-          version:
-        </Text>
-        <Text
-          style={{
-            ...styles.textStyle,
-            fontSize: 14,
-            color: theme.TEXT,
-            opacity,
-          }}
-        >{` ${BUILD_VERSION}.${releaseId}.${ANDROID_VERSION}`}</Text>
-      </View>
+      <TouchableOpacity
+        onPress={() => setShowLatestVersion((curr) => !curr)}
+        activeOpacity={1}
+      >
+        {showLatestVersion && (
+          <View style={styles.versionContainer}>
+            <Text
+              style={{ ...styles.textStyle, color: theme.TEXT, opacity }}
+            >{`latest version: ${latestVersion}`}</Text>
+          </View>
+        )}
+        {!showLatestVersion && (
+          <View style={styles.versionContainer}>
+            <Text style={{ ...styles.textStyle, color: theme.TEXT, opacity }}>
+              version:
+            </Text>
+            <Text
+              style={{
+                ...styles.textStyle,
+                fontSize: 14,
+                color: theme.TEXT,
+                opacity,
+              }}
+            >{` ${BUILD_VERSION}.${releaseId}.${ANDROID_VERSION}`}</Text>
+          </View>
+        )}
+      </TouchableOpacity>
     </View>
   );
 };
