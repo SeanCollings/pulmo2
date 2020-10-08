@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.10.4",
     "babel-jest": "^26.1.0",
     "babel-preset-expo": "^8.2.3",
-    "expo-cli": "^3.25.1",
+    "expo-cli": "^3.27.14",
     "jest": "^26.1.0",
     "jest-expo": "^38.0.0",
     "react-native-testing-library": "^2.1.1",

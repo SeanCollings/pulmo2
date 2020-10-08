@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import VersionCheck from 'react-native-version-check-expo';
 
@@ -16,9 +16,17 @@ const SettingsScreen = ({ navigation }) => {
   const [latestVersion, setLatestVersion] = useState(null);
   const [showLatestVersion, setShowLatestVersion] = useState(false);
 
-  VersionCheck.getLatestVersion().then((version) => {
-    setLatestVersion(version);
-  });
+  useEffect(() => {
+    let mounted = true;
+    VersionCheck.getLatestVersion().then((version) => {
+      if (mounted) {
+        setLatestVersion(version);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const releaseId = RELEASE_ID.includes('#') ? '1' : RELEASE_ID;
 
@@ -57,7 +65,6 @@ const SettingsScreen = ({ navigation }) => {
             <Text
               style={{
                 ...styles.textStyle,
-                fontSize: 14,
                 color: theme.TEXT,
                 opacity,
               }}

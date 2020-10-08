@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import { View, StyleSheet, Text } from 'react-native';
-import { StatusBar } from 'expo-status-bar';
 import Constants from 'expo-constants';
 
 import Navigator from './navigation';
@@ -34,6 +33,7 @@ const fetchFonts = () => {
 
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
   const [setupApp, setSetupApp] = useState(false);
   const [customExcercises, setCustomExcercises] = useState([]);
   const [activityIdArray, setActivityIdArray] = useState([]);
@@ -65,14 +65,12 @@ export default function App() {
   const loadAsyncDependencies = async () => {
     try {
       const [
-        _,
         customExcercisesAsync,
         activityIdArrayAsync,
         favActivityIdArrayAsync,
         profileAsync,
         settingsAsync,
       ] = await Promise.all([
-        fetchFonts(),
         loadCustomExcercisesAsync(),
         loadActivityIdArrayAsync(),
         loadFavActivityIdArrayAsync(),
@@ -80,7 +78,7 @@ export default function App() {
         loadSettingsAsync(),
       ]);
 
-      return updateAsyncState({
+      return await updateAsyncState({
         customExcercisesAsync,
         activityIdArrayAsync,
         favActivityIdArrayAsync,
@@ -101,16 +99,26 @@ export default function App() {
     Text.defaultProps.allowFontScaling = false;
   }, []);
 
+  useEffect(() => {
+    if (fontsLoaded) {
+      loadAsyncDependencies()
+        .then(() => {
+          setDataLoaded(true);
+        })
+        .catch((err) => console.log(`loadAsyncDependencies error: ${err}`));
+    }
+  }, [fontsLoaded]);
+
   if (setupApp) return <AppSetup />;
 
   // Remove <View style={styles.container}> if white flash still persists
   return (
     <View style={styles.container} data-testid="app-component">
-      {!dataLoaded && (
+      {!fontsLoaded && (
         <AppLoading
-          startAsync={loadAsyncDependencies}
-          onFinish={() => setDataLoaded(true)}
-          onError={(err) => console.log(`AppLoading  error: ${err}`)}
+          startAsync={fetchFonts}
+          onFinish={() => setFontsLoaded(true)}
+          onError={(err) => console.log(`AppLoading error: ${err}`)}
         />
       )}
       {dataLoaded && (
@@ -129,7 +137,6 @@ export default function App() {
           </ExcerciseContextProvider>
         </CustomExcerciseContextProvider>
       )}
-      <StatusBar style="light" />
     </View>
   );
 }
