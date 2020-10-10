@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
 import { View, StyleSheet, Text } from 'react-native';
 import Constants from 'expo-constants';
-import { AppLoading } from 'expo';
 import * as SplashScreen from 'expo-splash-screen';
 
 import Navigator from './navigation';
@@ -81,6 +80,7 @@ export default function App() {
 
   const prepareResources = useCallback(async () => {
     try {
+      await fetchFonts();
       await loadAsyncDependencies();
     } catch (err) {
       console.log(`prepareResources error: ${err}`);
@@ -93,9 +93,13 @@ export default function App() {
     if (Constants.manifest?.extra?.setupData === 'true') {
       setSetupApp(true);
     } else {
-      SplashScreen.preventAutoHideAsync();
-      Text.defaultProps = Text.defaultProps || {};
-      Text.defaultProps.allowFontScaling = false;
+      SplashScreen.preventAutoHideAsync()
+        .then(() => {
+          prepareResources();
+          Text.defaultProps = Text.defaultProps || {};
+          Text.defaultProps.allowFontScaling = false;
+        })
+        .catch((err) => console.log(err));
     }
   }, []);
 
@@ -103,13 +107,6 @@ export default function App() {
 
   return (
     <View style={styles.container} data-testid="app-component">
-      {!dataLoaded && (
-        <AppLoading
-          startAsync={fetchFonts}
-          onFinish={prepareResources}
-          onError={(err) => console.log(`AppLoading error: ${err}`)}
-        />
-      )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
           <ExcerciseContextProvider>
@@ -132,8 +129,4 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
-  image: {
-    width: '100%',
-    height: '100%',
-  },
 });
