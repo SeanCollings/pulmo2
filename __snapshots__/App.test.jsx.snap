@@ -14,16 +14,19 @@ exports[`App success renders in dark mode 1`] = `
     style={
       Object {
         "backgroundColor": "#121212",
-        "flex": 1,
+        "height": "200%",
       }
     }
   >
-    <RNCSafeAreaView
+    <RNCSafeAreaProvider
       onInsetsChange={[Function]}
       style={
-        Object {
-          "flex": 1,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
       }
     >
       <View
@@ -91,6 +94,224 @@ exports[`App success renders in dark mode 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="box-none"
+                    style={
+                      Array [
+                        Object {
+                          "zIndex": 1,
+                        },
+                        false,
+                      ]
+                    }
+                  >
+                    <View
+                      accessibilityElementsHidden={false}
+                      importantForAccessibility="auto"
+                      onLayout={[Function]}
+                      pointerEvents="box-none"
+                      style={null}
+                    >
+                      <View
+                        pointerEvents="box-none"
+                        style={
+                          Object {
+                            "bottom": 0,
+                            "left": 0,
+                            "opacity": 1,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "zIndex": 0,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "backgroundColor": "#222222",
+                              "borderBottomColor": "#707070",
+                              "borderBottomWidth": 1,
+                              "flex": 1,
+                              "shadowColor": "transparent",
+                              "shadowOffset": 0,
+                              "shadowOpacity": 0,
+                              "shadowRadius": 0,
+                            }
+                          }
+                        />
+                      </View>
+                      <View
+                        pointerEvents="box-none"
+                        style={
+                          Object {
+                            "height": 64,
+                            "maxHeight": undefined,
+                            "minHeight": undefined,
+                            "opacity": undefined,
+                            "transform": undefined,
+                          }
+                        }
+                      >
+                        <View
+                          pointerEvents="none"
+                          style={
+                            Object {
+                              "height": 20,
+                            }
+                          }
+                        />
+                        <View
+                          pointerEvents="box-none"
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flex": 1,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <View
+                            pointerEvents="box-none"
+                            style={
+                              Object {
+                                "marginHorizontal": 16,
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "flexDirection": "row",
+                                }
+                              }
+                            >
+                              <Text
+                                allowFontScaling={false}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#ededed",
+                                    "color": "#222222",
+                                    "fontFamily": "tit-regular",
+                                    "fontSize": 20,
+                                    "opacity": 0.87,
+                                  }
+                                }
+                              >
+                                PulmO
+                              </Text>
+                              <View
+                                style={
+                                  Object {
+                                    "top": 5,
+                                  }
+                                }
+                              >
+                                <Text
+                                  allowFontScaling={false}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#ededed",
+                                      "color": "#222222",
+                                      "fontFamily": "tit-regular",
+                                      "fontSize": 18,
+                                      "opacity": 0.87,
+                                    }
+                                  }
+                                >
+                                  2
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            pointerEvents="box-none"
+                            style={
+                              Object {
+                                "alignItems": "flex-end",
+                                "bottom": 0,
+                                "justifyContent": "center",
+                                "opacity": 1,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "flexDirection": "row",
+                                    "justifyContent": "center",
+                                  },
+                                  Object {
+                                    "marginRight": 5,
+                                  },
+                                ]
+                              }
+                            >
+                              <View>
+                                <View
+                                  accessible={true}
+                                  focusable={true}
+                                  hitSlop={
+                                    Object {
+                                      "bottom": 5,
+                                      "left": 5,
+                                      "right": 5,
+                                      "top": 5,
+                                    }
+                                  }
+                                  onClick={[Function]}
+                                  onResponderGrant={[Function]}
+                                  onResponderMove={[Function]}
+                                  onResponderRelease={[Function]}
+                                  onResponderTerminate={[Function]}
+                                  onResponderTerminationRequest={[Function]}
+                                  onStartShouldSetResponder={[Function]}
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "justifyContent": "center",
+                                      "opacity": 0.87,
+                                    }
+                                  }
+                                >
+                                  <View>
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#ededed",
+                                            "fontSize": 23,
+                                          },
+                                          Object {
+                                            "marginHorizontal": 11,
+                                          },
+                                          Object {
+                                            "fontFamily": "material-community",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
                     onLayout={[Function]}
                     style={
                       Object {
@@ -111,6 +332,14 @@ exports[`App success renders in dark mode 1`] = `
                       }
                     >
                       <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      />
+                      <View
                         accessibilityElementsHidden={false}
                         closing={false}
                         gestureVelocityImpact={0.3}
@@ -118,6 +347,7 @@ exports[`App success renders in dark mode 1`] = `
                         onClose={[Function]}
                         onGestureBegin={[Function]}
                         onGestureCanceled={[Function]}
+                        onGestureEnd={[Function]}
                         onOpen={[Function]}
                         onTransitionStart={[Function]}
                         pointerEvents="box-none"
@@ -138,8 +368,8 @@ exports[`App success renders in dark mode 1`] = `
                                 "damping": 500,
                                 "mass": 3,
                                 "overshootClamping": true,
-                                "restDisplacementThreshold": 0.01,
-                                "restSpeedThreshold": 0.01,
+                                "restDisplacementThreshold": 10,
+                                "restSpeedThreshold": 10,
                                 "stiffness": 1000,
                               },
                             },
@@ -149,8 +379,8 @@ exports[`App success renders in dark mode 1`] = `
                                 "damping": 500,
                                 "mass": 3,
                                 "overshootClamping": true,
-                                "restDisplacementThreshold": 0.01,
-                                "restSpeedThreshold": 0.01,
+                                "restDisplacementThreshold": 10,
+                                "restSpeedThreshold": 10,
                                 "stiffness": 1000,
                               },
                             },
@@ -162,12 +392,12 @@ exports[`App success renders in dark mode 1`] = `
                           style={
                             Object {
                               "flex": 1,
-                              "marginTop": 64,
                             }
                           }
                         >
                           <View
                             collapsable={false}
+                            forwardedRef={[Function]}
                             onGestureHandlerEvent={[Function]}
                             onGestureHandlerStateChange={[Function]}
                             style={
@@ -309,7 +539,6 @@ exports[`App success renders in dark mode 1`] = `
                                             <View
                                               accessible={true}
                                               focusable={true}
-                                              isTVSelectable={true}
                                               onClick={[Function]}
                                               onResponderGrant={[Function]}
                                               onResponderMove={[Function]}
@@ -366,7 +595,7 @@ exports[`App success renders in dark mode 1`] = `
                                               }
                                             }
                                           >
-                                            selected level: 2
+                                            selected level: 5
                                           </Text>
                                           <View
                                             style={
@@ -549,224 +778,6 @@ exports[`App success renders in dark mode 1`] = `
                       </View>
                     </View>
                   </View>
-                  <View
-                    pointerEvents="box-none"
-                    style={
-                      Object {
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      }
-                    }
-                  >
-                    <View
-                      accessibilityElementsHidden={false}
-                      importantForAccessibility="auto"
-                      onLayout={[Function]}
-                      pointerEvents="box-none"
-                      style={null}
-                    >
-                      <View
-                        pointerEvents="none"
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "opacity": 1,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#222222",
-                              "borderBottomColor": "#707070",
-                              "borderBottomWidth": 1,
-                              "flex": 1,
-                              "shadowColor": "transparent",
-                              "shadowOffset": 0,
-                              "shadowOpacity": 0,
-                              "shadowRadius": 0,
-                            }
-                          }
-                        />
-                      </View>
-                      <View
-                        pointerEvents="box-none"
-                        style={
-                          Object {
-                            "height": 64,
-                            "maxHeight": undefined,
-                            "minHeight": undefined,
-                            "opacity": undefined,
-                            "transform": undefined,
-                          }
-                        }
-                      >
-                        <View
-                          pointerEvents="none"
-                          style={
-                            Object {
-                              "height": 20,
-                            }
-                          }
-                        />
-                        <View
-                          pointerEvents="box-none"
-                          style={
-                            Object {
-                              "alignItems": "center",
-                              "flex": 1,
-                              "flexDirection": "row",
-                              "justifyContent": "center",
-                            }
-                          }
-                        >
-                          <View
-                            pointerEvents="box-none"
-                            style={
-                              Object {
-                                "marginHorizontal": 16,
-                                "opacity": 1,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "flexDirection": "row",
-                                }
-                              }
-                            >
-                              <Text
-                                allowFontScaling={false}
-                                style={
-                                  Object {
-                                    "backgroundColor": "#ededed",
-                                    "color": "#222222",
-                                    "fontFamily": "tit-regular",
-                                    "fontSize": 20,
-                                    "opacity": 0.87,
-                                  }
-                                }
-                              >
-                                PulmO
-                              </Text>
-                              <View
-                                style={
-                                  Object {
-                                    "top": 5,
-                                  }
-                                }
-                              >
-                                <Text
-                                  allowFontScaling={false}
-                                  style={
-                                    Object {
-                                      "backgroundColor": "#ededed",
-                                      "color": "#222222",
-                                      "fontFamily": "tit-regular",
-                                      "fontSize": 18,
-                                      "opacity": 0.87,
-                                    }
-                                  }
-                                >
-                                  2
-                                </Text>
-                              </View>
-                            </View>
-                          </View>
-                          <View
-                            pointerEvents="box-none"
-                            style={
-                              Object {
-                                "alignItems": "flex-end",
-                                "bottom": 0,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "position": "absolute",
-                                "right": 0,
-                                "top": 0,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Array [
-                                  Object {
-                                    "flexDirection": "row",
-                                    "justifyContent": "center",
-                                  },
-                                  Object {
-                                    "marginRight": 5,
-                                  },
-                                ]
-                              }
-                            >
-                              <View>
-                                <View
-                                  accessible={true}
-                                  focusable={true}
-                                  hitSlop={
-                                    Object {
-                                      "bottom": 5,
-                                      "left": 5,
-                                      "right": 5,
-                                      "top": 5,
-                                    }
-                                  }
-                                  isTVSelectable={true}
-                                  onClick={[Function]}
-                                  onResponderGrant={[Function]}
-                                  onResponderMove={[Function]}
-                                  onResponderRelease={[Function]}
-                                  onResponderTerminate={[Function]}
-                                  onResponderTerminationRequest={[Function]}
-                                  onStartShouldSetResponder={[Function]}
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "justifyContent": "center",
-                                      "opacity": 0.87,
-                                    }
-                                  }
-                                >
-                                  <View>
-                                    <Text
-                                      allowFontScaling={false}
-                                      style={
-                                        Array [
-                                          Object {
-                                            "color": "#ededed",
-                                            "fontSize": 23,
-                                          },
-                                          Object {
-                                            "marginHorizontal": 11,
-                                          },
-                                          Object {
-                                            "fontFamily": "material-community",
-                                            "fontStyle": "normal",
-                                            "fontWeight": "normal",
-                                          },
-                                          Object {},
-                                        ]
-                                      }
-                                    >
-                                      
-                                    </Text>
-                                  </View>
-                                </View>
-                              </View>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
                 </View>
               </View>
             </View>
@@ -777,11 +788,11 @@ exports[`App success renders in dark mode 1`] = `
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderTopColor": "rgb(224, 224, 224)",
+              "borderTopColor": "rgb(216, 216, 216)",
               "borderTopWidth": 0.5,
               "bottom": 0,
               "elevation": 8,
-              "height": 50,
+              "height": 49,
               "left": 0,
               "paddingBottom": 0,
               "paddingHorizontal": 0,
@@ -807,7 +818,11 @@ exports[`App success renders in dark mode 1`] = `
             <View
               accessibilityLabel="Excercises, tab, 1 of 3"
               accessibilityRole="button"
-              accessibilityStates={Array []}
+              accessibilityState={
+                Object {
+                  "selected": false,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -838,9 +853,12 @@ exports[`App success renders in dark mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -935,8 +953,7 @@ exports[`App success renders in dark mode 1`] = `
                       "color": "#707070",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -951,10 +968,10 @@ exports[`App success renders in dark mode 1`] = `
             <View
               accessibilityLabel="Home, tab, 2 of 3"
               accessibilityRole="button"
-              accessibilityStates={
-                Array [
-                  "selected",
-                ]
+              accessibilityState={
+                Object {
+                  "selected": true,
+                }
               }
               accessible={true}
               focusable={true}
@@ -986,9 +1003,12 @@ exports[`App success renders in dark mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -1083,8 +1103,7 @@ exports[`App success renders in dark mode 1`] = `
                       "color": "#2f9fd0",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -1099,7 +1118,11 @@ exports[`App success renders in dark mode 1`] = `
             <View
               accessibilityLabel="Profile, tab, 3 of 3"
               accessibilityRole="button"
-              accessibilityStates={Array []}
+              accessibilityState={
+                Object {
+                  "selected": false,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -1130,9 +1153,12 @@ exports[`App success renders in dark mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -1227,8 +1253,7 @@ exports[`App success renders in dark mode 1`] = `
                       "color": "#707070",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -1243,7 +1268,7 @@ exports[`App success renders in dark mode 1`] = `
           </View>
         </View>
       </View>
-    </RNCSafeAreaView>
+    </RNCSafeAreaProvider>
   </View>
 </View>
 `;
@@ -1262,16 +1287,19 @@ exports[`App success renders in light mode 1`] = `
     style={
       Object {
         "backgroundColor": "white",
-        "flex": 1,
+        "height": "200%",
       }
     }
   >
-    <RNCSafeAreaView
+    <RNCSafeAreaProvider
       onInsetsChange={[Function]}
       style={
-        Object {
-          "flex": 1,
-        }
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
       }
     >
       <View
@@ -1339,6 +1367,224 @@ exports[`App success renders in light mode 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="box-none"
+                    style={
+                      Array [
+                        Object {
+                          "zIndex": 1,
+                        },
+                        false,
+                      ]
+                    }
+                  >
+                    <View
+                      accessibilityElementsHidden={false}
+                      importantForAccessibility="auto"
+                      onLayout={[Function]}
+                      pointerEvents="box-none"
+                      style={null}
+                    >
+                      <View
+                        pointerEvents="box-none"
+                        style={
+                          Object {
+                            "bottom": 0,
+                            "left": 0,
+                            "opacity": 1,
+                            "position": "absolute",
+                            "right": 0,
+                            "top": 0,
+                            "zIndex": 0,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "backgroundColor": "#005bbb",
+                              "borderBottomColor": "#CCC",
+                              "borderBottomWidth": 1,
+                              "flex": 1,
+                              "shadowColor": "transparent",
+                              "shadowOffset": 0,
+                              "shadowOpacity": 0,
+                              "shadowRadius": 0,
+                            }
+                          }
+                        />
+                      </View>
+                      <View
+                        pointerEvents="box-none"
+                        style={
+                          Object {
+                            "height": 64,
+                            "maxHeight": undefined,
+                            "minHeight": undefined,
+                            "opacity": undefined,
+                            "transform": undefined,
+                          }
+                        }
+                      >
+                        <View
+                          pointerEvents="none"
+                          style={
+                            Object {
+                              "height": 20,
+                            }
+                          }
+                        />
+                        <View
+                          pointerEvents="box-none"
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "flex": 1,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <View
+                            pointerEvents="box-none"
+                            style={
+                              Object {
+                                "marginHorizontal": 16,
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "flexDirection": "row",
+                                }
+                              }
+                            >
+                              <Text
+                                allowFontScaling={false}
+                                style={
+                                  Object {
+                                    "backgroundColor": "white",
+                                    "color": "#005bbb",
+                                    "fontFamily": "tit-regular",
+                                    "fontSize": 20,
+                                    "opacity": 1,
+                                  }
+                                }
+                              >
+                                PulmO
+                              </Text>
+                              <View
+                                style={
+                                  Object {
+                                    "top": 5,
+                                  }
+                                }
+                              >
+                                <Text
+                                  allowFontScaling={false}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "white",
+                                      "color": "#005bbb",
+                                      "fontFamily": "tit-regular",
+                                      "fontSize": 18,
+                                      "opacity": 1,
+                                    }
+                                  }
+                                >
+                                  2
+                                </Text>
+                              </View>
+                            </View>
+                          </View>
+                          <View
+                            pointerEvents="box-none"
+                            style={
+                              Object {
+                                "alignItems": "flex-end",
+                                "bottom": 0,
+                                "justifyContent": "center",
+                                "opacity": 1,
+                                "position": "absolute",
+                                "right": 0,
+                                "top": 0,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "flexDirection": "row",
+                                    "justifyContent": "center",
+                                  },
+                                  Object {
+                                    "marginRight": 5,
+                                  },
+                                ]
+                              }
+                            >
+                              <View>
+                                <View
+                                  accessible={true}
+                                  focusable={true}
+                                  hitSlop={
+                                    Object {
+                                      "bottom": 5,
+                                      "left": 5,
+                                      "right": 5,
+                                      "top": 5,
+                                    }
+                                  }
+                                  onClick={[Function]}
+                                  onResponderGrant={[Function]}
+                                  onResponderMove={[Function]}
+                                  onResponderRelease={[Function]}
+                                  onResponderTerminate={[Function]}
+                                  onResponderTerminationRequest={[Function]}
+                                  onStartShouldSetResponder={[Function]}
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "justifyContent": "center",
+                                      "opacity": 1,
+                                    }
+                                  }
+                                >
+                                  <View>
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "white",
+                                            "fontSize": 23,
+                                          },
+                                          Object {
+                                            "marginHorizontal": 11,
+                                          },
+                                          Object {
+                                            "fontFamily": "material-community",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                  <View
                     onLayout={[Function]}
                     style={
                       Object {
@@ -1359,6 +1605,14 @@ exports[`App success renders in light mode 1`] = `
                       }
                     >
                       <View
+                        collapsable={false}
+                        style={
+                          Object {
+                            "opacity": 1,
+                          }
+                        }
+                      />
+                      <View
                         accessibilityElementsHidden={false}
                         closing={false}
                         gestureVelocityImpact={0.3}
@@ -1366,6 +1620,7 @@ exports[`App success renders in light mode 1`] = `
                         onClose={[Function]}
                         onGestureBegin={[Function]}
                         onGestureCanceled={[Function]}
+                        onGestureEnd={[Function]}
                         onOpen={[Function]}
                         onTransitionStart={[Function]}
                         pointerEvents="box-none"
@@ -1386,8 +1641,8 @@ exports[`App success renders in light mode 1`] = `
                                 "damping": 500,
                                 "mass": 3,
                                 "overshootClamping": true,
-                                "restDisplacementThreshold": 0.01,
-                                "restSpeedThreshold": 0.01,
+                                "restDisplacementThreshold": 10,
+                                "restSpeedThreshold": 10,
                                 "stiffness": 1000,
                               },
                             },
@@ -1397,8 +1652,8 @@ exports[`App success renders in light mode 1`] = `
                                 "damping": 500,
                                 "mass": 3,
                                 "overshootClamping": true,
-                                "restDisplacementThreshold": 0.01,
-                                "restSpeedThreshold": 0.01,
+                                "restDisplacementThreshold": 10,
+                                "restSpeedThreshold": 10,
                                 "stiffness": 1000,
                               },
                             },
@@ -1410,12 +1665,12 @@ exports[`App success renders in light mode 1`] = `
                           style={
                             Object {
                               "flex": 1,
-                              "marginTop": 64,
                             }
                           }
                         >
                           <View
                             collapsable={false}
+                            forwardedRef={[Function]}
                             onGestureHandlerEvent={[Function]}
                             onGestureHandlerStateChange={[Function]}
                             style={
@@ -1557,7 +1812,6 @@ exports[`App success renders in light mode 1`] = `
                                             <View
                                               accessible={true}
                                               focusable={true}
-                                              isTVSelectable={true}
                                               onClick={[Function]}
                                               onResponderGrant={[Function]}
                                               onResponderMove={[Function]}
@@ -1797,224 +2051,6 @@ exports[`App success renders in light mode 1`] = `
                       </View>
                     </View>
                   </View>
-                  <View
-                    pointerEvents="box-none"
-                    style={
-                      Object {
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      }
-                    }
-                  >
-                    <View
-                      accessibilityElementsHidden={false}
-                      importantForAccessibility="auto"
-                      onLayout={[Function]}
-                      pointerEvents="box-none"
-                      style={null}
-                    >
-                      <View
-                        pointerEvents="none"
-                        style={
-                          Object {
-                            "bottom": 0,
-                            "left": 0,
-                            "opacity": 1,
-                            "position": "absolute",
-                            "right": 0,
-                            "top": 0,
-                          }
-                        }
-                      >
-                        <View
-                          style={
-                            Object {
-                              "backgroundColor": "#005bbb",
-                              "borderBottomColor": "#CCC",
-                              "borderBottomWidth": 1,
-                              "flex": 1,
-                              "shadowColor": "transparent",
-                              "shadowOffset": 0,
-                              "shadowOpacity": 0,
-                              "shadowRadius": 0,
-                            }
-                          }
-                        />
-                      </View>
-                      <View
-                        pointerEvents="box-none"
-                        style={
-                          Object {
-                            "height": 64,
-                            "maxHeight": undefined,
-                            "minHeight": undefined,
-                            "opacity": undefined,
-                            "transform": undefined,
-                          }
-                        }
-                      >
-                        <View
-                          pointerEvents="none"
-                          style={
-                            Object {
-                              "height": 20,
-                            }
-                          }
-                        />
-                        <View
-                          pointerEvents="box-none"
-                          style={
-                            Object {
-                              "alignItems": "center",
-                              "flex": 1,
-                              "flexDirection": "row",
-                              "justifyContent": "center",
-                            }
-                          }
-                        >
-                          <View
-                            pointerEvents="box-none"
-                            style={
-                              Object {
-                                "marginHorizontal": 16,
-                                "opacity": 1,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "flexDirection": "row",
-                                }
-                              }
-                            >
-                              <Text
-                                allowFontScaling={false}
-                                style={
-                                  Object {
-                                    "backgroundColor": "white",
-                                    "color": "#005bbb",
-                                    "fontFamily": "tit-regular",
-                                    "fontSize": 20,
-                                    "opacity": 1,
-                                  }
-                                }
-                              >
-                                PulmO
-                              </Text>
-                              <View
-                                style={
-                                  Object {
-                                    "top": 5,
-                                  }
-                                }
-                              >
-                                <Text
-                                  allowFontScaling={false}
-                                  style={
-                                    Object {
-                                      "backgroundColor": "white",
-                                      "color": "#005bbb",
-                                      "fontFamily": "tit-regular",
-                                      "fontSize": 18,
-                                      "opacity": 1,
-                                    }
-                                  }
-                                >
-                                  2
-                                </Text>
-                              </View>
-                            </View>
-                          </View>
-                          <View
-                            pointerEvents="box-none"
-                            style={
-                              Object {
-                                "alignItems": "flex-end",
-                                "bottom": 0,
-                                "justifyContent": "center",
-                                "opacity": 1,
-                                "position": "absolute",
-                                "right": 0,
-                                "top": 0,
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Array [
-                                  Object {
-                                    "flexDirection": "row",
-                                    "justifyContent": "center",
-                                  },
-                                  Object {
-                                    "marginRight": 5,
-                                  },
-                                ]
-                              }
-                            >
-                              <View>
-                                <View
-                                  accessible={true}
-                                  focusable={true}
-                                  hitSlop={
-                                    Object {
-                                      "bottom": 5,
-                                      "left": 5,
-                                      "right": 5,
-                                      "top": 5,
-                                    }
-                                  }
-                                  isTVSelectable={true}
-                                  onClick={[Function]}
-                                  onResponderGrant={[Function]}
-                                  onResponderMove={[Function]}
-                                  onResponderRelease={[Function]}
-                                  onResponderTerminate={[Function]}
-                                  onResponderTerminationRequest={[Function]}
-                                  onStartShouldSetResponder={[Function]}
-                                  style={
-                                    Object {
-                                      "alignItems": "center",
-                                      "justifyContent": "center",
-                                      "opacity": 1,
-                                    }
-                                  }
-                                >
-                                  <View>
-                                    <Text
-                                      allowFontScaling={false}
-                                      style={
-                                        Array [
-                                          Object {
-                                            "color": "white",
-                                            "fontSize": 23,
-                                          },
-                                          Object {
-                                            "marginHorizontal": 11,
-                                          },
-                                          Object {
-                                            "fontFamily": "material-community",
-                                            "fontStyle": "normal",
-                                            "fontWeight": "normal",
-                                          },
-                                          Object {},
-                                        ]
-                                      }
-                                    >
-                                      
-                                    </Text>
-                                  </View>
-                                </View>
-                              </View>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
                 </View>
               </View>
             </View>
@@ -2025,11 +2061,11 @@ exports[`App success renders in light mode 1`] = `
           style={
             Object {
               "backgroundColor": "rgb(255, 255, 255)",
-              "borderTopColor": "rgb(224, 224, 224)",
+              "borderTopColor": "rgb(216, 216, 216)",
               "borderTopWidth": 0.5,
               "bottom": 0,
               "elevation": 8,
-              "height": 50,
+              "height": 49,
               "left": 0,
               "paddingBottom": 0,
               "paddingHorizontal": 0,
@@ -2055,7 +2091,11 @@ exports[`App success renders in light mode 1`] = `
             <View
               accessibilityLabel="Excercises, tab, 1 of 3"
               accessibilityRole="button"
-              accessibilityStates={Array []}
+              accessibilityState={
+                Object {
+                  "selected": false,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -2086,9 +2126,12 @@ exports[`App success renders in light mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -2183,8 +2226,7 @@ exports[`App success renders in light mode 1`] = `
                       "color": "#002f56",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -2199,10 +2241,10 @@ exports[`App success renders in light mode 1`] = `
             <View
               accessibilityLabel="Home, tab, 2 of 3"
               accessibilityRole="button"
-              accessibilityStates={
-                Array [
-                  "selected",
-                ]
+              accessibilityState={
+                Object {
+                  "selected": true,
+                }
               }
               accessible={true}
               focusable={true}
@@ -2234,9 +2276,12 @@ exports[`App success renders in light mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -2331,8 +2376,7 @@ exports[`App success renders in light mode 1`] = `
                       "color": "white",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -2347,7 +2391,11 @@ exports[`App success renders in light mode 1`] = `
             <View
               accessibilityLabel="Profile, tab, 3 of 3"
               accessibilityRole="button"
-              accessibilityStates={Array []}
+              accessibilityState={
+                Object {
+                  "selected": false,
+                }
+              }
               accessible={true}
               focusable={true}
               onClick={[Function]}
@@ -2378,9 +2426,12 @@ exports[`App success renders in light mode 1`] = `
             >
               <View
                 style={
-                  Object {
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }
               >
                 <View
@@ -2475,8 +2526,7 @@ exports[`App success renders in light mode 1`] = `
                       "color": "#002f56",
                     },
                     Object {
-                      "fontSize": 11,
-                      "marginBottom": 1.5,
+                      "fontSize": 10,
                     },
                     Object {
                       "fontFamily": "tit-regular",
@@ -2491,7 +2541,7 @@ exports[`App success renders in light mode 1`] = `
           </View>
         </View>
       </View>
-    </RNCSafeAreaView>
+    </RNCSafeAreaProvider>
   </View>
 </View>
 `;

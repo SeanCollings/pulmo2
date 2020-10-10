@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { AppLoading } from 'expo';
+import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
 import { View, StyleSheet, Text } from 'react-native';
 import Constants from 'expo-constants';
+import * as SplashScreen from 'expo-splash-screen';
 
 import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
@@ -25,15 +25,8 @@ const fetchFonts = () => {
   });
 };
 
-// let customExcercises = [];
-// let activityIdArray = [];
-// let favActivityIdArray = [];
-// let profile = {};
-// let appSettings = {};
-
 export default function App() {
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [fontsLoaded, setFontsLoaded] = useState(false);
   const [setupApp, setSetupApp] = useState(false);
   const [customExcercises, setCustomExcercises] = useState([]);
   const [activityIdArray, setActivityIdArray] = useState([]);
@@ -53,11 +46,6 @@ export default function App() {
     favActivityIdArrayAsync && setFavActivityIdArray(favActivityIdArrayAsync);
     profileAsync && setProfile(profileAsync);
     settingsAsync && setAppSettings(settingsAsync);
-    // customExcercises = customExcercisesAsync || [];
-    // activityIdArray = activityIdArrayAsync || [];
-    // favActivityIdArray = favActivityIdArrayAsync || [];
-    // profile = profileAsync || {};
-    // appSettings = settingsAsync || {};
 
     return Promise.resolve();
   };
@@ -90,37 +78,39 @@ export default function App() {
     }
   };
 
-  useEffect(() => {
-    if (Constants.manifest?.extra?.setupData === 'true') {
-      setSetupApp(true);
+  const prepareResources = useCallback(async () => {
+    try {
+      await fetchFonts();
+      await loadAsyncDependencies();
+    } catch (err) {
+      console.log(`prepareResources error: ${err}`);
+    } finally {
+      setDataLoaded(true);
     }
-
-    Text.defaultProps = Text.defaultProps || {};
-    Text.defaultProps.allowFontScaling = false;
   }, []);
 
   useEffect(() => {
-    if (fontsLoaded) {
-      loadAsyncDependencies()
-        .then(() => {
-          setDataLoaded(true);
-        })
-        .catch((err) => console.log(`loadAsyncDependencies error: ${err}`));
+    if (Constants.manifest?.extra?.setupData === 'true') {
+      setSetupApp(true);
+    } else {
+      Text.defaultProps = Text.defaultProps || {};
+      Text.defaultProps.allowFontScaling = false;
+
+      SplashScreen.preventAutoHideAsync();
+      prepareResources();
     }
-  }, [fontsLoaded]);
+  }, []);
+
+  useEffect(() => {
+    if (dataLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [dataLoaded]);
 
   if (setupApp) return <AppSetup />;
 
-  // Remove <View style={styles.container}> if white flash still persists
   return (
     <View style={styles.container} data-testid="app-component">
-      {!fontsLoaded && (
-        <AppLoading
-          startAsync={fetchFonts}
-          onFinish={() => setFontsLoaded(true)}
-          onError={(err) => console.log(`AppLoading error: ${err}`)}
-        />
-      )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
           <ExcerciseContextProvider>
