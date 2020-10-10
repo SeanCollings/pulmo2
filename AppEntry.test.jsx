@@ -2,7 +2,7 @@ import React from 'react';
 import { act, create } from 'react-test-renderer';
 import { cleanup } from 'react-native-testing-library';
 
-import App from './App';
+import AppEntry from './AppEntry';
 import fixtures from './app-initialise/__fixtures__/index.fixtures';
 import loadCustomExcercisesAsync from './app-initialise/load-custom-excercise';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
@@ -23,7 +23,7 @@ jest.mock('./app-initialise/load-profile');
 jest.mock('./app-initialise/load-settings');
 jest.mock('./helpers/storage');
 
-describe('App', () => {
+describe('AppEntry', () => {
   afterEach(() => {
     cleanup();
     jest.clearAllMocks();
@@ -35,7 +35,7 @@ describe('App', () => {
       getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
 
       await act(async () => {
-        tree = create(<App />);
+        tree = create(<AppEntry />);
       });
       expect(tree.toJSON().children.length).toBe(1);
     });
@@ -55,7 +55,7 @@ describe('App', () => {
         theme: LIGHT_MODE,
       });
       await act(async () => {
-        tree = create(<App />);
+        tree = create(<AppEntry />);
       });
       expect(tree).toMatchSnapshot();
     });
@@ -69,7 +69,7 @@ describe('App', () => {
         theme: DARK_MODE,
       });
       await act(async () => {
-        tree = create(<App />);
+        tree = create(<AppEntry />);
       });
       expect(tree).toMatchSnapshot();
     });
@@ -88,7 +88,10 @@ describe('App', () => {
       loadProfileAsync.mockReturnValueOnce(null);
       loadSettingsAsync.mockReturnValueOnce(null);
 
-      await act(async () => create(<App />));
+      await act(async () => {
+        create(<AppEntry />);
+        jest.runAllTimers();
+      });
       expect(console.log).toHaveBeenCalled();
     });
   });
