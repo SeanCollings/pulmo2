@@ -1,7 +1,6 @@
 import React from 'react';
 import { act, create } from 'react-test-renderer';
 import { cleanup } from 'react-native-testing-library';
-import * as SplashScreen from 'expo-splash-screen';
 
 import App from './App';
 import fixtures from './app-initialise/__fixtures__/index.fixtures';
@@ -23,9 +22,6 @@ jest.mock('./app-initialise/load-fav-activity-id-array');
 jest.mock('./app-initialise/load-profile');
 jest.mock('./app-initialise/load-settings');
 jest.mock('./helpers/storage');
-jest.mock('expo-splash-screen', () => ({
-  preventAutoHideAsync: jest.fn(),
-}));
 
 describe('App', () => {
   afterEach(() => {
@@ -37,9 +33,6 @@ describe('App', () => {
     test('has 1 child', async () => {
       let tree;
       getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
-      SplashScreen.preventAutoHideAsync.mockImplementation(() =>
-        Promise.resolve()
-      );
 
       await act(async () => {
         tree = create(<App />);

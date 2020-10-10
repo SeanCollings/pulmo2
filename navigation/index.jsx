@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState, useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import * as SplashScreen from 'expo-splash-screen';
 
 import { useTheme } from '../hooks/useTheme';
 import { MainTabs, DisclaimerStack } from './AppNavigator';
@@ -22,12 +21,6 @@ const AppNavigator = (props) => {
     disclaimerContext[DISCLAIMER_SHOW] ||
       !disclaimerContext[DISCLAIMER_DONT_SHOW_AGAIN]
   );
-
-  useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hideAsync();
-    }, 2000);
-  }, []);
 
   useEffect(() => {
     if (firstMount.current) {
