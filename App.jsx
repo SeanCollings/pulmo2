@@ -101,12 +101,6 @@ export default function App() {
     }
   }, []);
 
-  useEffect(() => {
-    if (dataLoaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [dataLoaded]);
-
   if (setupApp) return <AppSetup />;
 
   return (
