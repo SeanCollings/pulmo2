@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import Constants from 'expo-constants';
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -16,6 +16,7 @@ import loadProfileAsync from './app-initialise/load-profile';
 import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-array';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
 import AppSetup from './setup';
+import SplashIcon from './assets/pulmo2_splash.png';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -96,7 +97,6 @@ export default function App() {
       Text.defaultProps = Text.defaultProps || {};
       Text.defaultProps.allowFontScaling = false;
 
-      SplashScreen.preventAutoHideAsync();
       prepareResources();
     }
   }, []);
@@ -105,6 +105,15 @@ export default function App() {
 
   return (
     <View style={styles.container} data-testid="app-component">
+      {!dataLoaded && (
+        <View>
+          <Image
+            style={styles.image}
+            source={SplashIcon}
+            resizeMode="contain"
+          />
+        </View>
+      )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
           <ExcerciseContextProvider>
@@ -127,4 +136,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
+  image: {
+    width: '100%',
+    height: '100%',
+  },
 });

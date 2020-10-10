@@ -10,5 +10,6 @@ export default ({ config }) => {
     extra: {
       setupData: process.env.SETUP_DATA,
     },
+    splash: {},
   };
 };
