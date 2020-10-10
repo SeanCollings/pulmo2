@@ -94,10 +94,11 @@ export default function App() {
     if (Constants.manifest?.extra?.setupData === 'true') {
       setSetupApp(true);
     } else {
+      SplashScreen.preventAutoHideAsync();
+      prepareResources();
+
       Text.defaultProps = Text.defaultProps || {};
       Text.defaultProps.allowFontScaling = false;
-
-      prepareResources();
     }
   }, []);
 
@@ -106,7 +107,7 @@ export default function App() {
   return (
     <View style={styles.container} data-testid="app-component">
       {!dataLoaded && (
-        <View>
+        <View style={{ ...styles.container }}>
           <Image
             style={styles.image}
             source={SplashIcon}
