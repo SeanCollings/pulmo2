@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import Constants from 'expo-constants';
+import { AppLoading } from 'expo';
 import * as SplashScreen from 'expo-splash-screen';
 
 import Navigator from './navigation';
@@ -16,7 +17,6 @@ import loadProfileAsync from './app-initialise/load-profile';
 import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-array';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
 import AppSetup from './setup';
-import SplashIcon from './assets/pulmo2_splash.png';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -81,7 +81,6 @@ export default function App() {
 
   const prepareResources = useCallback(async () => {
     try {
-      await fetchFonts();
       await loadAsyncDependencies();
     } catch (err) {
       console.log(`prepareResources error: ${err}`);
@@ -95,8 +94,6 @@ export default function App() {
       setSetupApp(true);
     } else {
       SplashScreen.preventAutoHideAsync();
-      prepareResources();
-
       Text.defaultProps = Text.defaultProps || {};
       Text.defaultProps.allowFontScaling = false;
     }
@@ -107,13 +104,11 @@ export default function App() {
   return (
     <View style={styles.container} data-testid="app-component">
       {!dataLoaded && (
-        <View style={{ ...styles.container }}>
-          <Image
-            style={styles.image}
-            source={SplashIcon}
-            resizeMode="contain"
-          />
-        </View>
+        <AppLoading
+          startAsync={fetchFonts}
+          onFinish={prepareResources}
+          onError={(err) => console.log(`AppLoading error: ${err}`)}
+        />
       )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>

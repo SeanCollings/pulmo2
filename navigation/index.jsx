@@ -49,7 +49,7 @@ const AppNavigator = (props) => {
           <MainTabs defaultTabBarOptions={defaultTabBarOptions} />
         )}
       </NavigationContainer>
-      <StatusBar style="light" backgroundColor={theme.PRIMARY} />
+      <StatusBar style="light" />
     </View>
   );
 };

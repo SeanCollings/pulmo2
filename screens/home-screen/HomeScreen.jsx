@@ -91,7 +91,9 @@ const HomeScreen = ({ navigation }) => {
   };
 
   useEffect(() => {
-    SplashScreen.hideAsync();
+    setTimeout(() => {
+      SplashScreen.hideAsync();
+    }, 1000);
     AppState.addEventListener('change', handleAppStateChange);
     return () => AppState.removeEventListener('change', handleAppStateChange);
   }, []);
