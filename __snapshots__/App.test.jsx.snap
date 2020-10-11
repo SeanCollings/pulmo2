@@ -14,7 +14,7 @@ exports[`App should hasve 1 child 1`] = `
     style={
       Object {
         "backgroundColor": "white",
-        "height": "200%",
+        "flex": 1,
       }
     }
   >

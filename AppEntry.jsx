@@ -15,7 +15,6 @@ import loadProfileAsync from './app-initialise/load-profile';
 import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-array';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
 import AppSetup from './setup';
-import SplashImage from './assets/pulmo2_splash.png';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -104,15 +103,6 @@ export default function App() {
 
   return (
     <View style={styles.container} data-testid="app-component">
-      {!dataLoaded && (
-        <View style={{ ...styles.container, justifyContent: 'center' }}>
-          <Image
-            style={styles.image}
-            source={SplashImage}
-            resizeMode="contain"
-          />
-        </View>
-      )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
           <ExcerciseContextProvider>
@@ -135,12 +125,4 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
-  image: {
-    width: '100%',
-    height: '100%',
-  },
-  indicator: {
-    position: 'absolute',
-    alignSelf: 'center',
-  },
 });

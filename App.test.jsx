@@ -1,5 +1,6 @@
 import React from 'react';
 import { act, create } from 'react-test-renderer';
+import * as SplashScreen from 'expo-splash-screen';
 
 import App from './App';
 import fixtures from './app-initialise/__fixtures__/index.fixtures';
@@ -21,11 +22,17 @@ jest.mock('./app-initialise/load-fav-activity-id-array');
 jest.mock('./app-initialise/load-profile');
 jest.mock('./app-initialise/load-settings');
 jest.mock('./helpers/storage');
+jest.mock('expo-splash-screen', () => ({
+  preventAutoHideAsync: jest.fn(),
+}));
 
 describe('App', () => {
   let tree;
 
   test('should hasve 1 child', async () => {
+    SplashScreen.preventAutoHideAsync.mockImplementation(() =>
+      Promise.resolve()
+    );
     getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
     loadActivityIdArrayAsync.mockReturnValueOnce(fixtures.activityIdArray);
     loadCustomExcercisesAsync.mockReturnValueOnce(fixtures.customExcercise);

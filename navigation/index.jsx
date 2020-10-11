@@ -56,4 +56,4 @@ const AppNavigator = (props) => {
 
 export default AppNavigator;
 
-const styles = StyleSheet.create({ container: { height: '200%' } });
+const styles = StyleSheet.create({ container: { flex: 1 } });
