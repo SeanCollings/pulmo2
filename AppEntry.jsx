@@ -96,9 +96,7 @@ export default function App() {
       Text.defaultProps = Text.defaultProps || {};
       Text.defaultProps.allowFontScaling = false;
 
-      setTimeout(() => {
-        prepareResources();
-      }, 1000);
+      prepareResources();
     }
   }, []);
 

@@ -5,7 +5,9 @@ import AppEntry from './AppEntry';
 
 export default () => {
   useEffect(() => {
-    SplashScreen.hideAsync();
+    if (!process.env.NODE_ENV === 'development') {
+      SplashScreen.hideAsync();
+    }
   }, []);
 
   return <AppEntry />;

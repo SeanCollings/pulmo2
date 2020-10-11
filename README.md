@@ -19,6 +19,7 @@ If you would like to start from a clean slate - i.e. having no initial data like
 If you would like to pre-load data to work with, do the following:
 
 - create a `.env` file in your root directory
+- inside the `.env` file, create and set the variable `ENV="development"`
 - inside the `.env` file, create and set the variable `SETUP_DATA=true`
 - run the command `npm start` to start the app
 - this will load all the test data to the phones memory
