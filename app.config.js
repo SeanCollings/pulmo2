@@ -2,8 +2,6 @@ import 'dotenv/config';
 import { BUILD_VERSION, ANDROID_VERSION, IOS_VERSION } from './version';
 
 export default ({ config }) => {
-  const development = process.env.ENV === 'development';
-
   return {
     ...config,
     version: BUILD_VERSION,
@@ -12,12 +10,5 @@ export default ({ config }) => {
     extra: {
       setupData: process.env.SETUP_DATA,
     },
-    splash: development
-      ? {
-          image: './assets/pulmo2_splash.png',
-          resizeMode: 'contain',
-          backgroundColor: '#002f56',
-        }
-      : {},
   };
 };
