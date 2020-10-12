@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import VersionCheck from 'react-native-version-check-expo';
+import Constants from 'expo-constants';
 
 import options from './options';
 import { useTheme } from '../../hooks/useTheme';
@@ -29,6 +30,7 @@ const SettingsScreen = ({ navigation }) => {
   }, []);
 
   const releaseId = RELEASE_ID.includes('#') ? '1' : RELEASE_ID;
+  const sdkVersion = Constants?.manifest?.sdkVersion.split('.')[0] || '0';
 
   const opacity = theme.DARK ? 0.36 : 0.7;
 
@@ -68,7 +70,7 @@ const SettingsScreen = ({ navigation }) => {
                 color: theme.TEXT,
                 opacity,
               }}
-            >{` ${BUILD_VERSION}.${releaseId}.${ANDROID_VERSION}`}</Text>
+            >{` ${BUILD_VERSION}.${sdkVersion}.${releaseId}.${ANDROID_VERSION}`}</Text>
           </View>
         )}
       </TouchableOpacity>

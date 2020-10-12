@@ -23,14 +23,7 @@ exports[`Tabs - unit test should render 1`] = `
       onGestureHandlerStateChange={[Function]}
       onHandlerStateChange={[Function]}
       rippleColor={0}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          undefined,
-        ]
-      }
+      testID="tab_one"
     >
       <View
         accessible={true}
@@ -43,7 +36,6 @@ exports[`Tabs - unit test should render 1`] = `
             "opacity": 1,
           }
         }
-        testID="tab_one"
       >
         <View
           style={
@@ -92,14 +84,7 @@ exports[`Tabs - unit test should render 1`] = `
       onGestureHandlerStateChange={[Function]}
       onHandlerStateChange={[Function]}
       rippleColor={0}
-      style={
-        Array [
-          Object {
-            "overflow": "hidden",
-          },
-          undefined,
-        ]
-      }
+      testID="tab_two"
     >
       <View
         accessible={true}
@@ -112,7 +97,6 @@ exports[`Tabs - unit test should render 1`] = `
             "opacity": 1,
           }
         }
-        testID="tab_two"
       >
         <View
           style={
