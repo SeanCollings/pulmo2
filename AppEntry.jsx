@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text, ActivityIndicator, Image } from 'react-native';
 import Constants from 'expo-constants';
 
 import Navigator from './navigation';
@@ -15,6 +15,7 @@ import loadProfileAsync from './app-initialise/load-profile';
 import loadFavActivityIdArrayAsync from './app-initialise/load-fav-activity-id-array';
 import loadActivityIdArrayAsync from './app-initialise/load-activity-id-array';
 import AppSetup from './setup';
+import SplashImage from './assets/pulmo2_splash.png';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -32,6 +33,7 @@ export default function App() {
   const [favActivityIdArray, setFavActivityIdArray] = useState([]);
   const [profile, setProfile] = useState({});
   const [appSettings, setAppSettings] = useState({});
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   const updateAsyncState = ({
     customExcercisesAsync,
@@ -79,12 +81,14 @@ export default function App() {
 
   const prepareResources = useCallback(async () => {
     try {
-      await fetchFonts();
-      await loadAsyncDependencies();
+      await Promise.all([fetchFonts(), loadAsyncDependencies()]);
+
+      setDataLoaded(true);
+      setTimeout(() => {
+        setShowSplashScreen(false);
+      }, 1000);
     } catch (err) {
       console.log(`prepareResources error: ${err}`);
-    } finally {
-      setDataLoaded(true);
     }
   }, []);
 
@@ -103,6 +107,20 @@ export default function App() {
 
   return (
     <View style={styles.container} data-testid="app-component">
+      {showSplashScreen && (
+        <View style={styles.splashScreenContainer}>
+          <Image
+            style={styles.image}
+            source={SplashImage}
+            resizeMode="contain"
+          />
+          <ActivityIndicator
+            size="large"
+            style={styles.indicator}
+            color="#fff"
+          ></ActivityIndicator>
+        </View>
+      )}
       {dataLoaded && (
         <CustomExcerciseContextProvider excercises={customExcercises}>
           <ExcerciseContextProvider>
@@ -125,4 +143,21 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#002f56' },
+  splashScreenContainer: {
+    backgroundColor: '#002f56',
+    justifyContent: 'center',
+    zIndex: 1,
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+  },
+  indicator: {
+    position: 'absolute',
+    alignSelf: 'center',
+    opacity: 0.7,
+  },
 });

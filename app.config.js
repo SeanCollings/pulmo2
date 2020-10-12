@@ -10,5 +10,10 @@ export default ({ config }) => {
     extra: {
       setupData: process.env.SETUP_DATA,
     },
+    // splash: {
+    //   image: './assets/pulmo2_splash.png',
+    //   resizeMode: 'contain',
+    //   backgroundColor: '#002f56',
+    // },
   };
 };

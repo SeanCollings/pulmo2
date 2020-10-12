@@ -10,11 +10,6 @@
     "packagerOpts": {
       "sourceExts": ["js", "json", "ts", "tsx", "jsx"]
     },
-    "splash": {
-      "image": "./assets/pulmo2_splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#002f56"
-    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },

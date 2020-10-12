@@ -8,7 +8,6 @@ import React, {
 import { StyleSheet, View, Text, ScrollView, AppState } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
 import { useKeepAwake } from 'expo-keep-awake';
-import * as SplashScreen from 'expo-splash-screen';
 
 import { ExcerciseContext } from '../../context/excercise-context';
 import { CustomExcerciseContext } from '../../context/custom-excercise-context';
@@ -91,10 +90,6 @@ const HomeScreen = ({ navigation }) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hideAsync();
-    }, 1000);
-
     AppState.addEventListener('change', handleAppStateChange);
     return () => AppState.removeEventListener('change', handleAppStateChange);
   }, []);

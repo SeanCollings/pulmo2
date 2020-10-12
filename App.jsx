@@ -7,7 +7,7 @@ export default () => {
   const [splashScreenEnabled, setSplashScreenEnabled] = useState(false);
 
   useEffect(() => {
-    SplashScreen.preventAutoHideAsync().then(() => {
+    SplashScreen.hideAsync().then(() => {
       setSplashScreenEnabled(true);
     });
   }, []);

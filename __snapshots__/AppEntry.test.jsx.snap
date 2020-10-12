@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppEntry errors should show the splash screen on error 1`] = `
+<View
+  data-testid="app-component"
+  style={
+    Object {
+      "backgroundColor": "#002f56",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#002f56",
+        "height": "100%",
+        "justifyContent": "center",
+        "position": "absolute",
+        "width": "100%",
+        "zIndex": 1,
+      }
+    }
+  >
+    <Image
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+    <ActivityIndicator
+      animating={true}
+      color="#fff"
+      hidesWhenStopped={true}
+      size="large"
+      style={
+        Object {
+          "alignSelf": "center",
+          "position": "absolute",
+        }
+      }
+    />
+  </View>
+</View>
+`;

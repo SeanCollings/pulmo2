@@ -30,14 +30,15 @@ describe('AppEntry', () => {
   });
 
   describe('success', () => {
-    test('has 1 child', async () => {
+    test('has 2 children', async () => {
       let tree;
       getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
 
       await act(async () => {
         tree = create(<AppEntry />);
+        jest.runAllTimers();
       });
-      expect(tree.toJSON().children.length).toBe(1);
+      expect(tree.toJSON().children.length).toBe(2);
     });
 
     // Set to test.skip as Azure produces a different snapshot for some reason.
@@ -76,7 +77,9 @@ describe('AppEntry', () => {
   });
 
   describe('errors', () => {
-    test('logs errors', async () => {
+    let tree;
+
+    beforeEach(() => {
       console.log = jest.fn();
       loadActivityIdArrayAsync.mockReturnValueOnce(null);
       loadCustomExcercisesAsync.mockReturnValueOnce(
@@ -87,7 +90,16 @@ describe('AppEntry', () => {
       loadFavActivityIdArrayAsync.mockReturnValueOnce(null);
       loadProfileAsync.mockReturnValueOnce(null);
       loadSettingsAsync.mockReturnValueOnce(null);
+    });
 
+    test('should show the splash screen on error', async () => {
+      await act(async () => {
+        tree = create(<AppEntry />);
+      });
+      expect(tree).toMatchSnapshot();
+    });
+
+    test('logs errors', async () => {
       await act(async () => {
         create(<AppEntry />);
         jest.runAllTimers();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should hasve 1 child 1`] = `
+exports[`App should render content after splash screen has been removed 1`] = `
 <View
   data-testid="app-component"
   style={
@@ -13,7 +13,6 @@ exports[`App should hasve 1 child 1`] = `
   <View
     style={
       Object {
-        "backgroundColor": "white",
         "flex": 1,
       }
     }

@@ -40,9 +40,8 @@ const AppNavigator = (props) => {
     allowFontScaling: false,
   };
 
-  // Remove view>styles if white flash still persists
   return (
-    <View style={{ ...styles.container, backgroundColor: theme.BACKGROUND }}>
+    <View style={styles.container}>
       <NavigationContainer>
         {showDisclaimer && <DisclaimerStack />}
         {!showDisclaimer && (
