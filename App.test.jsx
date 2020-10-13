@@ -23,14 +23,16 @@ jest.mock('./app-initialise/load-profile');
 jest.mock('./app-initialise/load-settings');
 jest.mock('./helpers/storage');
 jest.mock('expo-splash-screen', () => ({
-  hideAsync: jest.fn(),
+  preventAutoHideAsync: jest.fn(),
 }));
 
 describe('App', () => {
   let tree;
 
   beforeEach(() => {
-    SplashScreen.hideAsync.mockImplementation(() => Promise.resolve());
+    SplashScreen.preventAutoHideAsync.mockImplementation(() =>
+      Promise.resolve()
+    );
     getAsyncData.mockReturnValueOnce([11, STRENGTH_KEY]);
     loadActivityIdArrayAsync.mockReturnValueOnce(fixtures.activityIdArray);
     loadCustomExcercisesAsync.mockReturnValueOnce(fixtures.customExcercise);
@@ -44,12 +46,12 @@ describe('App', () => {
     });
   });
 
-  test('should have 2 children', async () => {
+  test('should have 1 child', async () => {
     await act(async () => {
       tree = create(<App />);
       jest.runAllTimers();
     });
-    expect(tree.toJSON().children.length).toBe(2);
+    expect(tree.toJSON().children.length).toBe(1);
   });
 
   test('should render content after splash screen has been removed', async () => {

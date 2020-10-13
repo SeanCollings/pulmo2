@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import * as Font from 'expo-font';
 import { View, StyleSheet, Text, ActivityIndicator, Image } from 'react-native';
 import Constants from 'expo-constants';
+import * as SplashScreen from 'expo-splash-screen';
 
 import Navigator from './navigation';
 import ExcerciseContextProvider from './context/excercise-context';
@@ -83,10 +84,12 @@ export default function App() {
     try {
       await Promise.all([fetchFonts(), loadAsyncDependencies()]);
 
-      setDataLoaded(true);
-      setTimeout(() => {
-        setShowSplashScreen(false);
-      }, 1000);
+      SplashScreen.hideAsync().then(() => {
+        setDataLoaded(true);
+        setTimeout(() => {
+          setShowSplashScreen(false);
+        }, 1000);
+      });
     } catch (err) {
       console.log(`prepareResources error: ${err}`);
     }

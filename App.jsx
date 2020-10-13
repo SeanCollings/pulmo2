@@ -8,12 +8,12 @@ export default () => {
   const [splashScreenEnabled, setSplashScreenEnabled] = useState(false);
 
   useEffect(() => {
-    SplashScreen.hideAsync().then(() => {
+    SplashScreen.preventAutoHideAsync().then(() => {
       setSplashScreenEnabled(true);
     });
   }, []);
 
-  if (!splashScreenEnabled) return <View style={{ flex: 1 }} />;
+  if (!splashScreenEnabled) return <View style={{ flex: 1 }}></View>;
 
   return <AppEntry />;
 };

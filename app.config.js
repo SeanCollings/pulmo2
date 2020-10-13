@@ -13,7 +13,7 @@ export default ({ config }) => {
     splash: {
       //   image: './assets/pulmo2_splash.png',
       //   resizeMode: 'contain',
-      //   backgroundColor: '#002f56',
+      backgroundColor: '#002f56',
     },
   };
 };
