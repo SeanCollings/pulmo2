@@ -4,8 +4,11 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HeaderButton from '../../components/HeaderButton';
+import { APP_ENV, ENV_STAGING } from '../../release-constants';
 
 const homeScreenOptions = (navData) => {
+  const tag = APP_ENV === ENV_STAGING ? ' (beta)' : '';
+
   return {
     headerTitle: ({ tintColor, style }) => {
       return (
@@ -27,7 +30,7 @@ const homeScreenOptions = (navData) => {
                 ...style,
               }}
             >
-              2
+              {`2${tag}`}
             </Text>
           </View>
         </View>

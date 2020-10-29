@@ -315,7 +315,7 @@ exports[`SettingsScreen - unit test should render 1`] = `
           }
         }
       >
-         1.0.0.36.1.5
+         1.0.0.36.1.6
       </Text>
     </View>
   </View>

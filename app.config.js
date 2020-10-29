@@ -1,5 +1,11 @@
 import 'dotenv/config';
-import { BUILD_VERSION, ANDROID_VERSION, IOS_VERSION } from './version';
+import {
+  BUILD_VERSION,
+  ANDROID_VERSION,
+  IOS_VERSION,
+  APP_ENV,
+  ENV_STAGING,
+} from './release-constants';
 
 export default ({ config }) => {
   return {
@@ -10,5 +16,6 @@ export default ({ config }) => {
     extra: {
       setupData: process.env.SETUP_DATA,
     },
+    ...(APP_ENV === ENV_STAGING ? { name: `${config.name} (beta)` } : {}),
   };
 };
