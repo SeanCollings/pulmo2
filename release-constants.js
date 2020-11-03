@@ -1,5 +1,5 @@
 const BUILD_VERSION = '1.0.0';
-const ANDROID_VERSION = 7;
+const ANDROID_VERSION = 8;
 const IOS_VERSION = '1.0.0';
 const RELEASE_ID = '#{Release.ReleaseId}#';
 const APP_ENV = '#{APP_ENV}#';

@@ -32,8 +32,8 @@ export const STREAK_DEFAULT = {
 export const DISCLAIMER_SHOW = 'disclaimer_show';
 export const DISCLAIMER_DONT_SHOW_AGAIN = 'dont_show_again';
 export const DISCLAIMER_DEFAULT = {
-  [DISCLAIMER_SHOW]: false,
-  [DISCLAIMER_DONT_SHOW_AGAIN]: true,
+  [DISCLAIMER_SHOW]: true,
+  [DISCLAIMER_DONT_SHOW_AGAIN]: false,
 };
 
 export const WORK_AVE_DEV_CURRENT = 'current';

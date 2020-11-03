@@ -38,6 +38,7 @@ const AppNavigator = (props) => {
     tabStyle: { backgroundColor: theme.PRIMARY },
     labelStyle: { fontFamily: 'tit-regular', fontSize: 12 },
     allowFontScaling: false,
+    style: { backgroundColor: theme.PRIMARY },
   };
 
   return (

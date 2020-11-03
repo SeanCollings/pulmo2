@@ -4,8 +4,8 @@ exports[`profile-context unit test 1`] = `
 Object {
   "profileContext": Object {
     "disclaimer": Object {
-      "disclaimer_show": false,
-      "dont_show_again": true,
+      "disclaimer_show": true,
+      "dont_show_again": false,
     },
     "selected_level": 5,
     "streak": Object {
