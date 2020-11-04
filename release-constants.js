@@ -1,8 +1,9 @@
 const BUILD_VERSION = '1.0.0';
-const ANDROID_VERSION = 8;
+// const ANDROID_VERSION = 8;
 const IOS_VERSION = '1.0.0';
 const RELEASE_ID = '#{Release.ReleaseId}#';
 const APP_ENV = '#{APP_ENV}#';
+const ANDROID_VERSION = '#{ANDROID_BUILD_VERSION}#';
 
 const ENV_DEV = 'development';
 const ENV_STAGING = 'staging';

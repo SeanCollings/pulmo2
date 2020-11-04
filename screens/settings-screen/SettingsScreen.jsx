@@ -16,6 +16,8 @@ import BarSelector from '../../components/BarSelector';
 
 export const settingsScreenOptions = options;
 
+const getVersion = (version) => (version.includes('#') ? '0' : version);
+
 const SettingsScreen = ({ navigation }) => {
   const theme = useTheme();
   const [latestVersion, setLatestVersion] = useState(null);
@@ -33,7 +35,8 @@ const SettingsScreen = ({ navigation }) => {
     };
   }, []);
 
-  const releaseId = RELEASE_ID.includes('#') ? '1' : RELEASE_ID;
+  const releaseId = getVersion(RELEASE_ID);
+  const androidBuildVersion = getVersion(ANDROID_VERSION);
   const sdkVersion = Constants?.manifest?.sdkVersion.split('.')[0] || '0';
 
   const opacity = theme.DARK ? 0.36 : 0.7;
@@ -74,7 +77,7 @@ const SettingsScreen = ({ navigation }) => {
                 color: theme.TEXT,
                 opacity,
               }}
-            >{` ${BUILD_VERSION}.${sdkVersion}.${releaseId}.${ANDROID_VERSION}`}</Text>
+            >{` ${BUILD_VERSION}.${sdkVersion}.${releaseId}.${androidBuildVersion}`}</Text>
           </View>
         )}
       </TouchableOpacity>
