@@ -68,7 +68,7 @@ const HelpExcerciseScreen = (props) => {
           {' '}
           Custom
         </Text>{' '}
-        excercises are saved and can be editted or deleted later.
+        excercises are saved and can be edited or deleted later.
       </Text>
       <Text style={styleTextContent}></Text>
     </ScrollView>

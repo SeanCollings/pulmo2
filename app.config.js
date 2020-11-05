@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import {
-  BUILD_VERSION,
+  EXPO_VERSION,
   ANDROID_VERSION,
   IOS_VERSION,
   APP_ENV,
@@ -8,14 +8,23 @@ import {
 } from './release-constants';
 
 export default ({ config }) => {
+  const isStaging = APP_ENV === ENV_STAGING;
+  const versionCode = APP_ENV.includes('#') ? 0 : ANDROID_VERSION;
+
   return {
     ...config,
-    version: BUILD_VERSION,
-    android: { ...config.android, versionCode: parseInt(ANDROID_VERSION) },
+    version: EXPO_VERSION,
+    android: {
+      ...config.android,
+      versionCode,
+      ...(isStaging ? { package: `${config.android.package}_beta` } : {}),
+    },
     ios: { ...config.ios, buildNumber: IOS_VERSION },
     extra: {
       setupData: process.env.SETUP_DATA,
     },
-    ...(APP_ENV === ENV_STAGING ? { name: `${config.name} (beta)` } : {}),
+    ...(isStaging
+      ? { name: `${config.name} (beta)`, slug: `${config.slug}_beta` }
+      : {}),
   };
 };

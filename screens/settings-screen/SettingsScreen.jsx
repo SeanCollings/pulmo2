@@ -7,7 +7,7 @@ import options from './options';
 import { useTheme } from '../../hooks/useTheme';
 import ThemeSelector from '../../components/ThemeSelector';
 import {
-  BUILD_VERSION,
+  EXPO_VERSION,
   ANDROID_VERSION,
   RELEASE_ID,
 } from '../../release-constants';
@@ -77,7 +77,7 @@ const SettingsScreen = ({ navigation }) => {
                 color: theme.TEXT,
                 opacity,
               }}
-            >{` ${BUILD_VERSION}.${sdkVersion}.${releaseId}.${androidBuildVersion}`}</Text>
+            >{` ${EXPO_VERSION}.${sdkVersion}.${releaseId}.${androidBuildVersion}`}</Text>
           </View>
         )}
       </TouchableOpacity>
