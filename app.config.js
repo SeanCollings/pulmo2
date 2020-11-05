@@ -9,7 +9,7 @@ import {
 
 export default ({ config }) => {
   const isStaging = APP_ENV === ENV_STAGING;
-  const versionCode = APP_ENV.includes('#') ? 0 : ANDROID_VERSION;
+  const versionCode = APP_ENV.includes('#') ? 0 : parseInt(ANDROID_VERSION);
 
   return {
     ...config,
