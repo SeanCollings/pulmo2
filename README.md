@@ -32,5 +32,8 @@ If you would like to pre-load data to work with, do the following:
 ```
 > npx expo publish
 > npx expo build:android -t app-bundle
-> npx expo fetch:android:keystore
 ```
+
+### Find PulmO2 on Google Play
+
+[PulmO2](https://play.google.com/store/apps/details?id=com.luft.pulmo_2)
